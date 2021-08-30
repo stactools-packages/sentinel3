@@ -29,29 +29,6 @@ SENTINEL_PROVIDER = pystac.Provider(
 
 SAFE_MANIFEST_ASSET_KEY = "safe-manifest"
 
-SENTINEL_POLARISATIONS = {
-    "vh":
-    Band.create(
-        name="VH",
-        description="vertical transmit and horizontal receive",
-    ),
-    "hh":
-    Band.create(
-        name="HH",
-        description="horizontal transmit and horizontal receive",
-    ),
-    "hv":
-    Band.create(
-        name="HV",
-        description="horizontal transmit and vertical receive",
-    ),
-    "vv":
-    Band.create(
-        name="VV",
-        description="vertical transmit and vertical receive",
-    ),
-}
-
 SENTINEL_LICENSE = Link(
     rel="license",
     target="https://sentinel.esa.int/documents/" +
