@@ -24,7 +24,7 @@ def fill_sat_properties(sat_ext, href):
     orbit_state = root.find_attr(
         "groundTrackDirection", ".//sentinel-safe:orbitNumber"
     )
-    sat_ext.orbit_state = OrbitState(orbit_state.lower())
+    sat_ext.orbit_state = OrbitState(orbit_state)
 
     sat_ext.absolute_orbit = int(root.findall(".//sentinel-safe:orbitNumber")[0].text)
 

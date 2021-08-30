@@ -50,4 +50,9 @@ def create_item(granule_href: str) -> pystac.Item:
         stac_extensions=[],
     )
     
+    # ---- Add Extensions ----
+    # sat
+    sat = SatExtension.ext(item, add_if_missing=True)
+    fill_sat_properties(sat, metalinks.product_metadata_href)
+    
     return item
