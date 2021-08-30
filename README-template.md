@@ -1,16 +1,16 @@
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/stactools-packages/ephemeral/main?filepath=docs/installation_and_basic_usage.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/stactools-packages/sentinel3/main?filepath=docs/installation_and_basic_usage.ipynb)
 
-# stactools-ephemeral
+# stactools-sentinel3
 
-- Name: ephemeral
-- Package: `stactools.ephemeral`
-- PyPI: https://pypi.org/project/stactools-ephemeral/
+- Name: sentinel3
+- Package: `stactools.sentinel3`
+- PyPI: https://pypi.org/project/stactools-sentinel3/
 - Owner: @githubusername
 - Dataset homepage: http://example.com
 - STAC extensions used:
   - [proj](https://github.com/stac-extensions/projection/)
 - Extra fields:
-  - `ephemeral:custom`: A custom attribute
+  - `sentinel3:custom`: A custom attribute
 
 A short description of the package and its usage.
 
@@ -26,7 +26,7 @@ A short description of the package and its usage.
 Description of the command line functions
 
 ```bash
-$ stac ephemeral create-item source destination
+$ stac sentinel3 create-item source destination
 ```
 
-Use `stac ephemeral --help` to see all subcommands and options.
+Use `stac sentinel3 --help` to see all subcommands and options.

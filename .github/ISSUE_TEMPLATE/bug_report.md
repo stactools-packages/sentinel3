@@ -15,7 +15,7 @@ Steps to reproduce the behavior:
 
 > Ex.
 >
-> 1. Install stactools-ephemeral
+> 1. Install stactools-sentinel3
 > 2. Run `scripts/test`
 > 3. See error
 
