@@ -1,0 +1,6 @@
+name: stactools-ephemeral
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - gdal

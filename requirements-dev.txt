@@ -1,0 +1,16 @@
+codespell
+coverage
+editorconfig-checker
+flake8
+isort
+jupyter
+mypy
+pylint
+sphinx
+sphinx-autobuild
+sphinx-click
+sphinxcontrib-fulltoc
+sphinxcontrib-napoleon
+types-click
+types-pytz
+yapf
