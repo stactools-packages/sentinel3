@@ -1,112 +1,53 @@
 import logging
-from datetime import datetime, timezone
+import os
 
-from pystac import (Asset, CatalogType, Collection, Extent, Item, MediaType,
-                    Provider, ProviderRole, SpatialExtent, TemporalExtent)
+import pystac
+from pystac.extensions.eo import EOExtension
+from pystac.extensions.sat import SatExtension
 from pystac.extensions.projection import ProjectionExtension
+
+from .metadata_links import MetadataLinks
+from .product_metadata import ProductMetadata
+
+from .constants import (
+    SENTINEL_PROVIDER,
+    SENTINEL_CONSTELLATION,
+    SENTINEL_LICENSE,
+)
+
+from .properties import (
+    fill_sat_properties,
+    fill_proj_properties,
+    fill_eo_properties
+)
+
+from .bands import image_asset_from_href
 
 logger = logging.getLogger(__name__)
 
 
-def create_collection() -> Collection:
-    """Create a STAC Collection
-
-    This function includes logic to extract all relevant metadata from
-    an asset describing the STAC collection and/or metadata coded into an
-    accompanying constants.py file.
-
-    See `Collection<https://pystac.readthedocs.io/en/latest/api.html#collection>`_.
-
-    Returns:
-        Collection: STAC Collection object
-    """
-    providers = [
-        Provider(
-            name="The OS Community",
-            roles=[
-                ProviderRole.PRODUCER, ProviderRole.PROCESSOR,
-                ProviderRole.HOST
-            ],
-            url="https://github.com/stac-utils/stactools",
-        )
-    ]
-
-    # Time must be in UTC
-    demo_time = datetime.now(tz=timezone.utc)
-
-    extent = Extent(
-        SpatialExtent([[-180., 90., 180., -90.]]),
-        TemporalExtent([demo_time, None]),
-    )
-
-    collection = Collection(
-        id="my-collection-id",
-        title="A dummy STAC Collection",
-        description="Used for demonstration purposes",
-        license="CC-0",
-        providers=providers,
-        extent=extent,
-        catalog_type=CatalogType.RELATIVE_PUBLISHED,
-    )
-
-    return collection
-
-
-def create_item(asset_href: str) -> Item:
-    """Create a STAC Item
-
-    This function should include logic to extract all relevant metadata from an
-    asset, metadata asset, and/or a constants.py file.
-
-    See `Item<https://pystac.readthedocs.io/en/latest/api.html#item>`_.
+def create_item(granule_href: str) -> pystac.Item:
+    """Create a STC Item from a Sentinel-3 scene.
 
     Args:
-        asset_href (str): The HREF pointing to an asset associated with the item
+        granule_href (str): The HREF to the granule.
+            This is expected to be a path to a SAFE archive.
 
     Returns:
-        Item: STAC Item object
+        pystac.Item: An item representing the Sentinel-1 GRD scene.
     """
 
-    properties = {
-        "title": "A dummy STAC Item",
-        "description": "Used for demonstration purposes",
-    }
+    metalinks = MetadataLinks(granule_href)
 
-    demo_geom = {
-        "type":
-        "Polygon",
-        "coordinates": [[[-180, -90], [180, -90], [180, 90], [-180, 90],
-                         [-180, -90]]],
-    }
+    product_metadata = ProductMetadata(metalinks.product_metadata_href)
 
-    # Time must be in UTC
-    demo_time = datetime.now(tz=timezone.utc)
-
-    item = Item(
-        id="my-item-id",
-        properties=properties,
-        geometry=demo_geom,
-        bbox=[-180, 90, 180, -90],
-        datetime=demo_time,
+    item = pystac.Item(
+        id=product_metadata.scene_id,
+        geometry=product_metadata.geometry,
+        bbox=product_metadata.bbox,
+        datetime=product_metadata.get_datetime,
+        properties={},
         stac_extensions=[],
     )
-
-    # It is a good idea to include proj attributes to optimize for libs like stac-vrt
-    proj_attrs = ProjectionExtension.ext(item, add_if_missing=True)
-    proj_attrs.epsg = 4326
-    proj_attrs.bbox = [-180, 90, 180, -90]
-    proj_attrs.shape = [1, 1]  # Raster shape
-    proj_attrs.transform = [-180, 360, 0, 90, 0, 180]  # Raster GeoTransform
-
-    # Add an asset to the item (COG for example)
-    item.add_asset(
-        "image",
-        Asset(
-            href=asset_href,
-            media_type=MediaType.COG,
-            roles=["data"],
-            title="A dummy STAC Item COG",
-        ),
-    )
-
+    
     return item

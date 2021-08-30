@@ -1,8 +1,8 @@
-import logging
-
 import click
+import logging
+import os
 
-from stactools.sentinel3 import stac
+from stactools.sentinel3.stac import create_item
 
 logger = logging.getLogger(__name__)
 
@@ -17,38 +17,23 @@ def create_sentinel3_command(cli):
         pass
 
     @sentinel3.command(
-        "create-collection",
-        short_help="Creates a STAC collection",
+        "create-item",
+        short_help="Convert a Sentinel3 scene into a STAC item",
     )
-    @click.argument("destination")
-    def create_collection_command(destination: str):
+    @click.argument("src")
+    @click.argument("dst")
+    def create_item_command(src, dst):
         """Creates a STAC Collection
 
         Args:
-            destination (str): An HREF for the Collection JSON
+            src (str): path to the scene
+            dst (str): path to the STAC Item JSON file that will be created
         """
-        collection = stac.create_collection()
+        item = create_item(src)
 
-        collection.set_self_href(destination)
+        item_path = os.path.join(dst, "{}.json".format(item.id))
+        item.set_self_href(item_path)
 
-        collection.save_object()
+        item.save_object()
 
-        return None
-
-    @sentinel3.command("create-item", short_help="Create a STAC item")
-    @click.argument("source")
-    @click.argument("destination")
-    def create_item_command(source: str, destination: str):
-        """Creates a STAC Item
-
-        Args:
-            source (str): HREF of the Asset associated with the Item
-            destination (str): An HREF for the STAC Collection
-        """
-        item = stac.create_item(source)
-
-        item.save_object(dest_href=destination)
-
-        return None
-
-    return sentinel3
+        return sentinel3
