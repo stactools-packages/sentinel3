@@ -1,6 +1,5 @@
 from stactools.core.io.xml import XmlElement
 from pystac.extensions.sat import OrbitState
-from .constants import X_SIZE, Y_SIZE
 
 def fill_sat_properties(sat_ext, href):
     """Fills the properties for SAR.
@@ -67,8 +66,8 @@ def fill_proj_properties(proj_ext, product_meta):
 
     proj_ext.epsg = product_meta.get_epsg
 
-    proj_ext.geometry = product_meta.geometry
+#     proj_ext.geometry = product_meta.geometry
 
-    proj_ext.bbox = product_meta.bbox
+#     proj_ext.bbox = product_meta.bbox
 
     proj_ext.shape = product_meta.get_shape

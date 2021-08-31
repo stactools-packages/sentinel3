@@ -5,7 +5,9 @@ import pystac
 
 from stactools.core.io.xml import XmlElement
 
-from .constants import SAFE_MANIFEST_ASSET_KEY
+from .constants import (SAFE_MANIFEST_ASSET_KEY, 
+                        SENTINEL_SLSTR_BANDS, 
+                        SENTINEL_OLCI_BANDS)
 
 
 class ManifestError(Exception):
@@ -49,79 +51,41 @@ class MetadataLinks:
         preview = os.path.join(self.granule_href, "preview")
         return os.path.join(preview, "quick-look.png")
 
-    @property
-    def annotation_hrefs(self) -> List[str]:
-        annotation_path = os.path.join(self.granule_href, "annotation")
-        return [
-            os.path.join(annotation_path, x)
-            for x in os.listdir(annotation_path) if x.endswith("xml")
-        ]
-
-    @property
-    def calibration_hrefs(self) -> List[str]:
-        calibration_path = os.path.join(self.granule_href,
-                                        "annotation/calibration")
-        return [
-            os.path.join(calibration_path, x)
-            for x in os.listdir(calibration_path)
-            if x.endswith("xml") and "calibration" in x
-        ]
-
-    @property
-    def noise_hrefs(self) -> List[str]:
-        calibration_path = os.path.join(self.granule_href,
-                                        "annotation/calibration")
-        return [
-            os.path.join(calibration_path, x)
-            for x in os.listdir(calibration_path)
-            if x.endswith("xml") and "noise" in x
-        ]
-
     def create_manifest_asset(self):
-        asset = pystac.Asset(href=self.href,
-                             media_type=pystac.MediaType.XML,
-                             roles=["metadata"])
+        asset = pystac.Asset(
+            href=self.href,
+            media_type=pystac.MediaType.XML,
+            roles=["metadata"],
+        )
         return (SAFE_MANIFEST_ASSET_KEY, asset)
-
-    def create_product_asset(self):
-        assets = []
-        for x in self.annotation_hrefs:
-            asset = pystac.Asset(
-                href=x,
-                media_type=pystac.MediaType.XML,
-                title="Product Schema",
-                roles=["metadata"],
-            )
-            assets.append(
-                (f"product_{x.split('-')[1]}_{x.split('-')[3]}", asset)
-            )
-
-        return assets
-
-    def create_calibration_asset(self):
-        assets = []
-        for x in self.calibration_hrefs:
-            asset = pystac.Asset(
-                href=x,
-                media_type=pystac.MediaType.XML,
-                title="Calibration Schema",
-                roles=["metadata"],
-            )
-            assets.append(
-                (f"calibration_{x.split('-')[2]}_{x.split('-')[4]}", asset))
-
-        return assets
-
-    def create_noise_asset(self):
-        assets = []
-        for x in self.noise_hrefs:
-            asset = pystac.Asset(
-                href=x,
-                media_type=pystac.MediaType.XML,
-                title="Noise Schema",
-                roles=["metadata"],
-            )
-            assets.append(
-                (f"noise_{x.split('-')[2]}_{x.split('-')[4]}", asset))
-
-        return assets
+    
+    def create_band_asset(self):
+        
+        band_dict_list = []
+        
+        root = XmlElement.from_file(self.product_metadata_href)
+        product_type = root.findall(".//sentinel3:productType")[0].text.split("_")[0]
+        
+        if product_type == "OL":
+            instrument_bands = SENTINEL_OLCI_BANDS
+            instrument_name = "OLCI"
+        elif product_type == "SL":
+            instrument_bands = SENTINEL_SLSTR_BANDS
+            instrument_name = "SLSTR"
+        
+        for band in instrument_bands:
+            band_dict = {
+                "name": instrument_bands[band].name,
+                "description": instrument_bands[band].description,
+                "center_wavelength": instrument_bands[band].center_wavelength,
+                "band_width": instrument_bands[band].full_width_half_max
+            }
+            band_dict_list.append(band_dict)
+        
+        asset = pystac.Asset(
+            href=self.href,
+            media_type=pystac.MediaType.XML,
+            roles=["metadata"],
+            extra_fields={"eo:bands": band_dict_list}
+        )
+        return (f"{instrument_name}_bands", asset)
