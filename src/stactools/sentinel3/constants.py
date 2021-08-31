@@ -200,6 +200,3 @@ SENTINEL_LICENSE = Link(
     target="https://sentinel.esa.int/documents/" +
     "247904/690755/Sentinel_Data_Legal_Notice",
 )
-
-X_SIZE = 10000
-Y_SIZE = 10000

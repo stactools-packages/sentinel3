@@ -13,6 +13,8 @@ from .constants import (
     SENTINEL_PROVIDER,
     SENTINEL_CONSTELLATION,
     SENTINEL_LICENSE,
+    SENTINEL_SLSTR_BANDS,
+    SENTINEL_OLCI_BANDS
 )
 
 from .properties import (
@@ -70,5 +72,12 @@ def create_item(granule_href: str) -> pystac.Item:
     
     # s3 properties
     item.properties.update({**product_metadata.metadata_dict})
+    
+    # Add assets to item
+    item.add_asset(*metalinks.create_manifest_asset())
+    
+    # objects for bands
+    
+    item.add_asset(*metalinks.create_band_asset())
     
     return item
