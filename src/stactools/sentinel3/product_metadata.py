@@ -146,9 +146,9 @@ class ProductMetadata:
             "end_datetime":
             str(self.end_datetime),
             "s3:instrument":
-            str(self._root.find_attr("abbreviation", ".//sentinel-safe:familyName")),
+            str(self._root.find_attr("abbreviation", ".//sentinel-safe:familyName[@abbreviation]")),
             "s3:mode":
-            str(self._root.find_attr("abbreviation", ".//sentinel-safe:mode")),
+            str(self._root.find_attr("identifier", ".//sentinel-safe:mode")),
             "s3:productType":
             self._root.findall(".//sentinel3:productType")[0].text,
         }
