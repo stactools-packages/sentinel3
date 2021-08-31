@@ -21,7 +21,7 @@ from .properties import (
     fill_eo_properties
 )
 
-from .bands import image_asset_from_href
+# from .bands import image_asset_from_href
 
 logger = logging.getLogger(__name__)
 
@@ -54,5 +54,21 @@ def create_item(granule_href: str) -> pystac.Item:
     # sat
     sat = SatExtension.ext(item, add_if_missing=True)
     fill_sat_properties(sat, metalinks.product_metadata_href)
+    
+    # eo
+    eo = EOExtension.ext(item, add_if_missing=True)
+    fill_eo_properties(eo, metalinks.product_metadata_href)
+    
+    # proj
+    proj = ProjectionExtension.ext(item, add_if_missing=True)
+    fill_proj_properties(proj, product_metadata)
+    
+    # --Common metadata--
+    item.common_metadata.providers = [SENTINEL_PROVIDER]
+    item.common_metadata.platform = product_metadata.platform
+    item.common_metadata.constellation = SENTINEL_CONSTELLATION
+    
+    # s3 properties
+    item.properties.update({**product_metadata.metadata_dict})
     
     return item

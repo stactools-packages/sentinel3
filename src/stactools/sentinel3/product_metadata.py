@@ -82,8 +82,8 @@ class ProductMetadata:
 
     @property
     def get_datetime(self) -> datetime:
-        start_time = self._root.findall(".//sentinel3:receivingStartTime")[0].text
-        end_time = self._root.findall(".//sentinel3:receivingStopTime")[0].text
+        start_time = self._root.findall(".//sentinel-safe:startTime")[0].text
+        end_time = self._root.findall(".//sentinel-safe:stopTime")[0].text
 
         central_time = (
             datetime.strptime(start_time, "%Y-%m-%dT%H:%M:%S.%fZ") +
@@ -99,7 +99,7 @@ class ProductMetadata:
 
     @property
     def start_datetime(self) -> datetime:
-        time = self._root.findall(".//sentinel3:receivingStartTime")
+        time = self._root.findall(".//sentinel-safe:startTime")
 
         if time is None:
             raise ValueError(
@@ -110,7 +110,7 @@ class ProductMetadata:
 
     @property
     def end_datetime(self) -> datetime:
-        time = self._root.findall(".//sentinel3:receivingStopTime")
+        time = self._root.findall(".//sentinel-safe:stopTime")
 
         if time is None:
             raise ValueError(
@@ -145,10 +145,26 @@ class ProductMetadata:
             str(self.start_datetime),
             "end_datetime":
             str(self.end_datetime),
-#             "s1:instrument_configuration_ID":
-#             self._root.findall(".//s1sarl1:instrumentConfigurationID")[0].text,
-#             "s1:datatake_id":
-#             self._root.findall(".//s1sarl1:missionDataTakeID")[0].text,
+            "s3:instrument":
+            str(self._root.find_attr("abbreviation", ".//sentinel-safe:familyName")),
+            "s3:mode":
+            str(self._root.find_attr("abbreviation", ".//sentinel-safe:mode")),
+            "s3:productType":
+            self._root.findall(".//sentinel3:productType")[0].text,
         }
 
         return {k: v for k, v in result.items() if v is not None}
+    
+    @property
+    def get_shape(self):
+        x_size = int(self._root.findall(".//sentinel3:columns")[0].text)
+        y_size = int(self._root.findall(".//sentinel3:rows")[0].text)
+        shape = [x_size, y_size]
+        
+        return shape
+    
+    @property
+    def get_epsg(self):
+        epsg = self._root.find_attr("srsName", ".//sentinel-safe:footPrint").split("/")[-1]
+        
+        return epsg

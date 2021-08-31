@@ -34,13 +34,24 @@ def fill_sat_properties(sat_ext, href):
 def fill_eo_properties(eo_ext, href):
     # Read meta file
     root = XmlElement.from_file(href)
-    
-    eo_ext.cloud_cover = float(
-        root.find_attr("percentage", ".//sentinel3:cloudyPixels")
-    )
+    product_name = root.findall(".//sentinel3:productName")[0].text
+    if product_name.split("_")[1] == "OL":
+        pass
+    elif product_name.split("_")[1] == "SL":
+        eo_ext.cloud_cover = float(
+            root.find_attr("percentage", ".//sentinel3:cloudyPixels")
+        )
+    else:
+        raise ValueError(
+            "Unexpected value found at "
+            f"{product_name}: "
+            "this was expected to follow the sentinel 3 "
+            "naming convention, including "
+            "ending in .SEN3"
+        )
 
 
-def fill_proj_properties(proj_ext, meta_links, product_meta):
+def fill_proj_properties(proj_ext, product_meta):
     """Fills the properties for SAR.
 
     Based on the sar Extension.py
@@ -54,13 +65,10 @@ def fill_proj_properties(proj_ext, meta_links, product_meta):
     """
     # Read meta file
 
-    proj_ext.epsg = 4326
+    proj_ext.epsg = product_meta.get_epsg
 
-#     proj_ext.geometry = product_meta.geometry
+    proj_ext.geometry = product_meta.geometry
 
     proj_ext.bbox = product_meta.bbox
 
-    x_size = int(X_SIZE)
-    y_size = int(Y_SIZE)
-
-    proj_ext.shape = [x_size, y_size]
+    proj_ext.shape = product_meta.get_shape
