@@ -139,8 +139,8 @@ class ProductMetadata:
 
     @property
     def metadata_dict(self) -> Dict[str, Any]:
-        formatter = "{0:.6f}"
-        product_type = self._root.findall(".//sentinel3:productType")[0].text.split("_")[0]
+        product_type = self._root.findall(
+            ".//sentinel3:productType")[0].text.split("_")[0]
         if product_type == "OL":
             result = {
                 "start_datetime":
@@ -153,29 +153,61 @@ class ProductMetadata:
                         "abbreviation",
                         ".//sentinel-safe:familyName[@abbreviation]")),
                 "s3:mode":
-                str(self._root.find_attr("identifier", ".//sentinel-safe:mode")),
+                str(self._root.find_attr("identifier",
+                                         ".//sentinel-safe:mode")),
                 "s3:productType":
                 self._root.findall(".//sentinel3:productType")[0].text,
                 "s3:salineWaterPixels_percentage":
-                float(self._root.find_attr("percentage", ".//sentinel3:salineWaterPixels")),
+                float(
+                    str(
+                        self._root.find_attr(
+                            "percentage", ".//sentinel3:salineWaterPixels"))),
                 "s3:coastalPixels_percentage":
-                float(self._root.find_attr("percentage", ".//sentinel3:coastalPixels")),
+                float(
+                    str(
+                        self._root.find_attr("percentage",
+                                             ".//sentinel3:coastalPixels"))),
                 "s3:freshInlandWaterPixels_percentage":
-                float(self._root.find_attr("percentage", ".//sentinel3:freshInlandWaterPixels")),
+                float(
+                    str(
+                        self._root.find_attr(
+                            "percentage",
+                            ".//sentinel3:freshInlandWaterPixels"))),
                 "s3:tidalRegionPixels_percentage":
-                float(self._root.find_attr("percentage", ".//sentinel3:tidalRegionPixels")),
+                float(
+                    str(
+                        self._root.find_attr(
+                            "percentage", ".//sentinel3:tidalRegionPixels"))),
                 "s3:brightPixels_percentage":
-                float(self._root.find_attr("percentage", ".//sentinel3:brightPixels")),
+                float(
+                    str(
+                        self._root.find_attr("percentage",
+                                             ".//sentinel3:brightPixels"))),
                 "s3:invalidPixels_percentage":
-                float(self._root.find_attr("percentage", ".//olci:invalidPixels")),
+                float(
+                    str(
+                        self._root.find_attr("percentage",
+                                             ".//olci:invalidPixels"))),
                 "s3:cosmeticPixels_percentage":
-                float(self._root.find_attr("percentage", ".//olci:cosmeticPixels")),
+                float(
+                    str(
+                        self._root.find_attr("percentage",
+                                             ".//olci:cosmeticPixels"))),
                 "s3:duplicatedPixels_percentage":
-                float(self._root.find_attr("percentage", ".//olci:duplicatedPixels")),
+                float(
+                    str(
+                        self._root.find_attr("percentage",
+                                             ".//olci:duplicatedPixels"))),
                 "s3:saturatedPixels_percentage":
-                float(self._root.find_attr("percentage", ".//olci:saturatedPixels")),
+                float(
+                    str(
+                        self._root.find_attr("percentage",
+                                             ".//olci:saturatedPixels"))),
                 "s3:dubiousSamples_percentage":
-                float(self._root.find_attr("percentage", ".//olci:dubiousSamples")),
+                float(
+                    str(
+                        self._root.find_attr("percentage",
+                                             ".//olci:dubiousSamples"))),
             }
         elif product_type == "SL":
             result = {
@@ -189,27 +221,73 @@ class ProductMetadata:
                         "abbreviation",
                         ".//sentinel-safe:familyName[@abbreviation]")),
                 "s3:mode":
-                str(self._root.find_attr("identifier", ".//sentinel-safe:mode")),
+                str(self._root.find_attr("identifier",
+                                         ".//sentinel-safe:mode")),
                 "s3:productType":
                 self._root.findall(".//sentinel3:productType")[0].text,
                 "s3:salineWaterPixels_percentage":
-                float(self._root.find_attr("percentage", ".//slstr:classificationSummary[@grid='1 km']/sentinel3:salineWaterPixels")),
+                float(
+                    str(
+                        self._root.find_attr(
+                            "percentage",
+                            ".//slstr:classificationSummary[@grid='1 km']"
+                            "/sentinel3:salineWaterPixels"))),
                 "s3:landPixels_percentage":
-                float(self._root.find_attr("percentage", ".//slstr:classificationSummary[@grid='1 km']/sentinel3:landPixels")),
+                float(
+                    str(
+                        self._root.find_attr(
+                            "percentage",
+                            ".//slstr:classificationSummary[@grid='1 km']"
+                            "/sentinel3:landPixels"))),
                 "s3:coastalPixels_percentage":
-                float(self._root.find_attr("percentage", ".//slstr:classificationSummary[@grid='1 km']/sentinel3:coastalPixels")),
+                float(
+                    str(
+                        self._root.find_attr(
+                            "percentage",
+                            ".//slstr:classificationSummary[@grid='1 km']"
+                            "/sentinel3:coastalPixels"))),
                 "s3:freshInlandWaterPixels_percentage":
-                float(self._root.find_attr("percentage", ".//slstr:classificationSummary[@grid='1 km']/sentinel3:freshInlandWaterPixels")),
+                float(
+                    str(
+                        self._root.find_attr(
+                            "percentage",
+                            ".//slstr:classificationSummary[@grid='1 km']"
+                            "/sentinel3:freshInlandWaterPixels"))),
                 "s3:tidalRegionPixels_percentage":
-                float(self._root.find_attr("percentage", ".//slstr:classificationSummary[@grid='1 km']/sentinel3:tidalRegionPixels")),
+                float(
+                    str(
+                        self._root.find_attr(
+                            "percentage",
+                            ".//slstr:classificationSummary[@grid='1 km']"
+                            "/sentinel3:tidalRegionPixels"))),
                 "s3:cosmeticPixels_percentage":
-                float(self._root.find_attr("percentage", ".//slstr:pixelQualitySummary[@grid='1 km']/slstr:cosmeticPixels")),
+                float(
+                    str(
+                        self._root.find_attr(
+                            "percentage",
+                            ".//slstr:pixelQualitySummary[@grid='1 km']"
+                            "/slstr:cosmeticPixels"))),
                 "s3:duplicatedPixels_percentage":
-                float(self._root.find_attr("percentage", ".//slstr:pixelQualitySummary[@grid='1 km']/slstr:duplicatedPixels")),
+                float(
+                    str(
+                        self._root.find_attr(
+                            "percentage",
+                            ".//slstr:pixelQualitySummary[@grid='1 km']"
+                            "/slstr:duplicatedPixels"))),
                 "s3:saturatedPixels_percentage":
-                float(self._root.find_attr("percentage", ".//slstr:pixelQualitySummary[@grid='1 km']/slstr:saturatedPixels")),
+                float(
+                    str(
+                        self._root.find_attr(
+                            "percentage",
+                            ".//slstr:pixelQualitySummary[@grid='1 km']"
+                            "/slstr:saturatedPixels"))),
                 "s3:outOfRangePixels_percentage":
-                float(self._root.find_attr("percentage", ".//slstr:pixelQualitySummary[@grid='1 km']/slstr:outOfRangePixels")),
+                float(
+                    str(
+                        self._root.find_attr(
+                            "percentage",
+                            ".//slstr:pixelQualitySummary[@grid='1 km']"
+                            "/slstr:outOfRangePixels"))),
             }
 
         return {k: v for k, v in result.items() if v is not None}

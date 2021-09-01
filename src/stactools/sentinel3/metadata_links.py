@@ -67,10 +67,8 @@ class MetadataLinks:
 
         if product_type == "OL":
             instrument_bands = SENTINEL_OLCI_BANDS
-            instrument_name = "OLCI"
         elif product_type == "SL":
             instrument_bands = SENTINEL_SLSTR_BANDS
-            instrument_name = "SLSTR"
 
         for band in instrument_bands:
             band_dict = {

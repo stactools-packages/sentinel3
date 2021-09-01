@@ -1,14 +1,11 @@
 import logging
-import os
 
 import pystac
 from pystac.extensions.eo import EOExtension
 from pystac.extensions.projection import ProjectionExtension
 from pystac.extensions.sat import SatExtension
 
-from .constants import (SENTINEL_CONSTELLATION, SENTINEL_LICENSE,
-                        SENTINEL_OLCI_BANDS, SENTINEL_PROVIDER,
-                        SENTINEL_SLSTR_BANDS)
+from .constants import SENTINEL_CONSTELLATION, SENTINEL_PROVIDER
 from .metadata_links import MetadataLinks
 from .product_metadata import ProductMetadata
 from .properties import (fill_eo_properties, fill_proj_properties,
@@ -16,15 +13,16 @@ from .properties import (fill_eo_properties, fill_proj_properties,
 
 logger = logging.getLogger(__name__)
 
+
 def create_item(granule_href: str) -> pystac.Item:
     """Create a STC Item from a Sentinel-3 scene.
 
     Args:
         granule_href (str): The HREF to the granule.
-            This is expected to be a path to a SAFE archive.
+            This is expected to be a path to a SEN3 archive.
 
     Returns:
-        pystac.Item: An item representing the Sentinel-1 GRD scene.
+        pystac.Item: An item representing the Sentinel-3 OLCI or SLSTR scene.
     """
 
     metalinks = MetadataLinks(granule_href)
@@ -65,7 +63,6 @@ def create_item(granule_href: str) -> pystac.Item:
     item.add_asset(*metalinks.create_manifest_asset())
 
     # objects for bands
-
     item.add_asset(*metalinks.create_band_asset())
 
     return item

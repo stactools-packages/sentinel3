@@ -1,0 +1,438 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "id": "S3A_SL_1_RBT____20210827T074336_20210827T074636_20210827T094954_0179_075_320_3060_LN2_O_NR_004",
+  "properties": {
+    "sat:platform_international_designator": "2016-011A",
+    "sat:orbit_state": "descending",
+    "sat:absolute_orbit": 28783,
+    "sat:relative_orbit": 320,
+    "eo:cloud_cover": 12.909653,
+    "proj:epsg": "4326",
+    "proj:shape": [
+      1500,
+      1200
+    ],
+    "providers": [
+      {
+        "name": "ESA",
+        "roles": [
+          "producer",
+          "processor",
+          "licensor"
+        ],
+        "url": "https://earth.esa.int/web/guest/home"
+      }
+    ],
+    "platform": "Sentinel-3A",
+    "constellation": "Sentinel 3",
+    "start_datetime": "2021-08-27 07:43:35.980881+00:00",
+    "end_datetime": "2021-08-27 07:46:35.980881+00:00",
+    "s3:instrument": "SLSTR",
+    "s3:mode": "EO",
+    "s3:productType": "SL_1_RBT___",
+    "s3:salineWaterPixels_percentage": 0.0,
+    "s3:landPixels_percentage": 100.0,
+    "s3:coastalPixels_percentage": 0.0,
+    "s3:freshInlandWaterPixels_percentage": 6.677569,
+    "s3:tidalRegionPixels_percentage": 0.0,
+    "s3:cosmeticPixels_percentage": 27.02875,
+    "s3:duplicatedPixels_percentage": 5.058438,
+    "s3:saturatedPixels_percentage": 0.0,
+    "s3:outOfRangePixels_percentage": 14.225087,
+    "datetime": "2021-08-27T07:45:05.980881Z"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          22.5729,
+          -10.5646
+        ],
+        [
+          23.0319,
+          -10.6755
+        ],
+        [
+          23.4782,
+          -10.8013
+        ],
+        [
+          23.9257,
+          -10.899
+        ],
+        [
+          24.3806,
+          -11.0196
+        ],
+        [
+          24.8315,
+          -11.124
+        ],
+        [
+          25.2883,
+          -11.2454
+        ],
+        [
+          25.742,
+          -11.3496
+        ],
+        [
+          26.1935,
+          -11.4682
+        ],
+        [
+          26.6435,
+          -11.5699
+        ],
+        [
+          27.1037,
+          -11.6837
+        ],
+        [
+          27.5584,
+          -11.7958
+        ],
+        [
+          28.0096,
+          -11.8963
+        ],
+        [
+          28.4665,
+          -12.0034
+        ],
+        [
+          28.9278,
+          -12.1127
+        ],
+        [
+          29.3778,
+          -12.2149
+        ],
+        [
+          29.8373,
+          -12.3228
+        ],
+        [
+          30.2922,
+          -12.4183
+        ],
+        [
+          30.749,
+          -12.5236
+        ],
+        [
+          31.2114,
+          -12.6305
+        ],
+        [
+          31.6659,
+          -12.7247
+        ],
+        [
+          32.1291,
+          -12.8295
+        ],
+        [
+          32.5864,
+          -12.9314
+        ],
+        [
+          33.0417,
+          -13.0241
+        ],
+        [
+          33.5032,
+          -13.1256
+        ],
+        [
+          33.967,
+          -13.2259
+        ],
+        [
+          34.4234,
+          -13.3201
+        ],
+        [
+          34.8826,
+          -13.4132
+        ],
+        [
+          35.3419,
+          -13.5141
+        ],
+        [
+          35.8048,
+          -13.6094
+        ],
+        [
+          35.9776,
+          -13.6378
+        ],
+        [
+          36.5391,
+          -11.0241
+        ],
+        [
+          37.1042,
+          -8.36389
+        ],
+        [
+          37.6743,
+          -5.7033
+        ],
+        [
+          38.2488,
+          -3.05146
+        ],
+        [
+          38.242,
+          -3.04068
+        ],
+        [
+          38.0646,
+          -3.00883
+        ],
+        [
+          37.6266,
+          -2.90479
+        ],
+        [
+          37.1845,
+          -2.80637
+        ],
+        [
+          36.7265,
+          -2.71104
+        ],
+        [
+          36.2795,
+          -2.60826
+        ],
+        [
+          35.8321,
+          -2.50421
+        ],
+        [
+          35.3884,
+          -2.40943
+        ],
+        [
+          34.9399,
+          -2.30664
+        ],
+        [
+          34.4951,
+          -2.20435
+        ],
+        [
+          34.0422,
+          -2.1098
+        ],
+        [
+          33.6013,
+          -2.00825
+        ],
+        [
+          33.1505,
+          -1.90454
+        ],
+        [
+          32.703,
+          -1.81018
+        ],
+        [
+          32.2529,
+          -1.70606
+        ],
+        [
+          31.8128,
+          -1.60652
+        ],
+        [
+          31.3629,
+          -1.50178
+        ],
+        [
+          30.9113,
+          -1.40755
+        ],
+        [
+          30.4676,
+          -1.29905
+        ],
+        [
+          30.0208,
+          -1.1986
+        ],
+        [
+          29.5667,
+          -1.0977
+        ],
+        [
+          29.1261,
+          -1.00028
+        ],
+        [
+          28.6796,
+          -0.892143
+        ],
+        [
+          28.2278,
+          -0.795913
+        ],
+        [
+          27.7901,
+          -0.698288
+        ],
+        [
+          27.3318,
+          -0.587556
+        ],
+        [
+          26.8934,
+          -0.488956
+        ],
+        [
+          26.4418,
+          -0.396138
+        ],
+        [
+          25.9951,
+          -0.289773
+        ],
+        [
+          25.5498,
+          -0.190798
+        ],
+        [
+          25.1026,
+          -0.086826
+        ],
+        [
+          25.1007,
+          -0.095582
+        ],
+        [
+          24.5014,
+          -2.72124
+        ],
+        [
+          23.8788,
+          -5.35326
+        ],
+        [
+          23.233,
+          -7.98242
+        ],
+        [
+          22.5729,
+          -10.5646
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "self",
+      "href": "/opt/stactools-sentinel3/examples/S3A_SL_1_RBT____20210827T074336_20210827T074636_20210827T094954_0179_075_320_3060_LN2_O_NR_004.json",
+      "type": "application/json"
+    }
+  ],
+  "assets": {
+    "safe-manifest": {
+      "href": "./tests/data-files/S3A_SL_1_RBT____20210827T074336_20210827T074636_20210827T094954_0179_075_320_3060_LN2_O_NR_004.SEN3/xfdumanifest.xml",
+      "type": "application/xml",
+      "roles": [
+        "metadata"
+      ]
+    },
+    "eo:bands": {
+      "href": "./tests/data-files/S3A_SL_1_RBT____20210827T074336_20210827T074636_20210827T094954_0179_075_320_3060_LN2_O_NR_004.SEN3/xfdumanifest.xml",
+      "type": "application/xml",
+      "band_fields": [
+        {
+          "name": "S1",
+          "description": "Band 1 - Cloud screening, vegetation monitoring, aerosol",
+          "center_wavelength": 554.27,
+          "band_width": 19.26
+        },
+        {
+          "name": "S2",
+          "description": "Band 2 - NDVI, vegetation monitoring, aerosol",
+          "center_wavelength": 659.47,
+          "band_width": 19.25
+        },
+        {
+          "name": "S3",
+          "description": "Band 3 - NDVI, cloud flagging, pixel co-registration",
+          "center_wavelength": 868,
+          "band_width": 20.6
+        },
+        {
+          "name": "S4",
+          "description": "Band 4 - Cirrus detection over land",
+          "center_wavelength": 1374.8,
+          "band_width": 20.8
+        },
+        {
+          "name": "S5",
+          "description": "Band 5 - Cloud clearing, ice, snow, vegetation monitoring",
+          "center_wavelength": 1613.4,
+          "band_width": 60.68
+        },
+        {
+          "name": "S6",
+          "description": "Band 6 - Vegetation state and cloud clearing",
+          "center_wavelength": 2255.7,
+          "band_width": 50.15
+        },
+        {
+          "name": "S7",
+          "description": "Band 7 - SST, LST, Active fire",
+          "center_wavelength": 3742,
+          "band_width": 398
+        },
+        {
+          "name": "S8",
+          "description": "Band 8 - SST, LST, Active fire",
+          "center_wavelength": 10854,
+          "band_width": 776
+        },
+        {
+          "name": "S9",
+          "description": "Band 9 - SST, LST",
+          "center_wavelength": 12022.5,
+          "band_width": 905
+        },
+        {
+          "name": "F1",
+          "description": "Band 10 - Active fire",
+          "center_wavelength": 3742,
+          "band_width": 398
+        },
+        {
+          "name": "F2",
+          "description": "Band 11 - Active fire",
+          "center_wavelength": 10854,
+          "band_width": 776
+        }
+      ],
+      "roles": [
+        "metadata"
+      ]
+    }
+  },
+  "bbox": [
+    22.5729,
+    -13.6378,
+    38.2488,
+    -0.086826
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/sat/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/eo/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v1.0.0/schema.json"
+  ]
+}
