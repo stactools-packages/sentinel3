@@ -1,10 +1,9 @@
-from datetime import datetime
 import os
-from typing import Any, Dict, Optional, List
+from datetime import datetime
+from typing import Any, Dict, List, Optional
 
-from shapely.geometry import mapping, Polygon  # type: ignore
 from pystac.utils import str_to_datetime
-
+from shapely.geometry import Polygon, mapping  # type: ignore
 from stactools.core.io.xml import XmlElement
 
 
@@ -146,7 +145,10 @@ class ProductMetadata:
             "end_datetime":
             str(self.end_datetime),
             "s3:instrument":
-            str(self._root.find_attr("abbreviation", ".//sentinel-safe:familyName[@abbreviation]")),
+            str(
+                self._root.find_attr(
+                    "abbreviation",
+                    ".//sentinel-safe:familyName[@abbreviation]")),
             "s3:mode":
             str(self._root.find_attr("identifier", ".//sentinel-safe:mode")),
             "s3:productType":
@@ -154,17 +156,18 @@ class ProductMetadata:
         }
 
         return {k: v for k, v in result.items() if v is not None}
-    
+
     @property
     def get_shape(self):
         x_size = int(self._root.findall(".//sentinel3:columns")[0].text)
         y_size = int(self._root.findall(".//sentinel3:rows")[0].text)
         shape = [x_size, y_size]
-        
+
         return shape
-    
+
     @property
     def get_epsg(self):
-        epsg = self._root.find_attr("srsName", ".//sentinel-safe:footPrint").split("/")[-1]
-        
+        epsg = self._root.find_attr(
+            "srsName", ".//sentinel-safe:footPrint").split("/")[-1]
+
         return epsg

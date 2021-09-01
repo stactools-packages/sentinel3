@@ -2,12 +2,10 @@ import os
 from typing import List, Optional
 
 import pystac
-
 from stactools.core.io.xml import XmlElement
 
-from .constants import (SAFE_MANIFEST_ASSET_KEY, 
-                        SENTINEL_SLSTR_BANDS, 
-                        SENTINEL_OLCI_BANDS)
+from .constants import (SAFE_MANIFEST_ASSET_KEY, SENTINEL_OLCI_BANDS,
+                        SENTINEL_SLSTR_BANDS)
 
 
 class ManifestError(Exception):
@@ -58,21 +56,22 @@ class MetadataLinks:
             roles=["metadata"],
         )
         return (SAFE_MANIFEST_ASSET_KEY, asset)
-    
+
     def create_band_asset(self):
-        
+
         band_dict_list = []
-        
+
         root = XmlElement.from_file(self.product_metadata_href)
-        product_type = root.findall(".//sentinel3:productType")[0].text.split("_")[0]
-        
+        product_type = root.findall(".//sentinel3:productType")[0].text.split(
+            "_")[0]
+
         if product_type == "OL":
             instrument_bands = SENTINEL_OLCI_BANDS
             instrument_name = "OLCI"
         elif product_type == "SL":
             instrument_bands = SENTINEL_SLSTR_BANDS
             instrument_name = "SLSTR"
-        
+
         for band in instrument_bands:
             band_dict = {
                 "name": instrument_bands[band].name,
@@ -81,11 +80,9 @@ class MetadataLinks:
                 "band_width": instrument_bands[band].full_width_half_max
             }
             band_dict_list.append(band_dict)
-        
-        asset = pystac.Asset(
-            href=self.href,
-            media_type=pystac.MediaType.XML,
-            roles=["metadata"],
-            extra_fields={"eo:bands": band_dict_list}
-        )
-        return (f"{instrument_name}_bands", asset)
+
+        asset = pystac.Asset(href=self.href,
+                             media_type=pystac.MediaType.XML,
+                             roles=["metadata"],
+                             extra_fields={"band_fields": band_dict_list})
+        return ("eo:bands", asset)
