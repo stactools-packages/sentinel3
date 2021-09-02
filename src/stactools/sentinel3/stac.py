@@ -51,13 +51,13 @@ def create_item(granule_href: str) -> pystac.Item:
     proj = ProjectionExtension.ext(item, add_if_missing=True)
     fill_proj_properties(proj, product_metadata)
 
+    # s3 properties
+    item.properties.update({**product_metadata.metadata_dict})
+
     # --Common metadata--
     item.common_metadata.providers = [SENTINEL_PROVIDER]
     item.common_metadata.platform = product_metadata.platform
     item.common_metadata.constellation = SENTINEL_CONSTELLATION
-
-    # s3 properties
-    item.properties.update({**product_metadata.metadata_dict})
 
     # Add assets to item
     item.add_asset(*metalinks.create_manifest_asset())

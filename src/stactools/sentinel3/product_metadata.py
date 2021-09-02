@@ -38,7 +38,7 @@ class ProductMetadata:
 
             footprint_polygon = Polygon(footprint_points)
             geometry = mapping(footprint_polygon)
-            bbox = footprint_polygon.bounds
+            bbox = list(footprint_polygon.bounds)
 
             return (bbox, geometry)
 
