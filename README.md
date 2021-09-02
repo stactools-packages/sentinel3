@@ -14,7 +14,7 @@ This repository will assist you in the generation of STAC files for Sentinel 3 O
 
 ## Examples
 
-### STAC 
+### STAC
 
 - [OLCI Item](examples/S3A_OL_1_EFR____20210820T103153_20210820T103453_20210820T124206_0179_075_222_2160_LN1_O_NR_002.json.json)
 - [SLSTR Item](examples/S3A_SL_1_RBT____20210827T074336_20210827T074636_20210827T094954_0179_075_320_3060_LN2_O_NR_004.json)
