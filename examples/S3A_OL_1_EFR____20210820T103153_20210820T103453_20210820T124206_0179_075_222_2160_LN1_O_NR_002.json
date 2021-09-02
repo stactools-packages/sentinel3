@@ -12,19 +12,6 @@
       4865,
       4090
     ],
-    "providers": [
-      {
-        "name": "ESA",
-        "roles": [
-          "producer",
-          "processor",
-          "licensor"
-        ],
-        "url": "https://earth.esa.int/web/guest/home"
-      }
-    ],
-    "platform": "Sentinel-3A",
-    "constellation": "Sentinel 3",
     "start_datetime": "2021-08-20 10:31:52.751633+00:00",
     "end_datetime": "2021-08-20 10:34:52.751633+00:00",
     "s3:instrument": "OLCI",
@@ -40,6 +27,19 @@
     "s3:duplicatedPixels_percentage": 23.0,
     "s3:saturatedPixels_percentage": 6e-06,
     "s3:dubiousSamples_percentage": 0.0,
+    "providers": [
+      {
+        "name": "ESA",
+        "roles": [
+          "producer",
+          "processor",
+          "licensor"
+        ],
+        "url": "https://earth.esa.int/web/guest/home"
+      }
+    ],
+    "platform": "Sentinel-3A",
+    "constellation": "Sentinel 3",
     "datetime": "2021-08-20T10:33:22.751633Z"
   },
   "geometry": {
