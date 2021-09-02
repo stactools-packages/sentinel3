@@ -1,0 +1,1258 @@
+<?xml version ="1.0" encoding="UTF-8"?>
+   <xfdu:XFDU xmlns:xfdu="urn:ccsds:schema:xfdu:1" xmlns:sentinel-safe="http://www.esa.int/safe/sentinel/1.1" xmlns:gml="http://www.opengis.net/gml" xmlns:sentinel3="http://www.esa.int/safe/sentinel/sentinel-3/1.0" xmlns:olci="http://www.esa.int/safe/sentinel/sentinel-3/olci/1.0" version="esa/safe/sentinel/sentinel-3/olci/level-2/1.0">
+      <informationPackageMap>
+         <xfdu:contentUnit ID="packageUnit" unitType="Information Package" textInfo="SENTINEL-3 OLCI Level 2 Land Product" dmdID="acquisitionPeriod platform measurementOrbitReference measurementQualityInformation processing measurementFrameSet generalProductInformation olciProductInformation" pdiID="processing">
+            <xfdu:contentUnit  ID="geoCoordinatesUnit" unitType="Annotation Data Unit" textInfo="Geo Coordinates Annotations" dmdID="timeCoordinatesAnnotation">
+               <dataObjectPointer dataObjectID="geoCoordinatesData"/>
+            </xfdu:contentUnit>
+            <xfdu:contentUnit  ID="instrumentDataUnit" unitType="Annotation Data Unit" textInfo="Instrument Annotation" dmdID="geoCoordinatesAnnotation timeCoordinatesAnnotation">
+               <dataObjectPointer dataObjectID="instrumentDataData"/>
+            </xfdu:contentUnit>
+            <xfdu:contentUnit  ID="iwvUnit" unitType="Measurement Data Unit" textInfo="Integrated water vapour column" dmdID="geoCoordinatesAnnotation timeCoordinatesAnnotation">
+               <dataObjectPointer dataObjectID="iwvData"/>
+            </xfdu:contentUnit>
+            <xfdu:contentUnit  ID="lqsfUnit" unitType="Annotation Data Unit" textInfo="Land Quality and Science Flags" dmdID="geoCoordinatesAnnotation timeCoordinatesAnnotation">
+               <dataObjectPointer dataObjectID="lqsfData"/>
+            </xfdu:contentUnit>
+            <xfdu:contentUnit  ID="ogviUnit" unitType="Measurement Data Unit" textInfo="OLCI global Vegetal Index" dmdID="geoCoordinatesAnnotation timeCoordinatesAnnotation lqsfAnnotation">
+               <dataObjectPointer dataObjectID="ogviData"/>
+            </xfdu:contentUnit>
+            <xfdu:contentUnit  ID="otciUnit" unitType="Measurement Data Unit" textInfo="OLCI Terrestrial Chlorophyll Index" dmdID="geoCoordinatesAnnotation timeCoordinatesAnnotation lqsfAnnotation">
+               <dataObjectPointer dataObjectID="otciData"/>
+            </xfdu:contentUnit>
+            <xfdu:contentUnit  ID="rcOgviUnit" unitType="Annotation Data Unit" textInfo="Rectified Reflectance" dmdID="geoCoordinatesAnnotation timeCoordinatesAnnotation lqsfAnnotation">
+               <dataObjectPointer dataObjectID="rcOgviData"/>
+            </xfdu:contentUnit>
+            <xfdu:contentUnit  ID="tieGeoCoordinatesUnit" unitType="Annotation Data Unit" textInfo="Tie-Point Geo Coordinate Annotations" dmdID="timeCoordinatesAnnotation">
+               <dataObjectPointer dataObjectID="tieGeoCoordinatesData"/>
+            </xfdu:contentUnit>
+            <xfdu:contentUnit  ID="tieGeometriesUnit" unitType="Annotation Data Unit" textInfo="Tie-Point Geometries Annotations" dmdID="tieGeoCoordinatesAnnotation timeCoordinatesAnnotation">
+               <dataObjectPointer dataObjectID="tieGeometriesData"/>
+            </xfdu:contentUnit>
+            <xfdu:contentUnit  ID="tieMeteoUnit" unitType="Annotation Data Unit" textInfo="Tie-Point Meteo Annotations" dmdID="timeCoordinatesAnnotation tieGeoCoordinatesAnnotation">
+               <dataObjectPointer dataObjectID="tieMeteoData"/>
+            </xfdu:contentUnit>
+            <xfdu:contentUnit  ID="timeCoordinatesUnit" unitType="Annotation Data Unit" textInfo="Time Coordinates Annotations">
+               <dataObjectPointer dataObjectID="timeCoordinatesData"/>
+            </xfdu:contentUnit>
+         </xfdu:contentUnit>
+      </informationPackageMap>
+      <metadataSection>
+         <metadataObject ID="acquisitionPeriod" classification="DESCRIPTION" category="DMD">
+            <metadataWrap mimeType="text/xml" vocabularyName="Sentinel-SAFE" textInfo="Acquisition Period">
+               <xmlData>
+                  <sentinel-safe:acquisitionPeriod>
+                     <sentinel-safe:startTime>2018-01-05T00:24:08.795823Z</sentinel-safe:startTime>
+                     <sentinel-safe:stopTime>2018-01-05T00:25:39.511108Z</sentinel-safe:stopTime>
+                  </sentinel-safe:acquisitionPeriod>
+               </xmlData>
+            </metadataWrap>
+         </metadataObject>
+         <metadataObject ID="platform" classification="DESCRIPTION" category="DMD">
+            <metadataWrap mimeType="text/xml" vocabularyName="Sentinel-SAFE" textInfo="Platform Description">
+               <xmlData>
+                  <sentinel-safe:platform>
+                     <sentinel-safe:nssdcIdentifier>2016-011A</sentinel-safe:nssdcIdentifier>
+                     <sentinel-safe:familyName>Sentinel-3</sentinel-safe:familyName>
+                     <sentinel-safe:number>A</sentinel-safe:number>
+                     <sentinel-safe:instrument>
+                        <sentinel-safe:familyName abbreviation="OLCI">Ocean Land Colour Instrument</sentinel-safe:familyName>
+                        <sentinel-safe:mode identifier="EO">Earth Observation</sentinel-safe:mode>
+                     </sentinel-safe:instrument>
+                  </sentinel-safe:platform>
+               </xmlData>
+            </metadataWrap>
+         </metadataObject>
+         <metadataObject ID="measurementFrameSet" classification="DESCRIPTION" category="DMD">
+            <metadataWrap mimeType="text/xml" vocabularyName="Sentinel-SAFE" textInfo="Frame Set">
+               <xmlData>
+                  <sentinel-safe:frameSet>
+                     <sentinel-safe:footPrint srsName="http://www.opengis.net/def/crs/EPSG/0/4326">
+                        <gml:posList>52.6968 140.405 52.6353 141.416 52.5656 142.432 52.4872 143.446 52.4007 144.449 52.3052 145.454 52.2013 146.453 52.09 147.444 51.9693 148.431 51.84 149.416 51.7062 150.394 51.5604 151.367 51.4102 152.329 51.2481 153.288 51.0792 154.241 50.9005 155.183 50.7187 156.118 50.5272 157.048 50.3287 157.97 50.1222 158.884 52.6879 160.395 55.2413 162.085 55.4699 161.07 55.6888 160.046 55.8993 159.009 56.0996 157.96 56.2942 156.906 56.4784 155.833 56.6535 154.756 56.8159 153.669 56.9716 152.571 57.1142 151.462 57.2506 150.344 57.3767 149.22 57.4916 148.092 57.5973 146.953 57.6927 145.807 57.7773 144.66 57.8519 143.501 57.9158 142.341 57.9697 141.185 55.3302 140.798 52.6968 140.405</gml:posList>
+                     </sentinel-safe:footPrint>
+                  </sentinel-safe:frameSet>
+               </xmlData>
+            </metadataWrap>
+         </metadataObject>
+         <metadataObject ID="generalProductInformation" classification="DESCRIPTION" category="DMD">
+            <metadataWrap mimeType="text/xml" vocabularyName="Sentinel-SAFE" textInfo="General Product Information">
+               <xmlData>
+                  <sentinel3:generalProductInformation>
+                     <sentinel3:productName>S3A_OL_2_LFR____20180105T002409_20180105T002540_20180106T053045_0090_026_216_2069_LN1_O_NT_002.SEN3</sentinel3:productName>
+                     <sentinel3:productType>OL_2_LFR___</sentinel3:productType>
+                     <sentinel3:timeliness>NT</sentinel3:timeliness>
+                     <sentinel3:baselineCollection>002</sentinel3:baselineCollection>
+                     <sentinel3:creationTime>20180106T053045</sentinel3:creationTime>
+                     <sentinel3:productSize>44316928</sentinel3:productSize>
+                     <sentinel3:dumpInformation>
+                        <sentinel3:granuleNumber>1</sentinel3:granuleNumber>
+                        <sentinel3:granulePosition>FIRST</sentinel3:granulePosition>
+                        <sentinel3:dumpStart>2018-01-05T00:24:07.035802Z</sentinel3:dumpStart>
+                        <sentinel3:receivingGroundStation>CGS</sentinel3:receivingGroundStation>
+                        <sentinel3:receivingStartTime>2018-01-05T01:51:28.710684Z</sentinel3:receivingStartTime>
+                        <sentinel3:receivingStopTime>2018-01-05T01:51:49.441383Z</sentinel3:receivingStopTime>
+                     </sentinel3:dumpInformation>
+                     <sentinel3:dispositionMode>Operational</sentinel3:dispositionMode>
+                     <sentinel3:productUnit>
+                        <sentinel3:type>FRAME</sentinel3:type>
+                        <sentinel3:duration>90</sentinel3:duration>
+                        <sentinel3:alongtrackCoordinate>2069</sentinel3:alongtrackCoordinate>
+                     </sentinel3:productUnit>
+                  </sentinel3:generalProductInformation>
+               </xmlData>
+            </metadataWrap>
+         </metadataObject>
+         <metadataObject ID="olciProductInformation" classification="DESCRIPTION" category="DMD">
+            <metadataWrap mimeType="text/xml" vocabularyName="Sentinel-SAFE" textInfo="Olci Product Information">
+               <xmlData>
+                  <olci:olciProductInformation>
+                     <olci:classificationSummary>
+                        <sentinel3:salineWaterPixels percentage="13.000000"/>
+                        <sentinel3:coastalPixels percentage="0.002661"/>
+                        <sentinel3:freshInlandWaterPixels percentage="0.000000"/>
+                        <sentinel3:tidalRegionPixels percentage="1.000000"/>
+                        <sentinel3:landPixels percentage="0.000000"/>
+                        <sentinel3:cloudyPixels percentage="71.000000"/>
+                     </olci:classificationSummary>
+                     <olci:atmosphericCorrectionType>PARALLEL</olci:atmosphericCorrectionType>
+                     <olci:measurementAccuracy>2.000000</olci:measurementAccuracy>
+                     <olci:accuracyReference>0</olci:accuracyReference>
+                     <olci:imageSize>
+                        <sentinel3:rows>2062</sentinel3:rows>
+                        <sentinel3:columns>4865</sentinel3:columns>
+                     </olci:imageSize>
+                     <olci:pixelQualitySummary>
+                        <olci:invalidPixels value="357587" percentage="4.000000"/>
+                        <olci:cosmeticPixels value="0" percentage="0.000000"/>
+                        <olci:duplicatedPixels value="2357644" percentage="0.808174"/>
+                        <olci:saturatedPixels value="0" percentage="0.000000"/>
+                        <olci:dubiousSamples value="0" percentage="0.000000"/>
+                     </olci:pixelQualitySummary>
+                     <olci:ecmwfType timeRelevance="2">ANALYSIS</olci:ecmwfType>
+                     <olci:earthSunDistance>147100900191</olci:earthSunDistance>
+                     <olci:oclStatus>true</olci:oclStatus>
+                     <olci:samplingParameters>
+                        <olci:alTimeSampling>44001</olci:alTimeSampling>
+                        <olci:alSpatialSampling>294</olci:alSpatialSampling>
+                        <olci:acSpatialSampling>270</olci:acSpatialSampling>
+                        <olci:rowsPerTiePoint>1</olci:rowsPerTiePoint>
+                        <olci:columnsPerTiePoint>64</olci:columnsPerTiePoint>
+                     </olci:samplingParameters>
+                  </olci:olciProductInformation>
+               </xmlData>
+            </metadataWrap>
+         </metadataObject>
+         <metadataObject ID="measurementOrbitReference" classification="DESCRIPTION" category="DMD">
+            <metadataWrap mimeType="text/xml" vocabularyName="Sentinel-SAFE" textInfo="Orbit Reference">
+               <xmlData>
+                  <sentinel-safe:orbitReference>
+                     <sentinel-safe:orbitNumber type="start" groundTrackDirection="descending">9814</sentinel-safe:orbitNumber>
+                     <sentinel-safe:relativeOrbitNumber type="start" groundTrackDirection="descending">216</sentinel-safe:relativeOrbitNumber>
+                     <sentinel-safe:passNumber type="start" groundTrackDirection="descending">19628</sentinel-safe:passNumber>
+                     <sentinel-safe:relativePassNumber type="start" groundTrackDirection="descending">432</sentinel-safe:relativePassNumber>
+                     <sentinel-safe:cycleNumber>26</sentinel-safe:cycleNumber>
+                     <sentinel-safe:phaseIdentifier>1</sentinel-safe:phaseIdentifier>
+                     <sentinel-safe:elementSet>
+                        <sentinel-safe:ephemeris>
+                           <sentinel-safe:epoch type="TAI">2018-01-04T23:50:16.511108</sentinel-safe:epoch>
+                           <sentinel-safe:epoch type="UTC">2018-01-04T23:49:39.511108Z</sentinel-safe:epoch>
+                           <sentinel-safe:epoch type="UT1">2018-01-04T23:49:39.724331</sentinel-safe:epoch>
+                           <sentinel-safe:position>
+                              <sentinel-safe:x>6376264.5630000001</sentinel-safe:x>
+                              <sentinel-safe:y>-3308938.1120000002</sentinel-safe:y>
+                              <sentinel-safe:z>0.001</sentinel-safe:z>
+                           </sentinel-safe:position>
+                           <sentinel-safe:velocity>
+                              <sentinel-safe:x>-763.34557500000005</sentinel-safe:x>
+                              <sentinel-safe:y>-1452.418649</sentinel-safe:y>
+                              <sentinel-safe:z>7366.4027390000001</sentinel-safe:z>
+                           </sentinel-safe:velocity>
+                        </sentinel-safe:ephemeris>
+                        <sentinel-safe:ephemeris>
+                           <sentinel-safe:epoch type="TAI">2018-01-05T01:31:15.731957</sentinel-safe:epoch>
+                           <sentinel-safe:epoch type="UTC">2018-01-05T01:30:38.731957Z</sentinel-safe:epoch>
+                           <sentinel-safe:epoch type="UT1">2018-01-05T01:30:38.945110</sentinel-safe:epoch>
+                           <sentinel-safe:position>
+                              <sentinel-safe:x>4355879.4440000001</sentinel-safe:x>
+                              <sentinel-safe:y>-5712454.4179999996</sentinel-safe:y>
+                              <sentinel-safe:z>-0.001</sentinel-safe:z>
+                           </sentinel-safe:position>
+                           <sentinel-safe:velocity>
+                              <sentinel-safe:x>-1309.912235</sentinel-safe:x>
+                              <sentinel-safe:y>-988.10239100000001</sentinel-safe:y>
+                              <sentinel-safe:z>7366.4027390000001</sentinel-safe:z>
+                           </sentinel-safe:velocity>
+                        </sentinel-safe:ephemeris>
+                     </sentinel-safe:elementSet>
+                  </sentinel-safe:orbitReference>
+               </xmlData>
+            </metadataWrap>
+         </metadataObject>
+         <metadataObject ID="measurementQualityInformation" classification="DESCRIPTION" category="DMD">
+            <metadataWrap mimeType="text/xml" vocabularyName="Sentinel-SAFE" textInfo="Quality Information">
+               <xmlData>
+                  <sentinel-safe:qualityInformation>
+                     <sentinel-safe:extension>
+                        <sentinel3:productQuality>
+                           <sentinel3:onlineQualityCheck>PASSED</sentinel3:onlineQualityCheck>
+                        </sentinel3:productQuality>
+                     </sentinel-safe:extension>
+                  </sentinel-safe:qualityInformation>
+               </xmlData>
+            </metadataWrap>
+         </metadataObject>
+         <metadataObject ID="processing" classification="PROVENANCE" category="PDI">
+            <metadataWrap mimeType="text/xml" vocabularyName="Sentinel-SAFE" textInfo="Processing">
+               <xmlData>
+                  <sentinel-safe:processing name="DataProcessing" outputLevel="2" start="2018-01-06T05:34:07.000000" stop="2018-01-06T05:34:08.831648">
+                     <sentinel-safe:facility name="Land OLCI Processing and Archiving Centre [LN1]" organisation="European Space Agency" site="Oberpfaffenhofen" country="Germany">
+                        <sentinel-safe:hardware name="OPE"/>
+                        <sentinel-safe:software name="PUG" version="03.30"/>
+                     </sentinel-safe:facility>
+                     <sentinel-safe:resource name="Product Data Format Specification - OLCI Level 1 and Level 2 Instrument Products S3IPF.PDS.004" role="Applicable Document" version="2.1"/>
+                     <sentinel-safe:resource name="Metadata Specification, Excel document S3IPF.PDS.008" role="Applicable Document" version="3.3"/>
+                     <sentinel-safe:resource name="S3A_OL_2_LFR____20180105T002409_20180105T010807_20180106T033022_2638_026_216______LN1_O_NT_002.SEN3" role="L2 Product">
+                        <sentinel-safe:processing name="DataProcessing" outputLevel="2" start="2018-01-06T03:29:35.025511" stop="2018-01-06T03:48:27.116894">
+                           <sentinel-safe:facility name="Land OLCI Processing and Archiving Centre [LN1]" organisation="European Space Agency" site="Oberpfaffenhofen" country="Germany">
+                              <sentinel-safe:hardware name="OPE"/>
+                              <sentinel-safe:software name="IPF-OL-2" version="06.11"/>
+                           </sentinel-safe:facility>
+                           <sentinel-safe:resource name="S3A_OL_1_EFR____20180105T002409_20180105T010807_20180106T013345_2638_026_216______LN1_O_NT_002.SEN3" role="input_product">
+                              <sentinel-safe:processing name="DataProcessing" outputLevel="1" start="2018-01-06T01:33:35.947652" stop="2018-01-06T03:25:11.840616">
+                                 <sentinel-safe:facility name="Land OLCI Processing and Archiving Centre [LN1]" organisation="European Space Agency" site="Oberpfaffenhofen" country="Germany">
+                                    <sentinel-safe:hardware name="OPE"/>
+                                    <sentinel-safe:software name="IPF-OL-1-EO" version="06.07"/>
+                                 </sentinel-safe:facility>
+                                 <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015122_20180105T015337_6131_026_216______SVL_O_AL_002.SEN3" role="input_product,orbit_init">
+                                    <sentinel-safe:processing name="DataProcessing" outputLevel="0" start="2018-01-05T01:53:36.890565" stop="2018-01-05T01:53:41.637473">
+                                       <sentinel-safe:facility name="Svalbard Satellite Core Ground Station [SVL]" organisation="European Space Agency" site="Svalbard" country="Norway">
+                                          <sentinel-safe:hardware name="OPE"/>
+                                          <sentinel-safe:software name="IPF-0" version="06.09"/>
+                                       </sentinel-safe:facility>
+                                       <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="Time Correlation File">
+                                       </sentinel-safe:resource>
+                                       <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="FOS Orbit File (Restituted)">
+                                          <sentinel-safe:processing name="ADC_AUX_REFORMATTER">
+                                             <sentinel-safe:facility name="MAR" organisation="European Organisation for the Exploitation of Meteorological Satellites" site="Darmstadt" country="Germany">
+                                                <sentinel-safe:hardware name="OPE"/>
+                                                <sentinel-safe:software name="ADC" version="2.0"/>
+                                             </sentinel-safe:facility>
+                                          </sentinel-safe:processing>
+                                       </sentinel-safe:resource>
+                                       <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="Time Correlation File">
+                                       </sentinel-safe:resource>
+                                       <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="FOS Orbit File (Restituted)">
+                                          <sentinel-safe:processing name="ADC_AUX_REFORMATTER">
+                                             <sentinel-safe:facility name="MAR" organisation="European Organisation for the Exploitation of Meteorological Satellites" site="Darmstadt" country="Germany">
+                                                <sentinel-safe:hardware name="OPE"/>
+                                                <sentinel-safe:software name="ADC" version="2.0"/>
+                                             </sentinel-safe:facility>
+                                          </sentinel-safe:processing>
+                                       </sentinel-safe:resource>
+                                       <sentinel-safe:resource name="S3A_AX___OSF_AX_20160216T192404_99991231T235959_20170322T163046___________________EUM_O_AL_001.SEN3" role="Reference Orbit Scenario File">
+                                          <sentinel-safe:processing name="ADC_AUX_REFORMATTER">
+                                             <sentinel-safe:facility name="MAR" organisation="European Organisation for the Exploitation of Meteorological Satellites" site="Darmstadt" country="Germany">
+                                                <sentinel-safe:hardware name="OPE"/>
+                                                <sentinel-safe:software name="ADC" version="2.0"/>
+                                             </sentinel-safe:facility>
+                                          </sentinel-safe:processing>
+                                       </sentinel-safe:resource>
+                                       <sentinel-safe:resource name="S3A_TM_0_NAT__G_20180105T000929_20180105T015140_20180105T015254_6131______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                       </sentinel-safe:resource>
+                                       <sentinel-safe:resource name="S3IPF PDS 001 - i1r7 - Product Data Format Specification - Level 0" role="Product Data Format Specification - Level 0">
+                                       </sentinel-safe:resource>
+                                    </sentinel-safe:processing>
+                                 </sentinel-safe:resource>
+                                 <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015131_20180105T020031_6140_026_216______SVL_O_AL_002.SEN3" role="input_product,orbit_init">
+                                    <sentinel-safe:processing name="DataProcessing" outputLevel="0" start="2018-01-05T02:00:30.906316" stop="2018-01-05T02:00:35.627829">
+                                       <sentinel-safe:facility name="Svalbard Satellite Core Ground Station [SVL]" organisation="European Space Agency" site="Svalbard" country="Norway">
+                                          <sentinel-safe:hardware name="OPE"/>
+                                          <sentinel-safe:software name="IPF-0" version="06.09"/>
+                                       </sentinel-safe:facility>
+                                       <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="Time Correlation File">
+                                       </sentinel-safe:resource>
+                                       <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="FOS Orbit File (Restituted)">
+                                          <sentinel-safe:processing name="ADC_AUX_REFORMATTER">
+                                             <sentinel-safe:facility name="MAR" organisation="European Organisation for the Exploitation of Meteorological Satellites" site="Darmstadt" country="Germany">
+                                                <sentinel-safe:hardware name="OPE"/>
+                                                <sentinel-safe:software name="ADC" version="2.0"/>
+                                             </sentinel-safe:facility>
+                                          </sentinel-safe:processing>
+                                       </sentinel-safe:resource>
+                                       <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="Time Correlation File">
+                                       </sentinel-safe:resource>
+                                       <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="FOS Orbit File (Restituted)">
+                                          <sentinel-safe:processing name="ADC_AUX_REFORMATTER">
+                                             <sentinel-safe:facility name="MAR" organisation="European Organisation for the Exploitation of Meteorological Satellites" site="Darmstadt" country="Germany">
+                                                <sentinel-safe:hardware name="OPE"/>
+                                                <sentinel-safe:software name="ADC" version="2.0"/>
+                                             </sentinel-safe:facility>
+                                          </sentinel-safe:processing>
+                                       </sentinel-safe:resource>
+                                       <sentinel-safe:resource name="S3A_AX___OSF_AX_20160216T192404_99991231T235959_20170322T163046___________________EUM_O_AL_001.SEN3" role="Reference Orbit Scenario File">
+                                          <sentinel-safe:processing name="ADC_AUX_REFORMATTER">
+                                             <sentinel-safe:facility name="MAR" organisation="European Organisation for the Exploitation of Meteorological Satellites" site="Darmstadt" country="Germany">
+                                                <sentinel-safe:hardware name="OPE"/>
+                                                <sentinel-safe:software name="ADC" version="2.0"/>
+                                             </sentinel-safe:facility>
+                                          </sentinel-safe:processing>
+                                       </sentinel-safe:resource>
+                                       <sentinel-safe:resource name="S3A_TM_0_NAT__G_20180105T000929_20180105T015149_20180105T015951_6140______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                       </sentinel-safe:resource>
+                                       <sentinel-safe:resource name="S3IPF PDS 001 - i1r7 - Product Data Format Specification - Level 0" role="Product Data Format Specification - Level 0">
+                                       </sentinel-safe:resource>
+                                    </sentinel-safe:processing>
+                                 </sentinel-safe:resource>
+                                 <sentinel-safe:resource name="S3A_OL_0_EFR____20180105T002409_20180105T010807_20180105T034859_2638_026_216______LN1_O_NT_002.SEN3" role="input_product">
+                                    <sentinel-safe:processing name="DataProcessing" outputLevel="0" start="2018-01-05T03:48:00.882767" stop="2018-01-05T03:49:31.854903">
+                                       <sentinel-safe:facility name="Land OLCI Processing and Archiving Centre [LN1]" organisation="European Space Agency" site="Oberpfaffenhofen" country="Germany">
+                                          <sentinel-safe:hardware name="OPE"/>
+                                          <sentinel-safe:software name="PUG" version="03.30"/>
+                                       </sentinel-safe:facility>
+                                       <sentinel-safe:resource name="S3IPF PDS 001 - i1r1 - Product Data Format Specification - Level 0" role="Applicable Document" version="1.6">
+                                       </sentinel-safe:resource>
+                                       <sentinel-safe:resource name="S3A_OL_0_EFR____20180105T002409_20180105T002607_20180105T020035_0118_026_216______SVL_O_NR_002.SEN3" role="L0 Product" version="1.6">
+                                          <sentinel-safe:processing name="DataProcessing" start="2018-01-05T02:00:32.851000" stop="2018-01-05T02:00:36.190491">
+                                             <sentinel-safe:facility name="Svalbard Satellite Core Ground Station [SVL]" organisation="European Space Agency" site="Svalbard" country="Norway">
+                                                <sentinel-safe:hardware name="OPE"/>
+                                                <sentinel-safe:software name="IPF-0" version="06.09"/>
+                                             </sentinel-safe:facility>
+                                             <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="Time Correlation File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="FOS Orbit File (Restituted)">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_AX___OSF_AX_20160216T192404_99991231T235959_20170322T163046___________________EUM_O_AL_001.SEN3" role="Reference Orbit Scenario File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_OL_0_EFR__G_20180105T002425_20180105T002625_20180105T015954_0120______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015122_20180105T015337_6131_026_216______SVL_O_AL_002.SEN3" role="Orbit File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015122_20180105T015337_6131_026_216______SVL_O_AL_002.SEN3" role="L0 Product">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT__G_20180105T000929_20180105T015140_20180105T015254_6131______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3IPF PDS 001 - i1r7 - Product Data Format Specification - Level 0" role="Product Data Format Specification - Level 0">
+                                             </sentinel-safe:resource>
+                                          </sentinel-safe:processing>
+                                       </sentinel-safe:resource>
+                                       <sentinel-safe:resource name="S3A_OL_0_EFR____20180105T002607_20180105T002807_20180105T020127_0119_026_216______SVL_O_NR_002.SEN3" role="L0 Product" version="1.6">
+                                          <sentinel-safe:processing name="DataProcessing" start="2018-01-05T02:01:25.613411" stop="2018-01-05T02:01:28.964578">
+                                             <sentinel-safe:facility name="Svalbard Satellite Core Ground Station [SVL]" organisation="European Space Agency" site="Svalbard" country="Norway">
+                                                <sentinel-safe:hardware name="OPE"/>
+                                                <sentinel-safe:software name="IPF-0" version="06.09"/>
+                                             </sentinel-safe:facility>
+                                             <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="Time Correlation File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="FOS Orbit File (Restituted)">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_AX___OSF_AX_20160216T192404_99991231T235959_20170322T163046___________________EUM_O_AL_001.SEN3" role="Reference Orbit Scenario File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_OL_0_EFR__G_20180105T002625_20180105T002825_20180105T015250_0120______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015122_20180105T015337_6131_026_216______SVL_O_AL_002.SEN3" role="Orbit File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015122_20180105T015337_6131_026_216______SVL_O_AL_002.SEN3" role="L0 Product">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT__G_20180105T000929_20180105T015140_20180105T015254_6131______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3IPF PDS 001 - i1r7 - Product Data Format Specification - Level 0" role="Product Data Format Specification - Level 0">
+                                             </sentinel-safe:resource>
+                                          </sentinel-safe:processing>
+                                       </sentinel-safe:resource>
+                                       <sentinel-safe:resource name="S3A_OL_0_EFR____20180105T002807_20180105T003007_20180105T020125_0119_026_216______SVL_O_NR_002.SEN3" role="L0 Product" version="1.6">
+                                          <sentinel-safe:processing name="DataProcessing" start="2018-01-05T02:01:22.797309" stop="2018-01-05T02:01:26.094383">
+                                             <sentinel-safe:facility name="Svalbard Satellite Core Ground Station [SVL]" organisation="European Space Agency" site="Svalbard" country="Norway">
+                                                <sentinel-safe:hardware name="OPE"/>
+                                                <sentinel-safe:software name="IPF-0" version="06.09"/>
+                                             </sentinel-safe:facility>
+                                             <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="Time Correlation File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="FOS Orbit File (Restituted)">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_AX___OSF_AX_20160216T192404_99991231T235959_20170322T163046___________________EUM_O_AL_001.SEN3" role="Reference Orbit Scenario File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_OL_0_EFR__G_20180105T002825_20180105T003025_20180105T015250_0120______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015122_20180105T015337_6131_026_216______SVL_O_AL_002.SEN3" role="Orbit File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015122_20180105T015337_6131_026_216______SVL_O_AL_002.SEN3" role="L0 Product">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT__G_20180105T000929_20180105T015140_20180105T015254_6131______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3IPF PDS 001 - i1r7 - Product Data Format Specification - Level 0" role="Product Data Format Specification - Level 0">
+                                             </sentinel-safe:resource>
+                                          </sentinel-safe:processing>
+                                       </sentinel-safe:resource>
+                                       <sentinel-safe:resource name="S3A_OL_0_EFR____20180105T003007_20180105T003207_20180105T020127_0119_026_216______SVL_O_NR_002.SEN3" role="L0 Product" version="1.6">
+                                          <sentinel-safe:processing name="DataProcessing" start="2018-01-05T02:01:25.523907" stop="2018-01-05T02:01:28.871114">
+                                             <sentinel-safe:facility name="Svalbard Satellite Core Ground Station [SVL]" organisation="European Space Agency" site="Svalbard" country="Norway">
+                                                <sentinel-safe:hardware name="OPE"/>
+                                                <sentinel-safe:software name="IPF-0" version="06.09"/>
+                                             </sentinel-safe:facility>
+                                             <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="Time Correlation File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="FOS Orbit File (Restituted)">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_AX___OSF_AX_20160216T192404_99991231T235959_20170322T163046___________________EUM_O_AL_001.SEN3" role="Reference Orbit Scenario File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_OL_0_EFR__G_20180105T003025_20180105T003225_20180105T015256_0120______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015122_20180105T015337_6131_026_216______SVL_O_AL_002.SEN3" role="Orbit File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015122_20180105T015337_6131_026_216______SVL_O_AL_002.SEN3" role="L0 Product">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT__G_20180105T000929_20180105T015140_20180105T015254_6131______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3IPF PDS 001 - i1r7 - Product Data Format Specification - Level 0" role="Product Data Format Specification - Level 0">
+                                             </sentinel-safe:resource>
+                                          </sentinel-safe:processing>
+                                       </sentinel-safe:resource>
+                                       <sentinel-safe:resource name="S3A_OL_0_EFR____20180105T003207_20180105T003407_20180105T020128_0119_026_216______SVL_O_NR_002.SEN3" role="L0 Product" version="1.6">
+                                          <sentinel-safe:processing name="DataProcessing" start="2018-01-05T02:01:25.683219" stop="2018-01-05T02:01:29.073471">
+                                             <sentinel-safe:facility name="Svalbard Satellite Core Ground Station [SVL]" organisation="European Space Agency" site="Svalbard" country="Norway">
+                                                <sentinel-safe:hardware name="OPE"/>
+                                                <sentinel-safe:software name="IPF-0" version="06.09"/>
+                                             </sentinel-safe:facility>
+                                             <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="Time Correlation File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="FOS Orbit File (Restituted)">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_AX___OSF_AX_20160216T192404_99991231T235959_20170322T163046___________________EUM_O_AL_001.SEN3" role="Reference Orbit Scenario File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_OL_0_EFR__G_20180105T003225_20180105T003425_20180105T015316_0120______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015122_20180105T015337_6131_026_216______SVL_O_AL_002.SEN3" role="Orbit File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015122_20180105T015337_6131_026_216______SVL_O_AL_002.SEN3" role="L0 Product">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT__G_20180105T000929_20180105T015140_20180105T015254_6131______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3IPF PDS 001 - i1r7 - Product Data Format Specification - Level 0" role="Product Data Format Specification - Level 0">
+                                             </sentinel-safe:resource>
+                                          </sentinel-safe:processing>
+                                       </sentinel-safe:resource>
+                                       <sentinel-safe:resource name="S3A_OL_0_EFR____20180105T003407_20180105T003607_20180105T020136_0119_026_216______SVL_O_NR_002.SEN3" role="L0 Product" version="1.6">
+                                          <sentinel-safe:processing name="DataProcessing" start="2018-01-05T02:01:33.740779" stop="2018-01-05T02:01:37.166083">
+                                             <sentinel-safe:facility name="Svalbard Satellite Core Ground Station [SVL]" organisation="European Space Agency" site="Svalbard" country="Norway">
+                                                <sentinel-safe:hardware name="OPE"/>
+                                                <sentinel-safe:software name="IPF-0" version="06.09"/>
+                                             </sentinel-safe:facility>
+                                             <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="Time Correlation File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="FOS Orbit File (Restituted)">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_AX___OSF_AX_20160216T192404_99991231T235959_20170322T163046___________________EUM_O_AL_001.SEN3" role="Reference Orbit Scenario File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_OL_0_EFR__G_20180105T003425_20180105T003625_20180105T015342_0120______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015122_20180105T015337_6131_026_216______SVL_O_AL_002.SEN3" role="Orbit File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015122_20180105T015337_6131_026_216______SVL_O_AL_002.SEN3" role="L0 Product">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT__G_20180105T000929_20180105T015140_20180105T015254_6131______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3IPF PDS 001 - i1r7 - Product Data Format Specification - Level 0" role="Product Data Format Specification - Level 0">
+                                             </sentinel-safe:resource>
+                                          </sentinel-safe:processing>
+                                       </sentinel-safe:resource>
+                                       <sentinel-safe:resource name="S3A_OL_0_EFR____20180105T003607_20180105T003807_20180105T020157_0119_026_216______SVL_O_NR_002.SEN3" role="L0 Product" version="1.6">
+                                          <sentinel-safe:processing name="DataProcessing" start="2018-01-05T02:01:55.310040" stop="2018-01-05T02:01:58.673614">
+                                             <sentinel-safe:facility name="Svalbard Satellite Core Ground Station [SVL]" organisation="European Space Agency" site="Svalbard" country="Norway">
+                                                <sentinel-safe:hardware name="OPE"/>
+                                                <sentinel-safe:software name="IPF-0" version="06.09"/>
+                                             </sentinel-safe:facility>
+                                             <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="Time Correlation File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="FOS Orbit File (Restituted)">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_AX___OSF_AX_20160216T192404_99991231T235959_20170322T163046___________________EUM_O_AL_001.SEN3" role="Reference Orbit Scenario File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_OL_0_EFR__G_20180105T003625_20180105T003825_20180105T015402_0120______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015122_20180105T015337_6131_026_216______SVL_O_AL_002.SEN3" role="Orbit File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015122_20180105T015337_6131_026_216______SVL_O_AL_002.SEN3" role="L0 Product">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT__G_20180105T000929_20180105T015140_20180105T015254_6131______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3IPF PDS 001 - i1r7 - Product Data Format Specification - Level 0" role="Product Data Format Specification - Level 0">
+                                             </sentinel-safe:resource>
+                                          </sentinel-safe:processing>
+                                       </sentinel-safe:resource>
+                                       <sentinel-safe:resource name="S3A_OL_0_EFR____20180105T003807_20180105T004007_20180105T020157_0119_026_216______SVL_O_NR_002.SEN3" role="L0 Product" version="1.6">
+                                          <sentinel-safe:processing name="DataProcessing" start="2018-01-05T02:01:55.487744" stop="2018-01-05T02:01:58.851509">
+                                             <sentinel-safe:facility name="Svalbard Satellite Core Ground Station [SVL]" organisation="European Space Agency" site="Svalbard" country="Norway">
+                                                <sentinel-safe:hardware name="OPE"/>
+                                                <sentinel-safe:software name="IPF-0" version="06.09"/>
+                                             </sentinel-safe:facility>
+                                             <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="Time Correlation File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="FOS Orbit File (Restituted)">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_AX___OSF_AX_20160216T192404_99991231T235959_20170322T163046___________________EUM_O_AL_001.SEN3" role="Reference Orbit Scenario File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_OL_0_EFR__G_20180105T003825_20180105T004025_20180105T015422_0120______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015122_20180105T015337_6131_026_216______SVL_O_AL_002.SEN3" role="Orbit File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015122_20180105T015337_6131_026_216______SVL_O_AL_002.SEN3" role="L0 Product">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT__G_20180105T000929_20180105T015140_20180105T015254_6131______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3IPF PDS 001 - i1r7 - Product Data Format Specification - Level 0" role="Product Data Format Specification - Level 0">
+                                             </sentinel-safe:resource>
+                                          </sentinel-safe:processing>
+                                       </sentinel-safe:resource>
+                                       <sentinel-safe:resource name="S3A_OL_0_EFR____20180105T004007_20180105T004207_20180105T020306_0119_026_216______SVL_O_NR_002.SEN3" role="L0 Product" version="1.6">
+                                          <sentinel-safe:processing name="DataProcessing" start="2018-01-05T02:03:04.520788" stop="2018-01-05T02:03:07.898139">
+                                             <sentinel-safe:facility name="Svalbard Satellite Core Ground Station [SVL]" organisation="European Space Agency" site="Svalbard" country="Norway">
+                                                <sentinel-safe:hardware name="OPE"/>
+                                                <sentinel-safe:software name="IPF-0" version="06.09"/>
+                                             </sentinel-safe:facility>
+                                             <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="Time Correlation File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="FOS Orbit File (Restituted)">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_AX___OSF_AX_20160216T192404_99991231T235959_20170322T163046___________________EUM_O_AL_001.SEN3" role="Reference Orbit Scenario File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_OL_0_EFR__G_20180105T004025_20180105T004225_20180105T015443_0120______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015122_20180105T015337_6131_026_216______SVL_O_AL_002.SEN3" role="Orbit File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015122_20180105T015337_6131_026_216______SVL_O_AL_002.SEN3" role="L0 Product">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT__G_20180105T000929_20180105T015140_20180105T015254_6131______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3IPF PDS 001 - i1r7 - Product Data Format Specification - Level 0" role="Product Data Format Specification - Level 0">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015131_20180105T020031_6140_026_216______SVL_O_AL_002.SEN3" role="L0 Product">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT__G_20180105T000929_20180105T015149_20180105T015951_6140______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                          </sentinel-safe:processing>
+                                       </sentinel-safe:resource>
+                                       <sentinel-safe:resource name="S3A_OL_0_EFR____20180105T004207_20180105T004407_20180105T020245_0119_026_216______SVL_O_NR_002.SEN3" role="L0 Product" version="1.6">
+                                          <sentinel-safe:processing name="DataProcessing" start="2018-01-05T02:02:42.906084" stop="2018-01-05T02:02:46.289732">
+                                             <sentinel-safe:facility name="Svalbard Satellite Core Ground Station [SVL]" organisation="European Space Agency" site="Svalbard" country="Norway">
+                                                <sentinel-safe:hardware name="OPE"/>
+                                                <sentinel-safe:software name="IPF-0" version="06.09"/>
+                                             </sentinel-safe:facility>
+                                             <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="Time Correlation File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="FOS Orbit File (Restituted)">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_AX___OSF_AX_20160216T192404_99991231T235959_20170322T163046___________________EUM_O_AL_001.SEN3" role="Reference Orbit Scenario File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_OL_0_EFR__G_20180105T004225_20180105T004425_20180105T015503_0120______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015122_20180105T015337_6131_026_216______SVL_O_AL_002.SEN3" role="Orbit File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015122_20180105T015337_6131_026_216______SVL_O_AL_002.SEN3" role="L0 Product">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT__G_20180105T000929_20180105T015140_20180105T015254_6131______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3IPF PDS 001 - i1r7 - Product Data Format Specification - Level 0" role="Product Data Format Specification - Level 0">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015131_20180105T020031_6140_026_216______SVL_O_AL_002.SEN3" role="L0 Product">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT__G_20180105T000929_20180105T015149_20180105T015951_6140______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                          </sentinel-safe:processing>
+                                       </sentinel-safe:resource>
+                                       <sentinel-safe:resource name="S3A_OL_0_EFR____20180105T004407_20180105T004607_20180105T020246_0119_026_216______SVL_O_NR_002.SEN3" role="L0 Product" version="1.6">
+                                          <sentinel-safe:processing name="DataProcessing" start="2018-01-05T02:02:43.881943" stop="2018-01-05T02:02:47.265064">
+                                             <sentinel-safe:facility name="Svalbard Satellite Core Ground Station [SVL]" organisation="European Space Agency" site="Svalbard" country="Norway">
+                                                <sentinel-safe:hardware name="OPE"/>
+                                                <sentinel-safe:software name="IPF-0" version="06.09"/>
+                                             </sentinel-safe:facility>
+                                             <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="Time Correlation File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="FOS Orbit File (Restituted)">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_AX___OSF_AX_20160216T192404_99991231T235959_20170322T163046___________________EUM_O_AL_001.SEN3" role="Reference Orbit Scenario File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_OL_0_EFR__G_20180105T004425_20180105T004625_20180105T015524_0120______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015122_20180105T015337_6131_026_216______SVL_O_AL_002.SEN3" role="Orbit File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015122_20180105T015337_6131_026_216______SVL_O_AL_002.SEN3" role="L0 Product">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT__G_20180105T000929_20180105T015140_20180105T015254_6131______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3IPF PDS 001 - i1r7 - Product Data Format Specification - Level 0" role="Product Data Format Specification - Level 0">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015131_20180105T020031_6140_026_216______SVL_O_AL_002.SEN3" role="L0 Product">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT__G_20180105T000929_20180105T015149_20180105T015951_6140______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                          </sentinel-safe:processing>
+                                       </sentinel-safe:resource>
+                                       <sentinel-safe:resource name="S3A_OL_0_EFR____20180105T004607_20180105T004807_20180105T020158_0119_026_216______SVL_O_NR_002.SEN3" role="L0 Product" version="1.6">
+                                          <sentinel-safe:processing name="DataProcessing" start="2018-01-05T02:01:56.247558" stop="2018-01-05T02:01:59.486572">
+                                             <sentinel-safe:facility name="Svalbard Satellite Core Ground Station [SVL]" organisation="European Space Agency" site="Svalbard" country="Norway">
+                                                <sentinel-safe:hardware name="OPE"/>
+                                                <sentinel-safe:software name="IPF-0" version="06.09"/>
+                                             </sentinel-safe:facility>
+                                             <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="Time Correlation File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="FOS Orbit File (Restituted)">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_AX___OSF_AX_20160216T192404_99991231T235959_20170322T163046___________________EUM_O_AL_001.SEN3" role="Reference Orbit Scenario File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_OL_0_EFR__G_20180105T004625_20180105T004825_20180105T015544_0120______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015122_20180105T015337_6131_026_216______SVL_O_AL_002.SEN3" role="Orbit File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015122_20180105T015337_6131_026_216______SVL_O_AL_002.SEN3" role="L0 Product">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT__G_20180105T000929_20180105T015140_20180105T015254_6131______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3IPF PDS 001 - i1r7 - Product Data Format Specification - Level 0" role="Product Data Format Specification - Level 0">
+                                             </sentinel-safe:resource>
+                                          </sentinel-safe:processing>
+                                       </sentinel-safe:resource>
+                                       <sentinel-safe:resource name="S3A_OL_0_EFR____20180105T004807_20180105T005007_20180105T020257_0119_026_216______SVL_O_NR_002.SEN3" role="L0 Product" version="1.6">
+                                          <sentinel-safe:processing name="DataProcessing" start="2018-01-05T02:02:54.596785" stop="2018-01-05T02:02:58.113562">
+                                             <sentinel-safe:facility name="Svalbard Satellite Core Ground Station [SVL]" organisation="European Space Agency" site="Svalbard" country="Norway">
+                                                <sentinel-safe:hardware name="OPE"/>
+                                                <sentinel-safe:software name="IPF-0" version="06.09"/>
+                                             </sentinel-safe:facility>
+                                             <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="Time Correlation File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="FOS Orbit File (Restituted)">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_AX___OSF_AX_20160216T192404_99991231T235959_20170322T163046___________________EUM_O_AL_001.SEN3" role="Reference Orbit Scenario File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_OL_0_EFR__G_20180105T004825_20180105T005025_20180105T015555_0120______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015122_20180105T015337_6131_026_216______SVL_O_AL_002.SEN3" role="Orbit File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015122_20180105T015337_6131_026_216______SVL_O_AL_002.SEN3" role="L0 Product">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT__G_20180105T000929_20180105T015140_20180105T015254_6131______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3IPF PDS 001 - i1r7 - Product Data Format Specification - Level 0" role="Product Data Format Specification - Level 0">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015131_20180105T020031_6140_026_216______SVL_O_AL_002.SEN3" role="L0 Product">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT__G_20180105T000929_20180105T015149_20180105T015951_6140______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                          </sentinel-safe:processing>
+                                       </sentinel-safe:resource>
+                                       <sentinel-safe:resource name="S3A_OL_0_EFR____20180105T005007_20180105T005207_20180105T020338_0119_026_216______SVL_O_NR_002.SEN3" role="L0 Product" version="1.6">
+                                          <sentinel-safe:processing name="DataProcessing" start="2018-01-05T02:03:35.819263" stop="2018-01-05T02:03:39.210719">
+                                             <sentinel-safe:facility name="Svalbard Satellite Core Ground Station [SVL]" organisation="European Space Agency" site="Svalbard" country="Norway">
+                                                <sentinel-safe:hardware name="OPE"/>
+                                                <sentinel-safe:software name="IPF-0" version="06.09"/>
+                                             </sentinel-safe:facility>
+                                             <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="Time Correlation File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="FOS Orbit File (Restituted)">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_AX___OSF_AX_20160216T192404_99991231T235959_20170322T163046___________________EUM_O_AL_001.SEN3" role="Reference Orbit Scenario File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_OL_0_EFR__G_20180105T005025_20180105T005225_20180105T015610_0120______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015122_20180105T015337_6131_026_216______SVL_O_AL_002.SEN3" role="Orbit File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015122_20180105T015337_6131_026_216______SVL_O_AL_002.SEN3" role="L0 Product">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT__G_20180105T000929_20180105T015140_20180105T015254_6131______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3IPF PDS 001 - i1r7 - Product Data Format Specification - Level 0" role="Product Data Format Specification - Level 0">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015131_20180105T020031_6140_026_216______SVL_O_AL_002.SEN3" role="L0 Product">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT__G_20180105T000929_20180105T015149_20180105T015951_6140______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                          </sentinel-safe:processing>
+                                       </sentinel-safe:resource>
+                                       <sentinel-safe:resource name="S3A_OL_0_EFR____20180105T005207_20180105T005407_20180105T020258_0119_026_216______SVL_O_NR_002.SEN3" role="L0 Product" version="1.6">
+                                          <sentinel-safe:processing name="DataProcessing" start="2018-01-05T02:02:56.461568" stop="2018-01-05T02:02:59.855756">
+                                             <sentinel-safe:facility name="Svalbard Satellite Core Ground Station [SVL]" organisation="European Space Agency" site="Svalbard" country="Norway">
+                                                <sentinel-safe:hardware name="OPE"/>
+                                                <sentinel-safe:software name="IPF-0" version="06.09"/>
+                                             </sentinel-safe:facility>
+                                             <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="Time Correlation File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="FOS Orbit File (Restituted)">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_AX___OSF_AX_20160216T192404_99991231T235959_20170322T163046___________________EUM_O_AL_001.SEN3" role="Reference Orbit Scenario File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_OL_0_EFR__G_20180105T005225_20180105T005425_20180105T015626_0120______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015122_20180105T015337_6131_026_216______SVL_O_AL_002.SEN3" role="Orbit File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015122_20180105T015337_6131_026_216______SVL_O_AL_002.SEN3" role="L0 Product">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT__G_20180105T000929_20180105T015140_20180105T015254_6131______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3IPF PDS 001 - i1r7 - Product Data Format Specification - Level 0" role="Product Data Format Specification - Level 0">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015131_20180105T020031_6140_026_216______SVL_O_AL_002.SEN3" role="L0 Product">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT__G_20180105T000929_20180105T015149_20180105T015951_6140______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                          </sentinel-safe:processing>
+                                       </sentinel-safe:resource>
+                                       <sentinel-safe:resource name="S3A_OL_0_EFR____20180105T005407_20180105T005607_20180105T020331_0119_026_216______SVL_O_NR_002.SEN3" role="L0 Product" version="1.6">
+                                          <sentinel-safe:processing name="DataProcessing" start="2018-01-05T02:03:29.640288" stop="2018-01-05T02:03:33.006585">
+                                             <sentinel-safe:facility name="Svalbard Satellite Core Ground Station [SVL]" organisation="European Space Agency" site="Svalbard" country="Norway">
+                                                <sentinel-safe:hardware name="OPE"/>
+                                                <sentinel-safe:software name="IPF-0" version="06.09"/>
+                                             </sentinel-safe:facility>
+                                             <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="Time Correlation File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="FOS Orbit File (Restituted)">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_AX___OSF_AX_20160216T192404_99991231T235959_20170322T163046___________________EUM_O_AL_001.SEN3" role="Reference Orbit Scenario File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_OL_0_EFR__G_20180105T005425_20180105T005625_20180105T015641_0120______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015122_20180105T015337_6131_026_216______SVL_O_AL_002.SEN3" role="Orbit File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015122_20180105T015337_6131_026_216______SVL_O_AL_002.SEN3" role="L0 Product">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT__G_20180105T000929_20180105T015140_20180105T015254_6131______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3IPF PDS 001 - i1r7 - Product Data Format Specification - Level 0" role="Product Data Format Specification - Level 0">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015131_20180105T020031_6140_026_216______SVL_O_AL_002.SEN3" role="L0 Product">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT__G_20180105T000929_20180105T015149_20180105T015951_6140______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                          </sentinel-safe:processing>
+                                       </sentinel-safe:resource>
+                                       <sentinel-safe:resource name="S3A_OL_0_EFR____20180105T005607_20180105T005807_20180105T020410_0119_026_216______SVL_O_NR_002.SEN3" role="L0 Product" version="1.6">
+                                          <sentinel-safe:processing name="DataProcessing" start="2018-01-05T02:04:08.651446" stop="2018-01-05T02:04:12.016630">
+                                             <sentinel-safe:facility name="Svalbard Satellite Core Ground Station [SVL]" organisation="European Space Agency" site="Svalbard" country="Norway">
+                                                <sentinel-safe:hardware name="OPE"/>
+                                                <sentinel-safe:software name="IPF-0" version="06.09"/>
+                                             </sentinel-safe:facility>
+                                             <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="Time Correlation File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="FOS Orbit File (Restituted)">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_AX___OSF_AX_20160216T192404_99991231T235959_20170322T163046___________________EUM_O_AL_001.SEN3" role="Reference Orbit Scenario File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_OL_0_EFR__G_20180105T005625_20180105T005825_20180105T015652_0120______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015122_20180105T015337_6131_026_216______SVL_O_AL_002.SEN3" role="Orbit File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015122_20180105T015337_6131_026_216______SVL_O_AL_002.SEN3" role="L0 Product">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT__G_20180105T000929_20180105T015140_20180105T015254_6131______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3IPF PDS 001 - i1r7 - Product Data Format Specification - Level 0" role="Product Data Format Specification - Level 0">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015131_20180105T020031_6140_026_216______SVL_O_AL_002.SEN3" role="L0 Product">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT__G_20180105T000929_20180105T015149_20180105T015951_6140______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                          </sentinel-safe:processing>
+                                       </sentinel-safe:resource>
+                                       <sentinel-safe:resource name="S3A_OL_0_EFR____20180105T005807_20180105T010007_20180105T020304_0119_026_216______SVL_O_NR_002.SEN3" role="L0 Product" version="1.6">
+                                          <sentinel-safe:processing name="DataProcessing" start="2018-01-05T02:03:01.774036" stop="2018-01-05T02:03:05.021105">
+                                             <sentinel-safe:facility name="Svalbard Satellite Core Ground Station [SVL]" organisation="European Space Agency" site="Svalbard" country="Norway">
+                                                <sentinel-safe:hardware name="OPE"/>
+                                                <sentinel-safe:software name="IPF-0" version="06.09"/>
+                                             </sentinel-safe:facility>
+                                             <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="Time Correlation File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="FOS Orbit File (Restituted)">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_AX___OSF_AX_20160216T192404_99991231T235959_20170322T163046___________________EUM_O_AL_001.SEN3" role="Reference Orbit Scenario File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_OL_0_EFR__G_20180105T005825_20180105T010025_20180105T015707_0120______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015122_20180105T015337_6131_026_216______SVL_O_AL_002.SEN3" role="Orbit File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015122_20180105T015337_6131_026_216______SVL_O_AL_002.SEN3" role="L0 Product">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT__G_20180105T000929_20180105T015140_20180105T015254_6131______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3IPF PDS 001 - i1r7 - Product Data Format Specification - Level 0" role="Product Data Format Specification - Level 0">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015131_20180105T020031_6140_026_216______SVL_O_AL_002.SEN3" role="L0 Product">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT__G_20180105T000929_20180105T015149_20180105T015951_6140______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                          </sentinel-safe:processing>
+                                       </sentinel-safe:resource>
+                                       <sentinel-safe:resource name="S3A_OL_0_EFR____20180105T010007_20180105T010207_20180105T020331_0119_026_216______SVL_O_NR_002.SEN3" role="L0 Product" version="1.6">
+                                          <sentinel-safe:processing name="DataProcessing" start="2018-01-05T02:03:29.127860" stop="2018-01-05T02:03:32.392617">
+                                             <sentinel-safe:facility name="Svalbard Satellite Core Ground Station [SVL]" organisation="European Space Agency" site="Svalbard" country="Norway">
+                                                <sentinel-safe:hardware name="OPE"/>
+                                                <sentinel-safe:software name="IPF-0" version="06.09"/>
+                                             </sentinel-safe:facility>
+                                             <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="Time Correlation File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="FOS Orbit File (Restituted)">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_AX___OSF_AX_20160216T192404_99991231T235959_20170322T163046___________________EUM_O_AL_001.SEN3" role="Reference Orbit Scenario File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_OL_0_EFR__G_20180105T010025_20180105T010225_20180105T015718_0120______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015122_20180105T015337_6131_026_216______SVL_O_AL_002.SEN3" role="Orbit File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015122_20180105T015337_6131_026_216______SVL_O_AL_002.SEN3" role="L0 Product">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT__G_20180105T000929_20180105T015140_20180105T015254_6131______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3IPF PDS 001 - i1r7 - Product Data Format Specification - Level 0" role="Product Data Format Specification - Level 0">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015131_20180105T020031_6140_026_216______SVL_O_AL_002.SEN3" role="L0 Product">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT__G_20180105T000929_20180105T015149_20180105T015951_6140______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                          </sentinel-safe:processing>
+                                       </sentinel-safe:resource>
+                                       <sentinel-safe:resource name="S3A_OL_0_EFR____20180105T010207_20180105T010407_20180105T020331_0119_026_216______SVL_O_NR_002.SEN3" role="L0 Product" version="1.6">
+                                          <sentinel-safe:processing name="DataProcessing" start="2018-01-05T02:03:29.158621" stop="2018-01-05T02:03:32.547289">
+                                             <sentinel-safe:facility name="Svalbard Satellite Core Ground Station [SVL]" organisation="European Space Agency" site="Svalbard" country="Norway">
+                                                <sentinel-safe:hardware name="OPE"/>
+                                                <sentinel-safe:software name="IPF-0" version="06.09"/>
+                                             </sentinel-safe:facility>
+                                             <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="Time Correlation File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="FOS Orbit File (Restituted)">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_AX___OSF_AX_20160216T192404_99991231T235959_20170322T163046___________________EUM_O_AL_001.SEN3" role="Reference Orbit Scenario File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_OL_0_EFR__G_20180105T010225_20180105T010425_20180105T015723_0120______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015122_20180105T015337_6131_026_216______SVL_O_AL_002.SEN3" role="Orbit File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015122_20180105T015337_6131_026_216______SVL_O_AL_002.SEN3" role="L0 Product">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT__G_20180105T000929_20180105T015140_20180105T015254_6131______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3IPF PDS 001 - i1r7 - Product Data Format Specification - Level 0" role="Product Data Format Specification - Level 0">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015131_20180105T020031_6140_026_216______SVL_O_AL_002.SEN3" role="L0 Product">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT__G_20180105T000929_20180105T015149_20180105T015951_6140______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                          </sentinel-safe:processing>
+                                       </sentinel-safe:resource>
+                                       <sentinel-safe:resource name="S3A_OL_0_EFR____20180105T010407_20180105T010607_20180105T020247_0119_026_216______SVL_O_NR_002.SEN3" role="L0 Product" version="1.6">
+                                          <sentinel-safe:processing name="DataProcessing" start="2018-01-05T02:02:44.782268" stop="2018-01-05T02:02:48.021120">
+                                             <sentinel-safe:facility name="Svalbard Satellite Core Ground Station [SVL]" organisation="European Space Agency" site="Svalbard" country="Norway">
+                                                <sentinel-safe:hardware name="OPE"/>
+                                                <sentinel-safe:software name="IPF-0" version="06.09"/>
+                                             </sentinel-safe:facility>
+                                             <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="Time Correlation File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="FOS Orbit File (Restituted)">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_AX___OSF_AX_20160216T192404_99991231T235959_20170322T163046___________________EUM_O_AL_001.SEN3" role="Reference Orbit Scenario File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_OL_0_EFR__G_20180105T010425_20180105T010625_20180105T015728_0120______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015122_20180105T015337_6131_026_216______SVL_O_AL_002.SEN3" role="Orbit File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015122_20180105T015337_6131_026_216______SVL_O_AL_002.SEN3" role="L0 Product">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT__G_20180105T000929_20180105T015140_20180105T015254_6131______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3IPF PDS 001 - i1r7 - Product Data Format Specification - Level 0" role="Product Data Format Specification - Level 0">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015131_20180105T020031_6140_026_216______SVL_O_AL_002.SEN3" role="L0 Product">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT__G_20180105T000929_20180105T015149_20180105T015951_6140______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                          </sentinel-safe:processing>
+                                       </sentinel-safe:resource>
+                                       <sentinel-safe:resource name="S3A_OL_0_EFR____20180105T010607_20180105T010807_20180105T020303_0120_026_216______SVL_O_NR_002.SEN3" role="L0 Product" version="1.6">
+                                          <sentinel-safe:processing name="DataProcessing" start="2018-01-05T02:03:01.746886" stop="2018-01-05T02:03:05.016837">
+                                             <sentinel-safe:facility name="Svalbard Satellite Core Ground Station [SVL]" organisation="European Space Agency" site="Svalbard" country="Norway">
+                                                <sentinel-safe:hardware name="OPE"/>
+                                                <sentinel-safe:software name="IPF-0" version="06.09"/>
+                                             </sentinel-safe:facility>
+                                             <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="Time Correlation File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="FOS Orbit File (Restituted)">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_AX___OSF_AX_20160216T192404_99991231T235959_20170322T163046___________________EUM_O_AL_001.SEN3" role="Reference Orbit Scenario File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_OL_0_EFR__G_20180105T010625_20180105T010825_20180105T015955_0120______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015122_20180105T015337_6131_026_216______SVL_O_AL_002.SEN3" role="Orbit File">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015122_20180105T015337_6131_026_216______SVL_O_AL_002.SEN3" role="L0 Product">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT__G_20180105T000929_20180105T015140_20180105T015254_6131______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3IPF PDS 001 - i1r7 - Product Data Format Specification - Level 0" role="Product Data Format Specification - Level 0">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT____20180105T000911_20180105T015131_20180105T020031_6140_026_216______SVL_O_AL_002.SEN3" role="L0 Product">
+                                             </sentinel-safe:resource>
+                                             <sentinel-safe:resource name="S3A_TM_0_NAT__G_20180105T000929_20180105T015149_20180105T015951_6140______________SVL_O_NR_OPE.ISIP" role="L0PP Granule">
+                                             </sentinel-safe:resource>
+                                          </sentinel-safe:processing>
+                                       </sentinel-safe:resource>
+                                       <sentinel-safe:resource name="S3A_AX___FRO_AX_20180101T000000_20180111T000000_20180104T064139___________________EUM_O_AL_001.SEN3" role="Orbit File" version="1.6">
+                                          <sentinel-safe:processing name="ADC_AUX_REFORMATTER">
+                                             <sentinel-safe:facility name="MAR" organisation="European Organisation for the Exploitation of Meteorological Satellites" site="Darmstadt" country="Germany">
+                                                <sentinel-safe:hardware name="OPE"/>
+                                                <sentinel-safe:software name="ADC" version="2.0"/>
+                                             </sentinel-safe:facility>
+                                             <sentinel-safe:resource name="S3A_OPER_MPL_ORBRES_20180101T000000_20180111T000000_0001.EOF" role="Raw Data" version="0001">
+                                             </sentinel-safe:resource>
+                                          </sentinel-safe:processing>
+                                       </sentinel-safe:resource>
+                                       <sentinel-safe:resource name="S3A_AX___OSF_AX_20160216T192404_99991231T235959_20170322T163046___________________EUM_O_AL_001.SEN3" role="Reference Orbit Scenario File" version="1.6">
+                                          <sentinel-safe:processing name="ADC_AUX_REFORMATTER">
+                                             <sentinel-safe:facility name="MAR" organisation="European Organisation for the Exploitation of Meteorological Satellites" site="Darmstadt" country="Germany">
+                                                <sentinel-safe:hardware name="OPE"/>
+                                                <sentinel-safe:software name="ADC" version="2.0"/>
+                                             </sentinel-safe:facility>
+                                             <sentinel-safe:resource name="S3A_OPER_MPL_ORBSCT_20160216T192404_99999999T999999_0002.TGZ" role="Raw Data" version="0002">
+                                             </sentinel-safe:resource>
+                                          </sentinel-safe:processing>
+                                       </sentinel-safe:resource>
+                                    </sentinel-safe:processing>
+                                 </sentinel-safe:resource>
+                                 <sentinel-safe:resource name="S3A_OL_1_EO__AX_20160425T103700_20991231T235959_20170915T120000___________________MPC_O_AL_009.SEN3" role="OLCI L1 Processing Control Parameter file in EO mode">
+                                    <sentinel-safe:processing name="AdfProcessing">
+                                       <sentinel-safe:facility name="ESA Mission Performance Coordinating Centre (MPC)" organisation="ESA Mission Performance Coordinating Centre" site="Sophia Antipolis" country="France">
+                                          <sentinel-safe:hardware name="OPE"/>
+                                          <sentinel-safe:software name="ADC" version="1.0"/>
+                                       </sentinel-safe:facility>
+                                       <sentinel-safe:resource name="S3IPF.PDS.007 - i2r8 - Auxiliary Data Format Specification" role="Product Data Specification Document - ADFs" version="2.8">
+                                       </sentinel-safe:resource>
+                                    </sentinel-safe:processing>
+                                 </sentinel-safe:resource>
+                                 <sentinel-safe:resource name="S3__AX___MA1_AX_20180105T030000_20180105T150000_20180105T173947___________________ECW_O_SN_001.SEN3" role="ECMWF Meteorological Data (Analysis) AN SFC + PL">
+                                    <sentinel-safe:processing name="ADC_AUX_REFORMATTER">
+                                       <sentinel-safe:facility name="MAR" organisation="European Organisation for the Exploitation of Meteorological Satellites" site="Darmstadt" country="Germany">
+                                          <sentinel-safe:hardware name="OPE"/>
+                                          <sentinel-safe:software name="ADC" version="2.0"/>
+                                       </sentinel-safe:facility>
+                                       <sentinel-safe:resource name="T1D01050600010506001" role="Raw Data" version="0001">
+                                       </sentinel-safe:resource>
+                                    </sentinel-safe:processing>
+                                 </sentinel-safe:resource>
+                                 <sentinel-safe:resource name="S3__AX___MA1_AX_20180104T210000_20180105T090000_20180105T055358___________________ECW_O_SN_001.SEN3" role="ECMWF Meteorological Data (Analysis) AN SFC + PL">
+                                    <sentinel-safe:processing name="ADC_AUX_REFORMATTER">
+                                       <sentinel-safe:facility name="MAR" organisation="European Organisation for the Exploitation of Meteorological Satellites" site="Darmstadt" country="Germany">
+                                          <sentinel-safe:hardware name="OPE"/>
+                                          <sentinel-safe:software name="ADC" version="2.0"/>
+                                       </sentinel-safe:facility>
+                                       <sentinel-safe:resource name="T1D01050000010500001" role="Raw Data" version="0001">
+                                       </sentinel-safe:resource>
+                                    </sentinel-safe:processing>
+                                 </sentinel-safe:resource>
+                                 <sentinel-safe:resource name="S3__AX___MA1_AX_20180104T150000_20180105T030000_20180105T054202___________________ECW_O_SN_001.SEN3" role="ECMWF Meteorological Data (Analysis) AN SFC + PL">
+                                    <sentinel-safe:processing name="ADC_AUX_REFORMATTER">
+                                       <sentinel-safe:facility name="MAR" organisation="European Organisation for the Exploitation of Meteorological Satellites" site="Darmstadt" country="Germany">
+                                          <sentinel-safe:hardware name="OPE"/>
+                                          <sentinel-safe:software name="ADC" version="2.0"/>
+                                       </sentinel-safe:facility>
+                                       <sentinel-safe:resource name="T1D01041800010418001" role="Raw Data" version="0001">
+                                       </sentinel-safe:resource>
+                                    </sentinel-safe:processing>
+                                 </sentinel-safe:resource>
+                                 <sentinel-safe:resource name="S3__AX___DEM_AX_20000101T000000_20991231T235959_20151214T120000___________________MPC_O_AL_001.SEN3" role="Digital Elevation Model GETASSE30V2">
+                                    <sentinel-safe:processing name="AdfProcessing">
+                                       <sentinel-safe:facility name="ESA Mission Performance Coordinating Centre (MPC)" organisation="ESA Mission Performance Coordinating Centre" site="Sophia Antipolis" country="France">
+                                          <sentinel-safe:hardware name="OPE"/>
+                                          <sentinel-safe:software name="ADC" version="1.0"/>
+                                       </sentinel-safe:facility>
+                                       <sentinel-safe:resource name="S3IPF.PDS.007 - i1r13 - Auxiliary Data Format Specification" role="Product Data Specification Document - ADFs" version="1.13">
+                                       </sentinel-safe:resource>
+                                    </sentinel-safe:processing>
+                                 </sentinel-safe:resource>
+                                 <sentinel-safe:resource name="S3A_OL_1_CLUTAX_20160425T095210_20991231T235959_20160525T120000___________________MPC_O_AL_003.SEN3" role="OLCI Classification thresholds LUTs file">
+                                    <sentinel-safe:processing name="AdfProcessing">
+                                       <sentinel-safe:facility name="ESA Mission Performance Coordinating Centre (MPC)" organisation="ESA Mission Performance Coordinating Centre" site="Sophia Antipolis" country="France">
+                                          <sentinel-safe:hardware name="OPE"/>
+                                          <sentinel-safe:software name="ADC" version="1.0"/>
+                                       </sentinel-safe:facility>
+                                       <sentinel-safe:resource name="S3IPF.PDS.007 - i1r13 - Auxiliary Data Format Specification" role="Product Data Specification Document - ADFs" version="1.13">
+                                       </sentinel-safe:resource>
+                                    </sentinel-safe:processing>
+                                 </sentinel-safe:resource>
+                                 <sentinel-safe:resource name="S3A_OL_1_INS_AX_20160228T000000_20991231T235959_20160914T120000___________________MPC_O_AL_005.SEN3" role="OLCI Characterisation and Models Data file">
+                                    <sentinel-safe:processing name="AdfProcessing">
+                                       <sentinel-safe:facility name="ESA Mission Performance Coordinating Centre (MPC)" organisation="ESA Mission Performance Coordinating Centre" site="Sophia Antipolis" country="France">
+                                          <sentinel-safe:hardware name="OPE"/>
+                                          <sentinel-safe:software name="ADC" version="1.0"/>
+                                       </sentinel-safe:facility>
+                                       <sentinel-safe:resource name="S3IPF.PDS.007 - i2r3 - Auxiliary Data Format Specification" role="Product Data Specification Document - ADFs" version="2.3">
+                                       </sentinel-safe:resource>
+                                    </sentinel-safe:processing>
+                                 </sentinel-safe:resource>
+                                 <sentinel-safe:resource name="S3A_OL_1_CAL_AX_20170827T142237_20991231T235959_20170915T120000___________________MPC_O_AL_017.SEN3" role="OLCI Calibration Data file">
+                                    <sentinel-safe:processing name="AdfProcessing">
+                                       <sentinel-safe:facility name="ESA Mission Performance Coordinating Centre (MPC)" organisation="ESA Mission Performance Coordinating Centre" site="Sophia Antipolis" country="France">
+                                          <sentinel-safe:hardware name="OPE"/>
+                                          <sentinel-safe:software name="ADC" version="1.0"/>
+                                       </sentinel-safe:facility>
+                                       <sentinel-safe:resource name="S3IPF.PDS.007 - i2r8 - Auxiliary Data Format Specification" role="Product Data Specification Document - ADFs" version="2.8">
+                                       </sentinel-safe:resource>
+                                    </sentinel-safe:processing>
+                                 </sentinel-safe:resource>
+                                 <sentinel-safe:resource name="S3A_OL_1_PRG_AX_20160425T095210_20991231T235959_20160426T120000___________________MPC_O_AL_003.SEN3" role="OLCI Programmation Data file">
+                                    <sentinel-safe:processing name="AdfProcessing">
+                                       <sentinel-safe:facility name="ESA Mission Performance Coordinating Centre (MPC)" organisation="ESA Mission Performance Coordinating Centre" site="Sophia Antipolis" country="France">
+                                          <sentinel-safe:hardware name="OPE"/>
+                                          <sentinel-safe:software name="ADC" version="1.0"/>
+                                       </sentinel-safe:facility>
+                                       <sentinel-safe:resource name="S3IPF.PDS.007 - i1r13 - Auxiliary Data Format Specification" role="Product Data Specification Document - ADFs" version="1.13">
+                                       </sentinel-safe:resource>
+                                    </sentinel-safe:processing>
+                                 </sentinel-safe:resource>
+                                 <sentinel-safe:resource name="S3__AX___LWM_AX_20000101T000000_20991231T235959_20151214T120000___________________MPC_O_AL_001.SEN3" role="Land/Water Mask file">
+                                    <sentinel-safe:processing name="AdfProcessing">
+                                       <sentinel-safe:facility name="ESA Mission Performance Coordinating Centre (MPC)" organisation="ESA Mission Performance Coordinating Centre" site="Sophia Antipolis" country="France">
+                                          <sentinel-safe:hardware name="OPE"/>
+                                          <sentinel-safe:software name="ADC" version="1.0"/>
+                                       </sentinel-safe:facility>
+                                       <sentinel-safe:resource name="S3IPF.PDS.007 - i1r13 - Auxiliary Data Format Specification" role="Product Data Specification Document - ADFs" version="1.13">
+                                       </sentinel-safe:resource>
+                                    </sentinel-safe:processing>
+                                 </sentinel-safe:resource>
+                                 <sentinel-safe:resource name="S3__AX___OOM_AX_20000101T000000_20991231T235959_20151214T120000___________________MPC_O_AL_001.SEN3" role="Open Ocean Mask file">
+                                    <sentinel-safe:processing name="AdfProcessing">
+                                       <sentinel-safe:facility name="ESA Mission Performance Coordinating Centre (MPC)" organisation="ESA Mission Performance Coordinating Centre" site="Sophia Antipolis" country="France">
+                                          <sentinel-safe:hardware name="OPE"/>
+                                          <sentinel-safe:software name="ADC" version="1.0"/>
+                                       </sentinel-safe:facility>
+                                       <sentinel-safe:resource name="S3IPF.PDS.007 - i1r13 - Auxiliary Data Format Specification" role="Product Data Specification Document - ADFs" version="1.13">
+                                       </sentinel-safe:resource>
+                                    </sentinel-safe:processing>
+                                 </sentinel-safe:resource>
+                                 <sentinel-safe:resource name="S3__AX___CLM_AX_20000101T000000_20991231T235959_20151214T120000___________________MPC_O_AL_001.SEN3" role="Coastline Mask file">
+                                    <sentinel-safe:processing name="AdfProcessing">
+                                       <sentinel-safe:facility name="ESA Mission Performance Coordinating Centre (MPC)" organisation="ESA Mission Performance Coordinating Centre" site="Sophia Antipolis" country="France">
+                                          <sentinel-safe:hardware name="OPE"/>
+                                          <sentinel-safe:software name="ADC" version="1.0"/>
+                                       </sentinel-safe:facility>
+                                       <sentinel-safe:resource name="S3IPF.PDS.007 - i1r13 - Auxiliary Data Format Specification" role="Product Data Specification Document - ADFs" version="1.13">
+                                       </sentinel-safe:resource>
+                                    </sentinel-safe:processing>
+                                 </sentinel-safe:resource>
+                                 <sentinel-safe:resource name="S3__AX___TRM_AX_20000101T000000_20991231T235959_20151214T120000___________________MPC_O_AL_001.SEN3" role="Tidal Regions Mask file">
+                                    <sentinel-safe:processing name="AdfProcessing">
+                                       <sentinel-safe:facility name="ESA Mission Performance Coordinating Centre (MPC)" organisation="ESA Mission Performance Coordinating Centre" site="Sophia Antipolis" country="France">
+                                          <sentinel-safe:hardware name="OPE"/>
+                                          <sentinel-safe:software name="ADC" version="1.0"/>
+                                       </sentinel-safe:facility>
+                                       <sentinel-safe:resource name="S3IPF.PDS.007 - i1r13 - Auxiliary Data Format Specification" role="Product Data Specification Document - ADFs" version="1.13">
+                                       </sentinel-safe:resource>
+                                    </sentinel-safe:processing>
+                                 </sentinel-safe:resource>
+                                 <sentinel-safe:resource name="S3A_AX___FRO_AX_20180102T000000_20180112T000000_20180105T064101___________________EUM_O_AL_001.SEN3" role="FOS Orbit File (Restituted),time_init">
+                                    <sentinel-safe:processing name="ADC_AUX_REFORMATTER">
+                                       <sentinel-safe:facility name="MAR" organisation="European Organisation for the Exploitation of Meteorological Satellites" site="Darmstadt" country="Germany">
+                                          <sentinel-safe:hardware name="OPE"/>
+                                          <sentinel-safe:software name="ADC" version="2.0"/>
+                                       </sentinel-safe:facility>
+                                       <sentinel-safe:resource name="S3A_OPER_MPL_ORBRES_20180102T000000_20180112T000000_0001.EOF" role="Raw Data" version="0001">
+                                       </sentinel-safe:resource>
+                                    </sentinel-safe:processing>
+                                 </sentinel-safe:resource>
+                                 <sentinel-safe:resource name="S3A_AX___OSF_AX_20160216T192404_99991231T235959_20170322T163046___________________EUM_O_AL_001.SEN3" role="Reference Orbit Scenario File">
+                                    <sentinel-safe:processing name="ADC_AUX_REFORMATTER">
+                                       <sentinel-safe:facility name="MAR" organisation="European Organisation for the Exploitation of Meteorological Satellites" site="Darmstadt" country="Germany">
+                                          <sentinel-safe:hardware name="OPE"/>
+                                          <sentinel-safe:software name="ADC" version="2.0"/>
+                                       </sentinel-safe:facility>
+                                       <sentinel-safe:resource name="S3A_OPER_MPL_ORBSCT_20160216T192404_99999999T999999_0002.TGZ" role="Raw Data" version="0002">
+                                       </sentinel-safe:resource>
+                                    </sentinel-safe:processing>
+                                 </sentinel-safe:resource>
+                                 <sentinel-safe:resource name="S3IPF PDS 004 - i2r1 - Product Data Format Specification - OLCI" role="Product Data Format Specification - OLCI">
+                                 </sentinel-safe:resource>
+                              </sentinel-safe:processing>
+                           </sentinel-safe:resource>
+                           <sentinel-safe:resource name="S3A_OL_2_PCP_AX_20160216T000000_20991231T235959_20170609T120000___________________MPC_O_AL_002.SEN3" role="OLCI L2 Processing Control Parameters file">
+                              <sentinel-safe:processing name="AdfProcessing">
+                                 <sentinel-safe:facility name="ESA Mission Performance Coordinating Centre (MPC)" organisation="ESA Mission Performance Coordinating Centre" site="Sophia Antipolis" country="France">
+                                    <sentinel-safe:hardware name="OPE"/>
+                                    <sentinel-safe:software name="ADC" version="1.0"/>
+                                 </sentinel-safe:facility>
+                                 <sentinel-safe:resource name="S3IPF.PDS.007 - i2r5 - Auxiliary Data Format Specification" role="Product Data Specification Document - ADFs" version="2.5">
+                                 </sentinel-safe:resource>
+                              </sentinel-safe:processing>
+                           </sentinel-safe:resource>
+                           <sentinel-safe:resource name="S3A_OL_2_PPP_AX_20160216T000000_20991231T235959_20170609T120000___________________MPC_O_AL_005.SEN3" role="OLCI Pre Processing data file">
+                              <sentinel-safe:processing name="AdfProcessing">
+                                 <sentinel-safe:facility name="ESA Mission Performance Coordinating Centre (MPC)" organisation="ESA Mission Performance Coordinating Centre" site="Sophia Antipolis" country="France">
+                                    <sentinel-safe:hardware name="OPE"/>
+                                    <sentinel-safe:software name="ADC" version="1.0"/>
+                                 </sentinel-safe:facility>
+                                 <sentinel-safe:resource name="S3IPF.PDS.007 - i2r5 - Auxiliary Data Format Specification" role="Product Data Specification Document - ADFs" version="2.5">
+                                 </sentinel-safe:resource>
+                              </sentinel-safe:processing>
+                           </sentinel-safe:resource>
+                           <sentinel-safe:resource name="S3A_OL_2_WVP_AX_20160216T000000_20991231T235959_20170113T120000___________________MPC_O_AL_003.SEN3" role="OLCI Water Vapour Parameters data file">
+                              <sentinel-safe:processing name="AdfProcessing">
+                                 <sentinel-safe:facility name="ESA Mission Performance Coordinating Centre (MPC)" organisation="ESA Mission Performance Coordinating Centre" site="Sophia Antipolis" country="France">
+                                    <sentinel-safe:hardware name="OPE"/>
+                                    <sentinel-safe:software name="ADC" version="1.0"/>
+                                 </sentinel-safe:facility>
+                                 <sentinel-safe:resource name="S3IPF.PDS.007 - i2r5 - Auxiliary Data Format Specification" role="Product Data Specification Document - ADFs" version="2.5">
+                                 </sentinel-safe:resource>
+                              </sentinel-safe:processing>
+                           </sentinel-safe:resource>
+                           <sentinel-safe:resource name="S3A_OL_2_ACP_AX_20160216T000000_20991231T235959_20170609T120000___________________MPC_O_AL_004.SEN3" role="OLCI Atmospheric Correction Parameters file">
+                              <sentinel-safe:processing name="AdfProcessing">
+                                 <sentinel-safe:facility name="ESA Mission Performance Coordinating Centre (MPC)" organisation="ESA Mission Performance Coordinating Centre" site="Sophia Antipolis" country="France">
+                                    <sentinel-safe:hardware name="OPE"/>
+                                    <sentinel-safe:software name="ADC" version="1.0"/>
+                                 </sentinel-safe:facility>
+                                 <sentinel-safe:resource name="S3IPF.PDS.007 - i2r5 - Auxiliary Data Format Specification" role="Product Data Specification Document - ADFs" version="2.5">
+                                 </sentinel-safe:resource>
+                              </sentinel-safe:processing>
+                           </sentinel-safe:resource>
+                           <sentinel-safe:resource name="S3A_OL_2_OCP_AX_20160216T000000_20991231T235959_20170609T120000___________________MPC_O_AL_003.SEN3" role="OLCI Ocean Colour Processing Parameters file">
+                              <sentinel-safe:processing name="AdfProcessing">
+                                 <sentinel-safe:facility name="ESA Mission Performance Coordinating Centre (MPC)" organisation="ESA Mission Performance Coordinating Centre" site="Sophia Antipolis" country="France">
+                                    <sentinel-safe:hardware name="OPE"/>
+                                    <sentinel-safe:software name="ADC" version="1.0"/>
+                                 </sentinel-safe:facility>
+                                 <sentinel-safe:resource name="S3IPF.PDS.007 - i2r5 - Auxiliary Data Format Specification" role="Product Data Specification Document - ADFs" version="2.5">
+                                 </sentinel-safe:resource>
+                              </sentinel-safe:processing>
+                           </sentinel-safe:resource>
+                           <sentinel-safe:resource name="S3A_OL_2_VGP_AX_20160216T000000_20991231T235959_20170113T120000___________________MPC_O_AL_004.SEN3" role="OLCI Vegetation Processing Parameters file">
+                              <sentinel-safe:processing name="AdfProcessing">
+                                 <sentinel-safe:facility name="ESA Mission Performance Coordinating Centre (MPC)" organisation="ESA Mission Performance Coordinating Centre" site="Sophia Antipolis" country="France">
+                                    <sentinel-safe:hardware name="OPE"/>
+                                    <sentinel-safe:software name="ADC" version="1.0"/>
+                                 </sentinel-safe:facility>
+                                 <sentinel-safe:resource name="S3IPF.PDS.007 - i2r5 - Auxiliary Data Format Specification" role="Product Data Specification Document - ADFs" version="2.5">
+                                 </sentinel-safe:resource>
+                              </sentinel-safe:processing>
+                           </sentinel-safe:resource>
+                           <sentinel-safe:resource name="S3A_OL_2_CLP_AX_20160216T000000_20991231T235959_20170210T120000___________________MPC_O_AL_003.SEN3" role="OLCI Climatology Data file">
+                              <sentinel-safe:processing name="AdfProcessing">
+                                 <sentinel-safe:facility name="ESA Mission Performance Coordinating Centre (MPC)" organisation="ESA Mission Performance Coordinating Centre" site="Sophia Antipolis" country="France">
+                                    <sentinel-safe:hardware name="OPE"/>
+                                    <sentinel-safe:software name="ADC" version="1.0"/>
+                                 </sentinel-safe:facility>
+                                 <sentinel-safe:resource name="S3IPF.PDS.007 - i2r5 - Auxiliary Data Format Specification" role="Product Data Specification Document - ADFs" version="2.5">
+                                 </sentinel-safe:resource>
+                              </sentinel-safe:processing>
+                           </sentinel-safe:resource>
+                           <sentinel-safe:resource name="S3A_AX___OSF_AX_20160216T192404_99991231T235959_20170322T163046___________________EUM_O_AL_001.SEN3" role="Reference Orbit Scenario File">
+                              <sentinel-safe:processing name="ADC_AUX_REFORMATTER">
+                                 <sentinel-safe:facility name="MAR" organisation="European Organisation for the Exploitation of Meteorological Satellites" site="Darmstadt" country="Germany">
+                                    <sentinel-safe:hardware name="OPE"/>
+                                    <sentinel-safe:software name="ADC" version="2.0"/>
+                                 </sentinel-safe:facility>
+                                 <sentinel-safe:resource name="S3A_OPER_MPL_ORBSCT_20160216T192404_99999999T999999_0002.TGZ" role="Raw Data" version="0002">
+                                 </sentinel-safe:resource>
+                              </sentinel-safe:processing>
+                           </sentinel-safe:resource>
+                           <sentinel-safe:resource name="S3A_AX___FRO_AX_20180102T000000_20180112T000000_20180105T064101___________________EUM_O_AL_001.SEN3" role="FOS Orbit File (Restituted),time_init">
+                              <sentinel-safe:processing name="ADC_AUX_REFORMATTER">
+                                 <sentinel-safe:facility name="MAR" organisation="European Organisation for the Exploitation of Meteorological Satellites" site="Darmstadt" country="Germany">
+                                    <sentinel-safe:hardware name="OPE"/>
+                                    <sentinel-safe:software name="ADC" version="2.0"/>
+                                 </sentinel-safe:facility>
+                                 <sentinel-safe:resource name="S3A_OPER_MPL_ORBRES_20180102T000000_20180112T000000_0001.EOF" role="Raw Data" version="0001">
+                                 </sentinel-safe:resource>
+                              </sentinel-safe:processing>
+                           </sentinel-safe:resource>
+                           <sentinel-safe:resource name="S3IPF PDS 004 - i2r1 - Product Data Format Specification - OLCI" role="Product Data Format Specification - OLCI">
+                           </sentinel-safe:resource>
+                        </sentinel-safe:processing>
+                     </sentinel-safe:resource>
+                  </sentinel-safe:processing>
+               </xmlData>
+            </metadataWrap>
+         </metadataObject>
+         <metadataObject ID="geoCoordinatesAnnotation" classification="DESCRIPTION" category="DMD">
+            <dataObjectPointer dataObjectID="geoCoordinatesData"/>
+         </metadataObject>
+         <metadataObject ID="instrumentDataAnnotation" classification="DESCRIPTION" category="DMD">
+            <dataObjectPointer dataObjectID="instrumentDataData"/>
+         </metadataObject>
+         <metadataObject ID="lqsfAnnotation" classification="DESCRIPTION" category="DMD">
+            <dataObjectPointer dataObjectID="lqsfData"/>
+         </metadataObject>
+         <metadataObject ID="tieGeoCoordinatesAnnotation" classification="DESCRIPTION" category="DMD">
+            <dataObjectPointer dataObjectID="tieGeoCoordinatesData"/>
+         </metadataObject>
+         <metadataObject ID="tieGeometriesAnnotation" classification="DESCRIPTION" category="DMD">
+            <dataObjectPointer dataObjectID="tieGeometriesData"/>
+         </metadataObject>
+         <metadataObject ID="tieMeteoAnnotation" classification="DESCRIPTION" category="DMD">
+            <dataObjectPointer dataObjectID="tieMeteoData"/>
+         </metadataObject>
+         <metadataObject ID="timeCoordinatesAnnotation" classification="DESCRIPTION" category="DMD">
+            <dataObjectPointer dataObjectID="timeCoordinatesData"/>
+         </metadataObject>
+      </metadataSection>
+      <dataObjectSection>
+         <dataObject ID="geoCoordinatesData">
+            <byteStream mimeType="application/x-netcdf" size="27584709">
+               <fileLocation locatorType="URL" textInfo="Geo Coordinates Annotations" href="./geo_coordinates.nc"/>
+               <checksum checksumName="MD5">e8386a81bd68f8520ff2b2314579d951</checksum>
+            </byteStream>
+         </dataObject>
+         <dataObject ID="instrumentDataData">
+            <byteStream mimeType="application/x-netcdf" size="690263">
+               <fileLocation locatorType="URL" textInfo="Instrument Annotation" href="./instrument_data.nc"/>
+               <checksum checksumName="MD5">8e314bc631d870ea9ec33b93e40a2649</checksum>
+            </byteStream>
+         </dataObject>
+         <dataObject ID="iwvData">
+            <byteStream mimeType="application/x-netcdf" size="1608988">
+               <fileLocation locatorType="URL" textInfo="Integrated water vapour column" href="./iwv.nc"/>
+               <checksum checksumName="MD5">d222fd7838ef27ad56260b625ea09a17</checksum>
+            </byteStream>
+         </dataObject>
+         <dataObject ID="lqsfData">
+            <byteStream mimeType="application/x-netcdf" size="1966206">
+               <fileLocation locatorType="URL" textInfo="Land Quality and Science Flags" href="./lqsf.nc"/>
+               <checksum checksumName="MD5">55f35ca421d239439160849a9185c3a9</checksum>
+            </byteStream>
+         </dataObject>
+         <dataObject ID="ogviData">
+            <byteStream mimeType="application/x-netcdf" size="107115">
+               <fileLocation locatorType="URL" textInfo="OLCI global Vegetal Index" href="./ogvi.nc"/>
+               <checksum checksumName="MD5">9939e0aab37419b305eb69a5e01dca3d</checksum>
+            </byteStream>
+         </dataObject>
+         <dataObject ID="otciData">
+            <byteStream mimeType="application/x-netcdf" size="212941">
+               <fileLocation locatorType="URL" textInfo="OLCI Terrestrial Chlorophyll Index" href="./otci.nc"/>
+               <checksum checksumName="MD5">82a8ee89d6cdf7e29b4f7cf7963fd862</checksum>
+            </byteStream>
+         </dataObject>
+         <dataObject ID="rcOgviData">
+            <byteStream mimeType="application/x-netcdf" size="387711">
+               <fileLocation locatorType="URL" textInfo="Rectified Reflectance" href="./rc_ogvi.nc"/>
+               <checksum checksumName="MD5">981715343cad0d15448427fba4c2e24b</checksum>
+            </byteStream>
+         </dataObject>
+         <dataObject ID="tieGeoCoordinatesData">
+            <byteStream mimeType="application/x-netcdf" size="656632">
+               <fileLocation locatorType="URL" textInfo="Tie-Point Geo Coordinate Annotations" href="./tie_geo_coordinates.nc"/>
+               <checksum checksumName="MD5">f66f32b3d31549681aecfd9f3b1dcbfc</checksum>
+            </byteStream>
+         </dataObject>
+         <dataObject ID="tieGeometriesData">
+            <byteStream mimeType="application/x-netcdf" size="1105033">
+               <fileLocation locatorType="URL" textInfo="Tie-Point Geometries Annotations" href="./tie_geometries.nc"/>
+               <checksum checksumName="MD5">a321b75aaa907b175849be17e566e345</checksum>
+            </byteStream>
+         </dataObject>
+         <dataObject ID="tieMeteoData">
+            <byteStream mimeType="application/x-netcdf" size="9874020">
+               <fileLocation locatorType="URL" textInfo="Tie-Point Meteo Annotations" href="./tie_meteo.nc"/>
+               <checksum checksumName="MD5">4ceac41250746874c4f8ade52c965879</checksum>
+            </byteStream>
+         </dataObject>
+         <dataObject ID="timeCoordinatesData">
+            <byteStream mimeType="application/x-netcdf" size="14116">
+               <fileLocation locatorType="URL" textInfo="Time Coordinates Annotations" href="./time_coordinates.nc"/>
+               <checksum checksumName="MD5">534822e13389907cfb4858ef404563c6</checksum>
+            </byteStream>
+         </dataObject>
+      </dataObjectSection>
+   </xfdu:XFDU>
