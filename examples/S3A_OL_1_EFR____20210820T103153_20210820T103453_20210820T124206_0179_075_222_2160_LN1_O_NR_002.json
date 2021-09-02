@@ -7,7 +7,7 @@
     "sat:orbit_state": "descending",
     "sat:absolute_orbit": 28685,
     "sat:relative_orbit": 222,
-    "proj:epsg": "4326",
+    "proj:epsg": 4326,
     "proj:shape": [
       4865,
       4090
@@ -246,14 +246,14 @@
   ],
   "assets": {
     "safe-manifest": {
-      "href": "./tests/data-files/S3A_OL_1_EFR____20210820T103153_20210820T103453_20210820T124206_0179_075_222_2160_LN1_O_NR_002.SEN3/xfdumanifest.xml",
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_1_EFR____20210820T103153_20210820T103453_20210820T124206_0179_075_222_2160_LN1_O_NR_002.SEN3/xfdumanifest.xml",
       "type": "application/xml",
       "roles": [
         "metadata"
       ]
     },
     "eo:bands": {
-      "href": "./tests/data-files/S3A_OL_1_EFR____20210820T103153_20210820T103453_20210820T124206_0179_075_222_2160_LN1_O_NR_002.SEN3/xfdumanifest.xml",
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_1_EFR____20210820T103153_20210820T103453_20210820T124206_0179_075_222_2160_LN1_O_NR_002.SEN3/xfdumanifest.xml",
       "type": "application/xml",
       "band_fields": [
         {
