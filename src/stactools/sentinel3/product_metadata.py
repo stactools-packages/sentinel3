@@ -305,4 +305,4 @@ class ProductMetadata:
         epsg = self._root.find_attr(
             "srsName", ".//sentinel-safe:footPrint").split("/")[-1]
 
-        return epsg
+        return int(epsg)

@@ -8,7 +8,7 @@
     "sat:absolute_orbit": 28783,
     "sat:relative_orbit": 320,
     "eo:cloud_cover": 12.909653,
-    "proj:epsg": "4326",
+    "proj:epsg": 4326,
     "proj:shape": [
       1500,
       1200
@@ -342,14 +342,14 @@
   ],
   "assets": {
     "safe-manifest": {
-      "href": "./tests/data-files/S3A_SL_1_RBT____20210827T074336_20210827T074636_20210827T094954_0179_075_320_3060_LN2_O_NR_004.SEN3/xfdumanifest.xml",
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_1_RBT____20210827T074336_20210827T074636_20210827T094954_0179_075_320_3060_LN2_O_NR_004.SEN3/xfdumanifest.xml",
       "type": "application/xml",
       "roles": [
         "metadata"
       ]
     },
     "eo:bands": {
-      "href": "./tests/data-files/S3A_SL_1_RBT____20210827T074336_20210827T074636_20210827T094954_0179_075_320_3060_LN2_O_NR_004.SEN3/xfdumanifest.xml",
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_1_RBT____20210827T074336_20210827T074636_20210827T094954_0179_075_320_3060_LN2_O_NR_004.SEN3/xfdumanifest.xml",
       "type": "application/xml",
       "band_fields": [
         {
