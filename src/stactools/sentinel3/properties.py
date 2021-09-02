@@ -46,8 +46,13 @@ def fill_eo_properties(eo_ext, href):
     # Read meta file
     root = XmlElement.from_file(href)
     product_name = root.findall(".//sentinel3:productName")[0].text
-    if product_name.split("_")[1] == "OL":
+    if product_name.split("_")[1] == "OL" and product_name.split(
+            "_")[2] == "1":
         pass
+    elif product_name.split("_")[1] == "OL" and product_name.split(
+            "_")[2] == "2":
+        eo_ext.cloud_cover = float(
+            root.find_attr("percentage", ".//sentinel3:cloudyPixels"))
     elif product_name.split("_")[1] == "SL":
         eo_ext.cloud_cover = float(
             root.find_attr("percentage", ".//sentinel3:cloudyPixels"))
