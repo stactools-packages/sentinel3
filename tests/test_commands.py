@@ -59,6 +59,50 @@ class CreateItemTest(CliTestCase):
                 [self.assertTrue(band in band_list) for band in bands_seen]
                 os.remove(f"{tmp_dir}/{item_id}.json")
 
+    def test_create_olci_1_err_item(self):
+        item_id = str("S3B_OL_1_ERR____"
+                      "20210902T054142_20210902T062554_20210903T103126_"
+                      "2652_056_262______LN1_O_NT_002")
+        granule_href = test_data.get_path(
+            "data-files/"
+            "S3B_OL_1_ERR____"
+            "20210902T054142_20210902T062554_20210903T103126_"
+            "2652_056_262______LN1_O_NT_002.SEN3")
+
+        with self.subTest(granule_href):
+            with TemporaryDirectory() as tmp_dir:
+                cmd = ["sentinel3", "create-item", granule_href, tmp_dir]
+                self.run_command(cmd)
+
+                jsons = [p for p in os.listdir(tmp_dir) if p.endswith(".json")]
+                self.assertEqual(len(jsons), 1)
+                fname = jsons[0]
+
+                item = pystac.Item.from_file(os.path.join(tmp_dir, fname))
+
+                item.validate()
+
+                self.assertEqual(item.id, item_id)
+
+                band_list = [
+                    value.name for value in SENTINEL_OLCI_BANDS.values()
+                ]
+
+                bands_seen = set()
+
+                for _, asset in item.assets.items():
+                    self.assertTrue("/./" not in asset.href)
+                    self.assertTrue(is_absolute_href(asset.href))
+                    if _ == "eo:bands":
+                        bands_seen |= set(
+                            b['name']
+                            for b in asset.extra_fields['band_fields'])
+                    else:
+                        pass
+
+                [self.assertTrue(band in band_list) for band in bands_seen]
+                os.remove(f"{tmp_dir}/{item_id}.json")
+
     def test_create_olci_2_lfr_item(self):
         item_id = str("S3A_OL_2_LFR____"
                       "20180105T002409_20180105T002540_20180106T053045_"
@@ -68,6 +112,50 @@ class CreateItemTest(CliTestCase):
             "S3A_OL_2_LFR____"
             "20180105T002409_20180105T002540_20180106T053045_"
             "0090_026_216_2069_LN1_O_NT_002.SEN3")
+
+        with self.subTest(granule_href):
+            with TemporaryDirectory() as tmp_dir:
+                cmd = ["sentinel3", "create-item", granule_href, tmp_dir]
+                self.run_command(cmd)
+
+                jsons = [p for p in os.listdir(tmp_dir) if p.endswith(".json")]
+                self.assertEqual(len(jsons), 1)
+                fname = jsons[0]
+
+                item = pystac.Item.from_file(os.path.join(tmp_dir, fname))
+
+                item.validate()
+
+                self.assertEqual(item.id, item_id)
+
+                band_list = [
+                    value.name for value in SENTINEL_OLCI_BANDS.values()
+                ]
+
+                bands_seen = set()
+
+                for _, asset in item.assets.items():
+                    self.assertTrue("/./" not in asset.href)
+                    self.assertTrue(is_absolute_href(asset.href))
+                    if _ == "eo:bands":
+                        bands_seen |= set(
+                            b['name']
+                            for b in asset.extra_fields['band_fields'])
+                    else:
+                        pass
+
+                [self.assertTrue(band in band_list) for band in bands_seen]
+                os.remove(f"{tmp_dir}/{item_id}.json")
+
+    def test_create_olci_2_lrr_item(self):
+        item_id = str("S3B_OL_2_LRR____"
+                      "20210902T054142_20210902T062554_20210903T103456_"
+                      "2652_056_262______LN1_O_NT_002")
+        granule_href = test_data.get_path(
+            "data-files/"
+            "S3B_OL_2_LRR____"
+            "20210902T054142_20210902T062554_20210903T103456_"
+            "2652_056_262______LN1_O_NT_002.SEN3")
 
         with self.subTest(granule_href):
             with TemporaryDirectory() as tmp_dir:
