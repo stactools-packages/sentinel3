@@ -247,16 +247,11 @@ class ProductMetadata:
                     str(
                         self._root.find_attr(
                             "percentage", ".//sentinel3:tidalRegionPixels"))),
-                "s3:landPixels":
+                "s3:landPixels_percentage":
                 float(
                     str(
                         self._root.find_attr("percentage",
                                              ".//sentinel3:landPixels"))),
-                "s3:cloudyPixels":
-                float(
-                    str(
-                        self._root.find_attr("percentage",
-                                             ".//sentinel3:cloudyPixels"))),
                 "s3:invalidPixels_percentage":
                 float(
                     str(
