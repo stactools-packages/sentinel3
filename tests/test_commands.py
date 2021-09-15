@@ -7,7 +7,9 @@ from stactools.testing import CliTestCase
 
 from stactools.sentinel3.commands import create_sentinel3_command
 from stactools.sentinel3.constants import (SENTINEL_OLCI_BANDS,
-                                           SENTINEL_SLSTR_BANDS)
+                                           SENTINEL_SLSTR_BANDS,
+                                           SENTINEL_SRAL_BANDS,
+                                           SENTINEL_SYNERGY_BANDS)
 from tests import test_data
 
 
@@ -395,6 +397,314 @@ class CreateItemTest(CliTestCase):
                 band_list = [
                     value.name for value in SENTINEL_SLSTR_BANDS.values()
                 ]
+
+                bands_seen = set()
+
+                for _, asset in item.assets.items():
+                    self.assertTrue("/./" not in asset.href)
+                    self.assertTrue(is_absolute_href(asset.href))
+                    if _ == "eo:bands":
+                        bands_seen |= set(
+                            b['name']
+                            for b in asset.extra_fields['band_fields'])
+                    else:
+                        pass
+
+                [self.assertTrue(band in band_list) for band in bands_seen]
+                os.remove(f"{tmp_dir}/{item_id}.json")
+
+    def test_create_sral_2_lan_item(self):
+        item_id = str("S3A_SR_2_LAN____"
+                      "20201003T195855_20201003T204924_20201028T210401_"
+                      "3029_063_270______LN3_O_NT_004")
+        granule_href = test_data.get_path(
+            "data-files/"
+            "S3A_SR_2_LAN____"
+            "20201003T195855_20201003T204924_20201028T210401_"
+            "3029_063_270______LN3_O_NT_004.SEN3")
+
+        with self.subTest(granule_href):
+            with TemporaryDirectory() as tmp_dir:
+                cmd = ["sentinel3", "create-item", granule_href, tmp_dir]
+                self.run_command(cmd)
+
+                jsons = [p for p in os.listdir(tmp_dir) if p.endswith(".json")]
+                self.assertEqual(len(jsons), 1)
+                fname = jsons[0]
+
+                item = pystac.Item.from_file(os.path.join(tmp_dir, fname))
+
+                item.validate()
+
+                self.assertEqual(item.id, item_id)
+
+                band_list = [
+                    value.name for value in SENTINEL_SRAL_BANDS.values()
+                ]
+
+                bands_seen = set()
+
+                for _, asset in item.assets.items():
+                    self.assertTrue("/./" not in asset.href)
+                    self.assertTrue(is_absolute_href(asset.href))
+                    if _ == "eo:bands":
+                        bands_seen |= set(
+                            b['name']
+                            for b in asset.extra_fields['band_fields'])
+                    else:
+                        pass
+
+                [self.assertTrue(band in band_list) for band in bands_seen]
+                os.remove(f"{tmp_dir}/{item_id}.json")
+
+    def test_create_sral_2_wat_item(self):
+        item_id = str("S3A_SR_2_WAT____"
+                      "20190326T011836_20190326T020243_20190420T170416_"
+                      "2647_043_017______MAR_O_NT_003")
+        granule_href = test_data.get_path(
+            "data-files/"
+            "S3A_SR_2_WAT____"
+            "20190326T011836_20190326T020243_20190420T170416_"
+            "2647_043_017______MAR_O_NT_003.SEN3")
+
+        with self.subTest(granule_href):
+            with TemporaryDirectory() as tmp_dir:
+                cmd = ["sentinel3", "create-item", granule_href, tmp_dir]
+                self.run_command(cmd)
+
+                jsons = [p for p in os.listdir(tmp_dir) if p.endswith(".json")]
+                self.assertEqual(len(jsons), 1)
+                fname = jsons[0]
+
+                item = pystac.Item.from_file(os.path.join(tmp_dir, fname))
+
+                item.validate()
+
+                self.assertEqual(item.id, item_id)
+
+                band_list = [
+                    value.name for value in SENTINEL_SRAL_BANDS.values()
+                ]
+
+                bands_seen = set()
+
+                for _, asset in item.assets.items():
+                    self.assertTrue("/./" not in asset.href)
+                    self.assertTrue(is_absolute_href(asset.href))
+                    if _ == "eo:bands":
+                        bands_seen |= set(
+                            b['name']
+                            for b in asset.extra_fields['band_fields'])
+                    else:
+                        pass
+
+                [self.assertTrue(band in band_list) for band in bands_seen]
+                os.remove(f"{tmp_dir}/{item_id}.json")
+
+    def test_create_synergy_2_aod_item(self):
+        item_id = str("S3A_SY_2_AOD____"
+                      "20201119T153545_20201119T162000_20201120T223531_"
+                      "2655_065_168______LN2_O_NT_002")
+        granule_href = test_data.get_path(
+            "data-files/"
+            "S3A_SY_2_AOD____"
+            "20201119T153545_20201119T162000_20201120T223531_"
+            "2655_065_168______LN2_O_NT_002.SEN3")
+
+        with self.subTest(granule_href):
+            with TemporaryDirectory() as tmp_dir:
+                cmd = ["sentinel3", "create-item", granule_href, tmp_dir]
+                self.run_command(cmd)
+
+                jsons = [p for p in os.listdir(tmp_dir) if p.endswith(".json")]
+                self.assertEqual(len(jsons), 1)
+                fname = jsons[0]
+
+                item = pystac.Item.from_file(os.path.join(tmp_dir, fname))
+
+                item.validate()
+
+                self.assertEqual(item.id, item_id)
+
+                band_list = [
+                    value.name for value in SENTINEL_SYNERGY_BANDS.values()
+                ][26:32]
+
+                bands_seen = set()
+
+                for _, asset in item.assets.items():
+                    self.assertTrue("/./" not in asset.href)
+                    self.assertTrue(is_absolute_href(asset.href))
+                    if _ == "eo:bands":
+                        bands_seen |= set(
+                            b['name']
+                            for b in asset.extra_fields['band_fields'])
+                    else:
+                        pass
+
+                [self.assertTrue(band in band_list) for band in bands_seen]
+                os.remove(f"{tmp_dir}/{item_id}.json")
+
+    def test_create_synergy_2_syn_item(self):
+        item_id = str("S3A_SY_2_SYN____"
+                      "20190202T004600_20190202T004900_20190203T142947_"
+                      "0179_041_045_2700_LN2_O_NT_002")
+        granule_href = test_data.get_path(
+            "data-files/"
+            "S3A_SY_2_SYN____"
+            "20190202T004600_20190202T004900_20190203T142947_"
+            "0179_041_045_2700_LN2_O_NT_002.SEN3")
+
+        with self.subTest(granule_href):
+            with TemporaryDirectory() as tmp_dir:
+                cmd = ["sentinel3", "create-item", granule_href, tmp_dir]
+                self.run_command(cmd)
+
+                jsons = [p for p in os.listdir(tmp_dir) if p.endswith(".json")]
+                self.assertEqual(len(jsons), 1)
+                fname = jsons[0]
+
+                item = pystac.Item.from_file(os.path.join(tmp_dir, fname))
+
+                item.validate()
+
+                self.assertEqual(item.id, item_id)
+
+                band_list = [
+                    value.name for value in SENTINEL_SYNERGY_BANDS.values()
+                ][:26]
+
+                bands_seen = set()
+
+                for _, asset in item.assets.items():
+                    self.assertTrue("/./" not in asset.href)
+                    self.assertTrue(is_absolute_href(asset.href))
+                    if _ == "eo:bands":
+                        bands_seen |= set(
+                            b['name']
+                            for b in asset.extra_fields['band_fields'])
+                    else:
+                        pass
+
+                [self.assertTrue(band in band_list) for band in bands_seen]
+                os.remove(f"{tmp_dir}/{item_id}.json")
+
+    def test_create_synergy_2_v10_item(self):
+        item_id = str("S3A_SY_2_V10____"
+                      "20191216T110000_20191226T110000_20200105T114106_"
+                      "ASIAN_ISLANDS_____LN2_O_NT_002")
+        granule_href = test_data.get_path(
+            "data-files/"
+            "S3A_SY_2_V10____"
+            "20191216T110000_20191226T110000_20200105T114106_"
+            "ASIAN_ISLANDS_____LN2_O_NT_002.SEN3")
+
+        with self.subTest(granule_href):
+            with TemporaryDirectory() as tmp_dir:
+                cmd = ["sentinel3", "create-item", granule_href, tmp_dir]
+                self.run_command(cmd)
+
+                jsons = [p for p in os.listdir(tmp_dir) if p.endswith(".json")]
+                self.assertEqual(len(jsons), 1)
+                fname = jsons[0]
+
+                item = pystac.Item.from_file(os.path.join(tmp_dir, fname))
+
+                item.validate()
+
+                self.assertEqual(item.id, item_id)
+
+                band_list = [
+                    value.name for value in SENTINEL_SYNERGY_BANDS.values()
+                ][-4:]
+
+                bands_seen = set()
+
+                for _, asset in item.assets.items():
+                    self.assertTrue("/./" not in asset.href)
+                    self.assertTrue(is_absolute_href(asset.href))
+                    if _ == "eo:bands":
+                        bands_seen |= set(
+                            b['name']
+                            for b in asset.extra_fields['band_fields'])
+                    else:
+                        pass
+
+                [self.assertTrue(band in band_list) for band in bands_seen]
+                os.remove(f"{tmp_dir}/{item_id}.json")
+
+    def test_create_synergy_2_vg1_item(self):
+        item_id = str("S3A_SY_2_VG1____"
+                      "20200609T120000_20200610T120000_20200615T121610_"
+                      "CENTRAL_AMERICA___LN2_O_NT_002")
+        granule_href = test_data.get_path(
+            "data-files/"
+            "S3A_SY_2_VG1____"
+            "20200609T120000_20200610T120000_20200615T121610_"
+            "CENTRAL_AMERICA___LN2_O_NT_002.SEN3")
+
+        with self.subTest(granule_href):
+            with TemporaryDirectory() as tmp_dir:
+                cmd = ["sentinel3", "create-item", granule_href, tmp_dir]
+                self.run_command(cmd)
+
+                jsons = [p for p in os.listdir(tmp_dir) if p.endswith(".json")]
+                self.assertEqual(len(jsons), 1)
+                fname = jsons[0]
+
+                item = pystac.Item.from_file(os.path.join(tmp_dir, fname))
+
+                item.validate()
+
+                self.assertEqual(item.id, item_id)
+
+                band_list = [
+                    value.name for value in SENTINEL_SYNERGY_BANDS.values()
+                ][-4:]
+
+                bands_seen = set()
+
+                for _, asset in item.assets.items():
+                    self.assertTrue("/./" not in asset.href)
+                    self.assertTrue(is_absolute_href(asset.href))
+                    if _ == "eo:bands":
+                        bands_seen |= set(
+                            b['name']
+                            for b in asset.extra_fields['band_fields'])
+                    else:
+                        pass
+
+                [self.assertTrue(band in band_list) for band in bands_seen]
+                os.remove(f"{tmp_dir}/{item_id}.json")
+
+    def test_create_synergy_2_vgp_item(self):
+        item_id = str("S3B_SY_2_VGP____"
+                      "20210213T192726_20210213T201112_20210215T060438_"
+                      "2626_049_099______LN2_O_NT_002")
+        granule_href = test_data.get_path(
+            "data-files/"
+            "S3B_SY_2_VGP____"
+            "20210213T192726_20210213T201112_20210215T060438_"
+            "2626_049_099______LN2_O_NT_002.SEN3")
+
+        with self.subTest(granule_href):
+            with TemporaryDirectory() as tmp_dir:
+                cmd = ["sentinel3", "create-item", granule_href, tmp_dir]
+                self.run_command(cmd)
+
+                jsons = [p for p in os.listdir(tmp_dir) if p.endswith(".json")]
+                self.assertEqual(len(jsons), 1)
+                fname = jsons[0]
+
+                item = pystac.Item.from_file(os.path.join(tmp_dir, fname))
+
+                item.validate()
+
+                self.assertEqual(item.id, item_id)
+
+                band_list = [
+                    value.name for value in SENTINEL_SYNERGY_BANDS.values()
+                ][-4:]
 
                 bands_seen = set()
 

@@ -1003,3 +1003,640 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
         for k, v in expected.items():
             self.assertIn(k, s3_props)
             self.assertEqual(s3_props[k], v)
+
+    def test_parses_sral_2_lan_metadata_properties(self):
+
+        # Get the path of the test xml
+        manifest_path = test_data.get_path(
+            "data-files/"
+            "S3A_SR_2_LAN____20201003T195855_20201003T204924_20201028T210401_"
+            "3029_063_270______LN3_O_NT_004.SEN3")
+
+        metalinks = MetadataLinks(manifest_path)
+
+        product_metadata = ProductMetadata(metalinks.product_metadata_href)
+
+        item = pystac.Item(
+            id=product_metadata.scene_id,
+            geometry=product_metadata.geometry,
+            bbox=product_metadata.bbox,
+            datetime=product_metadata.get_datetime,
+            properties={},
+            stac_extensions=[],
+        )
+
+        # ---- Add Extensions ----
+
+        # sat
+        sat = SatExtension.ext(item, add_if_missing=True)
+        fill_sat_properties(sat, metalinks.product_metadata_href)
+
+        # eo
+        eo = EOExtension.ext(item, add_if_missing=True)
+        fill_eo_properties(eo, metalinks.product_metadata_href)
+
+        # proj
+        proj = ProjectionExtension.ext(item, add_if_missing=True)
+        fill_proj_properties(proj, product_metadata)
+
+        # s3 properties
+        item.properties.update({**product_metadata.metadata_dict})
+
+        # Make a dictionary of the properties
+        s3_props = {
+            "bbox":
+            item.bbox,
+            "epsg":
+            item.properties["proj:epsg"],
+            "datetime":
+            item.datetime.strftime("%Y-%m-%dT%H:%M:%S.%fZ"),
+            "orbit_state":
+            item.properties["sat:orbit_state"],
+            "absolute_orbit":
+            item.properties["sat:absolute_orbit"],
+            "relative_orbit":
+            item.properties["sat:relative_orbit"],
+            "instrument":
+            item.properties["s3:instrument"],
+            "mode":
+            item.properties["s3:mode"],
+            "productType":
+            item.properties["s3:productType"],
+            "lrmModePercentage":
+            item.properties["s3:lrmModePercentage"],
+            "sarModePercentage":
+            item.properties["s3:sarModePercentage"],
+            "landPercentage":
+            item.properties["s3:landPercentage"],
+            "closedSeaPercentage":
+            item.properties["s3:closedSeaPercentage"],
+            "continentalIcePercentage":
+            item.properties["s3:continentalIcePercentage"],
+            "openOceanPercentage":
+            item.properties["s3:openOceanPercentage"],
+        }
+
+        expected = {
+            "bbox": [-72.2571, -81.4165, 120.308, 81.4178],
+            "epsg": 4326,
+            "datetime": "2020-10-03T20:24:09.317133Z",
+            "orbit_state": "ascending",
+            "absolute_orbit": 24113,
+            "relative_orbit": 270,
+            "instrument": "SRAL",
+            "mode": "EO",
+            "productType": "SR_2_LAN___",
+            "lrmModePercentage": 0.0,
+            "sarModePercentage": 100.0,
+            "landPercentage": 55.0,
+            "closedSeaPercentage": 0.0,
+            "continentalIcePercentage": 22.0,
+            "openOceanPercentage": 23.0,
+        }
+
+        for k, v in expected.items():
+            self.assertIn(k, s3_props)
+            self.assertEqual(s3_props[k], v)
+
+    def test_parses_sral_2_wat_metadata_properties(self):
+
+        # Get the path of the test xml
+        manifest_path = test_data.get_path(
+            "data-files/"
+            "S3A_SR_2_WAT____20190326T011836_20190326T020243_20190420T170416_"
+            "2647_043_017______MAR_O_NT_003.SEN3")
+
+        metalinks = MetadataLinks(manifest_path)
+
+        product_metadata = ProductMetadata(metalinks.product_metadata_href)
+
+        item = pystac.Item(
+            id=product_metadata.scene_id,
+            geometry=product_metadata.geometry,
+            bbox=product_metadata.bbox,
+            datetime=product_metadata.get_datetime,
+            properties={},
+            stac_extensions=[],
+        )
+
+        # ---- Add Extensions ----
+
+        # sat
+        sat = SatExtension.ext(item, add_if_missing=True)
+        fill_sat_properties(sat, metalinks.product_metadata_href)
+
+        # eo
+        eo = EOExtension.ext(item, add_if_missing=True)
+        fill_eo_properties(eo, metalinks.product_metadata_href)
+
+        # proj
+        proj = ProjectionExtension.ext(item, add_if_missing=True)
+        fill_proj_properties(proj, product_metadata)
+
+        # s3 properties
+        item.properties.update({**product_metadata.metadata_dict})
+
+        # Make a dictionary of the properties
+        s3_props = {
+            "bbox":
+            item.bbox,
+            "epsg":
+            item.properties["proj:epsg"],
+            "datetime":
+            item.datetime.strftime("%Y-%m-%dT%H:%M:%S.%fZ"),
+            "orbit_state":
+            item.properties["sat:orbit_state"],
+            "absolute_orbit":
+            item.properties["sat:absolute_orbit"],
+            "relative_orbit":
+            item.properties["sat:relative_orbit"],
+            "instrument":
+            item.properties["s3:instrument"],
+            "mode":
+            item.properties["s3:mode"],
+            "productType":
+            item.properties["s3:productType"],
+            "lrmModePercentage":
+            item.properties["s3:lrmModePercentage"],
+            "sarModePercentage":
+            item.properties["s3:sarModePercentage"],
+            "landPercentage":
+            item.properties["s3:landPercentage"],
+            "closedSeaPercentage":
+            item.properties["s3:closedSeaPercentage"],
+            "continentalIcePercentage":
+            item.properties["s3:continentalIcePercentage"],
+            "openOceanPercentage":
+            item.properties["s3:openOceanPercentage"],
+        }
+
+        expected = {
+            "bbox": [-172.503, -65.9996, 179.499, 81.4155],
+            "epsg": 4326,
+            "datetime": "2019-03-26T01:40:39.237989Z",
+            "orbit_state": "descending",
+            "absolute_orbit": 16160,
+            "relative_orbit": 17,
+            "instrument": "SRAL",
+            "mode": "EO",
+            "productType": "SR_2_WAT___",
+            "lrmModePercentage": 0.0,
+            "sarModePercentage": 100.0,
+            "landPercentage": 3.0,
+            "closedSeaPercentage": 0.0,
+            "continentalIcePercentage": 0.0,
+            "openOceanPercentage": 97.0,
+        }
+
+        for k, v in expected.items():
+            self.assertIn(k, s3_props)
+            self.assertEqual(s3_props[k], v)
+
+    def test_parses_synergy_2_aod_metadata_properties(self):
+
+        # Get the path of the test xml
+        manifest_path = test_data.get_path(
+            "data-files/"
+            "S3A_SY_2_AOD____20201119T153545_20201119T162000_20201120T223531_"
+            "2655_065_168______LN2_O_NT_002.SEN3")
+
+        metalinks = MetadataLinks(manifest_path)
+
+        product_metadata = ProductMetadata(metalinks.product_metadata_href)
+
+        item = pystac.Item(
+            id=product_metadata.scene_id,
+            geometry=product_metadata.geometry,
+            bbox=product_metadata.bbox,
+            datetime=product_metadata.get_datetime,
+            properties={},
+            stac_extensions=[],
+        )
+
+        # ---- Add Extensions ----
+
+        # sat
+        sat = SatExtension.ext(item, add_if_missing=True)
+        fill_sat_properties(sat, metalinks.product_metadata_href)
+
+        # eo
+        eo = EOExtension.ext(item, add_if_missing=True)
+        fill_eo_properties(eo, metalinks.product_metadata_href)
+
+        # proj
+        proj = ProjectionExtension.ext(item, add_if_missing=True)
+        fill_proj_properties(proj, product_metadata)
+
+        # s3 properties
+        item.properties.update({**product_metadata.metadata_dict})
+
+        # Make a dictionary of the properties
+        s3_props = {
+            "bbox":
+            item.bbox,
+            "epsg":
+            item.properties["proj:epsg"],
+            "datetime":
+            item.datetime.strftime("%Y-%m-%dT%H:%M:%S.%fZ"),
+            "orbit_state":
+            item.properties["sat:orbit_state"],
+            "absolute_orbit":
+            item.properties["sat:absolute_orbit"],
+            "relative_orbit":
+            item.properties["sat:relative_orbit"],
+            "cloud_cover":
+            item.properties["eo:cloud_cover"],
+            "shape":
+            item.properties["proj:shape"],
+            "instrument":
+            item.properties["s3:instrument"],
+            "mode":
+            item.properties["s3:mode"],
+            "productType":
+            item.properties["s3:productType"],
+            "salineWaterPixels_percentage":
+            item.properties["s3:salineWaterPixels_percentage"],
+            "landPixels_percentage":
+            item.properties["s3:landPixels_percentage"]
+        }
+
+        expected = {
+            "bbox": [-178.594, -84.4117, 177.852, 61.9656],
+            "epsg": 4326,
+            "datetime": "2020-11-19T15:57:52.526511Z",
+            "orbit_state": "descending",
+            "absolute_orbit": 24781,
+            "relative_orbit": 168,
+            "cloud_cover": 78.520162,
+            "shape": [324, 4023],
+            "instrument": "SYNERGY",
+            "mode": "EO",
+            "productType": "SY_2_AOD___",
+            "salineWaterPixels_percentage": 73.501939,
+            "landPixels_percentage": 26.485775
+        }
+
+        for k, v in expected.items():
+            self.assertIn(k, s3_props)
+            self.assertEqual(s3_props[k], v)
+
+    def test_parses_synergy_2_syn_metadata_properties(self):
+
+        # Get the path of the test xml
+        manifest_path = test_data.get_path(
+            "data-files/"
+            "S3A_SY_2_SYN____20190202T004600_20190202T004900_20190203T142947_"
+            "0179_041_045_2700_LN2_O_NT_002.SEN3")
+
+        metalinks = MetadataLinks(manifest_path)
+
+        product_metadata = ProductMetadata(metalinks.product_metadata_href)
+
+        item = pystac.Item(
+            id=product_metadata.scene_id,
+            geometry=product_metadata.geometry,
+            bbox=product_metadata.bbox,
+            datetime=product_metadata.get_datetime,
+            properties={},
+            stac_extensions=[],
+        )
+
+        # ---- Add Extensions ----
+
+        # sat
+        sat = SatExtension.ext(item, add_if_missing=True)
+        fill_sat_properties(sat, metalinks.product_metadata_href)
+
+        # eo
+        eo = EOExtension.ext(item, add_if_missing=True)
+        fill_eo_properties(eo, metalinks.product_metadata_href)
+
+        # proj
+        proj = ProjectionExtension.ext(item, add_if_missing=True)
+        fill_proj_properties(proj, product_metadata)
+
+        # s3 properties
+        item.properties.update({**product_metadata.metadata_dict})
+
+        # Make a dictionary of the properties
+        s3_props = {
+            "bbox":
+            item.bbox,
+            "epsg":
+            item.properties["proj:epsg"],
+            "datetime":
+            item.datetime.strftime("%Y-%m-%dT%H:%M:%S.%fZ"),
+            "orbit_state":
+            item.properties["sat:orbit_state"],
+            "absolute_orbit":
+            item.properties["sat:absolute_orbit"],
+            "relative_orbit":
+            item.properties["sat:relative_orbit"],
+            "cloud_cover":
+            item.properties["eo:cloud_cover"],
+            "instrument":
+            item.properties["s3:instrument"],
+            "mode":
+            item.properties["s3:mode"],
+            "productType":
+            item.properties["s3:productType"],
+            "salineWaterPixels_percentage":
+            item.properties["s3:salineWaterPixels_percentage"],
+            "coastalPixels_percentage":
+            item.properties["s3:coastalPixels_percentage"],
+            "freshInlandWaterPixels_percentage":
+            item.properties["s3:freshInlandWaterPixels_percentage"],
+            "tidalRegionPixels_percentage":
+            item.properties["s3:tidalRegionPixels_percentage"],
+            "landPixels_percentage":
+            item.properties["s3:landPixels_percentage"]
+        }
+
+        expected = {
+            "bbox": [130.373, 7.90436, 144.644, 20.9353],
+            "epsg": 4326,
+            "datetime": "2019-02-02T00:47:30.461765Z",
+            "orbit_state": "descending",
+            "absolute_orbit": 15418,
+            "relative_orbit": 45,
+            "cloud_cover": 39.446131,
+            "instrument": "SYNERGY",
+            "mode": "EO",
+            "productType": "SY_2_SYN___",
+            "salineWaterPixels_percentage": 95.649619,
+            "coastalPixels_percentage": 0.004361,
+            "freshInlandWaterPixels_percentage": 3e-05,
+            "tidalRegionPixels_percentage": 0.0,
+            "landPixels_percentage": 0.005341
+        }
+
+        for k, v in expected.items():
+            self.assertIn(k, s3_props)
+            self.assertEqual(s3_props[k], v)
+
+    def test_parses_synergy_2_v10_metadata_properties(self):
+
+        # Get the path of the test xml
+        manifest_path = test_data.get_path(
+            "data-files/"
+            "S3A_SY_2_V10____20191216T110000_20191226T110000_20200105T114106_"
+            "ASIAN_ISLANDS_____LN2_O_NT_002.SEN3")
+
+        metalinks = MetadataLinks(manifest_path)
+
+        product_metadata = ProductMetadata(metalinks.product_metadata_href)
+
+        item = pystac.Item(
+            id=product_metadata.scene_id,
+            geometry=product_metadata.geometry,
+            bbox=product_metadata.bbox,
+            datetime=product_metadata.get_datetime,
+            properties={},
+            stac_extensions=[],
+        )
+
+        # ---- Add Extensions ----
+
+        # sat
+        sat = SatExtension.ext(item, add_if_missing=True)
+        fill_sat_properties(sat, metalinks.product_metadata_href)
+
+        # eo
+        eo = EOExtension.ext(item, add_if_missing=True)
+        fill_eo_properties(eo, metalinks.product_metadata_href)
+
+        # proj
+        proj = ProjectionExtension.ext(item, add_if_missing=True)
+        fill_proj_properties(proj, product_metadata)
+
+        # s3 properties
+        item.properties.update({**product_metadata.metadata_dict})
+
+        # Make a dictionary of the properties
+        s3_props = {
+            "bbox":
+            item.bbox,
+            "epsg":
+            item.properties["proj:epsg"],
+            "datetime":
+            item.datetime.strftime("%Y-%m-%dT%H:%M:%SZ"),
+            "orbit_state":
+            item.properties["sat:orbit_state"],
+            "absolute_orbit":
+            item.properties["sat:absolute_orbit"],
+            "relative_orbit":
+            item.properties["sat:relative_orbit"],
+            "cloud_cover":
+            item.properties["eo:cloud_cover"],
+            "instrument":
+            item.properties["s3:instrument"],
+            "mode":
+            item.properties["s3:mode"],
+            "productType":
+            item.properties["s3:productType"],
+            "snowOrIcePixels_percentage":
+            item.properties["s3:snowOrIcePixels_percentage"],
+            "landPixels_percentage":
+            item.properties["s3:landPixels_percentage"]
+        }
+
+        expected = {
+            "bbox": [92.0045, -11.9955, 169.996, 28.9955],
+            "epsg": 4326,
+            "datetime": "2019-12-21T11:00:00Z",
+            "orbit_state": "descending",
+            "absolute_orbit": 19931,
+            "relative_orbit": 323,
+            "cloud_cover": 4.358878,
+            "instrument": "SYNERGY",
+            "mode": "EO",
+            "productType": "SY_2_V10___",
+            "snowOrIcePixels_percentage": 0.027358,
+            "landPixels_percentage": 18.263485
+        }
+
+        for k, v in expected.items():
+            self.assertIn(k, s3_props)
+            self.assertEqual(s3_props[k], v)
+
+    def test_parses_synergy_2_vg1_metadata_properties(self):
+
+        # Get the path of the test xml
+        manifest_path = test_data.get_path(
+            "data-files/"
+            "S3A_SY_2_VG1____20200609T120000_20200610T120000_20200615T121610_"
+            "CENTRAL_AMERICA___LN2_O_NT_002.SEN3")
+
+        metalinks = MetadataLinks(manifest_path)
+
+        product_metadata = ProductMetadata(metalinks.product_metadata_href)
+
+        item = pystac.Item(
+            id=product_metadata.scene_id,
+            geometry=product_metadata.geometry,
+            bbox=product_metadata.bbox,
+            datetime=product_metadata.get_datetime,
+            properties={},
+            stac_extensions=[],
+        )
+
+        # ---- Add Extensions ----
+
+        # sat
+        sat = SatExtension.ext(item, add_if_missing=True)
+        fill_sat_properties(sat, metalinks.product_metadata_href)
+
+        # eo
+        eo = EOExtension.ext(item, add_if_missing=True)
+        fill_eo_properties(eo, metalinks.product_metadata_href)
+
+        # proj
+        proj = ProjectionExtension.ext(item, add_if_missing=True)
+        fill_proj_properties(proj, product_metadata)
+
+        # s3 properties
+        item.properties.update({**product_metadata.metadata_dict})
+
+        # Make a dictionary of the properties
+        s3_props = {
+            "bbox":
+            item.bbox,
+            "epsg":
+            item.properties["proj:epsg"],
+            "datetime":
+            item.datetime.strftime("%Y-%m-%dT%H:%M:%SZ"),
+            "orbit_state":
+            item.properties["sat:orbit_state"],
+            "absolute_orbit":
+            item.properties["sat:absolute_orbit"],
+            "relative_orbit":
+            item.properties["sat:relative_orbit"],
+            "cloud_cover":
+            item.properties["eo:cloud_cover"],
+            "instrument":
+            item.properties["s3:instrument"],
+            "mode":
+            item.properties["s3:mode"],
+            "productType":
+            item.properties["s3:productType"],
+            "snowOrIcePixels_percentage":
+            item.properties["s3:snowOrIcePixels_percentage"],
+            "landPixels_percentage":
+            item.properties["s3:landPixels_percentage"]
+        }
+
+        expected = {
+            "bbox": [-124.991, 3.60956e-12, -50.0, 49.9911],
+            "epsg": 4326,
+            "datetime": "2020-06-10T00:00:00Z",
+            "orbit_state": "ascending",
+            "absolute_orbit": 22455,
+            "relative_orbit": 152,
+            "cloud_cover": 9.465587,
+            "instrument": "SYNERGY",
+            "mode": "EO",
+            "productType": "SY_2_VG1___",
+            "snowOrIcePixels_percentage": 0.066818,
+            "landPixels_percentage": 22.527562
+        }
+
+        for k, v in expected.items():
+            self.assertIn(k, s3_props)
+            self.assertEqual(s3_props[k], v)
+
+    def test_parses_synergy_2_vgp_metadata_properties(self):
+
+        # Get the path of the test xml
+        manifest_path = test_data.get_path(
+            "data-files/"
+            "S3B_SY_2_VGP____20210213T192726_20210213T201112_20210215T060438_"
+            "2626_049_099______LN2_O_NT_002.SEN3")
+
+        metalinks = MetadataLinks(manifest_path)
+
+        product_metadata = ProductMetadata(metalinks.product_metadata_href)
+
+        item = pystac.Item(
+            id=product_metadata.scene_id,
+            geometry=product_metadata.geometry,
+            bbox=product_metadata.bbox,
+            datetime=product_metadata.get_datetime,
+            properties={},
+            stac_extensions=[],
+        )
+
+        # ---- Add Extensions ----
+
+        # sat
+        sat = SatExtension.ext(item, add_if_missing=True)
+        fill_sat_properties(sat, metalinks.product_metadata_href)
+
+        # eo
+        eo = EOExtension.ext(item, add_if_missing=True)
+        fill_eo_properties(eo, metalinks.product_metadata_href)
+
+        # proj
+        proj = ProjectionExtension.ext(item, add_if_missing=True)
+        fill_proj_properties(proj, product_metadata)
+
+        # s3 properties
+        item.properties.update({**product_metadata.metadata_dict})
+
+        # Make a dictionary of the properties
+        s3_props = {
+            "bbox":
+            item.bbox,
+            "epsg":
+            item.properties["proj:epsg"],
+            "datetime":
+            item.datetime.strftime("%Y-%m-%dT%H:%M:%S.%fZ"),
+            "orbit_state":
+            item.properties["sat:orbit_state"],
+            "absolute_orbit":
+            item.properties["sat:absolute_orbit"],
+            "relative_orbit":
+            item.properties["sat:relative_orbit"],
+            "cloud_cover":
+            item.properties["eo:cloud_cover"],
+            "instrument":
+            item.properties["s3:instrument"],
+            "mode":
+            item.properties["s3:mode"],
+            "productType":
+            item.properties["s3:productType"],
+            "snowOrIcePixels_percentage":
+            item.properties["s3:snowOrIcePixels_percentage"],
+            "salineWaterPixels_percentage":
+            item.properties["s3:salineWaterPixels_percentage"],
+            "coastalPixelss_percentage":
+            item.properties["s3:coastalPixelss_percentage"],
+            "freshInlandWaterPixels_percentage":
+            item.properties["s3:freshInlandWaterPixels_percentage"],
+            "tidalRegionPixels_percentage":
+            item.properties["s3:tidalRegionPixels_percentage"],
+            "landPixels_percentage":
+            item.properties["s3:landPixels_percentage"]
+        }
+
+        expected = {
+            "bbox": [-179.336, -84.0126, 179.986, 68.7507],
+            "epsg": 4326,
+            "datetime": "2021-02-13T19:49:19.044416Z",
+            "orbit_state": "descending",
+            "absolute_orbit": 14616,
+            "relative_orbit": 99,
+            "cloud_cover": 0.280665,
+            "instrument": "SYNERGY",
+            "mode": "EO",
+            "productType": "SY_2_VGP___",
+            "snowOrIcePixels_percentage": 0.207021,
+            "salineWaterPixels_percentage": 86.89342,
+            "coastalPixelss_percentage": 0.048629,
+            "freshInlandWaterPixels_percentage": 0.355955,
+            "tidalRegionPixels_percentage": 0.062851,
+            "landPixels_percentage": 13.090312
+        }
+
+        for k, v in expected.items():
+            self.assertIn(k, s3_props)
+            self.assertEqual(s3_props[k], v)

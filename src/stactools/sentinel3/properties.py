@@ -56,6 +56,13 @@ def fill_eo_properties(eo_ext, href):
     elif product_name.split("_")[1] == "SL":
         eo_ext.cloud_cover = float(
             root.find_attr("percentage", ".//sentinel3:cloudyPixels"))
+    elif product_name.split("_")[1] == "SR" and product_name.split(
+            "_")[2] == "2":
+        pass
+    elif product_name.split("_")[1] == "SY" and product_name.split(
+            "_")[2] == "2":
+        eo_ext.cloud_cover = float(
+            root.find_attr("percentage", ".//sentinel3:cloudyPixels"))
     else:
         raise ValueError("Unexpected value found at "
                          f"{product_name}: "
@@ -80,4 +87,12 @@ def fill_proj_properties(proj_ext, product_meta):
 
     proj_ext.epsg = product_meta.get_epsg
 
-    proj_ext.shape = product_meta.get_shape
+    if (product_meta.scene_id.split("_")[1] == "SR"
+            and product_meta.scene_id.split("_")[2] == "2"):
+        pass
+    elif (product_meta.scene_id.split("_")[1] == "SY"
+          and product_meta.scene_id.split("_")[2] == "2"
+          and product_meta.scene_id.split("_")[3] != "AOD"):
+        pass
+    else:
+        proj_ext.shape = product_meta.get_shape
