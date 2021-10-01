@@ -1,6 +1,5 @@
-import os
 from datetime import datetime
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, Optional
 
 from pystac.utils import str_to_datetime
 from shapely.geometry import Polygon, mapping  # type: ignore
@@ -12,12 +11,9 @@ class ProductMetadataError(Exception):
 
 
 class ProductMetadata:
-    def __init__(
-        self,
-        href,
-    ) -> None:
+    def __init__(self, href: str, manifest: XmlElement) -> None:
         self.href = href
-        self._root = XmlElement.from_file(href)
+        self._root = manifest
 
         def _get_geometries():
             # Find the footprint descriptor
@@ -130,12 +126,6 @@ class ProductMetadata:
     def cycle_number(self) -> Optional[str]:
 
         return self._root.findall(".//safe:cycleNumber")[0].text
-
-    @property
-    def image_paths(self) -> List[str]:
-        head_folder = os.path.dirname(self.href)
-        measurements = os.path.join(head_folder, "measurement")
-        return [x for x in os.listdir(measurements) if x.endswith("tiff")]
 
     @property
     def metadata_dict(self) -> Dict[str, Any]:
@@ -629,6 +619,10 @@ class ProductMetadata:
                         self._root.find_attr("percentage",
                                              ".//sentinel3:landPixels"))),
             }
+        else:
+            raise RuntimeError(
+                f"Unsupported product type encountered: {product_type}")
+
         return {k: v for k, v in result.items() if v is not None}
 
     @property

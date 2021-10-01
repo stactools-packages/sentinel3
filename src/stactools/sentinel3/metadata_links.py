@@ -2,6 +2,7 @@ import os
 from typing import List, Optional
 
 import pystac
+from stactools.core.io import ReadHrefModifier
 from stactools.core.io.xml import XmlElement
 
 from .constants import (SAFE_MANIFEST_ASSET_KEY, SENTINEL_OLCI_BANDS,
@@ -14,15 +15,14 @@ class ManifestError(Exception):
 
 
 class MetadataLinks:
-    def __init__(
-        self,
-        granule_href: str,
-    ):
+    def __init__(self,
+                 granule_href: str,
+                 read_href_modifier: Optional[ReadHrefModifier] = None):
         self.granule_href = granule_href
         self.href = os.path.join(granule_href, "xfdumanifest.xml")
 
-        root = XmlElement.from_file(self.href)
-        data_object_section = root.find("dataObjectSection")
+        self.manifest = XmlElement.from_file(self.href, read_href_modifier)
+        data_object_section = self.manifest.find("dataObjectSection")
         if data_object_section is None:
             raise ManifestError(
                 f"Manifest at {self.href} does not have a dataObjectSection")
@@ -58,21 +58,24 @@ class MetadataLinks:
         )
         return (SAFE_MANIFEST_ASSET_KEY, asset)
 
-    def create_band_asset(self):
+    def create_band_asset(self, manifest: XmlElement):
 
         band_dict_list = []
 
-        root = XmlElement.from_file(self.product_metadata_href)
-        product_type = root.findall(".//sentinel3:productType")[0].text
+        product_type = manifest.findall(".//sentinel3:productType")[0].text
+        product_type_category = product_type.split("_")[0]
 
-        if product_type.split("_")[0] == "OL":
+        if product_type_category == "OL":
             instrument_bands = SENTINEL_OLCI_BANDS
-        elif product_type.split("_")[0] == "SL":
+        elif product_type_category == "SL":
             instrument_bands = SENTINEL_SLSTR_BANDS
-        elif product_type.split("_")[0] == "SR":
+        elif product_type_category == "SR":
             instrument_bands = SENTINEL_SRAL_BANDS
-        elif product_type.split("_")[0] == "SY":
+        elif product_type_category == "SY":
             instrument_bands = SENTINEL_SYNERGY_BANDS
+        else:
+            raise RuntimeError(
+                f"Unknown product type encountered: {product_type_category}")
 
         if instrument_bands == SENTINEL_SRAL_BANDS:
             for band in instrument_bands:

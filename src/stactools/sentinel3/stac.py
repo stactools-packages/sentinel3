@@ -1,9 +1,11 @@
 import logging
+from typing import Optional
 
 import pystac
 from pystac.extensions.eo import EOExtension
 from pystac.extensions.projection import ProjectionExtension
 from pystac.extensions.sat import SatExtension
+from stactools.core.io import ReadHrefModifier
 
 from .constants import SENTINEL_CONSTELLATION, SENTINEL_PROVIDER
 from .metadata_links import MetadataLinks
@@ -14,20 +16,26 @@ from .properties import (fill_eo_properties, fill_proj_properties,
 logger = logging.getLogger(__name__)
 
 
-def create_item(granule_href: str) -> pystac.Item:
+def create_item(
+        granule_href: str,
+        read_href_modifier: Optional[ReadHrefModifier] = None) -> pystac.Item:
     """Create a STC Item from a Sentinel-3 scene.
 
     Args:
         granule_href (str): The HREF to the granule.
             This is expected to be a path to a SEN3 archive.
+        read_href_modifier: A function that takes an HREF and returns a modified HREF.
+            This can be used to modify a HREF to make it readable, e.g. appending
+            an Azure SAS token or creating a signed URL.
 
     Returns:
         pystac.Item: An item representing the Sentinel-3 OLCI or SLSTR scene.
     """
 
-    metalinks = MetadataLinks(granule_href)
+    metalinks = MetadataLinks(granule_href, read_href_modifier)
 
-    product_metadata = ProductMetadata(metalinks.product_metadata_href)
+    product_metadata = ProductMetadata(metalinks.product_metadata_href,
+                                       metalinks.manifest)
 
     item = pystac.Item(
         id=product_metadata.scene_id,
@@ -41,11 +49,11 @@ def create_item(granule_href: str) -> pystac.Item:
     # ---- Add Extensions ----
     # sat
     sat = SatExtension.ext(item, add_if_missing=True)
-    fill_sat_properties(sat, metalinks.product_metadata_href)
+    fill_sat_properties(sat, metalinks.manifest)
 
     # eo
     eo = EOExtension.ext(item, add_if_missing=True)
-    fill_eo_properties(eo, metalinks.product_metadata_href)
+    fill_eo_properties(eo, metalinks.manifest)
 
     # proj
     proj = ProjectionExtension.ext(item, add_if_missing=True)
@@ -63,6 +71,6 @@ def create_item(granule_href: str) -> pystac.Item:
     item.add_asset(*metalinks.create_manifest_asset())
 
     # objects for bands
-    item.add_asset(*metalinks.create_band_asset())
+    item.add_asset(*metalinks.create_band_asset(metalinks.manifest))
 
     return item
