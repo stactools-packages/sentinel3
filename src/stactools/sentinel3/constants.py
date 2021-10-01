@@ -13,9 +13,7 @@ SENTINEL_LICENSE = Link(
     "247904/690755/Sentinel_Data_Legal_Notice",
 )
 
-SENTINEL_CONSTELLATION = "Sentinel 3"
-
-SENTINEL_INSTRUMENTS = ["slstr"]
+SENTINEL_CONSTELLATION = "Sentinel-3"
 
 SENTINEL_PROVIDER = pystac.Provider(
     name="ESA",
@@ -26,8 +24,6 @@ SENTINEL_PROVIDER = pystac.Provider(
     ],
     url="https://earth.esa.int/web/guest/home",
 )
-
-SAFE_MANIFEST_ASSET_KEY = "safe-manifest"
 
 SENTINEL_SLSTR_BANDS = {
     "S01":
@@ -572,9 +568,3 @@ SLSTR_BANDS_TO_RESOLUTIONS = {
         1000,
     ],
 }
-
-SENTINEL_LICENSE = Link(
-    rel="license",
-    target="https://sentinel.esa.int/documents/" +
-    "247904/690755/Sentinel_Data_Legal_Notice",
-)
