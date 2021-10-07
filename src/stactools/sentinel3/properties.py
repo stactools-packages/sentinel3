@@ -26,8 +26,15 @@ def fill_sat_properties(sat_ext: SatExtension, manifest: XmlElement):
     sat_ext.absolute_orbit = int(
         manifest.findall(".//sentinel-safe:orbitNumber")[0].text)
 
-    sat_ext.relative_orbit = int(
+    relative_orbit_num = int(
         manifest.findall(".//sentinel-safe:relativeOrbitNumber")[0].text)
+
+    if relative_orbit_num == 0:
+        sat_ext.relative_orbit = int(
+            manifest.findall(
+                ".//sentinel-safe:relativeOrbitNumber[@type='stop']")[0].text)
+    else:
+        sat_ext.relative_orbit = relative_orbit_num
 
 
 def fill_eo_properties(eo_ext: EOExtension, manifest: XmlElement):
