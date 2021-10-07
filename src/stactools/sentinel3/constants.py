@@ -568,3 +568,69 @@ SLSTR_BANDS_TO_RESOLUTIONS = {
         1000,
     ],
 }
+
+SENTINEL_LICENSE = Link(
+    rel="license",
+    target="https://sentinel.esa.int/documents/" +
+    "247904/690755/Sentinel_Data_Legal_Notice",
+)
+
+SYNERGY_SYN_ASSET_KEYS = [
+    "Syn_Oa01_reflectance_Data",
+    "Syn_Oa02_reflectance_Data",
+    "Syn_Oa03_reflectance_Data",
+    "Syn_Oa04_reflectance_Data",
+    "Syn_Oa05_reflectance_Data",
+    "Syn_Oa06_reflectance_Data",
+    "Syn_Oa07_reflectance_Data",
+    "Syn_Oa08_reflectance_Data",
+    "Syn_Oa09_reflectance_Data",
+    "Syn_Oa10_reflectance_Data",
+    "Syn_Oa11_reflectance_Data",
+    "Syn_Oa12_reflectance_Data",
+    "Syn_Oa16_reflectance_Data",
+    "Syn_Oa17_reflectance_Data",
+    "Syn_Oa18_reflectance_Data",
+    "Syn_Oa21_reflectance_Data",
+    "Syn_S1N_reflectance_Data",
+    "Syn_S2N_reflectance_Data",
+    "Syn_S3N_reflectance_Data",
+    "Syn_S5N_reflectance_Data",
+    "Syn_S6N_reflectance_Data",
+    "Syn_S1O_reflectance_Data",
+    "Syn_S2O_reflectance_Data",
+    "Syn_S3O_reflectance_Data",
+    "Syn_S5O_reflectance_Data",
+    "Syn_S6O_reflectance_Data",
+]
+
+SYNERGY_V10_VG1_VGP_ASSET_KEYS = ["b0Data", "b2Data", "b3Data", "mirData"]
+
+OLCI_L1_ASSET_KEYS = [
+    "Oa01_radianceData", "Oa02_radianceData", "Oa03_radianceData",
+    "Oa04_radianceData", "Oa05_radianceData", "Oa06_radianceData",
+    "Oa07_radianceData", "Oa08_radianceData", "Oa09_radianceData",
+    "Oa10_radianceData", "Oa11_radianceData", "Oa12_radianceData",
+    "Oa13_radianceData", "Oa14_radianceData", "Oa15_radianceData",
+    "Oa16_radianceData", "Oa17_radianceData", "Oa18_radianceData",
+    "Oa19_radianceData", "Oa20_radianceData", "Oa21_radianceData"
+]
+
+OLCI_L2_LAND_ASSET_KEYS = ["ogviData", "otciData", "iwvData"]
+
+OLCI_L2_WATER_ASSET_KEYS = [
+    "Oa01_reflectanceData", "Oa02_reflectanceData", "Oa03_reflectanceData",
+    "Oa04_reflectanceData", "Oa05_reflectanceData", "Oa06_reflectanceData",
+    "Oa07_reflectanceData", "Oa08_reflectanceData", "Oa09_reflectanceData",
+    "Oa10_reflectanceData", "Oa11_reflectanceData", "Oa12_reflectanceData",
+    "Oa16_reflectanceData", "Oa17_reflectanceData", "Oa18_reflectanceData",
+    "Oa21_reflectanceData", "chlNnData", "chlOc4meData", "iopNnData",
+    "iwvData", "parData", "trspData", "tsmNnData", "wAerData"
+]
+
+SLSTR_L1_ASSET_KEYS = [
+    "SLSTR_S1_RAD_AN_Data", "SLSTR_S2_RAD_AN_Data", "SLSTR_S3_RAD_AN_Data",
+    "SLSTR_S4_RAD_AN_Data", "SLSTR_S5_RAD_AN_Data", "SLSTR_S6_RAD_AN_Data",
+    "SLSTR_S7_BT_IN_Data", "SLSTR_S8_BT_IN_Data", "SLSTR_S9_BT_IN_Data",
+    "SLSTR_F1_BT_FN_Data", "SLSTR_F2_BT_IN_Data"
+]

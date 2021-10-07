@@ -2,6 +2,7 @@ import os
 from tempfile import TemporaryDirectory
 
 import pystac
+from pystac.extensions.eo import EOExtension
 from pystac.utils import is_absolute_href
 from stactools.testing import CliTestCase
 
@@ -51,12 +52,10 @@ class CreateItemTest(CliTestCase):
                 for _, asset in item.assets.items():
                     self.assertTrue("/./" not in asset.href)
                     self.assertTrue(is_absolute_href(asset.href))
-                    if _ == "eo:bands":
-                        bands_seen |= set(
-                            b['name']
-                            for b in asset.extra_fields['band_fields'])
-                    else:
-                        pass
+                    asset_eo = EOExtension.ext(asset)
+                    bands = asset_eo.bands
+                    if bands is not None:
+                        bands_seen |= set(b.name for b in bands)
 
                 [self.assertTrue(band in band_list) for band in bands_seen]
                 os.remove(f"{tmp_dir}/{item_id}.json")
@@ -95,12 +94,10 @@ class CreateItemTest(CliTestCase):
                 for _, asset in item.assets.items():
                     self.assertTrue("/./" not in asset.href)
                     self.assertTrue(is_absolute_href(asset.href))
-                    if _ == "eo:bands":
-                        bands_seen |= set(
-                            b['name']
-                            for b in asset.extra_fields['band_fields'])
-                    else:
-                        pass
+                    asset_eo = EOExtension.ext(asset)
+                    bands = asset_eo.bands
+                    if bands is not None:
+                        bands_seen |= set(b.name for b in bands)
 
                 [self.assertTrue(band in band_list) for band in bands_seen]
                 os.remove(f"{tmp_dir}/{item_id}.json")
@@ -139,12 +136,10 @@ class CreateItemTest(CliTestCase):
                 for _, asset in item.assets.items():
                     self.assertTrue("/./" not in asset.href)
                     self.assertTrue(is_absolute_href(asset.href))
-                    if _ == "eo:bands":
-                        bands_seen |= set(
-                            b['name']
-                            for b in asset.extra_fields['band_fields'])
-                    else:
-                        pass
+                    asset_eo = EOExtension.ext(asset)
+                    bands = asset_eo.bands
+                    if bands is not None:
+                        bands_seen |= set(b.name for b in bands)
 
                 [self.assertTrue(band in band_list) for band in bands_seen]
                 os.remove(f"{tmp_dir}/{item_id}.json")
@@ -183,12 +178,10 @@ class CreateItemTest(CliTestCase):
                 for _, asset in item.assets.items():
                     self.assertTrue("/./" not in asset.href)
                     self.assertTrue(is_absolute_href(asset.href))
-                    if _ == "eo:bands":
-                        bands_seen |= set(
-                            b['name']
-                            for b in asset.extra_fields['band_fields'])
-                    else:
-                        pass
+                    asset_eo = EOExtension.ext(asset)
+                    bands = asset_eo.bands
+                    if bands is not None:
+                        bands_seen |= set(b.name for b in bands)
 
                 [self.assertTrue(band in band_list) for band in bands_seen]
                 os.remove(f"{tmp_dir}/{item_id}.json")
@@ -227,12 +220,10 @@ class CreateItemTest(CliTestCase):
                 for _, asset in item.assets.items():
                     self.assertTrue("/./" not in asset.href)
                     self.assertTrue(is_absolute_href(asset.href))
-                    if _ == "eo:bands":
-                        bands_seen |= set(
-                            b['name']
-                            for b in asset.extra_fields['band_fields'])
-                    else:
-                        pass
+                    asset_eo = EOExtension.ext(asset)
+                    bands = asset_eo.bands
+                    if bands is not None:
+                        bands_seen |= set(b.name for b in bands)
 
                 [self.assertTrue(band in band_list) for band in bands_seen]
                 os.remove(f"{tmp_dir}/{item_id}.json")
@@ -271,12 +262,10 @@ class CreateItemTest(CliTestCase):
                 for _, asset in item.assets.items():
                     self.assertTrue("/./" not in asset.href)
                     self.assertTrue(is_absolute_href(asset.href))
-                    if _ == "eo:bands":
-                        bands_seen |= set(
-                            b['name']
-                            for b in asset.extra_fields['band_fields'])
-                    else:
-                        pass
+                    asset_eo = EOExtension.ext(asset)
+                    bands = asset_eo.bands
+                    if bands is not None:
+                        bands_seen |= set(b.name for b in bands)
 
                 [self.assertTrue(band in band_list) for band in bands_seen]
                 os.remove(f"{tmp_dir}/{item_id}.json")
@@ -315,12 +304,10 @@ class CreateItemTest(CliTestCase):
                 for _, asset in item.assets.items():
                     self.assertTrue("/./" not in asset.href)
                     self.assertTrue(is_absolute_href(asset.href))
-                    if _ == "eo:bands":
-                        bands_seen |= set(
-                            b['name']
-                            for b in asset.extra_fields['band_fields'])
-                    else:
-                        pass
+                    asset_eo = EOExtension.ext(asset)
+                    bands = asset_eo.bands
+                    if bands is not None:
+                        bands_seen |= set(b.name for b in bands)
 
                 [self.assertTrue(band in band_list) for band in bands_seen]
                 os.remove(f"{tmp_dir}/{item_id}.json")
@@ -359,12 +346,10 @@ class CreateItemTest(CliTestCase):
                 for _, asset in item.assets.items():
                     self.assertTrue("/./" not in asset.href)
                     self.assertTrue(is_absolute_href(asset.href))
-                    if _ == "eo:bands":
-                        bands_seen |= set(
-                            b['name']
-                            for b in asset.extra_fields['band_fields'])
-                    else:
-                        pass
+                    asset_eo = EOExtension.ext(asset)
+                    bands = asset_eo.bands
+                    if bands is not None:
+                        bands_seen |= set(b.name for b in bands)
 
                 [self.assertTrue(band in band_list) for band in bands_seen]
                 os.remove(f"{tmp_dir}/{item_id}.json")
@@ -403,12 +388,10 @@ class CreateItemTest(CliTestCase):
                 for _, asset in item.assets.items():
                     self.assertTrue("/./" not in asset.href)
                     self.assertTrue(is_absolute_href(asset.href))
-                    if _ == "eo:bands":
-                        bands_seen |= set(
-                            b['name']
-                            for b in asset.extra_fields['band_fields'])
-                    else:
-                        pass
+                    asset_eo = EOExtension.ext(asset)
+                    bands = asset_eo.bands
+                    if bands is not None:
+                        bands_seen |= set(b.name for b in bands)
 
                 [self.assertTrue(band in band_list) for band in bands_seen]
                 os.remove(f"{tmp_dir}/{item_id}.json")
@@ -447,12 +430,10 @@ class CreateItemTest(CliTestCase):
                 for _, asset in item.assets.items():
                     self.assertTrue("/./" not in asset.href)
                     self.assertTrue(is_absolute_href(asset.href))
-                    if _ == "eo:bands":
-                        bands_seen |= set(
-                            b['name']
-                            for b in asset.extra_fields['band_fields'])
-                    else:
-                        pass
+                    asset_eo = EOExtension.ext(asset)
+                    bands = asset_eo.bands
+                    if bands is not None:
+                        bands_seen |= set(b.name for b in bands)
 
                 [self.assertTrue(band in band_list) for band in bands_seen]
                 os.remove(f"{tmp_dir}/{item_id}.json")
@@ -491,12 +472,10 @@ class CreateItemTest(CliTestCase):
                 for _, asset in item.assets.items():
                     self.assertTrue("/./" not in asset.href)
                     self.assertTrue(is_absolute_href(asset.href))
-                    if _ == "eo:bands":
-                        bands_seen |= set(
-                            b['name']
-                            for b in asset.extra_fields['band_fields'])
-                    else:
-                        pass
+                    asset_eo = EOExtension.ext(asset)
+                    bands = asset_eo.bands
+                    if bands is not None:
+                        bands_seen |= set(b.name for b in bands)
 
                 [self.assertTrue(band in band_list) for band in bands_seen]
                 os.remove(f"{tmp_dir}/{item_id}.json")
@@ -535,12 +514,10 @@ class CreateItemTest(CliTestCase):
                 for _, asset in item.assets.items():
                     self.assertTrue("/./" not in asset.href)
                     self.assertTrue(is_absolute_href(asset.href))
-                    if _ == "eo:bands":
-                        bands_seen |= set(
-                            b['name']
-                            for b in asset.extra_fields['band_fields'])
-                    else:
-                        pass
+                    asset_eo = EOExtension.ext(asset)
+                    bands = asset_eo.bands
+                    if bands is not None:
+                        bands_seen |= set(b.name for b in bands)
 
                 [self.assertTrue(band in band_list) for band in bands_seen]
                 os.remove(f"{tmp_dir}/{item_id}.json")
@@ -579,12 +556,10 @@ class CreateItemTest(CliTestCase):
                 for _, asset in item.assets.items():
                     self.assertTrue("/./" not in asset.href)
                     self.assertTrue(is_absolute_href(asset.href))
-                    if _ == "eo:bands":
-                        bands_seen |= set(
-                            b['name']
-                            for b in asset.extra_fields['band_fields'])
-                    else:
-                        pass
+                    asset_eo = EOExtension.ext(asset)
+                    bands = asset_eo.bands
+                    if bands is not None:
+                        bands_seen |= set(b.name for b in bands)
 
                 [self.assertTrue(band in band_list) for band in bands_seen]
                 os.remove(f"{tmp_dir}/{item_id}.json")
@@ -623,12 +598,10 @@ class CreateItemTest(CliTestCase):
                 for _, asset in item.assets.items():
                     self.assertTrue("/./" not in asset.href)
                     self.assertTrue(is_absolute_href(asset.href))
-                    if _ == "eo:bands":
-                        bands_seen |= set(
-                            b['name']
-                            for b in asset.extra_fields['band_fields'])
-                    else:
-                        pass
+                    asset_eo = EOExtension.ext(asset)
+                    bands = asset_eo.bands
+                    if bands is not None:
+                        bands_seen |= set(b.name for b in bands)
 
                 [self.assertTrue(band in band_list) for band in bands_seen]
                 os.remove(f"{tmp_dir}/{item_id}.json")
@@ -667,12 +640,10 @@ class CreateItemTest(CliTestCase):
                 for _, asset in item.assets.items():
                     self.assertTrue("/./" not in asset.href)
                     self.assertTrue(is_absolute_href(asset.href))
-                    if _ == "eo:bands":
-                        bands_seen |= set(
-                            b['name']
-                            for b in asset.extra_fields['band_fields'])
-                    else:
-                        pass
+                    asset_eo = EOExtension.ext(asset)
+                    bands = asset_eo.bands
+                    if bands is not None:
+                        bands_seen |= set(b.name for b in bands)
 
                 [self.assertTrue(band in band_list) for band in bands_seen]
                 os.remove(f"{tmp_dir}/{item_id}.json")
@@ -711,12 +682,10 @@ class CreateItemTest(CliTestCase):
                 for _, asset in item.assets.items():
                     self.assertTrue("/./" not in asset.href)
                     self.assertTrue(is_absolute_href(asset.href))
-                    if _ == "eo:bands":
-                        bands_seen |= set(
-                            b['name']
-                            for b in asset.extra_fields['band_fields'])
-                    else:
-                        pass
+                    asset_eo = EOExtension.ext(asset)
+                    bands = asset_eo.bands
+                    if bands is not None:
+                        bands_seen |= set(b.name for b in bands)
 
                 [self.assertTrue(band in band_list) for band in bands_seen]
                 os.remove(f"{tmp_dir}/{item_id}.json")
