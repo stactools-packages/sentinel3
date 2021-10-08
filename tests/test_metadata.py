@@ -24,8 +24,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
 
         metalinks = MetadataLinks(manifest_path)
 
-        product_metadata = ProductMetadata(metalinks.product_metadata_href,
-                                           metalinks.manifest)
+        product_metadata = ProductMetadata(manifest_path, metalinks.manifest)
 
         item = pystac.Item(
             id=product_metadata.scene_id,
@@ -134,8 +133,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
 
         metalinks = MetadataLinks(manifest_path)
 
-        product_metadata = ProductMetadata(metalinks.product_metadata_href,
-                                           metalinks.manifest)
+        product_metadata = ProductMetadata(manifest_path, metalinks.manifest)
 
         item = pystac.Item(
             id=product_metadata.scene_id,
@@ -244,8 +242,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
 
         metalinks = MetadataLinks(manifest_path)
 
-        product_metadata = ProductMetadata(metalinks.product_metadata_href,
-                                           metalinks.manifest)
+        product_metadata = ProductMetadata(manifest_path, metalinks.manifest)
 
         item = pystac.Item(
             id=product_metadata.scene_id,
@@ -357,8 +354,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
 
         metalinks = MetadataLinks(manifest_path)
 
-        product_metadata = ProductMetadata(metalinks.product_metadata_href,
-                                           metalinks.manifest)
+        product_metadata = ProductMetadata(manifest_path, metalinks.manifest)
 
         item = pystac.Item(
             id=product_metadata.scene_id,
@@ -470,8 +466,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
 
         metalinks = MetadataLinks(manifest_path)
 
-        product_metadata = ProductMetadata(metalinks.product_metadata_href,
-                                           metalinks.manifest)
+        product_metadata = ProductMetadata(manifest_path, metalinks.manifest)
 
         item = pystac.Item(
             id=product_metadata.scene_id,
@@ -583,8 +578,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
 
         metalinks = MetadataLinks(manifest_path)
 
-        product_metadata = ProductMetadata(metalinks.product_metadata_href,
-                                           metalinks.manifest)
+        product_metadata = ProductMetadata(manifest_path, metalinks.manifest)
 
         item = pystac.Item(
             id=product_metadata.scene_id,
@@ -693,8 +687,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
 
         metalinks = MetadataLinks(manifest_path)
 
-        product_metadata = ProductMetadata(metalinks.product_metadata_href,
-                                           metalinks.manifest)
+        product_metadata = ProductMetadata(manifest_path, metalinks.manifest)
 
         item = pystac.Item(
             id=product_metadata.scene_id,
@@ -803,8 +796,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
 
         metalinks = MetadataLinks(manifest_path)
 
-        product_metadata = ProductMetadata(metalinks.product_metadata_href,
-                                           metalinks.manifest)
+        product_metadata = ProductMetadata(manifest_path, metalinks.manifest)
 
         item = pystac.Item(
             id=product_metadata.scene_id,
@@ -913,8 +905,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
 
         metalinks = MetadataLinks(manifest_path)
 
-        product_metadata = ProductMetadata(metalinks.product_metadata_href,
-                                           metalinks.manifest)
+        product_metadata = ProductMetadata(manifest_path, metalinks.manifest)
 
         item = pystac.Item(
             id=product_metadata.scene_id,
@@ -1023,8 +1014,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
 
         metalinks = MetadataLinks(manifest_path)
 
-        product_metadata = ProductMetadata(metalinks.product_metadata_href,
-                                           metalinks.manifest)
+        product_metadata = ProductMetadata(manifest_path, metalinks.manifest)
 
         item = pystac.Item(
             id=product_metadata.scene_id,
@@ -1118,8 +1108,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
 
         metalinks = MetadataLinks(manifest_path)
 
-        product_metadata = ProductMetadata(metalinks.product_metadata_href,
-                                           metalinks.manifest)
+        product_metadata = ProductMetadata(manifest_path, metalinks.manifest)
 
         item = pystac.Item(
             id=product_metadata.scene_id,
@@ -1213,8 +1202,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
 
         metalinks = MetadataLinks(manifest_path)
 
-        product_metadata = ProductMetadata(metalinks.product_metadata_href,
-                                           metalinks.manifest)
+        product_metadata = ProductMetadata(manifest_path, metalinks.manifest)
 
         item = pystac.Item(
             id=product_metadata.scene_id,
@@ -1302,8 +1290,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
 
         metalinks = MetadataLinks(manifest_path)
 
-        product_metadata = ProductMetadata(metalinks.product_metadata_href,
-                                           metalinks.manifest)
+        product_metadata = ProductMetadata(manifest_path, metalinks.manifest)
 
         item = pystac.Item(
             id=product_metadata.scene_id,
@@ -1397,8 +1384,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
 
         metalinks = MetadataLinks(manifest_path)
 
-        product_metadata = ProductMetadata(metalinks.product_metadata_href,
-                                           metalinks.manifest)
+        product_metadata = ProductMetadata(manifest_path, metalinks.manifest)
 
         item = pystac.Item(
             id=product_metadata.scene_id,
@@ -1483,8 +1469,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
 
         metalinks = MetadataLinks(manifest_path)
 
-        product_metadata = ProductMetadata(metalinks.product_metadata_href,
-                                           metalinks.manifest)
+        product_metadata = ProductMetadata(manifest_path, metalinks.manifest)
 
         item = pystac.Item(
             id=product_metadata.scene_id,
@@ -1569,8 +1554,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
 
         metalinks = MetadataLinks(manifest_path)
 
-        product_metadata = ProductMetadata(metalinks.product_metadata_href,
-                                           metalinks.manifest)
+        product_metadata = ProductMetadata(manifest_path, metalinks.manifest)
 
         item = pystac.Item(
             id=product_metadata.scene_id,

@@ -1,6 +1,6 @@
 import os
 from datetime import datetime
-from typing import Any, Dict, Optional, List
+from typing import Any, Dict, Optional
 
 from pystac.utils import str_to_datetime
 from shapely.geometry import Polygon, mapping  # type: ignore
