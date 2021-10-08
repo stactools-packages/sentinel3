@@ -571,12 +571,6 @@ SLSTR_BANDS_TO_RESOLUTIONS = {
     ],
 }
 
-SENTINEL_LICENSE = Link(
-    rel="license",
-    target="https://sentinel.esa.int/documents/" +
-    "247904/690755/Sentinel_Data_Legal_Notice",
-)
-
 SYNERGY_SYN_ASSET_KEYS = [
     "Syn_Oa01_reflectance_Data",
     "Syn_Oa02_reflectance_Data",

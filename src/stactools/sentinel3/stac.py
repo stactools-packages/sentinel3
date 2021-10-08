@@ -7,7 +7,7 @@ from pystac.extensions.projection import ProjectionExtension
 from pystac.extensions.sat import SatExtension
 from stactools.core.io import ReadHrefModifier
 
-from .constants import SENTINEL_CONSTELLATION, SENTINEL_PROVIDER
+from .constants import SENTINEL_CONSTELLATION, SENTINEL_PROVIDER, SENTINEL_LICENSE
 from .metadata_links import MetadataLinks
 from .product_metadata import ProductMetadata
 from .properties import (fill_eo_properties, fill_proj_properties,
@@ -76,5 +76,8 @@ def create_item(
     # objects for bands
     for band, asset in zip(band_list, asset_list):
         item.add_asset(band, asset)
+
+    # license link
+    item.links.append(SENTINEL_LICENSE)
 
     return item
