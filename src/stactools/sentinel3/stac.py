@@ -70,7 +70,11 @@ def create_item(
     # Add assets to item
     item.add_asset(*metalinks.create_manifest_asset())
 
+    # create band asset list
+    band_list, asset_list = metalinks.create_band_asset(metalinks.manifest)
+
     # objects for bands
-    item.add_asset(*metalinks.create_band_asset(metalinks.manifest))
+    for band, asset in zip(band_list, asset_list):
+        item.add_asset(band, asset)
 
     return item
