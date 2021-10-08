@@ -1,9 +1,12 @@
+import os
 from datetime import datetime
-from typing import Any, Dict, Optional
+from typing import Any, Dict, Optional, List
 
 from pystac.utils import str_to_datetime
 from shapely.geometry import Polygon, mapping  # type: ignore
 from stactools.core.io.xml import XmlElement
+
+from stactools.sentinel3.constants import MANIFEST_FILENAME
 
 
 class ProductMetadataError(Exception):
@@ -11,8 +14,9 @@ class ProductMetadataError(Exception):
 
 
 class ProductMetadata:
-    def __init__(self, href: str, manifest: XmlElement) -> None:
-        self.href = href
+    def __init__(self, granule_href: str, manifest: XmlElement) -> None:
+        self.granule_href = granule_href
+        self.manifest_href = os.path.join(granule_href, MANIFEST_FILENAME)
         self._root = manifest
 
         def _get_geometries():
@@ -20,7 +24,7 @@ class ProductMetadata:
             footprint_text = self._root.findall(".//gml:posList")
             if footprint_text is None:
                 ProductMetadataError(
-                    f"Cannot parse footprint from product metadata at {self.href}"
+                    f"Cannot parse footprint from product metadata at {self.manifest_href}"
                 )
             # Convert to values
             footprint_value = [
@@ -66,12 +70,12 @@ class ProductMetadata:
     @property
     def product_id(self) -> str:
         # Parse the name from href as it doesn't exist in xml files
-        href = self.href
+        href = self.manifest_href
         result = href.split("/")[-2]
         if result is None:
             raise ValueError(
                 "Cannot determine product ID using product metadata "
-                f"at {self.href}")
+                f"at {self.manifest_href}")
         else:
             return result
 
@@ -88,7 +92,7 @@ class ProductMetadata:
         if central_time is None:
             raise ValueError(
                 "Cannot determine product start time using product metadata "
-                f"at {self.href}")
+                f"at {self.manifest_href}")
         else:
             return str_to_datetime(str(central_time))
 
@@ -99,7 +103,7 @@ class ProductMetadata:
         if time is None:
             raise ValueError(
                 "Cannot determine product start time using product metadata "
-                f"at {self.href}")
+                f"at {self.manifest_href}")
         else:
             return str_to_datetime(time[0].text)
 
@@ -110,7 +114,7 @@ class ProductMetadata:
         if time is None:
             raise ValueError(
                 "Cannot determine product start time using product metadata "
-                f"at {self.href}")
+                f"at {self.manifest_href}")
         else:
             return str_to_datetime(time[0].text)
 

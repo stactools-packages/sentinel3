@@ -7,7 +7,7 @@ from stactools.core.io.xml import XmlElement
 
 from .constants import (SAFE_MANIFEST_ASSET_KEY, SENTINEL_OLCI_BANDS,
                         SENTINEL_SLSTR_BANDS, SENTINEL_SRAL_BANDS,
-                        SENTINEL_SYNERGY_BANDS)
+                        SENTINEL_SYNERGY_BANDS, MANIFEST_FILENAME)
 
 
 class ManifestError(Exception):
@@ -19,7 +19,7 @@ class MetadataLinks:
                  granule_href: str,
                  read_href_modifier: Optional[ReadHrefModifier] = None):
         self.granule_href = granule_href
-        self.href = os.path.join(granule_href, "xfdumanifest.xml")
+        self.href = os.path.join(granule_href, MANIFEST_FILENAME)
 
         self.manifest = XmlElement.from_file(self.href, read_href_modifier)
         data_object_section = self.manifest.find("dataObjectSection")
@@ -29,7 +29,7 @@ class MetadataLinks:
 
         self._data_object_section = data_object_section
         self.product_metadata_href = os.path.join(granule_href,
-                                                  "xfdumanifest.xml")
+                                                  MANIFEST_FILENAME)
 
     def _find_href(self, xpaths: List[str]) -> Optional[str]:
         file_path = None

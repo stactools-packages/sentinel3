@@ -34,7 +34,7 @@ def create_item(
 
     metalinks = MetadataLinks(granule_href, read_href_modifier)
 
-    product_metadata = ProductMetadata(metalinks.product_metadata_href,
+    product_metadata = ProductMetadata(granule_href,
                                        metalinks.manifest)
 
     item = pystac.Item(

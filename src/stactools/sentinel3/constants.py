@@ -7,6 +7,8 @@ INSPIRE_METADATA_ASSET_KEY = "inspire-metadata"
 SAFE_MANIFEST_ASSET_KEY = "safe-manifest"
 PRODUCT_METADATA_ASSET_KEY = "product-metadata"
 
+MANIFEST_FILENAME = "xfdumanifest.xml"
+
 SENTINEL_LICENSE = Link(
     rel="license",
     target="https://sentinel.esa.int/documents/" +
