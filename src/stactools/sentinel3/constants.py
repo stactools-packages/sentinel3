@@ -602,9 +602,29 @@ SYNERGY_SYN_ASSET_KEYS = [
     "Syn_S3O_reflectance_Data",
     "Syn_S5O_reflectance_Data",
     "Syn_S6O_reflectance_Data",
+    "Syn_ATO550_Data",
+    "Syn_Angstrom_exp550_Data",
+    "Syn_SDR_removed_pixels_Data",
+    "Syn_AMIN_Data",
+    "Syn_flags_Data",
+    "geolocation_Data",
+    "time_Data",
+    "annotations_removed_pixels_Data",
+    "tiepoints_olci_Data",
+    "tiepoints_slstr_n_Data",
+    "tiepoints_slstr_o_Data",
+    "tiepoints_meteo_Data"
 ]
 
-SYNERGY_V10_VG1_VGP_ASSET_KEYS = ["b0Data", "b2Data", "b3Data", "mirData"]
+SYNERGY_V10_VG1_ASSET_KEYS = [
+    "b0Data", "b2Data", "b3Data", "mirData", "ndviData", "vaaData", "vzaData",
+    "saaData", "szaData", "agData", "ogData", "wvgData", "tgData", "smData"
+]
+
+SYNERGY_VGP_ASSET_KEYS = [
+    "b0Data", "b2Data", "b3Data", "mirData", "vaaData", "vzaData", "saaData",
+    "szaData", "agData", "ogData", "wvgData", "smData"
+]
 
 OLCI_L1_ASSET_KEYS = [
     "Oa01_radianceData", "Oa02_radianceData", "Oa03_radianceData",
@@ -616,7 +636,11 @@ OLCI_L1_ASSET_KEYS = [
     "Oa19_radianceData", "Oa20_radianceData", "Oa21_radianceData"
 ]
 
-OLCI_L2_LAND_ASSET_KEYS = ["ogviData", "otciData", "iwvData"]
+OLCI_L2_LAND_ASSET_KEYS = [
+    "ogviData", "otciData", "iwvData", "rcOgviData", "lqsfData",
+    "timeCoordinatesData", "geoCoordinatesData", "tieGeoCoordinatesData",
+    "tieGeometriesData", "tieMeteoData", "instrumentDataData"
+]
 
 OLCI_L2_WATER_ASSET_KEYS = [
     "Oa01_reflectanceData", "Oa02_reflectanceData", "Oa03_reflectanceData",
@@ -625,7 +649,9 @@ OLCI_L2_WATER_ASSET_KEYS = [
     "Oa10_reflectanceData", "Oa11_reflectanceData", "Oa12_reflectanceData",
     "Oa16_reflectanceData", "Oa17_reflectanceData", "Oa18_reflectanceData",
     "Oa21_reflectanceData", "chlNnData", "chlOc4meData", "iopNnData",
-    "iwvData", "parData", "trspData", "tsmNnData", "wAerData"
+    "iwvData", "parData", "trspData", "tsmNnData", "wAerData",
+    "geoCoordinatesData", "instrumentDataData", "tieGeoCoordinatesData",
+    "tieGeometriesData", "tieMeteoData", "timeCoordinatesData", "wqsfData"
 ]
 
 SLSTR_L1_ASSET_KEYS = [
@@ -634,3 +660,38 @@ SLSTR_L1_ASSET_KEYS = [
     "SLSTR_S7_BT_IN_Data", "SLSTR_S8_BT_IN_Data", "SLSTR_S9_BT_IN_Data",
     "SLSTR_F1_BT_FN_Data", "SLSTR_F2_BT_IN_Data"
 ]
+
+SLSTR_L2_FRP_KEYS = [
+    "FRP_IN_Data", "SLSTR_CARTESIAN_FN_Data", "SLSTR_CARTESIAN_IN_Data",
+    "SLSTR_CARTESIAN_TX_Data", "SLSTR_FLAGS_FN_Data", "SLSTR_FLAGS_IN_Data",
+    "SLSTR_GEODETIC_FN_Data", "SLSTR_GEODETIC_IN_Data",
+    "SLSTR_GEODETIC_TX_Data", "SLSTR_GEOMETRY_TN_Data",
+    "SLSTR_INDICES_FN_Data", "SLSTR_INDICES_IN_Data", "SLSTR_MET_TX_Data",
+    "SLSTR_TIME_IN_Data"
+]
+
+SLSTR_L2_LST_KEYS = [
+    "LST_IN_Data", "LST_ANCILLARY_DS_Data", "SLSTR_FLAGS_IN_Data",
+    "SLSTR_INDICES_IN_Data", "SLSTR_TIME_IN_Data", "SLSTR_GEODETIC_IN_Data",
+    "SLSTR_CARTESIAN_IN_Data", "SLSTR_GEOMETRY_TN_Data",
+    "SLSTR_GEODETIC_TX_Data", "SLSTR_CARTESIAN_TX_Data", "SLSTR_MET_TX_Data"
+]
+
+SRAL_L2_LAN_WAT_KEYS = [
+    "standardMeasurementData", "enhancedMeasurementData",
+    "reducedMeasurementData"
+]
+
+SYNERGY_L2_A550_T550_BANDS = [
+    "S01", "S02", "S03", "S05", "S06", "Oa01", "Oa02", "Oa03", "Oa04", "Oa05",
+    "Oa06", "Oa07", "Oa08", "Oa09", "Oa10", "Oa11", "Oa12", "Oa16", "Oa17",
+    "Oa18", "Oa21"
+]
+
+SYNERGY_L2_SDR_BANDS = [
+    "S01", "S02", "S03", "S04", "S06", "Oa01", "Oa02", "Oa03", "Oa04", "Oa05",
+    "Oa06", "Oa07", "Oa08", "Oa09", "Oa10", "Oa11", "Oa12", "Oa13", "Oa16",
+    "Oa17", "Oa18", "Oa19", "Oa21"
+]
+
+SENTINEL_OLCI_SLSTR_BANDS = {**SENTINEL_SLSTR_BANDS, **SENTINEL_OLCI_BANDS}
