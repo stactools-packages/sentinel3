@@ -5,15 +5,7 @@ import pystac
 from stactools.core.io import ReadHrefModifier
 from stactools.core.io.xml import XmlElement
 
-from .constants import (MANIFEST_FILENAME, OLCI_L1_ASSET_KEYS,
-                        OLCI_L2_LAND_ASSET_KEYS, OLCI_L2_WATER_ASSET_KEYS,
-                        SAFE_MANIFEST_ASSET_KEY, SENTINEL_OLCI_BANDS,
-                        SENTINEL_SLSTR_BANDS, SENTINEL_SRAL_BANDS,
-                        SENTINEL_SYNERGY_BANDS, SLSTR_L1_ASSET_KEYS,
-                        SYNERGY_SYN_ASSET_KEYS, SRAL_L2_LAN_WAT_KEYS, SYNERGY_L2_A550_T550_BANDS,
-                        SENTINEL_OLCI_SLSTR_BANDS, SYNERGY_L2_SDR_BANDS,
-                        SYNERGY_V10_VG1_ASSET_KEYS, SYNERGY_VGP_ASSET_KEYS,
-                        SLSTR_L2_FRP_KEYS, SLSTR_L2_LST_KEYS)
+from . import constants
 
 
 class ManifestError(Exception):
@@ -25,7 +17,7 @@ class MetadataLinks:
                  granule_href: str,
                  read_href_modifier: Optional[ReadHrefModifier] = None):
         self.granule_href = granule_href
-        self.href = os.path.join(granule_href, MANIFEST_FILENAME)
+        self.href = os.path.join(granule_href, constants.MANIFEST_FILENAME)
 
         self.manifest = XmlElement.from_file(self.href, read_href_modifier)
         data_object_section = self.manifest.find("dataObjectSection")
@@ -35,7 +27,7 @@ class MetadataLinks:
 
         self._data_object_section = data_object_section
         self.product_metadata_href = os.path.join(granule_href,
-                                                  MANIFEST_FILENAME)
+                                                  constants.MANIFEST_FILENAME)
 
     def _find_href(self, xpaths: List[str]) -> Optional[str]:
         file_path = None
@@ -51,6 +43,12 @@ class MetadataLinks:
             file_path = file_path.strip("./")
             return os.path.join(self.granule_href, file_path)
 
+    def read_href(self, xpath: str) -> str:
+        asset_location = self.manifest.find_attr("href", xpath)
+        if asset_location is None:
+            raise RuntimeError(f"Xpath returns no href: {xpath}")
+        return asset_location
+
     @property
     def thumbnail_href(self) -> Optional[str]:
         preview = os.path.join(self.granule_href, "preview")
@@ -62,7 +60,7 @@ class MetadataLinks:
             media_type=pystac.MediaType.XML,
             roles=["metadata"],
         )
-        return (SAFE_MANIFEST_ASSET_KEY, asset)
+        return (constants.SAFE_MANIFEST_ASSET_KEY, asset)
 
     def create_band_asset(self, manifest: XmlElement):
 
@@ -72,19 +70,20 @@ class MetadataLinks:
         product_type_category = product_type.split("_")[0]
 
         if product_type_category == "OL":
-            instrument_bands = SENTINEL_OLCI_BANDS
+            instrument_bands = constants.SENTINEL_OLCI_BANDS
         elif product_type_category == "SL":
-            instrument_bands = SENTINEL_SLSTR_BANDS
+            instrument_bands = constants.SENTINEL_SLSTR_BANDS
         elif product_type_category == "SR":
-            instrument_bands = SENTINEL_SRAL_BANDS
+            instrument_bands = constants.SENTINEL_SRAL_BANDS
         elif product_type_category == "SY":
-            instrument_bands = SENTINEL_SYNERGY_BANDS
+            instrument_bands = constants.SENTINEL_SYNERGY_BANDS
         else:
             raise RuntimeError(
                 f"Unknown product type encountered: {product_type_category}")
 
-        if instrument_bands == SENTINEL_SRAL_BANDS:
-            asset_key_list = SRAL_L2_LAN_WAT_KEYS
+        asset_key_list = None
+        if instrument_bands == constants.SENTINEL_SRAL_BANDS:
+            asset_key_list = constants.SRAL_L2_LAN_WAT_KEYS
             for asset_key in asset_key_list:
                 band_dict_list = []
                 for band in instrument_bands:
@@ -99,8 +98,8 @@ class MetadataLinks:
                         instrument_bands[band].full_width_half_max
                     }
                     band_dict_list.append(band_dict)
-                asset_location = manifest.find_attr(
-                    "href", f".//dataObject[@ID='{asset_key}']//fileLocation")
+                asset_location = self.read_href(
+                    f".//dataObject[@ID='{asset_key}']//fileLocation")
                 asset_href = os.path.join(self.granule_href, asset_location)
                 media_type = manifest.find_attr(
                     "mimeType",
@@ -115,9 +114,10 @@ class MetadataLinks:
                     roles=["data"],
                     extra_fields={"eo:bands": band_dict_list})
                 asset_list.append(asset_obj)
-        elif instrument_bands == SENTINEL_SYNERGY_BANDS:
+        elif instrument_bands == constants.SENTINEL_SYNERGY_BANDS:
             if "_AOD_" in product_type:
-                band_key_list = list(SENTINEL_SYNERGY_BANDS.keys())[26:32]
+                band_key_list = list(
+                    constants.SENTINEL_SYNERGY_BANDS.keys())[26:32]
                 asset_key_list = ["NTC_AOD_Data"]
                 band_dict_list = []
                 for asset_key in asset_key_list:
@@ -133,10 +133,8 @@ class MetadataLinks:
                             instrument_bands[band].full_width_half_max
                         }
                         band_dict_list.append(band_dict)
-                    asset_location = str(
-                        manifest.find_attr(
-                            "href",
-                            f".//dataObject[@ID='{asset_key}']//fileLocation"))
+                    asset_location = self.read_href(
+                        f".//dataObject[@ID='{asset_key}']//fileLocation")
                     asset_href = os.path.join(self.granule_href,
                                               asset_location)
                     media_type = manifest.find_attr(
@@ -151,10 +149,11 @@ class MetadataLinks:
                         extra_fields={"eo:bands": band_dict_list})
                     asset_list.append(asset_obj)
             elif "_SYN_" in product_type:
-                asset_key_list = SYNERGY_SYN_ASSET_KEYS
+                asset_key_list = constants.SYNERGY_SYN_ASSET_KEYS
                 for ind, asset_key in enumerate(asset_key_list):
                     if ind < 26:
-                        band_key = list(SENTINEL_SYNERGY_BANDS.keys())[ind]
+                        band_key = list(
+                            constants.SENTINEL_SYNERGY_BANDS.keys())[ind]
                         band_dict_list = []
                         band_dict = {
                             "name":
@@ -168,43 +167,44 @@ class MetadataLinks:
                         }
                         band_dict_list.append(band_dict)
                     elif (ind == 26 or ind == 27):
-                        band_key_list = SYNERGY_L2_A550_T550_BANDS
+                        band_key_list = constants.SYNERGY_L2_A550_T550_BANDS
                         band_dict_list = []
                         for band in band_key_list:
                             band_dict = {
                                 "name":
-                                SENTINEL_OLCI_SLSTR_BANDS[band].name,
+                                constants.SENTINEL_OLCI_SLSTR_BANDS[band].name,
                                 "description":
-                                SENTINEL_OLCI_SLSTR_BANDS[band].description,
+                                constants.SENTINEL_OLCI_SLSTR_BANDS[band].
+                                description,
                                 "center_wavelength":
-                                SENTINEL_OLCI_SLSTR_BANDS[band].
+                                constants.SENTINEL_OLCI_SLSTR_BANDS[band].
                                 center_wavelength,
                                 "band_width":
-                                SENTINEL_OLCI_SLSTR_BANDS[band].
+                                constants.SENTINEL_OLCI_SLSTR_BANDS[band].
                                 full_width_half_max
                             }
                             band_dict_list.append(band_dict)
                     elif ind == 28:
-                        band_key_list = SYNERGY_L2_SDR_BANDS
+                        band_key_list = constants.SYNERGY_L2_SDR_BANDS
                         band_dict_list = []
                         for band in band_key_list:
                             band_dict = {
                                 "name":
-                                SENTINEL_OLCI_SLSTR_BANDS[band].name,
+                                constants.SENTINEL_OLCI_SLSTR_BANDS[band].name,
                                 "description":
-                                SENTINEL_OLCI_SLSTR_BANDS[band].description,
+                                constants.SENTINEL_OLCI_SLSTR_BANDS[band].
+                                description,
                                 "center_wavelength":
-                                SENTINEL_OLCI_SLSTR_BANDS[band].
+                                constants.SENTINEL_OLCI_SLSTR_BANDS[band].
                                 center_wavelength,
                                 "band_width":
-                                SENTINEL_OLCI_SLSTR_BANDS[band].
+                                constants.SENTINEL_OLCI_SLSTR_BANDS[band].
                                 full_width_half_max
                             }
                             band_dict_list.append(band_dict)
                     else:
                         band_dict_list = []
-                    asset_location = manifest.find_attr(
-                        "href",
+                    asset_location = self.read_href(
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
                     asset_href = os.path.join(self.granule_href,
                                               asset_location.split("/")[1])
@@ -230,12 +230,12 @@ class MetadataLinks:
                         asset_list.append(asset_obj)
             elif any(product_id in product_type
                      for product_id in ["_VG1_", "_V10_"]):
-                asset_key_list = SYNERGY_V10_VG1_ASSET_KEYS
+                asset_key_list = constants.SYNERGY_V10_VG1_ASSET_KEYS
                 for ind, asset_key in enumerate(asset_key_list):
                     band_dict_list = []
                     if ind < 4:
                         band_key = list(
-                            SENTINEL_SYNERGY_BANDS.keys())[-4:][ind]
+                            constants.SENTINEL_SYNERGY_BANDS.keys())[-4:][ind]
                         band_dict = {
                             "name":
                             instrument_bands[band_key].name,
@@ -263,8 +263,7 @@ class MetadataLinks:
                             band_dict_list.append(band_dict)
                     else:
                         band_dict_list = []
-                    asset_location = manifest.find_attr(
-                        "href",
+                    asset_location = self.read_href(
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
                     asset_href = os.path.join(self.granule_href,
                                               asset_location.split("/")[1])
@@ -289,12 +288,12 @@ class MetadataLinks:
                                                  roles=["data"])
                         asset_list.append(asset_obj)
             else:
-                asset_key_list = SYNERGY_VGP_ASSET_KEYS
+                asset_key_list = constants.SYNERGY_VGP_ASSET_KEYS
                 for ind, asset_key in enumerate(asset_key_list):
                     band_dict_list = []
                     if ind < 4:
                         band_key = list(
-                            SENTINEL_SYNERGY_BANDS.keys())[-4:][ind]
+                            constants.SENTINEL_SYNERGY_BANDS.keys())[-4:][ind]
                         band_dict = {
                             "name":
                             instrument_bands[band_key].name,
@@ -308,8 +307,7 @@ class MetadataLinks:
                         band_dict_list.append(band_dict)
                     else:
                         band_dict_list = []
-                    asset_location = manifest.find_attr(
-                        "href",
+                    asset_location = self.read_href(
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
                     asset_href = os.path.join(self.granule_href,
                                               asset_location)
@@ -333,9 +331,9 @@ class MetadataLinks:
                                                  description=asset_description,
                                                  roles=["data"])
                         asset_list.append(asset_obj)
-        elif instrument_bands == SENTINEL_OLCI_BANDS:
+        elif instrument_bands == constants.SENTINEL_OLCI_BANDS:
             if "OL_1_" in product_type:
-                asset_key_list = OLCI_L1_ASSET_KEYS
+                asset_key_list = constants.OLCI_L1_ASSET_KEYS
                 for asset_key, band in zip(asset_key_list, instrument_bands):
                     band_dict = {
                         "name": instrument_bands[band].name,
@@ -345,10 +343,8 @@ class MetadataLinks:
                         "band_width":
                         instrument_bands[band].full_width_half_max
                     }
-                    asset_location = str(
-                        manifest.find_attr(
-                            "href",
-                            f".//dataObject[@ID='{asset_key}']//fileLocation"))
+                    asset_location = self.read_href(
+                        f".//dataObject[@ID='{asset_key}']//fileLocation")
                     asset_href = os.path.join(self.granule_href,
                                               asset_location.split("/")[1])
                     media_type = manifest.find_attr(
@@ -365,7 +361,7 @@ class MetadataLinks:
                         extra_fields={"eo:bands": [band_dict]})
                     asset_list.append(asset_obj)
             elif any(_str in product_type for _str in ["_LFR_", "_LRR_"]):
-                asset_key_list = OLCI_L2_LAND_ASSET_KEYS
+                asset_key_list = constants.OLCI_L2_LAND_ASSET_KEYS
                 for asset_key in asset_key_list:
                     if asset_key == "ogviData":
                         band_key_list = ["Oa03", "Oa10", "Oa17"]
@@ -377,8 +373,7 @@ class MetadataLinks:
                         band_key_list = ["Oa10", "Oa17"]
                     else:
                         band_key_list = []
-                    asset_location = manifest.find_attr(
-                        "href",
+                    asset_location = self.read_href(
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
                     asset_href = os.path.join(self.granule_href,
                                               asset_location.split("/")[1])
@@ -415,7 +410,7 @@ class MetadataLinks:
                             extra_fields={"eo:bands": band_dict_list})
                     asset_list.append(asset_obj)
             elif "_WFR_" in product_type:
-                asset_key_list = OLCI_L2_WATER_ASSET_KEYS
+                asset_key_list = constants.OLCI_L2_WATER_ASSET_KEYS
                 for asset_key in asset_key_list:
                     if (asset_key == "chlNnData" or asset_key == "tsmNnData"):
                         band_key_list = [
@@ -444,13 +439,12 @@ class MetadataLinks:
                         band_key_list = ["Oa04", "Oa06"]
                     elif asset_key == "wAerData":
                         band_key_list = ["Oa05", "Oa06", "Oa17"]
-                    elif any(asset_key == key
-                             for key in OLCI_L2_WATER_ASSET_KEYS[-7:]):
+                    elif any(asset_key == key for key in
+                             constants.OLCI_L2_WATER_ASSET_KEYS[-7:]):
                         band_key_list = []
                     else:
                         band_key_list = [asset_key[:4]]
-                    asset_location = manifest.find_attr(
-                        "href",
+                    asset_location = self.read_href(
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
                     asset_href = os.path.join(self.granule_href,
                                               asset_location.split("/")[1])
@@ -487,9 +481,9 @@ class MetadataLinks:
                                                  description=asset_description,
                                                  roles=["data"])
                         asset_list.append(asset_obj)
-        elif instrument_bands == SENTINEL_SLSTR_BANDS:
+        elif instrument_bands == constants.SENTINEL_SLSTR_BANDS:
             if "SL_1_" in product_type:
-                asset_key_list = SLSTR_L1_ASSET_KEYS
+                asset_key_list = constants.SLSTR_L1_ASSET_KEYS
                 for asset_key, band in zip(asset_key_list, instrument_bands):
                     band_dict = {
                         "name": instrument_bands[band].name,
@@ -499,10 +493,8 @@ class MetadataLinks:
                         "band_width":
                         instrument_bands[band].full_width_half_max
                     }
-                    asset_location = str(
-                        manifest.find_attr(
-                            "href",
-                            f".//dataObject[@ID='{asset_key}']//fileLocation"))
+                    asset_location = self.read_href(
+                        f".//dataObject[@ID='{asset_key}']//fileLocation")
                     asset_href = os.path.join(self.granule_href,
                                               asset_location.split("/")[1])
                     media_type = manifest.find_attr(
@@ -519,14 +511,13 @@ class MetadataLinks:
                         extra_fields={"eo:bands": [band_dict]})
                     asset_list.append(asset_obj)
             elif "_FRP_" in product_type:
-                asset_key_list = SLSTR_L2_FRP_KEYS
+                asset_key_list = constants.SLSTR_L2_FRP_KEYS
                 for asset_key in asset_key_list:
                     if asset_key == "FRP_IN_Data":
                         band_key_list = ["S05", "S06", "S07", "S10"]
                     else:
                         band_key_list = []
-                    asset_location = manifest.find_attr(
-                        "href",
+                    asset_location = self.read_href(
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
                     asset_href = os.path.join(self.granule_href,
                                               asset_location.split("/")[1])
@@ -568,14 +559,13 @@ class MetadataLinks:
                                                  roles=["data"])
                         asset_list.append(asset_obj)
             elif "_LST_" in product_type:
-                asset_key_list = SLSTR_L2_LST_KEYS
+                asset_key_list = constants.SLSTR_L2_LST_KEYS
                 for asset_key in asset_key_list:
                     if asset_key == "LST_IN_Data":
                         band_key_list = ["S08", "S09"]
                     else:
                         band_key_list = []
-                    asset_location = manifest.find_attr(
-                        "href",
+                    asset_location = self.read_href(
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
                     asset_href = os.path.join(self.granule_href,
                                               asset_location.split("/")[1])
@@ -630,10 +620,8 @@ class MetadataLinks:
                             instrument_bands[band].full_width_half_max
                         }
                         band_dict_list.append(band_dict)
-                    asset_location = str(
-                        manifest.find_attr(
-                            "href",
-                            f".//dataObject[@ID='{asset_key}']//fileLocation"))
+                    asset_location = self.read_href(
+                        f".//dataObject[@ID='{asset_key}']//fileLocation")
                     asset_href = os.path.join(self.granule_href,
                                               asset_location.split("/")[1])
                     media_type = manifest.find_attr(
@@ -649,4 +637,5 @@ class MetadataLinks:
                         roles=["data"],
                         extra_fields={"eo:bands": band_dict_list})
                     asset_list.append(asset_obj)
+
         return (asset_key_list, asset_list)
