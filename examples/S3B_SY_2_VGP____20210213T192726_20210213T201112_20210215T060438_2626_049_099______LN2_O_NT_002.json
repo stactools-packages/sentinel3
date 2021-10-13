@@ -32,7 +32,7 @@
       }
     ],
     "platform": "Sentinel-3B",
-    "constellation": "Sentinel 3",
+    "constellation": "Sentinel-3",
     "datetime": "2021-02-13T19:49:19.044416Z"
   },
   "geometry": {
@@ -1413,28 +1413,55 @@
         "metadata"
       ]
     },
-    "eo:bands": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_SY_2_VGP____20210213T192726_20210213T201112_20210215T060438_2626_049_099______LN2_O_NT_002.SEN3/xfdumanifest.xml",
-      "type": "application/xml",
-      "band_fields": [
+    "b0Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_SY_2_VGP____20210213T192726_20210213T201112_20210215T060438_2626_049_099______LN2_O_NT_002.SEN3/B0.nc",
+      "type": "application/x-netcdf",
+      "eo:bands": [
         {
           "name": "B0",
           "description": "OLCI channels Oa02, Oa03",
           "center_wavelength": 450,
           "band_width": 20
-        },
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "b2Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_SY_2_VGP____20210213T192726_20210213T201112_20210215T060438_2626_049_099______LN2_O_NT_002.SEN3/B2.nc",
+      "type": "application/x-netcdf",
+      "eo:bands": [
         {
           "name": "B2",
           "description": "OLCI channels Oa06, Oa07, Oa08, Oa09, Oa10",
           "center_wavelength": 645,
           "band_width": 35
-        },
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "b3Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_SY_2_VGP____20210213T192726_20210213T201112_20210215T060438_2626_049_099______LN2_O_NT_002.SEN3/B3.nc",
+      "type": "application/x-netcdf",
+      "eo:bands": [
         {
           "name": "B3",
           "description": "OLCI channels Oa16, Oa17, Oa18, Oa21",
           "center_wavelength": 835,
           "band_width": 55
-        },
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "mirData": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_SY_2_VGP____20210213T192726_20210213T201112_20210215T060438_2626_049_099______LN2_O_NT_002.SEN3/MIR.nc",
+      "type": "application/x-netcdf",
+      "eo:bands": [
         {
           "name": "MIR",
           "description": "SLSTR nadir and oblique channels S5, S6",
@@ -1443,7 +1470,63 @@
         }
       ],
       "roles": [
-        "metadata"
+        "data"
+      ]
+    },
+    "vaaData": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_SY_2_VGP____20210213T192726_20210213T201112_20210215T060438_2626_049_099______LN2_O_NT_002.SEN3/vaa.nc",
+      "type": "application/x-netcdf",
+      "roles": [
+        "data"
+      ]
+    },
+    "vzaData": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_SY_2_VGP____20210213T192726_20210213T201112_20210215T060438_2626_049_099______LN2_O_NT_002.SEN3/vza.nc",
+      "type": "application/x-netcdf",
+      "roles": [
+        "data"
+      ]
+    },
+    "saaData": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_SY_2_VGP____20210213T192726_20210213T201112_20210215T060438_2626_049_099______LN2_O_NT_002.SEN3/saa.nc",
+      "type": "application/x-netcdf",
+      "roles": [
+        "data"
+      ]
+    },
+    "szaData": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_SY_2_VGP____20210213T192726_20210213T201112_20210215T060438_2626_049_099______LN2_O_NT_002.SEN3/sza.nc",
+      "type": "application/x-netcdf",
+      "roles": [
+        "data"
+      ]
+    },
+    "agData": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_SY_2_VGP____20210213T192726_20210213T201112_20210215T060438_2626_049_099______LN2_O_NT_002.SEN3/ag.nc",
+      "type": "application/x-netcdf",
+      "roles": [
+        "data"
+      ]
+    },
+    "ogData": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_SY_2_VGP____20210213T192726_20210213T201112_20210215T060438_2626_049_099______LN2_O_NT_002.SEN3/og.nc",
+      "type": "application/x-netcdf",
+      "roles": [
+        "data"
+      ]
+    },
+    "wvgData": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_SY_2_VGP____20210213T192726_20210213T201112_20210215T060438_2626_049_099______LN2_O_NT_002.SEN3/wvg.nc",
+      "type": "application/x-netcdf",
+      "roles": [
+        "data"
+      ]
+    },
+    "smData": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_SY_2_VGP____20210213T192726_20210213T201112_20210215T060438_2626_049_099______LN2_O_NT_002.SEN3/sm.nc",
+      "type": "application/x-netcdf",
+      "roles": [
+        "data"
       ]
     }
   },
