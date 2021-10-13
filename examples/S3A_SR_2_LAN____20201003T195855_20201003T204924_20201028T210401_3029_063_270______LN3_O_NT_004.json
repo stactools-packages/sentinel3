@@ -31,7 +31,7 @@
       }
     ],
     "platform": "Sentinel-3A",
-    "constellation": "Sentinel 3",
+    "constellation": "Sentinel-3",
     "datetime": "2020-10-03T20:24:09.317133Z"
   },
   "geometry": {
@@ -868,10 +868,11 @@
         "metadata"
       ]
     },
-    "eo:bands": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SR_2_LAN____20201003T195855_20201003T204924_20201028T210401_3029_063_270______LN3_O_NT_004.SEN3/xfdumanifest.xml",
-      "type": "application/xml",
-      "band_fields": [
+    "standardMeasurementData": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SR_2_LAN____20201003T195855_20201003T204924_20201028T210401_3029_063_270______LN3_O_NT_004.SEN3/standard_measurement.nc",
+      "type": "application/x-netcdf",
+      "description": "Measurement Data Object File",
+      "eo:bands": [
         {
           "name": "C",
           "description": "Band C - Ionospheric correction",
@@ -886,7 +887,51 @@
         }
       ],
       "roles": [
-        "metadata"
+        "data"
+      ]
+    },
+    "enhancedMeasurementData": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SR_2_LAN____20201003T195855_20201003T204924_20201028T210401_3029_063_270______LN3_O_NT_004.SEN3/enhanced_measurement.nc",
+      "type": "application/x-netcdf",
+      "description": "Measurement Data Object File",
+      "eo:bands": [
+        {
+          "name": "C",
+          "description": "Band C - Ionospheric correction",
+          "central_frequency": 5409999872.0,
+          "band_width_in_Hz": 290000000.0
+        },
+        {
+          "name": "Ku",
+          "description": "Band Ku - Range measurements",
+          "central_frequency": 13575000064.0,
+          "band_width_in_Hz": 320000000.0
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "reducedMeasurementData": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SR_2_LAN____20201003T195855_20201003T204924_20201028T210401_3029_063_270______LN3_O_NT_004.SEN3/reduced_measurement.nc",
+      "type": "application/x-netcdf",
+      "description": "Measurement Data Object File",
+      "eo:bands": [
+        {
+          "name": "C",
+          "description": "Band C - Ionospheric correction",
+          "central_frequency": 5409999872.0,
+          "band_width_in_Hz": 290000000.0
+        },
+        {
+          "name": "Ku",
+          "description": "Band Ku - Range measurements",
+          "central_frequency": 13575000064.0,
+          "band_width_in_Hz": 320000000.0
+        }
+      ],
+      "roles": [
+        "data"
       ]
     }
   },

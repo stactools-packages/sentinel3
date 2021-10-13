@@ -39,7 +39,7 @@
       }
     ],
     "platform": "Sentinel-3A",
-    "constellation": "Sentinel 3",
+    "constellation": "Sentinel-3",
     "datetime": "2020-11-04T00:13:54.939130Z"
   },
   "geometry": {
@@ -340,34 +340,11 @@
         "metadata"
       ]
     },
-    "eo:bands": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_FRP____20201104T001225_20201104T001525_20201105T060455_0179_064_330_1800_LN2_O_NT_004.SEN3/xfdumanifest.xml",
-      "type": "application/xml",
-      "band_fields": [
-        {
-          "name": "S1",
-          "description": "Band 1 - Cloud screening, vegetation monitoring, aerosol",
-          "center_wavelength": 554.27,
-          "band_width": 19.26
-        },
-        {
-          "name": "S2",
-          "description": "Band 2 - NDVI, vegetation monitoring, aerosol",
-          "center_wavelength": 659.47,
-          "band_width": 19.25
-        },
-        {
-          "name": "S3",
-          "description": "Band 3 - NDVI, cloud flagging, pixel co-registration",
-          "center_wavelength": 868,
-          "band_width": 20.6
-        },
-        {
-          "name": "S4",
-          "description": "Band 4 - Cirrus detection over land",
-          "center_wavelength": 1374.8,
-          "band_width": 20.8
-        },
+    "FRP_IN_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_FRP____20201104T001225_20201104T001525_20201105T060455_0179_064_330_1800_LN2_O_NT_004.SEN3/FRP_in.nc",
+      "type": "application/x-netcdf",
+      "description": "Fire Radiative Power (FRP) dataset",
+      "eo:bands": [
         {
           "name": "S5",
           "description": "Band 5 - Cloud clearing, ice, snow, vegetation monitoring",
@@ -387,32 +364,118 @@
           "band_width": 398
         },
         {
-          "name": "S8",
-          "description": "Band 8 - SST, LST, Active fire",
-          "center_wavelength": 10854,
-          "band_width": 776
-        },
-        {
-          "name": "S9",
-          "description": "Band 9 - SST, LST",
-          "center_wavelength": 12022.5,
-          "band_width": 905
-        },
-        {
           "name": "F1",
           "description": "Band 10 - Active fire",
           "center_wavelength": 3742,
           "band_width": 398
-        },
-        {
-          "name": "F2",
-          "description": "Band 11 - Active fire",
-          "center_wavelength": 10854,
-          "band_width": 776
         }
       ],
       "roles": [
-        "metadata"
+        "data"
+      ]
+    },
+    "SLSTR_CARTESIAN_FN_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_FRP____20201104T001225_20201104T001525_20201105T060455_0179_064_330_1800_LN2_O_NT_004.SEN3/cartesian_fn.nc",
+      "type": "application/x-netcdf",
+      "description": "Full resolution cartesian coordinates for the 1km F1 grid, nadir view",
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_CARTESIAN_IN_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_FRP____20201104T001225_20201104T001525_20201105T060455_0179_064_330_1800_LN2_O_NT_004.SEN3/cartesian_in.nc",
+      "type": "application/x-netcdf",
+      "description": "Full resolution cartesian coordinates for the 1km TIR grid, nadir view",
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_CARTESIAN_TX_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_FRP____20201104T001225_20201104T001525_20201105T060455_0179_064_330_1800_LN2_O_NT_004.SEN3/cartesian_tx.nc",
+      "type": "application/x-netcdf",
+      "description": "16km cartesian coordinates",
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_FLAGS_FN_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_FRP____20201104T001225_20201104T001525_20201105T060455_0179_064_330_1800_LN2_O_NT_004.SEN3/flags_fn.nc",
+      "type": "application/x-netcdf",
+      "description": "Global flags for the 1km F1 grid, nadir view",
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_FLAGS_IN_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_FRP____20201104T001225_20201104T001525_20201105T060455_0179_064_330_1800_LN2_O_NT_004.SEN3/flags_in.nc",
+      "type": "application/x-netcdf",
+      "description": "Global flags for the 1km TIR grid, nadir view",
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_GEODETIC_FN_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_FRP____20201104T001225_20201104T001525_20201105T060455_0179_064_330_1800_LN2_O_NT_004.SEN3/geodetic_fn.nc",
+      "type": "application/x-netcdf",
+      "description": "Full resolution geodetic coordinates for the 1km F1 grid, nadir view",
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_GEODETIC_IN_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_FRP____20201104T001225_20201104T001525_20201105T060455_0179_064_330_1800_LN2_O_NT_004.SEN3/geodetic_in.nc",
+      "type": "application/x-netcdf",
+      "description": "Full resolution geodetic coordinates for the 1km TIR grid, nadir view",
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_GEODETIC_TX_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_FRP____20201104T001225_20201104T001525_20201105T060455_0179_064_330_1800_LN2_O_NT_004.SEN3/geodetic_tx.nc",
+      "type": "application/x-netcdf",
+      "description": "16km geodetic coordinates",
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_GEOMETRY_TN_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_FRP____20201104T001225_20201104T001525_20201105T060455_0179_064_330_1800_LN2_O_NT_004.SEN3/geometry_tn.nc",
+      "type": "application/x-netcdf",
+      "description": "16km solar and satellite geometry annotations, nadir view",
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_INDICES_FN_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_FRP____20201104T001225_20201104T001525_20201105T060455_0179_064_330_1800_LN2_O_NT_004.SEN3/indices_fn.nc",
+      "type": "application/x-netcdf",
+      "description": "Scan, pixel and detector annotations for the 1km F1 grid, nadir view",
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_INDICES_IN_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_FRP____20201104T001225_20201104T001525_20201105T060455_0179_064_330_1800_LN2_O_NT_004.SEN3/indices_in.nc",
+      "type": "application/x-netcdf",
+      "description": "Scan, pixel and detector annotations for the 1km TIR grid, nadir view",
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_MET_TX_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_FRP____20201104T001225_20201104T001525_20201105T060455_0179_064_330_1800_LN2_O_NT_004.SEN3/met_tx.nc",
+      "type": "application/x-netcdf",
+      "description": "Meteorological parameters regridded onto the 16km tie points",
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_TIME_IN_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_FRP____20201104T001225_20201104T001525_20201105T060455_0179_064_330_1800_LN2_O_NT_004.SEN3/time_in.nc",
+      "type": "application/x-netcdf",
+      "description": "Time annotations for the 1 KM grid",
+      "roles": [
+        "data"
       ]
     }
   },

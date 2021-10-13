@@ -39,7 +39,7 @@
       }
     ],
     "platform": "Sentinel-3A",
-    "constellation": "Sentinel 3",
+    "constellation": "Sentinel-3",
     "datetime": "2018-01-04T01:31:35.029797Z"
   },
   "geometry": {
@@ -1340,52 +1340,11 @@
         "metadata"
       ]
     },
-    "eo:bands": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_LST____20180104T004105_20180104T022205_20180930T071122_6059_026_202______LR1_R_NT_003.SEN3/xfdumanifest.xml",
-      "type": "application/xml",
-      "band_fields": [
-        {
-          "name": "S1",
-          "description": "Band 1 - Cloud screening, vegetation monitoring, aerosol",
-          "center_wavelength": 554.27,
-          "band_width": 19.26
-        },
-        {
-          "name": "S2",
-          "description": "Band 2 - NDVI, vegetation monitoring, aerosol",
-          "center_wavelength": 659.47,
-          "band_width": 19.25
-        },
-        {
-          "name": "S3",
-          "description": "Band 3 - NDVI, cloud flagging, pixel co-registration",
-          "center_wavelength": 868,
-          "band_width": 20.6
-        },
-        {
-          "name": "S4",
-          "description": "Band 4 - Cirrus detection over land",
-          "center_wavelength": 1374.8,
-          "band_width": 20.8
-        },
-        {
-          "name": "S5",
-          "description": "Band 5 - Cloud clearing, ice, snow, vegetation monitoring",
-          "center_wavelength": 1613.4,
-          "band_width": 60.68
-        },
-        {
-          "name": "S6",
-          "description": "Band 6 - Vegetation state and cloud clearing",
-          "center_wavelength": 2255.7,
-          "band_width": 50.15
-        },
-        {
-          "name": "S7",
-          "description": "Band 7 - SST, LST, Active fire",
-          "center_wavelength": 3742,
-          "band_width": 398
-        },
+    "LST_IN_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_LST____20180104T004105_20180104T022205_20180930T071122_6059_026_202______LR1_R_NT_003.SEN3/LST_in.nc",
+      "type": "application/x-netcdf",
+      "description": "Land Surface Temperature (LST) values",
+      "eo:bands": [
         {
           "name": "S8",
           "description": "Band 8 - SST, LST, Active fire",
@@ -1397,22 +1356,90 @@
           "description": "Band 9 - SST, LST",
           "center_wavelength": 12022.5,
           "band_width": 905
-        },
-        {
-          "name": "F1",
-          "description": "Band 10 - Active fire",
-          "center_wavelength": 3742,
-          "band_width": 398
-        },
-        {
-          "name": "F2",
-          "description": "Band 11 - Active fire",
-          "center_wavelength": 10854,
-          "band_width": 776
         }
       ],
       "roles": [
-        "metadata"
+        "data"
+      ]
+    },
+    "LST_ANCILLARY_DS_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_LST____20180104T004105_20180104T022205_20180930T071122_6059_026_202______LR1_R_NT_003.SEN3/LST_ancillary_ds.nc",
+      "type": "application/x-netcdf",
+      "description": "LST ancillary Data Set",
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_FLAGS_IN_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_LST____20180104T004105_20180104T022205_20180930T071122_6059_026_202______LR1_R_NT_003.SEN3/flags_in.nc",
+      "type": "application/x-netcdf",
+      "description": "Global Flags Annotation Data Set",
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_INDICES_IN_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_LST____20180104T004105_20180104T022205_20180930T071122_6059_026_202______LR1_R_NT_003.SEN3/indices_in.nc",
+      "type": "application/x-netcdf",
+      "description": "Indices Annotation Data Set",
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_TIME_IN_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_LST____20180104T004105_20180104T022205_20180930T071122_6059_026_202______LR1_R_NT_003.SEN3/time_in.nc",
+      "type": "application/x-netcdf",
+      "description": "Time Annotation Data Set",
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_GEODETIC_IN_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_LST____20180104T004105_20180104T022205_20180930T071122_6059_026_202______LR1_R_NT_003.SEN3/geodetic_in.nc",
+      "type": "application/x-netcdf",
+      "description": "Geodetic Coordinates Annotation Data Set",
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_CARTESIAN_IN_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_LST____20180104T004105_20180104T022205_20180930T071122_6059_026_202______LR1_R_NT_003.SEN3/cartesian_in.nc",
+      "type": "application/x-netcdf",
+      "description": "Cartesian Coordinates Annotation Data Set",
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_GEOMETRY_TN_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_LST____20180104T004105_20180104T022205_20180930T071122_6059_026_202______LR1_R_NT_003.SEN3/geometry_tn.nc",
+      "type": "application/x-netcdf",
+      "description": "Solar and Satellite Annotation Data Set",
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_GEODETIC_TX_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_LST____20180104T004105_20180104T022205_20180930T071122_6059_026_202______LR1_R_NT_003.SEN3/geodetic_tx.nc",
+      "type": "application/x-netcdf",
+      "description": "Geodetic Coordinates Annotation Data Set",
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_CARTESIAN_TX_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_LST____20180104T004105_20180104T022205_20180930T071122_6059_026_202______LR1_R_NT_003.SEN3/cartesian_tx.nc",
+      "type": "application/x-netcdf",
+      "description": "Cartesian Coordinates Annotation Data Set",
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_MET_TX_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_LST____20180104T004105_20180104T022205_20180930T071122_6059_026_202______LR1_R_NT_003.SEN3/met_tx.nc",
+      "type": "application/x-netcdf",
+      "description": "Meteorological Parameters Auxiliary Data Set",
+      "roles": [
+        "data"
       ]
     }
   },

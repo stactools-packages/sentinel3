@@ -32,7 +32,7 @@
       }
     ],
     "platform": "Sentinel-3A",
-    "constellation": "Sentinel 3",
+    "constellation": "Sentinel-3",
     "datetime": "2020-11-19T15:57:52.526511Z"
   },
   "geometry": {
@@ -1421,10 +1421,11 @@
         "metadata"
       ]
     },
-    "eo:bands": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_AOD____20201119T153545_20201119T162000_20201120T223531_2655_065_168______LN2_O_NT_002.SEN3/xfdumanifest.xml",
-      "type": "application/xml",
-      "band_fields": [
+    "NTC_AOD_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_AOD____20201119T153545_20201119T162000_20201120T223531_2655_065_168______LN2_O_NT_002.SEN3/NTC_AOD.nc",
+      "type": "application/x-netcdf",
+      "description": "Global aerosol parameters",
+      "eo:bands": [
         {
           "name": "SYN_440",
           "description": "OLCI channel Oa03",
@@ -1463,7 +1464,7 @@
         }
       ],
       "roles": [
-        "metadata"
+        "data"
       ]
     }
   },
