@@ -547,9 +547,13 @@ class CreateItemTest(CliTestCase):
 
                 self.assertEqual(item.id, item_id)
 
-                band_list = [
-                    value.name for value in SENTINEL_SYNERGY_BANDS.values()
-                ][:26]
+                combined_bands = {
+                    **SENTINEL_OLCI_BANDS,
+                    **SENTINEL_SLSTR_BANDS,
+                    **SENTINEL_SYNERGY_BANDS
+                }
+
+                band_list = [value.name for value in combined_bands.values()]
 
                 bands_seen = set()
 
