@@ -19,6 +19,7 @@ logger = logging.getLogger(__name__)
 
 def create_item(
         granule_href: str,
+        skip_nc,
         read_href_modifier: Optional[ReadHrefModifier] = None) -> pystac.Item:
     """Create a STC Item from a Sentinel-3 scene.
 
@@ -71,7 +72,8 @@ def create_item(
     item.add_asset(*metalinks.create_manifest_asset())
 
     # create band asset list
-    band_list, asset_list = metalinks.create_band_asset(metalinks.manifest)
+    band_list, asset_list = metalinks.create_band_asset(
+        metalinks.manifest, skip_nc)
 
     # objects for bands
     for band, asset in zip(band_list, asset_list):

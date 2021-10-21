@@ -1,6 +1,7 @@
 import os
 from typing import List, Optional
 
+import netCDF4 as nc  # type: ignore
 import pystac
 from stactools.core.io import ReadHrefModifier
 from stactools.core.io.xml import XmlElement
@@ -62,7 +63,7 @@ class MetadataLinks:
         )
         return (constants.SAFE_MANIFEST_ASSET_KEY, asset)
 
-    def create_band_asset(self, manifest: XmlElement):
+    def create_band_asset(self, manifest: XmlElement, skip_nc=False):
 
         asset_list = []
 
@@ -141,12 +142,24 @@ class MetadataLinks:
                         "mimeType",
                         f".//dataObject[@ID='{asset_key}']//byteStream")
                     asset_description = "Global aerosol parameters"
-                    asset_obj = pystac.Asset(
-                        href=asset_href,
-                        media_type=media_type,
-                        description=asset_description,
-                        roles=["data"],
-                        extra_fields={"eo:bands": band_dict_list})
+                    if skip_nc:
+                        asset_resolution = []
+                    else:
+                        asset_resolution_str = nc.Dataset(
+                            asset_href).resolution
+                        asset_resolution = [
+                            int(asset_resolution_str.split(" ")[1]),
+                            int(asset_resolution_str.split(" ")[2])
+                        ]
+                    asset_obj = pystac.Asset(href=asset_href,
+                                             media_type=media_type,
+                                             description=asset_description,
+                                             roles=["data"],
+                                             extra_fields={
+                                                 "resolution":
+                                                 asset_resolution,
+                                                 "eo:bands": band_dict_list
+                                             })
                     asset_list.append(asset_obj)
             elif "_SYN_" in product_type:
                 asset_key_list = constants.SYNERGY_SYN_ASSET_KEYS
@@ -214,19 +227,33 @@ class MetadataLinks:
                     asset_description = manifest.find_attr(
                         "textInfo",
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
+                    if skip_nc:
+                        asset_resolution = []
+                    else:
+                        asset_resolution_str = nc.Dataset(
+                            asset_href).resolution
+                        asset_resolution = [
+                            int(asset_resolution_str.split(" ")[1]),
+                            int(asset_resolution_str.split(" ")[2])
+                        ]
                     if band_dict_list:
+                        asset_obj = pystac.Asset(href=asset_href,
+                                                 media_type=media_type,
+                                                 description=asset_description,
+                                                 roles=["data"],
+                                                 extra_fields={
+                                                     "resolution":
+                                                     asset_resolution,
+                                                     "eo:bands": band_dict_list
+                                                 })
+                        asset_list.append(asset_obj)
+                    else:
                         asset_obj = pystac.Asset(
                             href=asset_href,
                             media_type=media_type,
                             description=asset_description,
                             roles=["data"],
-                            extra_fields={"eo:bands": band_dict_list})
-                        asset_list.append(asset_obj)
-                    else:
-                        asset_obj = pystac.Asset(href=asset_href,
-                                                 media_type=media_type,
-                                                 description=asset_description,
-                                                 roles=["data"])
+                            extra_fields={"resolution": asset_resolution})
                         asset_list.append(asset_obj)
             elif any(product_id in product_type
                      for product_id in ["_VG1_", "_V10_"]):
@@ -273,19 +300,33 @@ class MetadataLinks:
                     asset_description = manifest.find_attr(
                         "textInfo",
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
+                    if skip_nc:
+                        asset_resolution = []
+                    else:
+                        asset_resolution_str = nc.Dataset(
+                            asset_href).resolution
+                        asset_resolution = [
+                            int(asset_resolution_str.split(" ")[1]),
+                            int(asset_resolution_str.split(" ")[2])
+                        ]
                     if band_dict_list:
+                        asset_obj = pystac.Asset(href=asset_href,
+                                                 media_type=media_type,
+                                                 description=asset_description,
+                                                 roles=["data"],
+                                                 extra_fields={
+                                                     "resolution":
+                                                     asset_resolution,
+                                                     "eo:bands": band_dict_list
+                                                 })
+                        asset_list.append(asset_obj)
+                    else:
                         asset_obj = pystac.Asset(
                             href=asset_href,
                             media_type=media_type,
                             description=asset_description,
                             roles=["data"],
-                            extra_fields={"eo:bands": band_dict_list})
-                        asset_list.append(asset_obj)
-                    else:
-                        asset_obj = pystac.Asset(href=asset_href,
-                                                 media_type=media_type,
-                                                 description=asset_description,
-                                                 roles=["data"])
+                            extra_fields={"resolution": asset_resolution})
                         asset_list.append(asset_obj)
             else:
                 asset_key_list = constants.SYNERGY_VGP_ASSET_KEYS
@@ -317,19 +358,33 @@ class MetadataLinks:
                     asset_description = manifest.find_attr(
                         "textInfo",
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
+                    if skip_nc:
+                        asset_resolution = []
+                    else:
+                        asset_resolution_str = nc.Dataset(
+                            asset_href).resolution
+                        asset_resolution = [
+                            int(asset_resolution_str.split(" ")[1]),
+                            int(asset_resolution_str.split(" ")[2])
+                        ]
                     if band_dict_list:
+                        asset_obj = pystac.Asset(href=asset_href,
+                                                 media_type=media_type,
+                                                 description=asset_description,
+                                                 roles=["data"],
+                                                 extra_fields={
+                                                     "resolution":
+                                                     asset_resolution,
+                                                     "eo:bands": band_dict_list
+                                                 })
+                        asset_list.append(asset_obj)
+                    else:
                         asset_obj = pystac.Asset(
                             href=asset_href,
                             media_type=media_type,
                             description=asset_description,
                             roles=["data"],
-                            extra_fields={"eo:bands": band_dict_list})
-                        asset_list.append(asset_obj)
-                    else:
-                        asset_obj = pystac.Asset(href=asset_href,
-                                                 media_type=media_type,
-                                                 description=asset_description,
-                                                 roles=["data"])
+                            extra_fields={"resolution": asset_resolution})
                         asset_list.append(asset_obj)
         elif instrument_bands == constants.SENTINEL_OLCI_BANDS:
             if "OL_1_" in product_type:
@@ -353,12 +408,24 @@ class MetadataLinks:
                     asset_description = manifest.find_attr(
                         "textInfo",
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
-                    asset_obj = pystac.Asset(
-                        href=asset_href,
-                        media_type=media_type,
-                        description=asset_description,
-                        roles=["data"],
-                        extra_fields={"eo:bands": [band_dict]})
+                    if skip_nc:
+                        asset_resolution = []
+                    else:
+                        asset_resolution_str = nc.Dataset(
+                            asset_href).resolution
+                        asset_resolution = [
+                            int(asset_resolution_str.split(" ")[1]),
+                            int(asset_resolution_str.split(" ")[2])
+                        ]
+                    asset_obj = pystac.Asset(href=asset_href,
+                                             media_type=media_type,
+                                             description=asset_description,
+                                             roles=["data"],
+                                             extra_fields={
+                                                 "resolution":
+                                                 asset_resolution,
+                                                 "eo:bands": [band_dict]
+                                             })
                     asset_list.append(asset_obj)
             elif any(_str in product_type for _str in ["_LFR_", "_LRR_"]):
                 asset_key_list = constants.OLCI_L2_LAND_ASSET_KEYS
@@ -383,11 +450,22 @@ class MetadataLinks:
                     asset_description = manifest.find_attr(
                         "textInfo",
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
+                    if skip_nc:
+                        asset_resolution = []
+                    else:
+                        asset_resolution_str = nc.Dataset(
+                            asset_href).resolution
+                        asset_resolution = [
+                            int(asset_resolution_str.split(" ")[1]),
+                            int(asset_resolution_str.split(" ")[2])
+                        ]
                     if not band_key_list:
-                        asset_obj = pystac.Asset(href=asset_href,
-                                                 media_type=media_type,
-                                                 description=asset_description,
-                                                 roles=["data"])
+                        asset_obj = pystac.Asset(
+                            href=asset_href,
+                            media_type=media_type,
+                            description=asset_description,
+                            roles=["data"],
+                            extra_fields={"resolution": asset_resolution})
                     else:
                         band_dict_list = []
                         for band in band_key_list:
@@ -402,12 +480,15 @@ class MetadataLinks:
                                 instrument_bands[band].full_width_half_max
                             }
                             band_dict_list.append(band_dict)
-                        asset_obj = pystac.Asset(
-                            href=asset_href,
-                            media_type=media_type,
-                            description=asset_description,
-                            roles=["data"],
-                            extra_fields={"eo:bands": band_dict_list})
+                        asset_obj = pystac.Asset(href=asset_href,
+                                                 media_type=media_type,
+                                                 description=asset_description,
+                                                 roles=["data"],
+                                                 extra_fields={
+                                                     "resolution":
+                                                     asset_resolution,
+                                                     "eo:bands": band_dict_list
+                                                 })
                     asset_list.append(asset_obj)
             elif "_WFR_" in product_type:
                 asset_key_list = constants.OLCI_L2_WATER_ASSET_KEYS
@@ -454,6 +535,15 @@ class MetadataLinks:
                     asset_description = manifest.find_attr(
                         "textInfo",
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
+                    if skip_nc:
+                        asset_resolution = []
+                    else:
+                        asset_resolution_str = nc.Dataset(
+                            asset_href).resolution
+                        asset_resolution = [
+                            int(asset_resolution_str.split(" ")[1]),
+                            int(asset_resolution_str.split(" ")[2])
+                        ]
                     if band_key_list:
                         band_dict_list = []
                         for band in band_key_list:
@@ -468,18 +558,23 @@ class MetadataLinks:
                                 instrument_bands[band].full_width_half_max
                             }
                             band_dict_list.append(band_dict)
+                        asset_obj = pystac.Asset(href=asset_href,
+                                                 media_type=media_type,
+                                                 description=asset_description,
+                                                 roles=["data"],
+                                                 extra_fields={
+                                                     "resolution":
+                                                     asset_resolution,
+                                                     "eo:bands": band_dict_list
+                                                 })
+                        asset_list.append(asset_obj)
+                    else:
                         asset_obj = pystac.Asset(
                             href=asset_href,
                             media_type=media_type,
                             description=asset_description,
                             roles=["data"],
-                            extra_fields={"eo:bands": band_dict_list})
-                        asset_list.append(asset_obj)
-                    else:
-                        asset_obj = pystac.Asset(href=asset_href,
-                                                 media_type=media_type,
-                                                 description=asset_description,
-                                                 roles=["data"])
+                            extra_fields={"resolution": asset_resolution})
                         asset_list.append(asset_obj)
         elif instrument_bands == constants.SENTINEL_SLSTR_BANDS:
             if "SL_1_" in product_type:
@@ -503,12 +598,24 @@ class MetadataLinks:
                     asset_description = manifest.find_attr(
                         "textInfo",
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
-                    asset_obj = pystac.Asset(
-                        href=asset_href,
-                        media_type=media_type,
-                        description=asset_description,
-                        roles=["data"],
-                        extra_fields={"eo:bands": [band_dict]})
+                    if skip_nc:
+                        asset_resolution = []
+                    else:
+                        asset_resolution_str = nc.Dataset(
+                            asset_href).resolution
+                        asset_resolution = [
+                            int(asset_resolution_str.split(" ")[1]),
+                            int(asset_resolution_str.split(" ")[2])
+                        ]
+                    asset_obj = pystac.Asset(href=asset_href,
+                                             media_type=media_type,
+                                             description=asset_description,
+                                             roles=["data"],
+                                             extra_fields={
+                                                 "resolution":
+                                                 asset_resolution,
+                                                 "eo:bands": [band_dict]
+                                             })
                     asset_list.append(asset_obj)
             elif "_FRP_" in product_type:
                 asset_key_list = constants.SLSTR_L2_FRP_KEYS
@@ -527,6 +634,15 @@ class MetadataLinks:
                     asset_description = manifest.find_attr(
                         "textInfo",
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
+                    if skip_nc:
+                        asset_resolution = []
+                    else:
+                        asset_resolution_str = nc.Dataset(
+                            asset_href).resolution
+                        asset_resolution = [
+                            int(asset_resolution_str.split(" ")[1]),
+                            int(asset_resolution_str.split(" ")[2])
+                        ]
                     if band_key_list:
                         band_dict_list = []
                         for band in band_key_list:
@@ -542,21 +658,26 @@ class MetadataLinks:
                             }
                             band_dict_list.append(band_dict)
                         asset_description = "Fire Radiative Power (FRP) dataset"
+                        asset_obj = pystac.Asset(href=asset_href,
+                                                 media_type=media_type,
+                                                 description=asset_description,
+                                                 roles=["data"],
+                                                 extra_fields={
+                                                     "resolution":
+                                                     asset_resolution,
+                                                     "eo:bands": band_dict_list
+                                                 })
+                        asset_list.append(asset_obj)
+                    else:
+                        # asset_description = manifest.find_attr(
+                        #     "textInfo",
+                        #     f".//dataObject[@ID='{asset_key}']//fileLocation")
                         asset_obj = pystac.Asset(
                             href=asset_href,
                             media_type=media_type,
                             description=asset_description,
                             roles=["data"],
-                            extra_fields={"eo:bands": band_dict_list})
-                        asset_list.append(asset_obj)
-                    else:
-                        asset_description = manifest.find_attr(
-                            "textInfo",
-                            f".//dataObject[@ID='{asset_key}']//fileLocation")
-                        asset_obj = pystac.Asset(href=asset_href,
-                                                 media_type=media_type,
-                                                 description=asset_description,
-                                                 roles=["data"])
+                            extra_fields={"resolution": asset_resolution})
                         asset_list.append(asset_obj)
             elif "_LST_" in product_type:
                 asset_key_list = constants.SLSTR_L2_LST_KEYS
@@ -572,6 +693,15 @@ class MetadataLinks:
                     media_type = manifest.find_attr(
                         "mimeType",
                         f".//dataObject[@ID='{asset_key}']//byteStream")
+                    if skip_nc:
+                        asset_resolution = []
+                    else:
+                        asset_resolution_str = nc.Dataset(
+                            asset_href).resolution
+                        asset_resolution = [
+                            int(asset_resolution_str.split(" ")[1]),
+                            int(asset_resolution_str.split(" ")[2])
+                        ]
                     if band_key_list:
                         band_dict_list = []
                         for band in band_key_list:
@@ -587,21 +717,26 @@ class MetadataLinks:
                             }
                             band_dict_list.append(band_dict)
                         asset_description = "Land Surface Temperature (LST) values"
-                        asset_obj = pystac.Asset(
-                            href=asset_href,
-                            media_type=media_type,
-                            description=asset_description,
-                            roles=["data"],
-                            extra_fields={"eo:bands": band_dict_list})
+                        asset_obj = pystac.Asset(href=asset_href,
+                                                 media_type=media_type,
+                                                 description=asset_description,
+                                                 roles=["data"],
+                                                 extra_fields={
+                                                     "resolution":
+                                                     asset_resolution,
+                                                     "eo:bands": band_dict_list
+                                                 })
                         asset_list.append(asset_obj)
                     else:
                         asset_description = manifest.find_attr(
                             "textInfo",
                             f".//dataObject[@ID='{asset_key}']//fileLocation")
-                        asset_obj = pystac.Asset(href=asset_href,
-                                                 media_type=media_type,
-                                                 description=asset_description,
-                                                 roles=["data"])
+                        asset_obj = pystac.Asset(
+                            href=asset_href,
+                            media_type=media_type,
+                            description=asset_description,
+                            roles=["data"],
+                            extra_fields={"resolution": asset_resolution})
                         asset_list.append(asset_obj)
             elif "_WST_" in product_type:
                 asset_key_list = ["L2P_Data"]
@@ -630,12 +765,20 @@ class MetadataLinks:
                     asset_description = (
                         "Data respects the Group for High Resolution "
                         "Sea Surface Temperature (GHRSST) L2P specification")
-                    asset_obj = pystac.Asset(
-                        href=asset_href,
-                        media_type=media_type,
-                        description=asset_description,
-                        roles=["data"],
-                        extra_fields={"eo:bands": band_dict_list})
+                    if skip_nc:
+                        asset_resolution = []
+                    else:
+                        asset_resolution_str = nc.Dataset(
+                            asset_href).spatial_resolution
+                    asset_obj = pystac.Asset(href=asset_href,
+                                             media_type=media_type,
+                                             description=asset_description,
+                                             roles=["data"],
+                                             extra_fields={
+                                                 "resolution":
+                                                 asset_resolution_str,
+                                                 "eo:bands": band_dict_list
+                                             })
                     asset_list.append(asset_obj)
 
         return (asset_key_list, asset_list)

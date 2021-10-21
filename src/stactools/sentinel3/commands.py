@@ -23,14 +23,17 @@ def create_sentinel3_command(cli):
     )
     @click.argument("src")
     @click.argument("dst")
-    def create_item_command(src, dst):
+    @click.option("--skip_nc",
+                  default=False,
+                  help="Insert <True> to skip reading nc files")
+    def create_item_command(src, dst, skip_nc):
         """Creates a STAC Collection
 
         Args:
             src (str): path to the scene
             dst (str): path to the STAC Item JSON file that will be created
         """
-        item = create_item(src)
+        item = create_item(src, skip_nc)
 
         item_path = os.path.join(dst, "{}.json".format(item.id))
         item.set_self_href(item_path)
