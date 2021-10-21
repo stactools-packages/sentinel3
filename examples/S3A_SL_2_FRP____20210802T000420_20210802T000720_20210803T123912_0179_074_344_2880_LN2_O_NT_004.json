@@ -1,0 +1,561 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "id": "S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004",
+  "properties": {
+    "sat:platform_international_designator": "2016-011A",
+    "sat:orbit_state": "descending",
+    "sat:absolute_orbit": 28422,
+    "sat:relative_orbit": 344,
+    "eo:cloud_cover": 63.904667,
+    "proj:epsg": 4326,
+    "proj:shape": [
+      1500,
+      1200
+    ],
+    "start_datetime": "2021-08-02 00:04:19.503088+00:00",
+    "end_datetime": "2021-08-02 00:07:19.503088+00:00",
+    "s3:instrument": "SLSTR",
+    "s3:mode": "EO",
+    "s3:productType": "SL_2_FRP___",
+    "s3:salineWaterPixels_percentage": 99.891,
+    "s3:landPixels_percentage": 0.109,
+    "s3:coastalPixels_percentage": 0.017944,
+    "s3:freshInlandWaterPixels_percentage": 0.000167,
+    "s3:tidalRegionPixels_percentage": 0.0,
+    "s3:cosmeticPixels_percentage": 21.585889,
+    "s3:duplicatedPixels_percentage": 5.461111,
+    "s3:saturatedPixels_percentage": 0.0,
+    "s3:outOfRangePixels_percentage": 0.184722,
+    "providers": [
+      {
+        "name": "ESA",
+        "roles": [
+          "producer",
+          "processor",
+          "licensor"
+        ],
+        "url": "https://earth.esa.int/web/guest/home"
+      }
+    ],
+    "platform": "Sentinel-3A",
+    "constellation": "Sentinel-3",
+    "datetime": "2021-08-02T00:05:49.503088Z"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          139.182,
+          -0.084644
+        ],
+        [
+          139.626,
+          -0.183157
+        ],
+        [
+          140.076,
+          -0.281092
+        ],
+        [
+          140.523,
+          -0.387054
+        ],
+        [
+          140.97,
+          -0.497076
+        ],
+        [
+          141.414,
+          -0.592245
+        ],
+        [
+          141.859,
+          -0.689678
+        ],
+        [
+          142.316,
+          -0.796363
+        ],
+        [
+          142.756,
+          -0.893094
+        ],
+        [
+          143.21,
+          -0.997698
+        ],
+        [
+          143.652,
+          -1.09499
+        ],
+        [
+          144.099,
+          -1.20107
+        ],
+        [
+          144.55,
+          -1.30265
+        ],
+        [
+          144.998,
+          -1.40378
+        ],
+        [
+          145.441,
+          -1.50243
+        ],
+        [
+          145.889,
+          -1.60523
+        ],
+        [
+          146.33,
+          -1.70513
+        ],
+        [
+          146.783,
+          -1.80135
+        ],
+        [
+          147.229,
+          -1.90417
+        ],
+        [
+          147.68,
+          -2.00905
+        ],
+        [
+          148.121,
+          -2.11071
+        ],
+        [
+          148.574,
+          -2.20549
+        ],
+        [
+          149.02,
+          -2.3081
+        ],
+        [
+          149.471,
+          -2.41059
+        ],
+        [
+          149.911,
+          -2.50533
+        ],
+        [
+          150.361,
+          -2.60804
+        ],
+        [
+          150.813,
+          -2.70373
+        ],
+        [
+          151.259,
+          -2.80854
+        ],
+        [
+          151.707,
+          -2.90673
+        ],
+        [
+          152.147,
+          -3.00034
+        ],
+        [
+          152.321,
+          -3.03934
+        ],
+        [
+          152.905,
+          -0.424634
+        ],
+        [
+          153.499,
+          2.23572
+        ],
+        [
+          154.105,
+          4.89527
+        ],
+        [
+          154.722,
+          7.54484
+        ],
+        [
+          154.715,
+          7.55574
+        ],
+        [
+          154.548,
+          7.59501
+        ],
+        [
+          154.096,
+          7.6983
+        ],
+        [
+          153.651,
+          7.80269
+        ],
+        [
+          153.197,
+          7.9124
+        ],
+        [
+          152.751,
+          8.01194
+        ],
+        [
+          152.297,
+          8.10982
+        ],
+        [
+          151.845,
+          8.2156
+        ],
+        [
+          151.392,
+          8.32119
+        ],
+        [
+          150.943,
+          8.42526
+        ],
+        [
+          150.486,
+          8.52082
+        ],
+        [
+          150.041,
+          8.62257
+        ],
+        [
+          149.585,
+          8.72577
+        ],
+        [
+          149.133,
+          8.81893
+        ],
+        [
+          148.677,
+          8.92123
+        ],
+        [
+          148.223,
+          9.02291
+        ],
+        [
+          147.776,
+          9.12005
+        ],
+        [
+          147.318,
+          9.221
+        ],
+        [
+          146.867,
+          9.31508
+        ],
+        [
+          146.41,
+          9.41185
+        ],
+        [
+          145.952,
+          9.50638
+        ],
+        [
+          145.504,
+          9.59842
+        ],
+        [
+          145.043,
+          9.69696
+        ],
+        [
+          144.595,
+          9.78727
+        ],
+        [
+          144.131,
+          9.88701
+        ],
+        [
+          143.679,
+          9.97713
+        ],
+        [
+          143.227,
+          10.0645
+        ],
+        [
+          142.768,
+          10.1486
+        ],
+        [
+          142.314,
+          10.2456
+        ],
+        [
+          141.856,
+          10.334
+        ],
+        [
+          141.399,
+          10.4264
+        ],
+        [
+          141.398,
+          10.4176
+        ],
+        [
+          140.867,
+          7.78604
+        ],
+        [
+          140.319,
+          5.14655
+        ],
+        [
+          139.755,
+          2.50827
+        ],
+        [
+          139.182,
+          -0.084644
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "license",
+      "href": "https://sentinel.esa.int/documents/247904/690755/Sentinel_Data_Legal_Notice"
+    },
+    {
+      "rel": "self",
+      "href": "/opt/stactools-sentinel3/examples/S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.json",
+      "type": "application/json"
+    }
+  ],
+  "assets": {
+    "safe-manifest": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/xfdumanifest.xml",
+      "type": "application/xml",
+      "roles": [
+        "metadata"
+      ]
+    },
+    "FRP_IN_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/FRP_in.nc",
+      "type": "application/x-netcdf",
+      "description": "Fire Radiative Power (FRP) dataset",
+      "resolution": [
+        1000,
+        1000
+      ],
+      "eo:bands": [
+        {
+          "name": "S5",
+          "description": "Band 5 - Cloud clearing, ice, snow, vegetation monitoring",
+          "center_wavelength": 1613.4,
+          "band_width": 60.68
+        },
+        {
+          "name": "S6",
+          "description": "Band 6 - Vegetation state and cloud clearing",
+          "center_wavelength": 2255.7,
+          "band_width": 50.15
+        },
+        {
+          "name": "S7",
+          "description": "Band 7 - SST, LST, Active fire",
+          "center_wavelength": 3742,
+          "band_width": 398
+        },
+        {
+          "name": "F1",
+          "description": "Band 10 - Active fire",
+          "center_wavelength": 3742,
+          "band_width": 398
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_CARTESIAN_FN_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/cartesian_fn.nc",
+      "type": "application/x-netcdf",
+      "description": "Full resolution cartesian coordinates for the 1km F1 grid, nadir view",
+      "resolution": [
+        1000,
+        1000
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_CARTESIAN_IN_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/cartesian_in.nc",
+      "type": "application/x-netcdf",
+      "description": "Full resolution cartesian coordinates for the 1km TIR grid, nadir view",
+      "resolution": [
+        1000,
+        1000
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_CARTESIAN_TX_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/cartesian_tx.nc",
+      "type": "application/x-netcdf",
+      "description": "16km cartesian coordinates",
+      "resolution": [
+        16000,
+        1000
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_FLAGS_FN_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/flags_fn.nc",
+      "type": "application/x-netcdf",
+      "description": "Global flags for the 1km F1 grid, nadir view",
+      "resolution": [
+        1000,
+        1000
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_FLAGS_IN_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/flags_in.nc",
+      "type": "application/x-netcdf",
+      "description": "Global flags for the 1km TIR grid, nadir view",
+      "resolution": [
+        1000,
+        1000
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_GEODETIC_FN_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/geodetic_fn.nc",
+      "type": "application/x-netcdf",
+      "description": "Full resolution geodetic coordinates for the 1km F1 grid, nadir view",
+      "resolution": [
+        1000,
+        1000
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_GEODETIC_IN_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/geodetic_in.nc",
+      "type": "application/x-netcdf",
+      "description": "Full resolution geodetic coordinates for the 1km TIR grid, nadir view",
+      "resolution": [
+        1000,
+        1000
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_GEODETIC_TX_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/geodetic_tx.nc",
+      "type": "application/x-netcdf",
+      "description": "16km geodetic coordinates",
+      "resolution": [
+        16000,
+        1000
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_GEOMETRY_TN_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/geometry_tn.nc",
+      "type": "application/x-netcdf",
+      "description": "16km solar and satellite geometry annotations, nadir view",
+      "resolution": [
+        16000,
+        1000
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_INDICES_FN_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/indices_fn.nc",
+      "type": "application/x-netcdf",
+      "description": "Scan, pixel and detector annotations for the 1km F1 grid, nadir view",
+      "resolution": [
+        1000,
+        1000
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_INDICES_IN_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/indices_in.nc",
+      "type": "application/x-netcdf",
+      "description": "Scan, pixel and detector annotations for the 1km TIR grid, nadir view",
+      "resolution": [
+        1000,
+        1000
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_MET_TX_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/met_tx.nc",
+      "type": "application/x-netcdf",
+      "description": "Meteorological parameters regridded onto the 16km tie points",
+      "resolution": [
+        16000,
+        1000
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_TIME_IN_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/time_in.nc",
+      "type": "application/x-netcdf",
+      "description": "Time annotations for the 1 KM grid",
+      "resolution": [
+        1000,
+        1000
+      ],
+      "roles": [
+        "data"
+      ]
+    }
+  },
+  "bbox": [
+    139.182,
+    -3.03934,
+    154.722,
+    10.4264
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/sat/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/eo/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v1.0.0/schema.json"
+  ]
+}
