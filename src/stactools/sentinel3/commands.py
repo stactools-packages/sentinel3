@@ -12,7 +12,7 @@ def create_sentinel3_command(cli):
     """Creates the stactools-sentinel3 command line utility."""
     @cli.group(
         "sentinel3",
-        short_help=("Commands for working with stactools-sentinel3"),
+        short_help="Commands for working with stactools-sentinel3",
     )
     def sentinel3():
         pass
@@ -32,6 +32,9 @@ def create_sentinel3_command(cli):
         Args:
             src (str): path to the scene
             dst (str): path to the STAC Item JSON file that will be created
+            skip_nc (bool): Skip parsing NetCDF data files. Since these are large, this saves
+                bandwidth when working over network, at the cost of metadata we can obtain
+                from them. Defaults to False.
         """
         item = create_item(src, skip_nc)
 
