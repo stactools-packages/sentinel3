@@ -99,6 +99,10 @@ class MetadataLinks:
                         instrument_bands[band].full_width_half_max
                     }
                     band_dict_list.append(band_dict)
+                if "reduced" in asset_key:
+                    band_dict_list = [band_dict_list[1]]
+                else:
+                    pass
                 asset_location = self.read_href(
                     f".//dataObject[@ID='{asset_key}']//fileLocation")
                 asset_href = os.path.join(self.granule_href, asset_location)
@@ -113,7 +117,7 @@ class MetadataLinks:
                     media_type=media_type,
                     description=asset_description,
                     roles=["data"],
-                    extra_fields={"eo:bands": band_dict_list})
+                    extra_fields={"sral:bands": band_dict_list})
                 asset_list.append(asset_obj)
         elif instrument_bands == constants.SENTINEL_SYNERGY_BANDS:
             if "_AOD_" in product_type:

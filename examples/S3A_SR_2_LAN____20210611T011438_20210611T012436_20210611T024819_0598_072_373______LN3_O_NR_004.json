@@ -228,7 +228,7 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SR_2_LAN____20210611T011438_20210611T012436_20210611T024819_0598_072_373______LN3_O_NR_004.SEN3/standard_measurement.nc",
       "type": "application/x-netcdf",
       "description": "Measurement Data Object File",
-      "eo:bands": [
+      "sral:bands": [
         {
           "name": "C",
           "description": "Band C - Ionospheric correction",
@@ -250,7 +250,7 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SR_2_LAN____20210611T011438_20210611T012436_20210611T024819_0598_072_373______LN3_O_NR_004.SEN3/enhanced_measurement.nc",
       "type": "application/x-netcdf",
       "description": "Measurement Data Object File",
-      "eo:bands": [
+      "sral:bands": [
         {
           "name": "C",
           "description": "Band C - Ionospheric correction",
@@ -272,13 +272,7 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SR_2_LAN____20210611T011438_20210611T012436_20210611T024819_0598_072_373______LN3_O_NR_004.SEN3/reduced_measurement.nc",
       "type": "application/x-netcdf",
       "description": "Measurement Data Object File",
-      "eo:bands": [
-        {
-          "name": "C",
-          "description": "Band C - Ionospheric correction",
-          "central_frequency": 5409999872.0,
-          "band_width_in_Hz": 290000000.0
-        },
+      "sral:bands": [
         {
           "name": "Ku",
           "description": "Band Ku - Range measurements",
