@@ -1,0 +1,1355 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "id": "S3B_OL_1_ERR____20210831T200148_20210831T204600_20210902T011514_2652_056_242______LN1_O_NT_002",
+  "properties": {
+    "sat:platform_international_designator": "2018-039A",
+    "sat:orbit_state": "ascending",
+    "sat:absolute_orbit": 17454,
+    "sat:relative_orbit": 242,
+    "proj:epsg": 4326,
+    "proj:shape": [
+      1217,
+      15070
+    ],
+    "start_datetime": "2021-08-31 20:01:47.783025+00:00",
+    "end_datetime": "2021-08-31 20:46:00.217707+00:00",
+    "s3:instrument": "OLCI",
+    "s3:mode": "EO",
+    "s3:productType": "OL_1_ERR___",
+    "s3:salineWaterPixels_percentage": 90.0,
+    "s3:coastalPixels_percentage": 0.0,
+    "s3:freshInlandWaterPixels_percentage": 0.0,
+    "s3:tidalRegionPixels_percentage": 0.0,
+    "s3:brightPixels_percentage": 47.0,
+    "s3:invalidPixels_percentage": 3.0,
+    "s3:cosmeticPixels_percentage": 0.0,
+    "s3:duplicatedPixels_percentage": 0.0,
+    "s3:saturatedPixels_percentage": 8e-06,
+    "s3:dubiousSamples_percentage": 0.0,
+    "providers": [
+      {
+        "name": "ESA",
+        "roles": [
+          "producer",
+          "processor",
+          "licensor"
+        ],
+        "url": "https://earth.esa.int/web/guest/home"
+      }
+    ],
+    "platform": "Sentinel-3B",
+    "constellation": "Sentinel-3",
+    "datetime": "2021-08-31T20:23:54.000366Z"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          165.07,
+          -59.1187
+        ],
+        [
+          166.056,
+          -59.4622
+        ],
+        [
+          167.074,
+          -59.809
+        ],
+        [
+          168.113,
+          -60.1478
+        ],
+        [
+          169.174,
+          -60.4781
+        ],
+        [
+          170.256,
+          -60.7997
+        ],
+        [
+          171.359,
+          -61.1124
+        ],
+        [
+          172.498,
+          -61.42
+        ],
+        [
+          173.643,
+          -61.7135
+        ],
+        [
+          174.811,
+          -61.9972
+        ],
+        [
+          175.983,
+          -62.2741
+        ],
+        [
+          177.194,
+          -62.5374
+        ],
+        [
+          178.426,
+          -62.79
+        ],
+        [
+          179.698,
+          -63.035
+        ],
+        [
+          -179.028,
+          -63.265
+        ],
+        [
+          -177.735,
+          -63.4834
+        ],
+        [
+          -176.439,
+          -63.6867
+        ],
+        [
+          -175.108,
+          -63.8812
+        ],
+        [
+          -173.759,
+          -64.0633
+        ],
+        [
+          -172.389,
+          -64.2325
+        ],
+        [
+          -171.746,
+          -63.1756
+        ],
+        [
+          -170.763,
+          -61.4187
+        ],
+        [
+          -169.864,
+          -59.6573
+        ],
+        [
+          -169.037,
+          -57.8919
+        ],
+        [
+          -168.27,
+          -56.1227
+        ],
+        [
+          -167.553,
+          -54.3499
+        ],
+        [
+          -166.88,
+          -52.5744
+        ],
+        [
+          -166.245,
+          -50.7962
+        ],
+        [
+          -165.642,
+          -49.0156
+        ],
+        [
+          -165.068,
+          -47.2328
+        ],
+        [
+          -164.518,
+          -45.4477
+        ],
+        [
+          -163.99,
+          -43.661
+        ],
+        [
+          -163.481,
+          -41.8723
+        ],
+        [
+          -162.988,
+          -40.0817
+        ],
+        [
+          -162.51,
+          -38.2903
+        ],
+        [
+          -162.045,
+          -36.4968
+        ],
+        [
+          -161.592,
+          -34.7019
+        ],
+        [
+          -161.149,
+          -32.9056
+        ],
+        [
+          -160.714,
+          -31.1084
+        ],
+        [
+          -160.288,
+          -29.3099
+        ],
+        [
+          -159.868,
+          -27.5098
+        ],
+        [
+          -159.454,
+          -25.7095
+        ],
+        [
+          -159.046,
+          -23.9076
+        ],
+        [
+          -158.641,
+          -22.1051
+        ],
+        [
+          -158.241,
+          -20.3017
+        ],
+        [
+          -157.843,
+          -18.4977
+        ],
+        [
+          -157.448,
+          -16.6925
+        ],
+        [
+          -157.054,
+          -14.8876
+        ],
+        [
+          -156.662,
+          -13.0811
+        ],
+        [
+          -156.27,
+          -11.2747
+        ],
+        [
+          -155.878,
+          -9.46781
+        ],
+        [
+          -155.486,
+          -7.66082
+        ],
+        [
+          -155.094,
+          -5.85298
+        ],
+        [
+          -154.699,
+          -4.04584
+        ],
+        [
+          -154.303,
+          -2.23776
+        ],
+        [
+          -153.904,
+          -0.430464
+        ],
+        [
+          -153.503,
+          1.37717
+        ],
+        [
+          -153.098,
+          3.18464
+        ],
+        [
+          -152.689,
+          4.99168
+        ],
+        [
+          -152.275,
+          6.79782
+        ],
+        [
+          -151.856,
+          8.60433
+        ],
+        [
+          -151.431,
+          10.4098
+        ],
+        [
+          -150.999,
+          12.2148
+        ],
+        [
+          -150.561,
+          14.0188
+        ],
+        [
+          -150.113,
+          15.8217
+        ],
+        [
+          -149.658,
+          17.6241
+        ],
+        [
+          -149.193,
+          19.4252
+        ],
+        [
+          -148.716,
+          21.2241
+        ],
+        [
+          -148.228,
+          23.0224
+        ],
+        [
+          -147.726,
+          24.8189
+        ],
+        [
+          -147.21,
+          26.6139
+        ],
+        [
+          -146.679,
+          28.4065
+        ],
+        [
+          -146.13,
+          30.1971
+        ],
+        [
+          -145.562,
+          31.9854
+        ],
+        [
+          -144.973,
+          33.7711
+        ],
+        [
+          -144.361,
+          35.554
+        ],
+        [
+          -143.723,
+          37.3337
+        ],
+        [
+          -143.057,
+          39.1101
+        ],
+        [
+          -142.359,
+          40.8827
+        ],
+        [
+          -141.626,
+          42.6512
+        ],
+        [
+          -140.853,
+          44.4151
+        ],
+        [
+          -140.036,
+          46.1737
+        ],
+        [
+          -139.17,
+          47.9267
+        ],
+        [
+          -138.247,
+          49.6735
+        ],
+        [
+          -137.261,
+          51.4129
+        ],
+        [
+          -136.202,
+          53.1438
+        ],
+        [
+          -135.061,
+          54.8659
+        ],
+        [
+          -133.824,
+          56.5773
+        ],
+        [
+          -132.478,
+          58.276
+        ],
+        [
+          -131.003,
+          59.9606
+        ],
+        [
+          -129.38,
+          61.6283
+        ],
+        [
+          -127.582,
+          63.2762
+        ],
+        [
+          -125.576,
+          64.9005
+        ],
+        [
+          -123.325,
+          66.4961
+        ],
+        [
+          -120.779,
+          68.0573
+        ],
+        [
+          -117.882,
+          69.576
+        ],
+        [
+          -114.56,
+          71.0418
+        ],
+        [
+          -110.729,
+          72.4427
+        ],
+        [
+          -106.291,
+          73.7612
+        ],
+        [
+          -101.137,
+          74.9742
+        ],
+        [
+          -95.167,
+          76.0572
+        ],
+        [
+          -88.3076,
+          76.976
+        ],
+        [
+          -80.5581,
+          77.6941
+        ],
+        [
+          -72.0385,
+          78.175
+        ],
+        [
+          -63.0173,
+          78.3893
+        ],
+        [
+          -53.8842,
+          78.3222
+        ],
+        [
+          -45.0589,
+          77.9784
+        ],
+        [
+          -44.2406,
+          78.5853
+        ],
+        [
+          -43.3509,
+          79.1775
+        ],
+        [
+          -42.3593,
+          79.767
+        ],
+        [
+          -41.2694,
+          80.3462
+        ],
+        [
+          -40.0175,
+          80.9289
+        ],
+        [
+          -38.5952,
+          81.507
+        ],
+        [
+          -36.9359,
+          82.0896
+        ],
+        [
+          -35.0524,
+          82.6546
+        ],
+        [
+          -32.8522,
+          83.2121
+        ],
+        [
+          -30.2352,
+          83.7511
+        ],
+        [
+          -27.1649,
+          84.2807
+        ],
+        [
+          -23.4832,
+          84.7908
+        ],
+        [
+          -18.9633,
+          85.2808
+        ],
+        [
+          -13.514,
+          85.7302
+        ],
+        [
+          -6.86186,
+          86.1324
+        ],
+        [
+          1.19419,
+          86.4712
+        ],
+        [
+          10.7258,
+          86.727
+        ],
+        [
+          21.517,
+          86.879
+        ],
+        [
+          32.7903,
+          86.9174
+        ],
+        [
+          36.5037,
+          88.6848
+        ],
+        [
+          -169.432,
+          89.5069
+        ],
+        [
+          -154.991,
+          87.7548
+        ],
+        [
+          -153.468,
+          85.9844
+        ],
+        [
+          -153.038,
+          84.2125
+        ],
+        [
+          -152.933,
+          82.4401
+        ],
+        [
+          -152.965,
+          80.6667
+        ],
+        [
+          -153.078,
+          78.8947
+        ],
+        [
+          -153.227,
+          77.1205
+        ],
+        [
+          -153.406,
+          75.3458
+        ],
+        [
+          -153.605,
+          73.5718
+        ],
+        [
+          -153.816,
+          71.7971
+        ],
+        [
+          -154.038,
+          70.0217
+        ],
+        [
+          -154.269,
+          68.2459
+        ],
+        [
+          -154.505,
+          66.4695
+        ],
+        [
+          -154.747,
+          64.6926
+        ],
+        [
+          -154.994,
+          62.9152
+        ],
+        [
+          -155.244,
+          61.137
+        ],
+        [
+          -155.499,
+          59.3583
+        ],
+        [
+          -155.756,
+          57.5789
+        ],
+        [
+          -156.017,
+          55.7987
+        ],
+        [
+          -156.281,
+          54.0179
+        ],
+        [
+          -156.547,
+          52.2364
+        ],
+        [
+          -156.816,
+          50.4541
+        ],
+        [
+          -157.088,
+          48.6712
+        ],
+        [
+          -157.363,
+          46.8876
+        ],
+        [
+          -157.64,
+          45.1032
+        ],
+        [
+          -157.92,
+          43.3181
+        ],
+        [
+          -158.203,
+          41.5323
+        ],
+        [
+          -158.489,
+          39.7458
+        ],
+        [
+          -158.778,
+          37.9586
+        ],
+        [
+          -159.07,
+          36.1707
+        ],
+        [
+          -159.365,
+          34.3825
+        ],
+        [
+          -159.663,
+          32.5933
+        ],
+        [
+          -159.965,
+          30.8038
+        ],
+        [
+          -160.27,
+          29.0145
+        ],
+        [
+          -160.58,
+          27.223
+        ],
+        [
+          -160.893,
+          25.4316
+        ],
+        [
+          -161.21,
+          23.6399
+        ],
+        [
+          -161.532,
+          21.8497
+        ],
+        [
+          -161.858,
+          20.0576
+        ],
+        [
+          -162.188,
+          18.2648
+        ],
+        [
+          -162.524,
+          16.4728
+        ],
+        [
+          -162.865,
+          14.6805
+        ],
+        [
+          -163.211,
+          12.8881
+        ],
+        [
+          -163.564,
+          11.096
+        ],
+        [
+          -163.922,
+          9.30327
+        ],
+        [
+          -164.287,
+          7.51258
+        ],
+        [
+          -164.659,
+          5.7216
+        ],
+        [
+          -165.038,
+          3.93054
+        ],
+        [
+          -165.424,
+          2.14012
+        ],
+        [
+          -165.819,
+          0.351247
+        ],
+        [
+          -166.223,
+          -1.43808
+        ],
+        [
+          -166.636,
+          -3.22459
+        ],
+        [
+          -167.058,
+          -5.01178
+        ],
+        [
+          -167.491,
+          -6.7967
+        ],
+        [
+          -167.935,
+          -8.58036
+        ],
+        [
+          -168.391,
+          -10.3622
+        ],
+        [
+          -168.859,
+          -12.1438
+        ],
+        [
+          -169.341,
+          -13.9211
+        ],
+        [
+          -169.837,
+          -15.6979
+        ],
+        [
+          -170.349,
+          -17.4718
+        ],
+        [
+          -170.878,
+          -19.2432
+        ],
+        [
+          -171.425,
+          -21.0115
+        ],
+        [
+          -171.99,
+          -22.7777
+        ],
+        [
+          -172.577,
+          -24.539
+        ],
+        [
+          -173.186,
+          -26.2984
+        ],
+        [
+          -173.82,
+          -28.0528
+        ],
+        [
+          -174.481,
+          -29.8028
+        ],
+        [
+          -175.17,
+          -31.5485
+        ],
+        [
+          -175.891,
+          -33.289
+        ],
+        [
+          -176.646,
+          -35.0239
+        ],
+        [
+          -177.438,
+          -36.7511
+        ],
+        [
+          -178.272,
+          -38.4728
+        ],
+        [
+          -179.151,
+          -40.1871
+        ],
+        [
+          179.92,
+          -41.8923
+        ],
+        [
+          178.936,
+          -43.5889
+        ],
+        [
+          177.891,
+          -45.2748
+        ],
+        [
+          176.778,
+          -46.9491
+        ],
+        [
+          175.59,
+          -48.6109
+        ],
+        [
+          174.317,
+          -50.2582
+        ],
+        [
+          172.95,
+          -51.8895
+        ],
+        [
+          171.478,
+          -53.5022
+        ],
+        [
+          169.887,
+          -55.0938
+        ],
+        [
+          168.161,
+          -56.6625
+        ],
+        [
+          166.284,
+          -58.2038
+        ],
+        [
+          165.07,
+          -59.1187
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "license",
+      "href": "https://sentinel.esa.int/documents/247904/690755/Sentinel_Data_Legal_Notice"
+    },
+    {
+      "rel": "self",
+      "href": "/opt/stactools-sentinel3/examples/S3B_OL_1_ERR____20210831T200148_20210831T204600_20210902T011514_2652_056_242______LN1_O_NT_002.json",
+      "type": "application/json"
+    }
+  ],
+  "assets": {
+    "safe-manifest": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_OL_1_ERR____20210831T200148_20210831T204600_20210902T011514_2652_056_242______LN1_O_NT_002.SEN3/xfdumanifest.xml",
+      "type": "application/xml",
+      "roles": [
+        "metadata"
+      ]
+    },
+    "Oa01_radianceData": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_OL_1_ERR____20210831T200148_20210831T204600_20210902T011514_2652_056_242______LN1_O_NT_002.SEN3/Oa01_radiance.nc",
+      "type": "application/x-netcdf",
+      "description": "TOA radiance for OLCI acquisition band Oa01",
+      "resolution": [
+        1080,
+        1176
+      ],
+      "eo:bands": [
+        {
+          "name": "Oa01",
+          "description": "Band 1 - Aerosol correction, improved water constituent retrieval",
+          "center_wavelength": 400,
+          "band_width": 15
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "Oa02_radianceData": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_OL_1_ERR____20210831T200148_20210831T204600_20210902T011514_2652_056_242______LN1_O_NT_002.SEN3/Oa02_radiance.nc",
+      "type": "application/x-netcdf",
+      "description": "TOA radiance for OLCI acquisition band Oa02",
+      "resolution": [
+        1080,
+        1176
+      ],
+      "eo:bands": [
+        {
+          "name": "Oa02",
+          "description": "Band 2 - Yellow substance and detrital pigments (turbidity)",
+          "center_wavelength": 412.5,
+          "band_width": 10
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "Oa03_radianceData": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_OL_1_ERR____20210831T200148_20210831T204600_20210902T011514_2652_056_242______LN1_O_NT_002.SEN3/Oa03_radiance.nc",
+      "type": "application/x-netcdf",
+      "description": "TOA radiance for OLCI acquisition band Oa03",
+      "resolution": [
+        1080,
+        1176
+      ],
+      "eo:bands": [
+        {
+          "name": "Oa03",
+          "description": "Band 3 - Chlorophyll absorption maximum, biogeochemistry, vegetation",
+          "center_wavelength": 442.5,
+          "band_width": 10
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "Oa04_radianceData": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_OL_1_ERR____20210831T200148_20210831T204600_20210902T011514_2652_056_242______LN1_O_NT_002.SEN3/Oa04_radiance.nc",
+      "type": "application/x-netcdf",
+      "description": "TOA radiance for OLCI acquisition band Oa04",
+      "resolution": [
+        1080,
+        1176
+      ],
+      "eo:bands": [
+        {
+          "name": "Oa04",
+          "description": "Band 4 - Chlorophyll",
+          "center_wavelength": 490,
+          "band_width": 10
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "Oa05_radianceData": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_OL_1_ERR____20210831T200148_20210831T204600_20210902T011514_2652_056_242______LN1_O_NT_002.SEN3/Oa05_radiance.nc",
+      "type": "application/x-netcdf",
+      "description": "TOA radiance for OLCI acquisition band Oa05",
+      "resolution": [
+        1080,
+        1176
+      ],
+      "eo:bands": [
+        {
+          "name": "Oa05",
+          "description": "Band 5 - Chlorophyll, sediment, turbidity, red tide",
+          "center_wavelength": 510,
+          "band_width": 10
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "Oa06_radianceData": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_OL_1_ERR____20210831T200148_20210831T204600_20210902T011514_2652_056_242______LN1_O_NT_002.SEN3/Oa06_radiance.nc",
+      "type": "application/x-netcdf",
+      "description": "TOA radiance for OLCI acquisition band Oa06",
+      "resolution": [
+        1080,
+        1176
+      ],
+      "eo:bands": [
+        {
+          "name": "Oa06",
+          "description": "Band 6 - Chlorophyll reference (minimum)",
+          "center_wavelength": 560,
+          "band_width": 10
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "Oa07_radianceData": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_OL_1_ERR____20210831T200148_20210831T204600_20210902T011514_2652_056_242______LN1_O_NT_002.SEN3/Oa07_radiance.nc",
+      "type": "application/x-netcdf",
+      "description": "TOA radiance for OLCI acquisition band Oa07",
+      "resolution": [
+        1080,
+        1176
+      ],
+      "eo:bands": [
+        {
+          "name": "Oa07",
+          "description": "Band 7 - Sediment loading",
+          "center_wavelength": 620,
+          "band_width": 10
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "Oa08_radianceData": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_OL_1_ERR____20210831T200148_20210831T204600_20210902T011514_2652_056_242______LN1_O_NT_002.SEN3/Oa08_radiance.nc",
+      "type": "application/x-netcdf",
+      "description": "TOA radiance for OLCI acquisition band Oa08",
+      "resolution": [
+        1080,
+        1176
+      ],
+      "eo:bands": [
+        {
+          "name": "Oa08",
+          "description": "Band 8 - 2nd Chlorophyll absorption maximum, sediment, yellow substance / vegetation",
+          "center_wavelength": 665,
+          "band_width": 10
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "Oa09_radianceData": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_OL_1_ERR____20210831T200148_20210831T204600_20210902T011514_2652_056_242______LN1_O_NT_002.SEN3/Oa09_radiance.nc",
+      "type": "application/x-netcdf",
+      "description": "TOA radiance for OLCI acquisition band Oa09",
+      "resolution": [
+        1080,
+        1176
+      ],
+      "eo:bands": [
+        {
+          "name": "Oa09",
+          "description": "Band 9 - Improved fluorescence retrieval",
+          "center_wavelength": 673.75,
+          "band_width": 7.5
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "Oa10_radianceData": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_OL_1_ERR____20210831T200148_20210831T204600_20210902T011514_2652_056_242______LN1_O_NT_002.SEN3/Oa10_radiance.nc",
+      "type": "application/x-netcdf",
+      "description": "TOA radiance for OLCI acquisition band Oa10",
+      "resolution": [
+        1080,
+        1176
+      ],
+      "eo:bands": [
+        {
+          "name": "Oa10",
+          "description": "Band 10 - Chlorophyll fluorescence peak, red edge",
+          "center_wavelength": 681.25,
+          "band_width": 7.5
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "Oa11_radianceData": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_OL_1_ERR____20210831T200148_20210831T204600_20210902T011514_2652_056_242______LN1_O_NT_002.SEN3/Oa11_radiance.nc",
+      "type": "application/x-netcdf",
+      "description": "TOA radiance for OLCI acquisition band Oa11",
+      "resolution": [
+        1080,
+        1176
+      ],
+      "eo:bands": [
+        {
+          "name": "Oa11",
+          "description": "Band 11 - Chlorophyll fluorescence baseline, red edge transition",
+          "center_wavelength": 708.75,
+          "band_width": 10
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "Oa12_radianceData": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_OL_1_ERR____20210831T200148_20210831T204600_20210902T011514_2652_056_242______LN1_O_NT_002.SEN3/Oa12_radiance.nc",
+      "type": "application/x-netcdf",
+      "description": "TOA radiance for OLCI acquisition band Oa12",
+      "resolution": [
+        1080,
+        1176
+      ],
+      "eo:bands": [
+        {
+          "name": "Oa12",
+          "description": "Band 12 - O2 absorption / clouds, vegetation",
+          "center_wavelength": 753.75,
+          "band_width": 7.5
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "Oa13_radianceData": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_OL_1_ERR____20210831T200148_20210831T204600_20210902T011514_2652_056_242______LN1_O_NT_002.SEN3/Oa13_radiance.nc",
+      "type": "application/x-netcdf",
+      "description": "TOA radiance for OLCI acquisition band Oa13",
+      "resolution": [
+        1080,
+        1176
+      ],
+      "eo:bands": [
+        {
+          "name": "Oa13",
+          "description": "Band 13 - O2 absorption / aerosol correction",
+          "center_wavelength": 761.25,
+          "band_width": 2.5
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "Oa14_radianceData": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_OL_1_ERR____20210831T200148_20210831T204600_20210902T011514_2652_056_242______LN1_O_NT_002.SEN3/Oa14_radiance.nc",
+      "type": "application/x-netcdf",
+      "description": "TOA radiance for OLCI acquisition band Oa14",
+      "resolution": [
+        1080,
+        1176
+      ],
+      "eo:bands": [
+        {
+          "name": "Oa14",
+          "description": "Band 14 - Atmospheric correction",
+          "center_wavelength": 764.375,
+          "band_width": 3.75
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "Oa15_radianceData": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_OL_1_ERR____20210831T200148_20210831T204600_20210902T011514_2652_056_242______LN1_O_NT_002.SEN3/Oa15_radiance.nc",
+      "type": "application/x-netcdf",
+      "description": "TOA radiance for OLCI acquisition band Oa15",
+      "resolution": [
+        1080,
+        1176
+      ],
+      "eo:bands": [
+        {
+          "name": "Oa15",
+          "description": "Band 15 - O2 absorption used for cloud top pressure, fluorescence over land",
+          "center_wavelength": 767.5,
+          "band_width": 2.5
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "Oa16_radianceData": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_OL_1_ERR____20210831T200148_20210831T204600_20210902T011514_2652_056_242______LN1_O_NT_002.SEN3/Oa16_radiance.nc",
+      "type": "application/x-netcdf",
+      "description": "TOA radiance for OLCI acquisition band Oa16",
+      "resolution": [
+        1080,
+        1176
+      ],
+      "eo:bands": [
+        {
+          "name": "Oa16",
+          "description": "Band 16 - Atmospheric / aerosol correction",
+          "center_wavelength": 778.75,
+          "band_width": 15
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "Oa17_radianceData": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_OL_1_ERR____20210831T200148_20210831T204600_20210902T011514_2652_056_242______LN1_O_NT_002.SEN3/Oa17_radiance.nc",
+      "type": "application/x-netcdf",
+      "description": "TOA radiance for OLCI acquisition band Oa17",
+      "resolution": [
+        1080,
+        1176
+      ],
+      "eo:bands": [
+        {
+          "name": "Oa17",
+          "description": "Band 17 - Atmospheric / aerosol correction, clouds, pixel co-registration",
+          "center_wavelength": 865,
+          "band_width": 20
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "Oa18_radianceData": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_OL_1_ERR____20210831T200148_20210831T204600_20210902T011514_2652_056_242______LN1_O_NT_002.SEN3/Oa18_radiance.nc",
+      "type": "application/x-netcdf",
+      "description": "TOA radiance for OLCI acquisition band Oa18",
+      "resolution": [
+        1080,
+        1176
+      ],
+      "eo:bands": [
+        {
+          "name": "Oa18",
+          "description": "Band 18 - Water vapour absorption reference. Common reference band with SLSTR. Vegetation monitoring",
+          "center_wavelength": 885,
+          "band_width": 10
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "Oa19_radianceData": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_OL_1_ERR____20210831T200148_20210831T204600_20210902T011514_2652_056_242______LN1_O_NT_002.SEN3/Oa19_radiance.nc",
+      "type": "application/x-netcdf",
+      "description": "TOA radiance for OLCI acquisition band Oa19",
+      "resolution": [
+        1080,
+        1176
+      ],
+      "eo:bands": [
+        {
+          "name": "Oa19",
+          "description": "Band 19 - Water vapour absorption, vegetation monitoring (maximum REFLECTANCE)",
+          "center_wavelength": 900,
+          "band_width": 10
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "Oa20_radianceData": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_OL_1_ERR____20210831T200148_20210831T204600_20210902T011514_2652_056_242______LN1_O_NT_002.SEN3/Oa20_radiance.nc",
+      "type": "application/x-netcdf",
+      "description": "TOA radiance for OLCI acquisition band Oa20",
+      "resolution": [
+        1080,
+        1176
+      ],
+      "eo:bands": [
+        {
+          "name": "Oa20",
+          "description": "Band 20 - Water vapour absorption, atmospheric / aerosol correction",
+          "center_wavelength": 940,
+          "band_width": 20
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "Oa21_radianceData": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_OL_1_ERR____20210831T200148_20210831T204600_20210902T011514_2652_056_242______LN1_O_NT_002.SEN3/Oa21_radiance.nc",
+      "type": "application/x-netcdf",
+      "description": "TOA radiance for OLCI acquisition band Oa21",
+      "resolution": [
+        1080,
+        1176
+      ],
+      "eo:bands": [
+        {
+          "name": "Oa21",
+          "description": "Band 21 - Water vapour absorption, atmospheric / aerosol correction",
+          "center_wavelength": 1020,
+          "band_width": 40
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    }
+  },
+  "bbox": [
+    -179.151,
+    -64.2325,
+    179.92,
+    89.5069
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/sat/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/eo/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v1.0.0/schema.json"
+  ]
+}

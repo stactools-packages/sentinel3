@@ -1,0 +1,513 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "id": "S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004",
+  "properties": {
+    "sat:platform_international_designator": "2016-011A",
+    "sat:orbit_state": "ascending",
+    "sat:absolute_orbit": 27224,
+    "sat:relative_orbit": 301,
+    "eo:cloud_cover": 57.378222,
+    "proj:epsg": 4326,
+    "proj:shape": [
+      1500,
+      1200
+    ],
+    "start_datetime": "2021-05-10 00:29:54.660731+00:00",
+    "end_datetime": "2021-05-10 00:32:54.660731+00:00",
+    "s3:instrument": "SLSTR",
+    "s3:mode": "EO",
+    "s3:productType": "SL_2_LST___",
+    "s3:salineWaterPixels_percentage": 78.747222,
+    "s3:landPixels_percentage": 21.252778,
+    "s3:coastalPixels_percentage": 0.050167,
+    "s3:freshInlandWaterPixels_percentage": 0.169778,
+    "s3:tidalRegionPixels_percentage": 0.899167,
+    "s3:cosmeticPixels_percentage": 21.881167,
+    "s3:duplicatedPixels_percentage": 5.449222,
+    "s3:saturatedPixels_percentage": 0.0,
+    "s3:outOfRangePixels_percentage": 0.0,
+    "providers": [
+      {
+        "name": "ESA",
+        "roles": [
+          "producer",
+          "processor",
+          "licensor"
+        ],
+        "url": "https://earth.esa.int/web/guest/home"
+      }
+    ],
+    "platform": "Sentinel-3A",
+    "constellation": "Sentinel-3",
+    "datetime": "2021-05-10T00:31:24.660731Z"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -41.5076,
+          -8.01962
+        ],
+        [
+          -41.3327,
+          -7.98032
+        ],
+        [
+          -40.8902,
+          -7.89274
+        ],
+        [
+          -40.434,
+          -7.79013
+        ],
+        [
+          -39.9857,
+          -7.69099
+        ],
+        [
+          -39.5293,
+          -7.59524
+        ],
+        [
+          -39.0759,
+          -7.50054
+        ],
+        [
+          -38.632,
+          -7.39817
+        ],
+        [
+          -38.1774,
+          -7.30053
+        ],
+        [
+          -37.7267,
+          -7.20359
+        ],
+        [
+          -37.2723,
+          -7.0957
+        ],
+        [
+          -36.8263,
+          -6.99912
+        ],
+        [
+          -36.3705,
+          -6.89927
+        ],
+        [
+          -35.9217,
+          -6.79179
+        ],
+        [
+          -35.476,
+          -6.69157
+        ],
+        [
+          -35.0221,
+          -6.59078
+        ],
+        [
+          -34.577,
+          -6.48928
+        ],
+        [
+          -34.1213,
+          -6.38704
+        ],
+        [
+          -33.6748,
+          -6.28153
+        ],
+        [
+          -33.2284,
+          -6.18307
+        ],
+        [
+          -32.7832,
+          -6.07228
+        ],
+        [
+          -32.3337,
+          -5.9685
+        ],
+        [
+          -31.8779,
+          -5.86289
+        ],
+        [
+          -31.4373,
+          -5.75536
+        ],
+        [
+          -30.9835,
+          -5.65545
+        ],
+        [
+          -30.5404,
+          -5.54494
+        ],
+        [
+          -30.0895,
+          -5.44607
+        ],
+        [
+          -29.6449,
+          -5.32805
+        ],
+        [
+          -29.1994,
+          -5.22376
+        ],
+        [
+          -28.7469,
+          -5.11077
+        ],
+        [
+          -28.2999,
+          -5.01269
+        ],
+        [
+          -27.6676,
+          -7.59868
+        ],
+        [
+          -26.9996,
+          -10.2251
+        ],
+        [
+          -26.3038,
+          -12.8476
+        ],
+        [
+          -25.5798,
+          -15.457
+        ],
+        [
+          -25.5773,
+          -15.4657
+        ],
+        [
+          -26.0347,
+          -15.5928
+        ],
+        [
+          -26.4961,
+          -15.7051
+        ],
+        [
+          -26.9538,
+          -15.8244
+        ],
+        [
+          -27.4155,
+          -15.9391
+        ],
+        [
+          -27.875,
+          -16.0688
+        ],
+        [
+          -28.3414,
+          -16.1802
+        ],
+        [
+          -28.7933,
+          -16.2978
+        ],
+        [
+          -29.2626,
+          -16.411
+        ],
+        [
+          -29.7195,
+          -16.5311
+        ],
+        [
+          -30.1845,
+          -16.6437
+        ],
+        [
+          -30.6508,
+          -16.7526
+        ],
+        [
+          -31.1084,
+          -16.8603
+        ],
+        [
+          -31.5761,
+          -16.9706
+        ],
+        [
+          -32.0491,
+          -17.0788
+        ],
+        [
+          -32.5091,
+          -17.1865
+        ],
+        [
+          -32.9802,
+          -17.2998
+        ],
+        [
+          -33.4444,
+          -17.4036
+        ],
+        [
+          -33.914,
+          -17.5058
+        ],
+        [
+          -34.3811,
+          -17.6056
+        ],
+        [
+          -34.8449,
+          -17.7135
+        ],
+        [
+          -35.3219,
+          -17.813
+        ],
+        [
+          -35.7932,
+          -17.9104
+        ],
+        [
+          -36.2589,
+          -18.0137
+        ],
+        [
+          -36.7253,
+          -18.1053
+        ],
+        [
+          -37.1993,
+          -18.2083
+        ],
+        [
+          -37.6776,
+          -18.302
+        ],
+        [
+          -38.1482,
+          -18.3986
+        ],
+        [
+          -38.6166,
+          -18.4907
+        ],
+        [
+          -39.09,
+          -18.5815
+        ],
+        [
+          -39.2673,
+          -18.6129
+        ],
+        [
+          -39.2784,
+          -18.6058
+        ],
+        [
+          -39.8366,
+          -15.9566
+        ],
+        [
+          -40.3971,
+          -13.2976
+        ],
+        [
+          -40.9597,
+          -10.6377
+        ],
+        [
+          -41.5076,
+          -8.01962
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "license",
+      "href": "https://sentinel.esa.int/documents/247904/690755/Sentinel_Data_Legal_Notice"
+    },
+    {
+      "rel": "self",
+      "href": "/opt/stactools-sentinel3/examples/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.json",
+      "type": "application/json"
+    }
+  ],
+  "assets": {
+    "safe-manifest": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/xfdumanifest.xml",
+      "type": "application/xml",
+      "roles": [
+        "metadata"
+      ]
+    },
+    "LST_IN_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/LST_in.nc",
+      "type": "application/x-netcdf",
+      "description": "Land Surface Temperature (LST) values",
+      "resolution": [
+        1000,
+        1000
+      ],
+      "eo:bands": [
+        {
+          "name": "S8",
+          "description": "Band 8 - SST, LST, Active fire",
+          "center_wavelength": 10854,
+          "band_width": 776
+        },
+        {
+          "name": "S9",
+          "description": "Band 9 - SST, LST",
+          "center_wavelength": 12022.5,
+          "band_width": 905
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "LST_ANCILLARY_DS_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/LST_ancillary_ds.nc",
+      "type": "application/x-netcdf",
+      "description": "LST ancillary measurement dataset",
+      "resolution": [
+        1000,
+        1000
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_FLAGS_IN_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/flags_in.nc",
+      "type": "application/x-netcdf",
+      "description": "Global flags for the 1km TIR grid, nadir view",
+      "resolution": [
+        1000,
+        1000
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_INDICES_IN_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/indices_in.nc",
+      "type": "application/x-netcdf",
+      "description": "Scan, pixel and detector annotations for the 1km TIR grid, nadir view",
+      "resolution": [
+        1000,
+        1000
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_TIME_IN_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/time_in.nc",
+      "type": "application/x-netcdf",
+      "description": "Time annotations for the 1 KM grid",
+      "resolution": [
+        1000,
+        1000
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_GEODETIC_IN_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/geodetic_in.nc",
+      "type": "application/x-netcdf",
+      "description": "Full resolution geodetic coordinates for the 1km TIR grid, nadir view",
+      "resolution": [
+        1000,
+        1000
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_CARTESIAN_IN_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/cartesian_in.nc",
+      "type": "application/x-netcdf",
+      "description": "Full resolution cartesian coordinates for the 1km TIR grid, nadir view",
+      "resolution": [
+        1000,
+        1000
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_GEOMETRY_TN_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/geometry_tn.nc",
+      "type": "application/x-netcdf",
+      "description": "16km solar and satellite geometry annotations, nadir view",
+      "resolution": [
+        16000,
+        1000
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_GEODETIC_TX_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/geodetic_tx.nc",
+      "type": "application/x-netcdf",
+      "description": "16km geodetic coordinates",
+      "resolution": [
+        16000,
+        1000
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_CARTESIAN_TX_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/cartesian_tx.nc",
+      "type": "application/x-netcdf",
+      "description": "16km cartesian coordinates",
+      "resolution": [
+        16000,
+        1000
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_MET_TX_Data": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/met_tx.nc",
+      "type": "application/x-netcdf",
+      "description": "Meteorological parameters regridded onto the 16km tie points",
+      "resolution": [
+        16000,
+        1000
+      ],
+      "roles": [
+        "data"
+      ]
+    }
+  },
+  "bbox": [
+    -41.5076,
+    -18.6129,
+    -25.5773,
+    -5.01269
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/sat/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/eo/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v1.0.0/schema.json"
+  ]
+}

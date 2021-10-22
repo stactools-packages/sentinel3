@@ -20,13 +20,13 @@ class CreateItemTest(CliTestCase):
 
     def test_create_olci_1_efr_item(self):
         item_id = str("S3A_OL_1_EFR____"
-                      "20210820T103153_20210820T103453_20210820T124206_"
-                      "0179_075_222_2160_LN1_O_NR_002")
+                      "20211021T073827_20211021T074112_20211021T091357_"
+                      "0164_077_334_4320_LN1_O_NR_002")
         granule_href = test_data.get_path(
             "data-files/"
             "S3A_OL_1_EFR____"
-            "20210820T103153_20210820T103453_20210820T124206_"
-            "0179_075_222_2160_LN1_O_NR_002.SEN3")
+            "20211021T073827_20211021T074112_20211021T091357_"
+            "0164_077_334_4320_LN1_O_NR_002.SEN3")
 
         with self.subTest(granule_href):
             with TemporaryDirectory() as tmp_dir:
@@ -62,13 +62,13 @@ class CreateItemTest(CliTestCase):
 
     def test_create_olci_1_err_item(self):
         item_id = str("S3B_OL_1_ERR____"
-                      "20210902T054142_20210902T062554_20210903T103126_"
-                      "2652_056_262______LN1_O_NT_002")
+                      "20210831T200148_20210831T204600_20210902T011514_"
+                      "2652_056_242______LN1_O_NT_002")
         granule_href = test_data.get_path(
             "data-files/"
             "S3B_OL_1_ERR____"
-            "20210902T054142_20210902T062554_20210903T103126_"
-            "2652_056_262______LN1_O_NT_002.SEN3")
+            "20210831T200148_20210831T204600_20210902T011514_"
+            "2652_056_242______LN1_O_NT_002.SEN3")
 
         with self.subTest(granule_href):
             with TemporaryDirectory() as tmp_dir:
@@ -104,13 +104,13 @@ class CreateItemTest(CliTestCase):
 
     def test_create_olci_2_lfr_item(self):
         item_id = str("S3A_OL_2_LFR____"
-                      "20180105T002409_20180105T002540_20180106T053045_"
-                      "0090_026_216_2069_LN1_O_NT_002")
+                      "20210523T003029_20210523T003329_20210524T050403_"
+                      "0179_072_102_1980_LN1_O_NT_002")
         granule_href = test_data.get_path(
             "data-files/"
             "S3A_OL_2_LFR____"
-            "20180105T002409_20180105T002540_20180106T053045_"
-            "0090_026_216_2069_LN1_O_NT_002.SEN3")
+            "20210523T003029_20210523T003329_20210524T050403_"
+            "0179_072_102_1980_LN1_O_NT_002.SEN3")
 
         with self.subTest(granule_href):
             with TemporaryDirectory() as tmp_dir:
@@ -146,13 +146,13 @@ class CreateItemTest(CliTestCase):
 
     def test_create_olci_2_lrr_item(self):
         item_id = str("S3B_OL_2_LRR____"
-                      "20210902T054142_20210902T062554_20210903T103456_"
-                      "2652_056_262______LN1_O_NT_002")
+                      "20210731T214325_20210731T222741_20210802T020007_"
+                      "2656_055_186______LN1_O_NT_002")
         granule_href = test_data.get_path(
             "data-files/"
             "S3B_OL_2_LRR____"
-            "20210902T054142_20210902T062554_20210903T103456_"
-            "2652_056_262______LN1_O_NT_002.SEN3")
+            "20210731T214325_20210731T222741_20210802T020007_"
+            "2656_055_186______LN1_O_NT_002.SEN3")
 
         with self.subTest(granule_href):
             with TemporaryDirectory() as tmp_dir:
@@ -188,13 +188,13 @@ class CreateItemTest(CliTestCase):
 
     def test_create_olci_2_wfr_item(self):
         item_id = str("S3A_OL_2_WFR____"
-                      "20201006T012547_20201006T012847_20201007T100122_"
-                      "0180_063_302_3060_MAR_O_NT_002")
+                      "20210604T001016_20210604T001316_20210604T021918_"
+                      "0179_072_273_1440_MAR_O_NR_003")
         granule_href = test_data.get_path(
             "data-files/"
             "S3A_OL_2_WFR____"
-            "20201006T012547_20201006T012847_20201007T100122_"
-            "0180_063_302_3060_MAR_O_NT_002.SEN3")
+            "20210604T001016_20210604T001316_20210604T021918_"
+            "0179_072_273_1440_MAR_O_NR_003.SEN3")
 
         with self.subTest(granule_href):
             with TemporaryDirectory() as tmp_dir:
@@ -230,13 +230,13 @@ class CreateItemTest(CliTestCase):
 
     def test_create_slstr_1_rbt_item(self):
         item_id = str("S3A_SL_1_RBT____"
-                      "20210827T074336_20210827T074636_20210827T094954_"
-                      "0179_075_320_3060_LN2_O_NR_004")
+                      "20210930T220914_20210930T221214_20211002T102150_"
+                      "0180_077_043_5400_LN2_O_NT_004")
         granule_href = test_data.get_path(
             "data-files/"
             "S3A_SL_1_RBT____"
-            "20210827T074336_20210827T074636_20210827T094954_"
-            "0179_075_320_3060_LN2_O_NR_004.SEN3")
+            "20210930T220914_20210930T221214_20211002T102150_"
+            "0180_077_043_5400_LN2_O_NT_004.SEN3")
 
         with self.subTest(granule_href):
             with TemporaryDirectory() as tmp_dir:
@@ -272,13 +272,13 @@ class CreateItemTest(CliTestCase):
 
     def test_create_slstr_2_frp_item(self):
         item_id = str("S3A_SL_2_FRP____"
-                      "20201104T001225_20201104T001525_20201105T060455_"
-                      "0179_064_330_1800_LN2_O_NT_004")
+                      "20210802T000420_20210802T000720_20210803T123912_"
+                      "0179_074_344_2880_LN2_O_NT_004")
         granule_href = test_data.get_path(
             "data-files/"
             "S3A_SL_2_FRP____"
-            "20201104T001225_20201104T001525_20201105T060455_"
-            "0179_064_330_1800_LN2_O_NT_004.SEN3")
+            "20210802T000420_20210802T000720_20210803T123912_"
+            "0179_074_344_2880_LN2_O_NT_004.SEN3")
 
         with self.subTest(granule_href):
             with TemporaryDirectory() as tmp_dir:
@@ -314,13 +314,13 @@ class CreateItemTest(CliTestCase):
 
     def test_create_slstr_2_lst_item(self):
         item_id = str("S3A_SL_2_LST____"
-                      "20180104T004105_20180104T022205_20180930T071122_"
-                      "6059_026_202______LR1_R_NT_003")
+                      "20210510T002955_20210510T003255_20210511T101010_"
+                      "0179_071_301_5760_LN2_O_NT_004")
         granule_href = test_data.get_path(
             "data-files/"
             "S3A_SL_2_LST____"
-            "20180104T004105_20180104T022205_20180930T071122_"
-            "6059_026_202______LR1_R_NT_003.SEN3")
+            "20210510T002955_20210510T003255_20210511T101010_"
+            "0179_071_301_5760_LN2_O_NT_004.SEN3")
 
         with self.subTest(granule_href):
             with TemporaryDirectory() as tmp_dir:
@@ -355,14 +355,14 @@ class CreateItemTest(CliTestCase):
                 os.remove(f"{tmp_dir}/{item_id}.json")
 
     def test_create_slstr_2_wst_item(self):
-        item_id = str("S3A_SL_2_WST____"
-                      "20190505T045344_20190505T063444_20190506T134130_"
-                      "6059_044_204______MAR_O_NT_003")
+        item_id = str("S3B_SL_2_WST____"
+                      "20210419T051754_20210419T065853_20210420T160434_"
+                      "6059_051_247______MAR_O_NT_003")
         granule_href = test_data.get_path(
             "data-files/"
-            "S3A_SL_2_WST____"
-            "20190505T045344_20190505T063444_20190506T134130_"
-            "6059_044_204______MAR_O_NT_003.SEN3")
+            "S3B_SL_2_WST____"
+            "20210419T051754_20210419T065853_20210420T160434_"
+            "6059_051_247______MAR_O_NT_003.SEN3")
 
         with self.subTest(granule_href):
             with TemporaryDirectory() as tmp_dir:
@@ -398,13 +398,13 @@ class CreateItemTest(CliTestCase):
 
     def test_create_sral_2_lan_item(self):
         item_id = str("S3A_SR_2_LAN____"
-                      "20201003T195855_20201003T204924_20201028T210401_"
-                      "3029_063_270______LN3_O_NT_004")
+                      "20210611T011438_20210611T012436_20210611T024819_"
+                      "0598_072_373______LN3_O_NR_004")
         granule_href = test_data.get_path(
             "data-files/"
             "S3A_SR_2_LAN____"
-            "20201003T195855_20201003T204924_20201028T210401_"
-            "3029_063_270______LN3_O_NT_004.SEN3")
+            "20210611T011438_20210611T012436_20210611T024819_"
+            "0598_072_373______LN3_O_NR_004.SEN3")
 
         with self.subTest(granule_href):
             with TemporaryDirectory() as tmp_dir:
@@ -440,13 +440,13 @@ class CreateItemTest(CliTestCase):
 
     def test_create_sral_2_wat_item(self):
         item_id = str("S3A_SR_2_WAT____"
-                      "20190326T011836_20190326T020243_20190420T170416_"
-                      "2647_043_017______MAR_O_NT_003")
+                      "20210704T012815_20210704T021455_20210729T173140_"
+                      "2800_073_316______MAR_O_NT_004")
         granule_href = test_data.get_path(
             "data-files/"
             "S3A_SR_2_WAT____"
-            "20190326T011836_20190326T020243_20190420T170416_"
-            "2647_043_017______MAR_O_NT_003.SEN3")
+            "20210704T012815_20210704T021455_20210729T173140_"
+            "2800_073_316______MAR_O_NT_004.SEN3")
 
         with self.subTest(granule_href):
             with TemporaryDirectory() as tmp_dir:
@@ -481,14 +481,14 @@ class CreateItemTest(CliTestCase):
                 os.remove(f"{tmp_dir}/{item_id}.json")
 
     def test_create_synergy_2_aod_item(self):
-        item_id = str("S3A_SY_2_AOD____"
-                      "20201119T153545_20201119T162000_20201120T223531_"
-                      "2655_065_168______LN2_O_NT_002")
+        item_id = str("S3B_SY_2_AOD____"
+                      "20210512T143315_20210512T151738_20210514T064157_"
+                      "2663_052_196______LN2_O_NT_002")
         granule_href = test_data.get_path(
             "data-files/"
-            "S3A_SY_2_AOD____"
-            "20201119T153545_20201119T162000_20201120T223531_"
-            "2655_065_168______LN2_O_NT_002.SEN3")
+            "S3B_SY_2_AOD____"
+            "20210512T143315_20210512T151738_20210514T064157_"
+            "2663_052_196______LN2_O_NT_002.SEN3")
 
         with self.subTest(granule_href):
             with TemporaryDirectory() as tmp_dir:
@@ -524,13 +524,13 @@ class CreateItemTest(CliTestCase):
 
     def test_create_synergy_2_syn_item(self):
         item_id = str("S3A_SY_2_SYN____"
-                      "20190202T004600_20190202T004900_20190203T142947_"
-                      "0179_041_045_2700_LN2_O_NT_002")
+                      "20210325T005418_20210325T005718_20210325T142858_"
+                      "0180_070_031_1620_LN2_O_ST_002")
         granule_href = test_data.get_path(
             "data-files/"
             "S3A_SY_2_SYN____"
-            "20190202T004600_20190202T004900_20190203T142947_"
-            "0179_041_045_2700_LN2_O_NT_002.SEN3")
+            "20210325T005418_20210325T005718_20210325T142858_"
+            "0180_070_031_1620_LN2_O_ST_002.SEN3")
 
         with self.subTest(granule_href):
             with TemporaryDirectory() as tmp_dir:
@@ -570,13 +570,13 @@ class CreateItemTest(CliTestCase):
 
     def test_create_synergy_2_v10_item(self):
         item_id = str("S3A_SY_2_V10____"
-                      "20191216T110000_20191226T110000_20200105T114106_"
-                      "ASIAN_ISLANDS_____LN2_O_NT_002")
+                      "20210911T000000_20210920T235959_20210928T121452_"
+                      "EUROPE____________LN2_O_NT_002")
         granule_href = test_data.get_path(
             "data-files/"
             "S3A_SY_2_V10____"
-            "20191216T110000_20191226T110000_20200105T114106_"
-            "ASIAN_ISLANDS_____LN2_O_NT_002.SEN3")
+            "20210911T000000_20210920T235959_20210928T121452_"
+            "EUROPE____________LN2_O_NT_002.SEN3")
 
         with self.subTest(granule_href):
             with TemporaryDirectory() as tmp_dir:
@@ -612,13 +612,13 @@ class CreateItemTest(CliTestCase):
 
     def test_create_synergy_2_vg1_item(self):
         item_id = str("S3A_SY_2_VG1____"
-                      "20200609T120000_20200610T120000_20200615T121610_"
-                      "CENTRAL_AMERICA___LN2_O_NT_002")
+                      "20211013T000000_20211013T235959_20211014T203456_"
+                      "EUROPE____________LN2_O_ST_002")
         granule_href = test_data.get_path(
             "data-files/"
             "S3A_SY_2_VG1____"
-            "20200609T120000_20200610T120000_20200615T121610_"
-            "CENTRAL_AMERICA___LN2_O_NT_002.SEN3")
+            "20211013T000000_20211013T235959_20211014T203456_"
+            "EUROPE____________LN2_O_ST_002.SEN3")
 
         with self.subTest(granule_href):
             with TemporaryDirectory() as tmp_dir:
@@ -653,14 +653,14 @@ class CreateItemTest(CliTestCase):
                 os.remove(f"{tmp_dir}/{item_id}.json")
 
     def test_create_synergy_2_vgp_item(self):
-        item_id = str("S3B_SY_2_VGP____"
-                      "20210213T192726_20210213T201112_20210215T060438_"
-                      "2626_049_099______LN2_O_NT_002")
+        item_id = str("S3A_SY_2_VGP____"
+                      "20210703T142237_20210703T150700_20210703T211742_"
+                      "2663_073_310______LN2_O_ST_002")
         granule_href = test_data.get_path(
             "data-files/"
-            "S3B_SY_2_VGP____"
-            "20210213T192726_20210213T201112_20210215T060438_"
-            "2626_049_099______LN2_O_NT_002.SEN3")
+            "S3A_SY_2_VGP____"
+            "20210703T142237_20210703T150700_20210703T211742_"
+            "2663_073_310______LN2_O_ST_002.SEN3")
 
         with self.subTest(granule_href):
             with TemporaryDirectory() as tmp_dir:
