@@ -19,13 +19,16 @@ logger = logging.getLogger(__name__)
 
 def create_item(
         granule_href: str,
-        skip_nc,
+        skip_nc: bool = False,
         read_href_modifier: Optional[ReadHrefModifier] = None) -> pystac.Item:
     """Create a STC Item from a Sentinel-3 scene.
 
     Args:
         granule_href (str): The HREF to the granule.
             This is expected to be a path to a SEN3 archive.
+        skip_nc (bool): Skip parsing NetCDF data files. Since these are large, this saves
+            bandwidth when working over network, at the cost of metadata we can obtain
+            from them. Defaults to False.
         read_href_modifier: A function that takes an HREF and returns a modified HREF.
             This can be used to modify a HREF to make it readable, e.g. appending
             an Azure SAS token or creating a signed URL.
