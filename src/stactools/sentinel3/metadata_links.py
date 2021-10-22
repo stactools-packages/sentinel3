@@ -151,9 +151,10 @@ class MetadataLinks:
                     else:
                         asset_resolution_str = nc.Dataset(
                             asset_href).resolution
+                        asset_resolution_split = asset_resolution_str.split(" ")
                         asset_resolution = [
-                            int(asset_resolution_str.split(" ")[1]),
-                            int(asset_resolution_str.split(" ")[2])
+                            int(asset_resolution_split[1]),
+                            int(asset_resolution_split[2])
                         ]
                     asset_obj = pystac.Asset(href=asset_href,
                                              media_type=media_type,
@@ -236,9 +237,10 @@ class MetadataLinks:
                     else:
                         asset_resolution_str = nc.Dataset(
                             asset_href).resolution
+                        asset_resolution_split = asset_resolution_str.split(" ")
                         asset_resolution = [
-                            int(asset_resolution_str.split(" ")[1]),
-                            int(asset_resolution_str.split(" ")[2])
+                            int(asset_resolution_split[1]),
+                            int(asset_resolution_split[2])
                         ]
                     if band_dict_list:
                         asset_obj = pystac.Asset(href=asset_href,
@@ -309,9 +311,10 @@ class MetadataLinks:
                     else:
                         asset_resolution_str = nc.Dataset(
                             asset_href).resolution
+                        asset_resolution_split = asset_resolution_str.split(" ")
                         asset_resolution = [
-                            int(asset_resolution_str.split(" ")[1]),
-                            int(asset_resolution_str.split(" ")[2])
+                            int(asset_resolution_split[1]),
+                            int(asset_resolution_split[2])
                         ]
                     if band_dict_list:
                         asset_obj = pystac.Asset(href=asset_href,
@@ -367,9 +370,10 @@ class MetadataLinks:
                     else:
                         asset_resolution_str = nc.Dataset(
                             asset_href).resolution
+                        asset_resolution_split = asset_resolution_str.split(" ")
                         asset_resolution = [
-                            int(asset_resolution_str.split(" ")[1]),
-                            int(asset_resolution_str.split(" ")[2])
+                            int(asset_resolution_split[1]),
+                            int(asset_resolution_split[2])
                         ]
                     if band_dict_list:
                         asset_obj = pystac.Asset(href=asset_href,
@@ -417,9 +421,10 @@ class MetadataLinks:
                     else:
                         asset_resolution_str = nc.Dataset(
                             asset_href).resolution
+                        asset_resolution_split = asset_resolution_str.split(" ")
                         asset_resolution = [
-                            int(asset_resolution_str.split(" ")[1]),
-                            int(asset_resolution_str.split(" ")[2])
+                            int(asset_resolution_split[1]),
+                            int(asset_resolution_split[2])
                         ]
                     asset_obj = pystac.Asset(href=asset_href,
                                              media_type=media_type,
@@ -459,9 +464,10 @@ class MetadataLinks:
                     else:
                         asset_resolution_str = nc.Dataset(
                             asset_href).resolution
+                        asset_resolution_split = asset_resolution_str.split(" ")
                         asset_resolution = [
-                            int(asset_resolution_str.split(" ")[1]),
-                            int(asset_resolution_str.split(" ")[2])
+                            int(asset_resolution_split[1]),
+                            int(asset_resolution_split[2])
                         ]
                     if not band_key_list:
                         asset_obj = pystac.Asset(
@@ -544,9 +550,10 @@ class MetadataLinks:
                     else:
                         asset_resolution_str = nc.Dataset(
                             asset_href).resolution
+                        asset_resolution_split = asset_resolution_str.split(" ")
                         asset_resolution = [
-                            int(asset_resolution_str.split(" ")[1]),
-                            int(asset_resolution_str.split(" ")[2])
+                            int(asset_resolution_split[1]),
+                            int(asset_resolution_split[2])
                         ]
                     if band_key_list:
                         band_dict_list = []
@@ -607,9 +614,10 @@ class MetadataLinks:
                     else:
                         asset_resolution_str = nc.Dataset(
                             asset_href).resolution
+                        asset_resolution_split = asset_resolution_str.split(" ")
                         asset_resolution = [
-                            int(asset_resolution_str.split(" ")[1]),
-                            int(asset_resolution_str.split(" ")[2])
+                            int(asset_resolution_split[1]),
+                            int(asset_resolution_split[2])
                         ]
                     asset_obj = pystac.Asset(href=asset_href,
                                              media_type=media_type,
@@ -643,9 +651,10 @@ class MetadataLinks:
                     else:
                         asset_resolution_str = nc.Dataset(
                             asset_href).resolution
+                        asset_resolution_split = asset_resolution_str.split(" ")
                         asset_resolution = [
-                            int(asset_resolution_str.split(" ")[1]),
-                            int(asset_resolution_str.split(" ")[2])
+                            int(asset_resolution_split[1]),
+                            int(asset_resolution_split[2])
                         ]
                     if band_key_list:
                         band_dict_list = []
@@ -702,9 +711,10 @@ class MetadataLinks:
                     else:
                         asset_resolution_str = nc.Dataset(
                             asset_href).resolution
+                        asset_resolution_split = asset_resolution_str.split(" ")
                         asset_resolution = [
-                            int(asset_resolution_str.split(" ")[1]),
-                            int(asset_resolution_str.split(" ")[2])
+                            int(asset_resolution_split[1]),
+                            int(asset_resolution_split[2])
                         ]
                     if band_key_list:
                         band_dict_list = []
@@ -774,13 +784,18 @@ class MetadataLinks:
                     else:
                         asset_resolution_str = nc.Dataset(
                             asset_href).spatial_resolution
+                        asset_resolution_split = asset_resolution_str.split(" ")
+                        asset_resolution = [
+                            int(asset_resolution_split[1]),
+                            int(asset_resolution_split[2])
+                        ]
                     asset_obj = pystac.Asset(href=asset_href,
                                              media_type=media_type,
                                              description=asset_description,
                                              roles=["data"],
                                              extra_fields={
                                                  "resolution":
-                                                 asset_resolution_str,
+                                                 asset_resolution,
                                                  "eo:bands": band_dict_list
                                              })
                     asset_list.append(asset_obj)
