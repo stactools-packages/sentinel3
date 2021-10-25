@@ -780,22 +780,17 @@ class MetadataLinks:
                         "Data respects the Group for High Resolution "
                         "Sea Surface Temperature (GHRSST) L2P specification")
                     if skip_nc:
-                        asset_resolution = []
+                        asset_resolution_str = ""
                     else:
                         asset_resolution_str = nc.Dataset(
                             asset_href).spatial_resolution
-                        asset_resolution_split = asset_resolution_str.split(" ")
-                        asset_resolution = [
-                            int(asset_resolution_split[1]),
-                            int(asset_resolution_split[2])
-                        ]
                     asset_obj = pystac.Asset(href=asset_href,
                                              media_type=media_type,
                                              description=asset_description,
                                              roles=["data"],
                                              extra_fields={
                                                  "resolution":
-                                                 asset_resolution,
+                                                 asset_resolution_str,
                                                  "eo:bands": band_dict_list
                                              })
                     asset_list.append(asset_obj)
