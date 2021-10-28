@@ -7,7 +7,6 @@
     "sat:orbit_state": "descending",
     "sat:absolute_orbit": 27681,
     "sat:relative_orbit": 373,
-    "proj:epsg": 4326,
     "start_datetime": "2021-06-11 01:14:37.943332+00:00",
     "end_datetime": "2021-06-11 01:24:36.460617+00:00",
     "s3:instrument": "SRAL",
@@ -228,6 +227,17 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SR_2_LAN____20210611T011438_20210611T012436_20210611T024819_0598_072_373______LN3_O_NR_004.SEN3/standard_measurement.nc",
       "type": "application/x-netcdf",
       "description": "Measurement Data Object File",
+      "sral:shape": [
+        {
+          "time_01": 598
+        },
+        {
+          "time_20_ku": 11716
+        },
+        {
+          "time_20_c": 11714
+        }
+      ],
       "sral:bands": [
         {
           "name": "C",
@@ -250,6 +260,20 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SR_2_LAN____20210611T011438_20210611T012436_20210611T024819_0598_072_373______LN3_O_NR_004.SEN3/enhanced_measurement.nc",
       "type": "application/x-netcdf",
       "description": "Measurement Data Object File",
+      "sral:shape": [
+        {
+          "time_01": 598
+        },
+        {
+          "time_20_ku": 11716
+        },
+        {
+          "time_20_c": 11714
+        },
+        {
+          "echo_sample_ind": 128
+        }
+      ],
       "sral:bands": [
         {
           "name": "C",
@@ -272,6 +296,11 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SR_2_LAN____20210611T011438_20210611T012436_20210611T024819_0598_072_373______LN3_O_NR_004.SEN3/reduced_measurement.nc",
       "type": "application/x-netcdf",
       "description": "Measurement Data Object File",
+      "sral:shape": [
+        {
+          "time_01": 598
+        }
+      ],
       "sral:bands": [
         {
           "name": "Ku",
@@ -293,7 +322,6 @@
   ],
   "stac_extensions": [
     "https://stac-extensions.github.io/sat/v1.0.0/schema.json",
-    "https://stac-extensions.github.io/eo/v1.0.0/schema.json",
-    "https://stac-extensions.github.io/projection/v1.0.0/schema.json"
+    "https://stac-extensions.github.io/eo/v1.0.0/schema.json"
   ]
 }

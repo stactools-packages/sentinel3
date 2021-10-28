@@ -8,11 +8,6 @@
     "sat:absolute_orbit": 17013,
     "sat:relative_orbit": 186,
     "eo:cloud_cover": 51.0,
-    "proj:epsg": 4326,
-    "proj:shape": [
-      1217,
-      15092
-    ],
     "start_datetime": "2021-07-31 21:43:24.821272+00:00",
     "end_datetime": "2021-07-31 22:27:41.127860+00:00",
     "s3:instrument": "OLCI",
@@ -28,6 +23,10 @@
     "s3:duplicatedPixels_percentage": 0.0,
     "s3:saturatedPixels_percentage": 0.0,
     "s3:dubiousSamples_percentage": 0.0,
+    "s3:shape": [
+      1217,
+      15092
+    ],
     "providers": [
       {
         "name": "ESA",
@@ -1130,7 +1129,6 @@
   ],
   "stac_extensions": [
     "https://stac-extensions.github.io/sat/v1.0.0/schema.json",
-    "https://stac-extensions.github.io/eo/v1.0.0/schema.json",
-    "https://stac-extensions.github.io/projection/v1.0.0/schema.json"
+    "https://stac-extensions.github.io/eo/v1.0.0/schema.json"
   ]
 }
