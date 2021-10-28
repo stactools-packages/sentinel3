@@ -59,10 +59,6 @@ def create_item(
     eo = EOExtension.ext(item, add_if_missing=True)
     fill_eo_properties(eo, metalinks.manifest)
 
-    # proj
-    proj = ProjectionExtension.ext(item, add_if_missing=True)
-    fill_proj_properties(proj, product_metadata)
-
     # s3 properties
     item.properties.update({**product_metadata.metadata_dict})
 

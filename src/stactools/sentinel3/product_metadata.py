@@ -133,6 +133,13 @@ class ProductMetadata:
 
     @property
     def metadata_dict(self) -> Dict[str, Any]:
+        def _get_shape():
+            x_size = int(self._root.findall(".//sentinel3:columns")[0].text)
+            y_size = int(self._root.findall(".//sentinel3:rows")[0].text)
+            shape = [x_size, y_size]
+
+            return shape
+
         product_type = self._root.findall(".//sentinel3:productType")[0].text
         if (product_type.split("_")[0] == "OL"
                 and product_type.split("_")[1] == "1"):
@@ -202,6 +209,7 @@ class ProductMetadata:
                     str(
                         self._root.find_attr("percentage",
                                              ".//olci:dubiousSamples"))),
+                "s3:shape": _get_shape()
             }
         elif (product_type.split("_")[0] == "OL"
               and product_type.split("_")[1] == "2"):
@@ -271,6 +279,7 @@ class ProductMetadata:
                     str(
                         self._root.find_attr("percentage",
                                              ".//olci:dubiousSamples"))),
+                "s3:shape": _get_shape()
             }
         elif (product_type.split("_")[0] == "SL"
               and product_type.split("_")[1] == "1"):
@@ -352,6 +361,7 @@ class ProductMetadata:
                             "percentage",
                             ".//slstr:pixelQualitySummary[@grid='1 km']"
                             "/slstr:outOfRangePixels"))),
+                "s3:shape": _get_shape()
             }
         elif (product_type.split("_")[0] == "SL"
               and product_type.split("_")[1] == "2"):
@@ -416,6 +426,7 @@ class ProductMetadata:
                     str(
                         self._root.find_attr("percentage",
                                              ".//slstr:outOfRangePixels"))),
+                "s3:shape": _get_shape()
             }
         elif (product_type.split("_")[0] == "SR"
               and product_type.split("_")[1] == "2"):
@@ -477,6 +488,7 @@ class ProductMetadata:
                     str(
                         self._root.find_attr("percentage",
                                              ".//sentinel3:landPixels"))),
+                "s3:shape": _get_shape()
             }
         elif "SY_2_SYN" in product_type:
             result = {
@@ -628,14 +640,6 @@ class ProductMetadata:
                 f"Unsupported product type encountered: {product_type}")
 
         return {k: v for k, v in result.items() if v is not None}
-
-    @property
-    def get_shape(self):
-        x_size = int(self._root.findall(".//sentinel3:columns")[0].text)
-        y_size = int(self._root.findall(".//sentinel3:rows")[0].text)
-        shape = [x_size, y_size]
-
-        return shape
 
     @property
     def get_epsg(self):
