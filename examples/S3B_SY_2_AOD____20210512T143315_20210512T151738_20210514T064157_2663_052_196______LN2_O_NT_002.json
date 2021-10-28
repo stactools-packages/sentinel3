@@ -8,11 +8,6 @@
     "sat:absolute_orbit": 15868,
     "sat:relative_orbit": 196,
     "eo:cloud_cover": 82.147057,
-    "proj:epsg": 4326,
-    "proj:shape": [
-      324,
-      4035
-    ],
     "start_datetime": "2021-05-12 14:33:14.765777+00:00",
     "end_datetime": "2021-05-12 15:17:38.420982+00:00",
     "s3:instrument": "SYNERGY",
@@ -20,6 +15,10 @@
     "s3:productType": "SY_2_AOD___",
     "s3:salineWaterPixels_percentage": 72.660328,
     "s3:landPixels_percentage": 27.276878,
+    "s3:shape": [
+      324,
+      4035
+    ],
     "providers": [
       {
         "name": "ESA",
@@ -1492,7 +1491,6 @@
   ],
   "stac_extensions": [
     "https://stac-extensions.github.io/sat/v1.0.0/schema.json",
-    "https://stac-extensions.github.io/eo/v1.0.0/schema.json",
-    "https://stac-extensions.github.io/projection/v1.0.0/schema.json"
+    "https://stac-extensions.github.io/eo/v1.0.0/schema.json"
   ]
 }

@@ -8,7 +8,6 @@
     "sat:absolute_orbit": 28848,
     "sat:relative_orbit": 145,
     "eo:cloud_cover": 3.041905,
-    "proj:epsg": 4326,
     "start_datetime": "2021-09-11 00:00:00+00:00",
     "end_datetime": "2021-09-20 23:59:59+00:00",
     "s3:instrument": "SYNERGY",
@@ -1468,7 +1467,6 @@
   ],
   "stac_extensions": [
     "https://stac-extensions.github.io/sat/v1.0.0/schema.json",
-    "https://stac-extensions.github.io/eo/v1.0.0/schema.json",
-    "https://stac-extensions.github.io/projection/v1.0.0/schema.json"
+    "https://stac-extensions.github.io/eo/v1.0.0/schema.json"
   ]
 }
