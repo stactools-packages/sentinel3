@@ -1248,6 +1248,20 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_V10____20210911T000000_20210920T235959_20210928T121452_EUROPE____________LN2_O_NT_002.SEN3/B0.nc",
       "type": "application/x-netcdf",
       "description": "Surface Reflectance Data Set associated with VGT-B0 channel",
+      "v10:shape": [
+        {
+          "crs": 1
+        },
+        {
+          "latitude": 5601
+        },
+        {
+          "longitude": 8176
+        },
+        {
+          "vertices": 2
+        }
+      ],
       "resolution": [
         1000,
         1000
@@ -1268,6 +1282,20 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_V10____20210911T000000_20210920T235959_20210928T121452_EUROPE____________LN2_O_NT_002.SEN3/B2.nc",
       "type": "application/x-netcdf",
       "description": "Surface Reflectance Data Set associated with VGT-B2 channel",
+      "v10:shape": [
+        {
+          "crs": 1
+        },
+        {
+          "latitude": 5601
+        },
+        {
+          "longitude": 8176
+        },
+        {
+          "vertices": 2
+        }
+      ],
       "resolution": [
         1000,
         1000
@@ -1288,6 +1316,20 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_V10____20210911T000000_20210920T235959_20210928T121452_EUROPE____________LN2_O_NT_002.SEN3/B3.nc",
       "type": "application/x-netcdf",
       "description": "Surface Reflectance Data Set associated with VGT-B3 channel",
+      "v10:shape": [
+        {
+          "crs": 1
+        },
+        {
+          "latitude": 5601
+        },
+        {
+          "longitude": 8176
+        },
+        {
+          "vertices": 2
+        }
+      ],
       "resolution": [
         1000,
         1000
@@ -1308,6 +1350,20 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_V10____20210911T000000_20210920T235959_20210928T121452_EUROPE____________LN2_O_NT_002.SEN3/MIR.nc",
       "type": "application/x-netcdf",
       "description": "Surface Reflectance Data Set associated with VGT-MIR channel",
+      "v10:shape": [
+        {
+          "crs": 1
+        },
+        {
+          "latitude": 5601
+        },
+        {
+          "longitude": 8176
+        },
+        {
+          "vertices": 2
+        }
+      ],
       "resolution": [
         1000,
         1000
@@ -1328,6 +1384,20 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_V10____20210911T000000_20210920T235959_20210928T121452_EUROPE____________LN2_O_NT_002.SEN3/NDVI.nc",
       "type": "application/x-netcdf",
       "description": "Normalised difference vegetation index",
+      "v10:shape": [
+        {
+          "crs": 1
+        },
+        {
+          "latitude": 5601
+        },
+        {
+          "longitude": 8176
+        },
+        {
+          "vertices": 2
+        }
+      ],
       "resolution": [
         1000,
         1000
@@ -1354,6 +1424,20 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_V10____20210911T000000_20210920T235959_20210928T121452_EUROPE____________LN2_O_NT_002.SEN3/vaa.nc",
       "type": "application/x-netcdf",
       "description": "View azimuth angle data",
+      "v10:shape": [
+        {
+          "crs": 1
+        },
+        {
+          "latitude": 5601
+        },
+        {
+          "longitude": 8176
+        },
+        {
+          "vertices": 2
+        }
+      ],
       "resolution": [
         1000,
         1000
@@ -1366,6 +1450,20 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_V10____20210911T000000_20210920T235959_20210928T121452_EUROPE____________LN2_O_NT_002.SEN3/vza.nc",
       "type": "application/x-netcdf",
       "description": "View zenith angle data",
+      "v10:shape": [
+        {
+          "crs": 1
+        },
+        {
+          "latitude": 5601
+        },
+        {
+          "longitude": 8176
+        },
+        {
+          "vertices": 2
+        }
+      ],
       "resolution": [
         1000,
         1000
@@ -1378,6 +1476,20 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_V10____20210911T000000_20210920T235959_20210928T121452_EUROPE____________LN2_O_NT_002.SEN3/saa.nc",
       "type": "application/x-netcdf",
       "description": "Solar azimuth angle data",
+      "v10:shape": [
+        {
+          "crs": 1
+        },
+        {
+          "latitude": 5601
+        },
+        {
+          "longitude": 8176
+        },
+        {
+          "vertices": 2
+        }
+      ],
       "resolution": [
         1000,
         1000
@@ -1390,6 +1502,20 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_V10____20210911T000000_20210920T235959_20210928T121452_EUROPE____________LN2_O_NT_002.SEN3/sza.nc",
       "type": "application/x-netcdf",
       "description": "Solar zenith angle data",
+      "v10:shape": [
+        {
+          "crs": 1
+        },
+        {
+          "latitude": 5601
+        },
+        {
+          "longitude": 8176
+        },
+        {
+          "vertices": 2
+        }
+      ],
       "resolution": [
         1000,
         1000
@@ -1402,6 +1528,20 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_V10____20210911T000000_20210920T235959_20210928T121452_EUROPE____________LN2_O_NT_002.SEN3/ag.nc",
       "type": "application/x-netcdf",
       "description": "Aerosol optical thickness data",
+      "v10:shape": [
+        {
+          "crs": 1
+        },
+        {
+          "latitude": 5601
+        },
+        {
+          "longitude": 8176
+        },
+        {
+          "vertices": 2
+        }
+      ],
       "resolution": [
         1000,
         1000
@@ -1414,6 +1554,20 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_V10____20210911T000000_20210920T235959_20210928T121452_EUROPE____________LN2_O_NT_002.SEN3/og.nc",
       "type": "application/x-netcdf",
       "description": "Total Ozone column data",
+      "v10:shape": [
+        {
+          "crs": 1
+        },
+        {
+          "latitude": 5601
+        },
+        {
+          "longitude": 8176
+        },
+        {
+          "vertices": 2
+        }
+      ],
       "resolution": [
         1000,
         1000
@@ -1426,6 +1580,20 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_V10____20210911T000000_20210920T235959_20210928T121452_EUROPE____________LN2_O_NT_002.SEN3/wvg.nc",
       "type": "application/x-netcdf",
       "description": "Total column Water vapour data",
+      "v10:shape": [
+        {
+          "crs": 1
+        },
+        {
+          "latitude": 5601
+        },
+        {
+          "longitude": 8176
+        },
+        {
+          "vertices": 2
+        }
+      ],
       "resolution": [
         1000,
         1000
@@ -1438,6 +1606,20 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_V10____20210911T000000_20210920T235959_20210928T121452_EUROPE____________LN2_O_NT_002.SEN3/tg.nc",
       "type": "application/x-netcdf",
       "description": "Synthesis time data",
+      "v10:shape": [
+        {
+          "crs": 1
+        },
+        {
+          "latitude": 5601
+        },
+        {
+          "longitude": 8176
+        },
+        {
+          "vertices": 2
+        }
+      ],
       "resolution": [
         1000,
         1000
@@ -1450,6 +1632,20 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_V10____20210911T000000_20210920T235959_20210928T121452_EUROPE____________LN2_O_NT_002.SEN3/sm.nc",
       "type": "application/x-netcdf",
       "description": "Status Map data",
+      "v10:shape": [
+        {
+          "crs": 1
+        },
+        {
+          "latitude": 5601
+        },
+        {
+          "longitude": 8176
+        },
+        {
+          "vertices": 2
+        }
+      ],
       "resolution": [
         1000,
         1000

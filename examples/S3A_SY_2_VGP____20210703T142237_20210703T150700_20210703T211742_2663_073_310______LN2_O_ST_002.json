@@ -1435,6 +1435,20 @@
     "b0Data": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/B0.nc",
       "type": "application/x-netcdf",
+      "vgp:shape": [
+        {
+          "latitude": 14672
+        },
+        {
+          "longitude": 23941
+        },
+        {
+          "vertices": 2
+        },
+        {
+          "crs": 1
+        }
+      ],
       "resolution": [
         1000,
         1000
@@ -1454,6 +1468,20 @@
     "b2Data": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/B2.nc",
       "type": "application/x-netcdf",
+      "vgp:shape": [
+        {
+          "latitude": 14672
+        },
+        {
+          "longitude": 23941
+        },
+        {
+          "vertices": 2
+        },
+        {
+          "crs": 1
+        }
+      ],
       "resolution": [
         1000,
         1000
@@ -1473,6 +1501,20 @@
     "b3Data": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/B3.nc",
       "type": "application/x-netcdf",
+      "vgp:shape": [
+        {
+          "latitude": 14672
+        },
+        {
+          "longitude": 23941
+        },
+        {
+          "vertices": 2
+        },
+        {
+          "crs": 1
+        }
+      ],
       "resolution": [
         1000,
         1000
@@ -1492,6 +1534,20 @@
     "mirData": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/MIR.nc",
       "type": "application/x-netcdf",
+      "vgp:shape": [
+        {
+          "latitude": 14672
+        },
+        {
+          "longitude": 23941
+        },
+        {
+          "vertices": 2
+        },
+        {
+          "crs": 1
+        }
+      ],
       "resolution": [
         1000,
         1000
@@ -1511,6 +1567,20 @@
     "vaaData": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/vaa.nc",
       "type": "application/x-netcdf",
+      "vgp:shape": [
+        {
+          "latitude": 14672
+        },
+        {
+          "longitude": 1496
+        },
+        {
+          "vertices": 2
+        },
+        {
+          "crs": 1
+        }
+      ],
       "resolution": [
         16000,
         1000
@@ -1522,6 +1592,20 @@
     "vzaData": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/vza.nc",
       "type": "application/x-netcdf",
+      "vgp:shape": [
+        {
+          "latitude": 14672
+        },
+        {
+          "longitude": 1496
+        },
+        {
+          "vertices": 2
+        },
+        {
+          "crs": 1
+        }
+      ],
       "resolution": [
         16000,
         1000
@@ -1533,6 +1617,20 @@
     "saaData": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/saa.nc",
       "type": "application/x-netcdf",
+      "vgp:shape": [
+        {
+          "latitude": 14672
+        },
+        {
+          "longitude": 1496
+        },
+        {
+          "vertices": 2
+        },
+        {
+          "crs": 1
+        }
+      ],
       "resolution": [
         16000,
         1000
@@ -1544,6 +1642,20 @@
     "szaData": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/sza.nc",
       "type": "application/x-netcdf",
+      "vgp:shape": [
+        {
+          "latitude": 14672
+        },
+        {
+          "longitude": 1496
+        },
+        {
+          "vertices": 2
+        },
+        {
+          "crs": 1
+        }
+      ],
       "resolution": [
         16000,
         1000
@@ -1555,6 +1667,20 @@
     "agData": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/ag.nc",
       "type": "application/x-netcdf",
+      "vgp:shape": [
+        {
+          "latitude": 14672
+        },
+        {
+          "longitude": 1496
+        },
+        {
+          "vertices": 2
+        },
+        {
+          "crs": 1
+        }
+      ],
       "resolution": [
         16000,
         1000
@@ -1566,6 +1692,20 @@
     "ogData": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/og.nc",
       "type": "application/x-netcdf",
+      "vgp:shape": [
+        {
+          "latitude": 14672
+        },
+        {
+          "longitude": 1496
+        },
+        {
+          "vertices": 2
+        },
+        {
+          "crs": 1
+        }
+      ],
       "resolution": [
         16000,
         1000
@@ -1577,6 +1717,20 @@
     "wvgData": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/wvg.nc",
       "type": "application/x-netcdf",
+      "vgp:shape": [
+        {
+          "latitude": 14672
+        },
+        {
+          "longitude": 1496
+        },
+        {
+          "vertices": 2
+        },
+        {
+          "crs": 1
+        }
+      ],
       "resolution": [
         16000,
         1000
@@ -1588,6 +1742,20 @@
     "smData": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/sm.nc",
       "type": "application/x-netcdf",
+      "vgp:shape": [
+        {
+          "latitude": 14672
+        },
+        {
+          "longitude": 23941
+        },
+        {
+          "vertices": 2
+        },
+        {
+          "crs": 1
+        }
+      ],
       "resolution": [
         1000,
         1000
