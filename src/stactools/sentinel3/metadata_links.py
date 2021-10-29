@@ -113,20 +113,23 @@ class MetadataLinks:
                     "textInfo",
                     f".//dataObject[@ID='{asset_key}']//fileLocation")
                 if skip_nc:
-                    asset_shape_list = []
+                    asset_shape_list: List[dict] = []
                 else:
                     asset_shape_list = []
                     for key in nc.Dataset(asset_href).dimensions.keys():
                         asset_shape_dict = {
-                            key: int(nc.Dataset(asset_href).dimensions[key].size)
+                            key:
+                            int(nc.Dataset(asset_href).dimensions[key].size)
                         }
                         asset_shape_list.append(asset_shape_dict)
-                asset_obj = pystac.Asset(
-                    href=asset_href,
-                    media_type=media_type,
-                    description=asset_description,
-                    roles=["data"],
-                    extra_fields={"shape": asset_shape_list, "sral:bands": band_dict_list})
+                asset_obj = pystac.Asset(href=asset_href,
+                                         media_type=media_type,
+                                         description=asset_description,
+                                         roles=["data"],
+                                         extra_fields={
+                                             "shape": asset_shape_list,
+                                             "sral:bands": band_dict_list
+                                         })
                 asset_list.append(asset_obj)
         elif instrument_bands == constants.SENTINEL_SYNERGY_BANDS:
             if "_AOD_" in product_type:
@@ -160,7 +163,8 @@ class MetadataLinks:
                     else:
                         asset_resolution_str = nc.Dataset(
                             asset_href).resolution
-                        asset_resolution_split = asset_resolution_str.split(" ")
+                        asset_resolution_split = asset_resolution_str.split(
+                            " ")
                         asset_resolution = [
                             int(asset_resolution_split[1]),
                             int(asset_resolution_split[2])
@@ -246,7 +250,8 @@ class MetadataLinks:
                     else:
                         asset_resolution_str = nc.Dataset(
                             asset_href).resolution
-                        asset_resolution_split = asset_resolution_str.split(" ")
+                        asset_resolution_split = asset_resolution_str.split(
+                            " ")
                         asset_resolution = [
                             int(asset_resolution_split[1]),
                             int(asset_resolution_split[2])
@@ -320,7 +325,8 @@ class MetadataLinks:
                     else:
                         asset_resolution_str = nc.Dataset(
                             asset_href).resolution
-                        asset_resolution_split = asset_resolution_str.split(" ")
+                        asset_resolution_split = asset_resolution_str.split(
+                            " ")
                         asset_resolution = [
                             int(asset_resolution_split[1]),
                             int(asset_resolution_split[2])
@@ -379,7 +385,8 @@ class MetadataLinks:
                     else:
                         asset_resolution_str = nc.Dataset(
                             asset_href).resolution
-                        asset_resolution_split = asset_resolution_str.split(" ")
+                        asset_resolution_split = asset_resolution_str.split(
+                            " ")
                         asset_resolution = [
                             int(asset_resolution_split[1]),
                             int(asset_resolution_split[2])
@@ -430,7 +437,8 @@ class MetadataLinks:
                     else:
                         asset_resolution_str = nc.Dataset(
                             asset_href).resolution
-                        asset_resolution_split = asset_resolution_str.split(" ")
+                        asset_resolution_split = asset_resolution_str.split(
+                            " ")
                         asset_resolution = [
                             int(asset_resolution_split[1]),
                             int(asset_resolution_split[2])
@@ -473,7 +481,8 @@ class MetadataLinks:
                     else:
                         asset_resolution_str = nc.Dataset(
                             asset_href).resolution
-                        asset_resolution_split = asset_resolution_str.split(" ")
+                        asset_resolution_split = asset_resolution_str.split(
+                            " ")
                         asset_resolution = [
                             int(asset_resolution_split[1]),
                             int(asset_resolution_split[2])
@@ -559,7 +568,8 @@ class MetadataLinks:
                     else:
                         asset_resolution_str = nc.Dataset(
                             asset_href).resolution
-                        asset_resolution_split = asset_resolution_str.split(" ")
+                        asset_resolution_split = asset_resolution_str.split(
+                            " ")
                         asset_resolution = [
                             int(asset_resolution_split[1]),
                             int(asset_resolution_split[2])
@@ -623,7 +633,8 @@ class MetadataLinks:
                     else:
                         asset_resolution_str = nc.Dataset(
                             asset_href).resolution
-                        asset_resolution_split = asset_resolution_str.split(" ")
+                        asset_resolution_split = asset_resolution_str.split(
+                            " ")
                         asset_resolution = [
                             int(asset_resolution_split[1]),
                             int(asset_resolution_split[2])
@@ -660,7 +671,8 @@ class MetadataLinks:
                     else:
                         asset_resolution_str = nc.Dataset(
                             asset_href).resolution
-                        asset_resolution_split = asset_resolution_str.split(" ")
+                        asset_resolution_split = asset_resolution_str.split(
+                            " ")
                         asset_resolution = [
                             int(asset_resolution_split[1]),
                             int(asset_resolution_split[2])
@@ -720,7 +732,8 @@ class MetadataLinks:
                     else:
                         asset_resolution_str = nc.Dataset(
                             asset_href).resolution
-                        asset_resolution_split = asset_resolution_str.split(" ")
+                        asset_resolution_split = asset_resolution_str.split(
+                            " ")
                         asset_resolution = [
                             int(asset_resolution_split[1]),
                             int(asset_resolution_split[2])

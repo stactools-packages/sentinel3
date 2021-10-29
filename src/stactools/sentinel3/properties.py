@@ -1,9 +1,6 @@
 from pystac.extensions.eo import EOExtension
-from pystac.extensions.projection import ProjectionExtension
 from pystac.extensions.sat import OrbitState, SatExtension
 from stactools.core.io.xml import XmlElement
-
-from stactools.sentinel3.product_metadata import ProductMetadata
 
 
 def fill_sat_properties(sat_ext: SatExtension, manifest: XmlElement):
@@ -77,28 +74,3 @@ def fill_eo_properties(eo_ext: EOExtension, manifest: XmlElement):
                          "this was expected to follow the sentinel 3 "
                          "naming convention, including "
                          "ending in .SEN3")
-
-
-def fill_proj_properties(proj_ext: ProjectionExtension,
-                         product_meta: ProductMetadata):
-    """Fills the properties for PROJ.
-
-    Based on the proj Extension.py
-
-    Args:
-        proj_ext (ProjectionExtension): The extension to be populated.
-        product_meta (ProductMetadata): An object containing general product metadata.
-    """
-    # Read meta file
-
-    proj_ext.epsg = product_meta.get_epsg
-
-    if (product_meta.scene_id.split("_")[1] == "SR"
-            and product_meta.scene_id.split("_")[2] == "2"):
-        pass
-    elif (product_meta.scene_id.split("_")[1] == "SY"
-          and product_meta.scene_id.split("_")[2] == "2"
-          and product_meta.scene_id.split("_")[3] != "AOD"):
-        pass
-    else:
-        proj_ext.shape = product_meta.get_shape

@@ -3,7 +3,6 @@ from typing import Optional
 
 import pystac
 from pystac.extensions.eo import EOExtension
-from pystac.extensions.projection import ProjectionExtension
 from pystac.extensions.sat import SatExtension
 from stactools.core.io import ReadHrefModifier
 
@@ -11,8 +10,7 @@ from .constants import (SENTINEL_CONSTELLATION, SENTINEL_LICENSE,
                         SENTINEL_PROVIDER)
 from .metadata_links import MetadataLinks
 from .product_metadata import ProductMetadata
-from .properties import (fill_eo_properties, fill_proj_properties,
-                         fill_sat_properties)
+from .properties import fill_eo_properties, fill_sat_properties
 
 logger = logging.getLogger(__name__)
 
