@@ -227,7 +227,7 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SR_2_LAN____20210611T011438_20210611T012436_20210611T024819_0598_072_373______LN3_O_NR_004.SEN3/standard_measurement.nc",
       "type": "application/x-netcdf",
       "description": "Measurement Data Object File",
-      "sral:shape": [
+      "shape": [
         {
           "time_01": 598
         },
@@ -260,7 +260,7 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SR_2_LAN____20210611T011438_20210611T012436_20210611T024819_0598_072_373______LN3_O_NR_004.SEN3/enhanced_measurement.nc",
       "type": "application/x-netcdf",
       "description": "Measurement Data Object File",
-      "sral:shape": [
+      "shape": [
         {
           "time_01": 598
         },
@@ -296,7 +296,7 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SR_2_LAN____20210611T011438_20210611T012436_20210611T024819_0598_072_373______LN3_O_NR_004.SEN3/reduced_measurement.nc",
       "type": "application/x-netcdf",
       "description": "Measurement Data Object File",
-      "sral:shape": [
+      "shape": [
         {
           "time_01": 598
         }
