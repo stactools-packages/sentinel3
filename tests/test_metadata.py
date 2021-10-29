@@ -2,13 +2,11 @@ import unittest
 
 import pystac
 from pystac.extensions.eo import EOExtension
-from pystac.extensions.projection import ProjectionExtension
 from pystac.extensions.sat import SatExtension
 
 from stactools.sentinel3.metadata_links import MetadataLinks
 from stactools.sentinel3.product_metadata import ProductMetadata
 from stactools.sentinel3.properties import (fill_eo_properties,
-                                            fill_proj_properties,
                                             fill_sat_properties)
 from tests import test_data
 
@@ -45,10 +43,6 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
         eo = EOExtension.ext(item, add_if_missing=True)
         fill_eo_properties(eo, metalinks.manifest)
 
-        # proj
-        proj = ProjectionExtension.ext(item, add_if_missing=True)
-        fill_proj_properties(proj, product_metadata)
-
         # s3 properties
         item.properties.update({**product_metadata.metadata_dict})
 
@@ -56,8 +50,6 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
         s3_props = {
             "bbox":
             item.bbox,
-            "epsg":
-            item.properties["proj:epsg"],
             "datetime":
             item.datetime.strftime("%Y-%m-%dT%H:%M:%S.%fZ"),
             "orbit_state":
@@ -66,8 +58,6 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             item.properties["sat:absolute_orbit"],
             "relative_orbit":
             item.properties["sat:relative_orbit"],
-            "shape":
-            item.properties["proj:shape"],
             "instrument":
             item.properties["s3:instrument"],
             "mode":
@@ -94,16 +84,16 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             item.properties["s3:saturatedPixels_percentage"],
             "dubiousSamples_percentage":
             item.properties["s3:dubiousSamples_percentage"],
+            "shape":
+            item.properties["s3:shape"]
         }
 
         expected = {
             "bbox": [-44.0441, -83.51, 13.0151, -68.2251],
-            "epsg": 4326,
             "datetime": "2021-10-21T07:39:49.724590Z",
             "orbit_state": "descending",
             "absolute_orbit": 29567,
             "relative_orbit": 334,
-            "shape": [4865, 3749],
             "instrument": "OLCI",
             "mode": "EO",
             "productType": "OL_1_EFR___",
@@ -117,6 +107,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             "duplicatedPixels_percentage": 25.0,
             "saturatedPixels_percentage": 0.0,
             "dubiousSamples_percentage": 0.0,
+            "shape": [4865, 3749]
         }
 
         for k, v in expected.items():
@@ -154,10 +145,6 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
         eo = EOExtension.ext(item, add_if_missing=True)
         fill_eo_properties(eo, metalinks.manifest)
 
-        # proj
-        proj = ProjectionExtension.ext(item, add_if_missing=True)
-        fill_proj_properties(proj, product_metadata)
-
         # s3 properties
         item.properties.update({**product_metadata.metadata_dict})
 
@@ -165,8 +152,6 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
         s3_props = {
             "bbox":
             item.bbox,
-            "epsg":
-            item.properties["proj:epsg"],
             "datetime":
             item.datetime.strftime("%Y-%m-%dT%H:%M:%S.%fZ"),
             "orbit_state":
@@ -175,8 +160,6 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             item.properties["sat:absolute_orbit"],
             "relative_orbit":
             item.properties["sat:relative_orbit"],
-            "shape":
-            item.properties["proj:shape"],
             "instrument":
             item.properties["s3:instrument"],
             "mode":
@@ -203,16 +186,16 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             item.properties["s3:saturatedPixels_percentage"],
             "dubiousSamples_percentage":
             item.properties["s3:dubiousSamples_percentage"],
+            "shape":
+            item.properties["s3:shape"]
         }
 
         expected = {
             "bbox": [-179.151, -64.2325, 179.92, 89.5069],
-            "epsg": 4326,
             "datetime": "2021-08-31T20:23:54.000366Z",
             "orbit_state": "ascending",
             "absolute_orbit": 17454,
             "relative_orbit": 242,
-            "shape": [1217, 15070],
             "instrument": "OLCI",
             "mode": "EO",
             "productType": "OL_1_ERR___",
@@ -226,6 +209,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             "duplicatedPixels_percentage": 0.0,
             "saturatedPixels_percentage": 8e-06,
             "dubiousSamples_percentage": 0.0,
+            "shape": [1217, 15070]
         }
 
         for k, v in expected.items():
@@ -263,10 +247,6 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
         eo = EOExtension.ext(item, add_if_missing=True)
         fill_eo_properties(eo, metalinks.manifest)
 
-        # proj
-        proj = ProjectionExtension.ext(item, add_if_missing=True)
-        fill_proj_properties(proj, product_metadata)
-
         # s3 properties
         item.properties.update({**product_metadata.metadata_dict})
 
@@ -274,8 +254,6 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
         s3_props = {
             "bbox":
             item.bbox,
-            "epsg":
-            item.properties["proj:epsg"],
             "datetime":
             item.datetime.strftime("%Y-%m-%dT%H:%M:%S.%fZ"),
             "orbit_state":
@@ -286,8 +264,6 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             item.properties["sat:relative_orbit"],
             "cloud_cover":
             item.properties["eo:cloud_cover"],
-            "shape":
-            item.properties["proj:shape"],
             "instrument":
             item.properties["s3:instrument"],
             "mode":
@@ -314,17 +290,17 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             item.properties["s3:saturatedPixels_percentage"],
             "dubiousSamples_percentage":
             item.properties["s3:dubiousSamples_percentage"],
+            "shape":
+            item.properties["s3:shape"]
         }
 
         expected = {
             "bbox": [138.497, 49.8938, 164.009, 62.918],
-            "epsg": 4326,
             "datetime": "2021-05-23T00:31:59.485583Z",
             "orbit_state": "descending",
             "absolute_orbit": 27410,
             "relative_orbit": 102,
             "cloud_cover": 83.0,
-            "shape": [4865, 4090],
             "instrument": "OLCI",
             "mode": "EO",
             "productType": "OL_2_LFR___",
@@ -338,6 +314,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             "duplicatedPixels_percentage": 1.545942,
             "saturatedPixels_percentage": 0.0,
             "dubiousSamples_percentage": 0.0,
+            "shape": [4865, 4090]
         }
 
         for k, v in expected.items():
@@ -375,10 +352,6 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
         eo = EOExtension.ext(item, add_if_missing=True)
         fill_eo_properties(eo, metalinks.manifest)
 
-        # proj
-        proj = ProjectionExtension.ext(item, add_if_missing=True)
-        fill_proj_properties(proj, product_metadata)
-
         # s3 properties
         item.properties.update({**product_metadata.metadata_dict})
 
@@ -386,8 +359,6 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
         s3_props = {
             "bbox":
             item.bbox,
-            "epsg":
-            item.properties["proj:epsg"],
             "datetime":
             item.datetime.strftime("%Y-%m-%dT%H:%M:%S.%fZ"),
             "orbit_state":
@@ -398,8 +369,6 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             item.properties["sat:relative_orbit"],
             "cloud_cover":
             item.properties["eo:cloud_cover"],
-            "shape":
-            item.properties["proj:shape"],
             "instrument":
             item.properties["s3:instrument"],
             "mode":
@@ -426,17 +395,17 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             item.properties["s3:saturatedPixels_percentage"],
             "dubiousSamples_percentage":
             item.properties["s3:dubiousSamples_percentage"],
+            "shape":
+            item.properties["s3:shape"]
         }
 
         expected = {
             "bbox": [-179.968, -53.7609, 179.943, 89.6231],
-            "epsg": 4326,
             "datetime": "2021-07-31T22:05:32.974566Z",
             "orbit_state": "ascending",
             "absolute_orbit": 17013,
             "relative_orbit": 186,
             "cloud_cover": 51.0,
-            "shape": [1217, 15092],
             "instrument": "OLCI",
             "mode": "EO",
             "productType": "OL_2_LRR___",
@@ -450,6 +419,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             "duplicatedPixels_percentage": 0.0,
             "saturatedPixels_percentage": 0.0,
             "dubiousSamples_percentage": 0.0,
+            "shape": [1217, 15092]
         }
 
         for k, v in expected.items():
@@ -487,10 +457,6 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
         eo = EOExtension.ext(item, add_if_missing=True)
         fill_eo_properties(eo, metalinks.manifest)
 
-        # proj
-        proj = ProjectionExtension.ext(item, add_if_missing=True)
-        fill_proj_properties(proj, product_metadata)
-
         # s3 properties
         item.properties.update({**product_metadata.metadata_dict})
 
@@ -498,8 +464,6 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
         s3_props = {
             "bbox":
             item.bbox,
-            "epsg":
-            item.properties["proj:epsg"],
             "datetime":
             item.datetime.strftime("%Y-%m-%dT%H:%M:%S.%fZ"),
             "orbit_state":
@@ -510,8 +474,6 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             item.properties["sat:relative_orbit"],
             "cloud_cover":
             item.properties["eo:cloud_cover"],
-            "shape":
-            item.properties["proj:shape"],
             "instrument":
             item.properties["s3:instrument"],
             "mode":
@@ -538,17 +500,17 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             item.properties["s3:saturatedPixels_percentage"],
             "dubiousSamples_percentage":
             item.properties["s3:dubiousSamples_percentage"],
+            "shape":
+            item.properties["s3:shape"]
         }
 
         expected = {
             "bbox": [-176.303, 76.7724, 179.972, 88.9826],
-            "epsg": 4326,
             "datetime": "2021-06-04T00:11:45.867265Z",
             "orbit_state": "ascending",
             "absolute_orbit": 27581,
             "relative_orbit": 273,
             "cloud_cover": 67.0,
-            "shape": [4865, 4091],
             "instrument": "OLCI",
             "mode": "EO",
             "productType": "OL_2_WFR___",
@@ -562,6 +524,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             "duplicatedPixels_percentage": 11.701367,
             "saturatedPixels_percentage": 0.0,
             "dubiousSamples_percentage": 0.0,
+            "shape": [4865, 4091]
         }
 
         for k, v in expected.items():
@@ -599,10 +562,6 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
         eo = EOExtension.ext(item, add_if_missing=True)
         fill_eo_properties(eo, metalinks.manifest)
 
-        # proj
-        proj = ProjectionExtension.ext(item, add_if_missing=True)
-        fill_proj_properties(proj, product_metadata)
-
         # s3 properties
         item.properties.update({**product_metadata.metadata_dict})
 
@@ -610,8 +569,6 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
         s3_props = {
             "bbox":
             item.bbox,
-            "epsg":
-            item.properties["proj:epsg"],
             "datetime":
             item.datetime.strftime("%Y-%m-%dT%H:%M:%S.%fZ"),
             "orbit_state":
@@ -622,8 +579,6 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             item.properties["sat:relative_orbit"],
             "cloud_cover":
             item.properties["eo:cloud_cover"],
-            "shape":
-            item.properties["proj:shape"],
             "instrument":
             item.properties["s3:instrument"],
             "mode":
@@ -648,17 +603,17 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             item.properties["s3:saturatedPixels_percentage"],
             "outOfRangePixels_percentage":
             item.properties["s3:outOfRangePixels_percentage"],
+            "shape":
+            item.properties["s3:shape"]
         }
 
         expected = {
             "bbox": [-3.34105, -39.7421, 15.4906, -25.8488],
-            "epsg": 4326,
             "datetime": "2021-09-30T22:10:43.843538Z",
             "orbit_state": "ascending",
             "absolute_orbit": 29276,
             "relative_orbit": 43,
             "cloud_cover": 80.216007,
-            "shape": [1500, 1200],
             "instrument": "SLSTR",
             "mode": "EO",
             "productType": "SL_1_RBT___",
@@ -671,6 +626,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             "duplicatedPixels_percentage": 5.105382,
             "saturatedPixels_percentage": 0.0,
             "outOfRangePixels_percentage": 0.0,
+            "shape": [1500, 1200]
         }
 
         for k, v in expected.items():
@@ -708,10 +664,6 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
         eo = EOExtension.ext(item, add_if_missing=True)
         fill_eo_properties(eo, metalinks.manifest)
 
-        # proj
-        proj = ProjectionExtension.ext(item, add_if_missing=True)
-        fill_proj_properties(proj, product_metadata)
-
         # s3 properties
         item.properties.update({**product_metadata.metadata_dict})
 
@@ -719,8 +671,6 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
         s3_props = {
             "bbox":
             item.bbox,
-            "epsg":
-            item.properties["proj:epsg"],
             "datetime":
             item.datetime.strftime("%Y-%m-%dT%H:%M:%S.%fZ"),
             "orbit_state":
@@ -731,8 +681,6 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             item.properties["sat:relative_orbit"],
             "cloud_cover":
             item.properties["eo:cloud_cover"],
-            "shape":
-            item.properties["proj:shape"],
             "instrument":
             item.properties["s3:instrument"],
             "mode":
@@ -757,17 +705,17 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             item.properties["s3:saturatedPixels_percentage"],
             "outOfRangePixels_percentage":
             item.properties["s3:outOfRangePixels_percentage"],
+            "shape":
+            item.properties["s3:shape"]
         }
 
         expected = {
             "bbox": [139.182, -3.03934, 154.722, 10.4264],
-            "epsg": 4326,
             "datetime": "2021-08-02T00:05:49.503088Z",
             "orbit_state": "descending",
             "absolute_orbit": 28422,
             "relative_orbit": 344,
             "cloud_cover": 63.904667,
-            "shape": [1500, 1200],
             "instrument": "SLSTR",
             "mode": "EO",
             "productType": "SL_2_FRP___",
@@ -780,6 +728,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             "duplicatedPixels_percentage": 5.461111,
             "saturatedPixels_percentage": 0.0,
             "outOfRangePixels_percentage": 0.184722,
+            "shape": [1500, 1200]
         }
 
         for k, v in expected.items():
@@ -817,10 +766,6 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
         eo = EOExtension.ext(item, add_if_missing=True)
         fill_eo_properties(eo, metalinks.manifest)
 
-        # proj
-        proj = ProjectionExtension.ext(item, add_if_missing=True)
-        fill_proj_properties(proj, product_metadata)
-
         # s3 properties
         item.properties.update({**product_metadata.metadata_dict})
 
@@ -828,8 +773,6 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
         s3_props = {
             "bbox":
             item.bbox,
-            "epsg":
-            item.properties["proj:epsg"],
             "datetime":
             item.datetime.strftime("%Y-%m-%dT%H:%M:%S.%fZ"),
             "orbit_state":
@@ -840,8 +783,6 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             item.properties["sat:relative_orbit"],
             "cloud_cover":
             item.properties["eo:cloud_cover"],
-            "shape":
-            item.properties["proj:shape"],
             "instrument":
             item.properties["s3:instrument"],
             "mode":
@@ -866,17 +807,17 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             item.properties["s3:saturatedPixels_percentage"],
             "outOfRangePixels_percentage":
             item.properties["s3:outOfRangePixels_percentage"],
+            "shape":
+            item.properties["s3:shape"]
         }
 
         expected = {
             "bbox": [-41.5076, -18.6129, -25.5773, -5.01269],
-            "epsg": 4326,
             "datetime": "2021-05-10T00:31:24.660731Z",
             "orbit_state": "ascending",
             "absolute_orbit": 27224,
             "relative_orbit": 301,
             "cloud_cover": 57.378222,
-            "shape": [1500, 1200],
             "instrument": "SLSTR",
             "mode": "EO",
             "productType": "SL_2_LST___",
@@ -889,6 +830,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             "duplicatedPixels_percentage": 5.449222,
             "saturatedPixels_percentage": 0.0,
             "outOfRangePixels_percentage": 0.0,
+            "shape": [1500, 1200]
         }
 
         for k, v in expected.items():
@@ -926,10 +868,6 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
         eo = EOExtension.ext(item, add_if_missing=True)
         fill_eo_properties(eo, metalinks.manifest)
 
-        # proj
-        proj = ProjectionExtension.ext(item, add_if_missing=True)
-        fill_proj_properties(proj, product_metadata)
-
         # s3 properties
         item.properties.update({**product_metadata.metadata_dict})
 
@@ -937,8 +875,6 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
         s3_props = {
             "bbox":
             item.bbox,
-            "epsg":
-            item.properties["proj:epsg"],
             "datetime":
             item.datetime.strftime("%Y-%m-%dT%H:%M:%S.%fZ"),
             "orbit_state":
@@ -949,8 +885,6 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             item.properties["sat:relative_orbit"],
             "cloud_cover":
             item.properties["eo:cloud_cover"],
-            "shape":
-            item.properties["proj:shape"],
             "instrument":
             item.properties["s3:instrument"],
             "mode":
@@ -975,17 +909,17 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             item.properties["s3:saturatedPixels_percentage"],
             "outOfRangePixels_percentage":
             item.properties["s3:outOfRangePixels_percentage"],
+            "shape":
+            item.properties["s3:shape"]
         }
 
         expected = {
             "bbox": [-175.687, -85.8995, 175.031, 89.0613],
-            "epsg": 4326,
             "datetime": "2021-04-19T06:08:23.709828Z",
             "orbit_state": "descending",
             "absolute_orbit": 15534,
             "relative_orbit": 247,
             "cloud_cover": 67.421502,
-            "shape": [1500, 40394],
             "instrument": "SLSTR",
             "mode": "EO",
             "productType": "SL_2_WST___",
@@ -998,6 +932,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             "duplicatedPixels_percentage": 0.0,
             "saturatedPixels_percentage": 0.0,
             "outOfRangePixels_percentage": 26.93685,
+            "shape": [1500, 40394]
         }
 
         for k, v in expected.items():
@@ -1035,10 +970,6 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
         eo = EOExtension.ext(item, add_if_missing=True)
         fill_eo_properties(eo, metalinks.manifest)
 
-        # proj
-        proj = ProjectionExtension.ext(item, add_if_missing=True)
-        fill_proj_properties(proj, product_metadata)
-
         # s3 properties
         item.properties.update({**product_metadata.metadata_dict})
 
@@ -1046,8 +977,6 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
         s3_props = {
             "bbox":
             item.bbox,
-            "epsg":
-            item.properties["proj:epsg"],
             "datetime":
             item.datetime.strftime("%Y-%m-%dT%H:%M:%S.%fZ"),
             "orbit_state":
@@ -1078,7 +1007,6 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
 
         expected = {
             "bbox": [-19.9677, -81.3739, 110.573, -67.0245],
-            "epsg": 4326,
             "datetime": "2021-06-11T01:19:37.201974Z",
             "orbit_state": "descending",
             "absolute_orbit": 27681,
@@ -1129,10 +1057,6 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
         eo = EOExtension.ext(item, add_if_missing=True)
         fill_eo_properties(eo, metalinks.manifest)
 
-        # proj
-        proj = ProjectionExtension.ext(item, add_if_missing=True)
-        fill_proj_properties(proj, product_metadata)
-
         # s3 properties
         item.properties.update({**product_metadata.metadata_dict})
 
@@ -1140,8 +1064,6 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
         s3_props = {
             "bbox":
             item.bbox,
-            "epsg":
-            item.properties["proj:epsg"],
             "datetime":
             item.datetime.strftime("%Y-%m-%dT%H:%M:%S.%fZ"),
             "orbit_state":
@@ -1172,7 +1094,6 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
 
         expected = {
             "bbox": [-153.507, -74.0588, -20.0953, 81.4226],
-            "epsg": 4326,
             "datetime": "2021-07-04T01:51:35.180925Z",
             "orbit_state": "descending",
             "absolute_orbit": 28009,
@@ -1223,10 +1144,6 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
         eo = EOExtension.ext(item, add_if_missing=True)
         fill_eo_properties(eo, metalinks.manifest)
 
-        # proj
-        proj = ProjectionExtension.ext(item, add_if_missing=True)
-        fill_proj_properties(proj, product_metadata)
-
         # s3 properties
         item.properties.update({**product_metadata.metadata_dict})
 
@@ -1234,8 +1151,6 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
         s3_props = {
             "bbox":
             item.bbox,
-            "epsg":
-            item.properties["proj:epsg"],
             "datetime":
             item.datetime.strftime("%Y-%m-%dT%H:%M:%S.%fZ"),
             "orbit_state":
@@ -1246,8 +1161,6 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             item.properties["sat:relative_orbit"],
             "cloud_cover":
             item.properties["eo:cloud_cover"],
-            "shape":
-            item.properties["proj:shape"],
             "instrument":
             item.properties["s3:instrument"],
             "mode":
@@ -1257,23 +1170,24 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             "salineWaterPixels_percentage":
             item.properties["s3:salineWaterPixels_percentage"],
             "landPixels_percentage":
-            item.properties["s3:landPixels_percentage"]
+            item.properties["s3:landPixels_percentage"],
+            "shape":
+            item.properties["s3:shape"]
         }
 
         expected = {
             "bbox": [-104.241, -54.5223, 112.209, 89.7337],
-            "epsg": 4326,
             "datetime": "2021-05-12T14:55:26.593379Z",
             "orbit_state": "ascending",
             "absolute_orbit": 15868,
             "relative_orbit": 196,
             "cloud_cover": 82.147057,
-            "shape": [324, 4035],
             "instrument": "SYNERGY",
             "mode": "EO",
             "productType": "SY_2_AOD___",
             "salineWaterPixels_percentage": 72.660328,
-            "landPixels_percentage": 27.276878
+            "landPixels_percentage": 27.276878,
+            "shape": [324, 4035]
         }
 
         for k, v in expected.items():
@@ -1311,10 +1225,6 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
         eo = EOExtension.ext(item, add_if_missing=True)
         fill_eo_properties(eo, metalinks.manifest)
 
-        # proj
-        proj = ProjectionExtension.ext(item, add_if_missing=True)
-        fill_proj_properties(proj, product_metadata)
-
         # s3 properties
         item.properties.update({**product_metadata.metadata_dict})
 
@@ -1322,8 +1232,6 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
         s3_props = {
             "bbox":
             item.bbox,
-            "epsg":
-            item.properties["proj:epsg"],
             "datetime":
             item.datetime.strftime("%Y-%m-%dT%H:%M:%S.%fZ"),
             "orbit_state":
@@ -1354,7 +1262,6 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
 
         expected = {
             "bbox": [-179.619, 69.3884, 179.853, 83.7777],
-            "epsg": 4326,
             "datetime": "2021-03-25T00:55:48.019583Z",
             "orbit_state": "descending",
             "absolute_orbit": 26569,
@@ -1405,10 +1312,6 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
         eo = EOExtension.ext(item, add_if_missing=True)
         fill_eo_properties(eo, metalinks.manifest)
 
-        # proj
-        proj = ProjectionExtension.ext(item, add_if_missing=True)
-        fill_proj_properties(proj, product_metadata)
-
         # s3 properties
         item.properties.update({**product_metadata.metadata_dict})
 
@@ -1416,8 +1319,6 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
         s3_props = {
             "bbox":
             item.bbox,
-            "epsg":
-            item.properties["proj:epsg"],
             "datetime":
             item.datetime.strftime("%Y-%m-%dT%H:%M:%S.%fZ"),
             "orbit_state":
@@ -1442,7 +1343,6 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
 
         expected = {
             "bbox": [-10.9911, 25.0, 62.0, 75.0],
-            "epsg": 4326,
             "datetime": "2021-09-15T23:59:59.500000Z",
             "orbit_state": "descending",
             "absolute_orbit": 28848,
@@ -1490,10 +1390,6 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
         eo = EOExtension.ext(item, add_if_missing=True)
         fill_eo_properties(eo, metalinks.manifest)
 
-        # proj
-        proj = ProjectionExtension.ext(item, add_if_missing=True)
-        fill_proj_properties(proj, product_metadata)
-
         # s3 properties
         item.properties.update({**product_metadata.metadata_dict})
 
@@ -1501,8 +1397,6 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
         s3_props = {
             "bbox":
             item.bbox,
-            "epsg":
-            item.properties["proj:epsg"],
             "datetime":
             item.datetime.strftime("%Y-%m-%dT%H:%M:%S.%fZ"),
             "orbit_state":
@@ -1527,7 +1421,6 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
 
         expected = {
             "bbox": [-10.9911, 25.0, 62.0, 75.0],
-            "epsg": 4326,
             "datetime": "2021-10-13T11:59:59.500000Z",
             "orbit_state": "descending",
             "absolute_orbit": 29233,
@@ -1575,10 +1468,6 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
         eo = EOExtension.ext(item, add_if_missing=True)
         fill_eo_properties(eo, metalinks.manifest)
 
-        # proj
-        proj = ProjectionExtension.ext(item, add_if_missing=True)
-        fill_proj_properties(proj, product_metadata)
-
         # s3 properties
         item.properties.update({**product_metadata.metadata_dict})
 
@@ -1586,8 +1475,6 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
         s3_props = {
             "bbox":
             item.bbox,
-            "epsg":
-            item.properties["proj:epsg"],
             "datetime":
             item.datetime.strftime("%Y-%m-%dT%H:%M:%S.%fZ"),
             "orbit_state":
@@ -1620,7 +1507,6 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
 
         expected = {
             "bbox": [-98.2945, -49.2134, 115.456, 89.5354],
-            "epsg": 4326,
             "datetime": "2021-07-03T14:44:48.463954Z",
             "orbit_state": "ascending",
             "absolute_orbit": 28003,

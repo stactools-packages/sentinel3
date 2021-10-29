@@ -209,7 +209,8 @@ class ProductMetadata:
                     str(
                         self._root.find_attr("percentage",
                                              ".//olci:dubiousSamples"))),
-                "s3:shape": _get_shape()
+                "s3:shape":
+                _get_shape()
             }
         elif (product_type.split("_")[0] == "OL"
               and product_type.split("_")[1] == "2"):
@@ -279,7 +280,8 @@ class ProductMetadata:
                     str(
                         self._root.find_attr("percentage",
                                              ".//olci:dubiousSamples"))),
-                "s3:shape": _get_shape()
+                "s3:shape":
+                _get_shape()
             }
         elif (product_type.split("_")[0] == "SL"
               and product_type.split("_")[1] == "1"):
@@ -361,7 +363,8 @@ class ProductMetadata:
                             "percentage",
                             ".//slstr:pixelQualitySummary[@grid='1 km']"
                             "/slstr:outOfRangePixels"))),
-                "s3:shape": _get_shape()
+                "s3:shape":
+                _get_shape()
             }
         elif (product_type.split("_")[0] == "SL"
               and product_type.split("_")[1] == "2"):
@@ -426,7 +429,8 @@ class ProductMetadata:
                     str(
                         self._root.find_attr("percentage",
                                              ".//slstr:outOfRangePixels"))),
-                "s3:shape": _get_shape()
+                "s3:shape":
+                _get_shape()
             }
         elif (product_type.split("_")[0] == "SR"
               and product_type.split("_")[1] == "2"):
@@ -488,7 +492,8 @@ class ProductMetadata:
                     str(
                         self._root.find_attr("percentage",
                                              ".//sentinel3:landPixels"))),
-                "s3:shape": _get_shape()
+                "s3:shape":
+                _get_shape()
             }
         elif "SY_2_SYN" in product_type:
             result = {
