@@ -247,6 +247,7 @@ class MetadataLinks:
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
                     if skip_nc:
                         asset_resolution = []
+                        asset_shape_list = []
                     else:
                         asset_resolution_str = nc.Dataset(
                             asset_href).resolution
@@ -256,24 +257,39 @@ class MetadataLinks:
                             int(asset_resolution_split[1]),
                             int(asset_resolution_split[2])
                         ]
+                        asset_shape_list = []
+                        for key in nc.Dataset(asset_href).dimensions.keys():
+                            asset_shape_dict = {
+                                key:
+                                int(
+                                    nc.Dataset(
+                                        asset_href).dimensions[key].size)
+                            }
+                            asset_shape_list.append(asset_shape_dict)
                     if band_dict_list:
                         asset_obj = pystac.Asset(href=asset_href,
                                                  media_type=media_type,
                                                  description=asset_description,
                                                  roles=["data"],
                                                  extra_fields={
+                                                     "syn:shape":
+                                                     asset_shape_list,
                                                      "resolution":
                                                      asset_resolution,
                                                      "eo:bands": band_dict_list
                                                  })
                         asset_list.append(asset_obj)
                     else:
-                        asset_obj = pystac.Asset(
-                            href=asset_href,
-                            media_type=media_type,
-                            description=asset_description,
-                            roles=["data"],
-                            extra_fields={"resolution": asset_resolution})
+                        asset_obj = pystac.Asset(href=asset_href,
+                                                 media_type=media_type,
+                                                 description=asset_description,
+                                                 roles=["data"],
+                                                 extra_fields={
+                                                     "syn:shape":
+                                                     asset_shape_list,
+                                                     "resolution":
+                                                     asset_resolution
+                                                 })
                         asset_list.append(asset_obj)
             elif any(product_id in product_type
                      for product_id in ["_VG1_", "_V10_"]):
@@ -322,6 +338,7 @@ class MetadataLinks:
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
                     if skip_nc:
                         asset_resolution = []
+                        asset_shape_list = []
                     else:
                         asset_resolution_str = nc.Dataset(
                             asset_href).resolution
@@ -331,16 +348,27 @@ class MetadataLinks:
                             int(asset_resolution_split[1]),
                             int(asset_resolution_split[2])
                         ]
+                        asset_shape_list = []
+                        for key in nc.Dataset(asset_href).dimensions.keys():
+                            asset_shape_dict = {
+                                key:
+                                int(
+                                    nc.Dataset(
+                                        asset_href).dimensions[key].size)
+                            }
+                            asset_shape_list.append(asset_shape_dict)
                     if band_dict_list:
-                        asset_obj = pystac.Asset(href=asset_href,
-                                                 media_type=media_type,
-                                                 description=asset_description,
-                                                 roles=["data"],
-                                                 extra_fields={
-                                                     "resolution":
-                                                     asset_resolution,
-                                                     "eo:bands": band_dict_list
-                                                 })
+                        asset_obj = pystac.Asset(
+                            href=asset_href,
+                            media_type=media_type,
+                            description=asset_description,
+                            roles=["data"],
+                            extra_fields={
+                                f"{product_type.split('_')[2].lower()}:shape":
+                                asset_shape_list,
+                                "resolution": asset_resolution,
+                                "eo:bands": band_dict_list
+                            })
                         asset_list.append(asset_obj)
                     else:
                         asset_obj = pystac.Asset(
@@ -348,7 +376,11 @@ class MetadataLinks:
                             media_type=media_type,
                             description=asset_description,
                             roles=["data"],
-                            extra_fields={"resolution": asset_resolution})
+                            extra_fields={
+                                f"{product_type.split('_')[2].lower()}:shape":
+                                asset_shape_list,
+                                "resolution": asset_resolution
+                            })
                         asset_list.append(asset_obj)
             else:
                 asset_key_list = constants.SYNERGY_VGP_ASSET_KEYS
@@ -382,6 +414,7 @@ class MetadataLinks:
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
                     if skip_nc:
                         asset_resolution = []
+                        asset_shape_list = []
                     else:
                         asset_resolution_str = nc.Dataset(
                             asset_href).resolution
@@ -391,24 +424,39 @@ class MetadataLinks:
                             int(asset_resolution_split[1]),
                             int(asset_resolution_split[2])
                         ]
+                        asset_shape_list = []
+                        for key in nc.Dataset(asset_href).dimensions.keys():
+                            asset_shape_dict = {
+                                key:
+                                int(
+                                    nc.Dataset(
+                                        asset_href).dimensions[key].size)
+                            }
+                            asset_shape_list.append(asset_shape_dict)
                     if band_dict_list:
                         asset_obj = pystac.Asset(href=asset_href,
                                                  media_type=media_type,
                                                  description=asset_description,
                                                  roles=["data"],
                                                  extra_fields={
+                                                     "vgp:shape":
+                                                     asset_shape_list,
                                                      "resolution":
                                                      asset_resolution,
                                                      "eo:bands": band_dict_list
                                                  })
                         asset_list.append(asset_obj)
                     else:
-                        asset_obj = pystac.Asset(
-                            href=asset_href,
-                            media_type=media_type,
-                            description=asset_description,
-                            roles=["data"],
-                            extra_fields={"resolution": asset_resolution})
+                        asset_obj = pystac.Asset(href=asset_href,
+                                                 media_type=media_type,
+                                                 description=asset_description,
+                                                 roles=["data"],
+                                                 extra_fields={
+                                                     "vgp:shape":
+                                                     asset_shape_list,
+                                                     "resolution":
+                                                     asset_resolution
+                                                 })
                         asset_list.append(asset_obj)
         elif instrument_bands == constants.SENTINEL_OLCI_BANDS:
             if "OL_1_" in product_type:
@@ -703,9 +751,6 @@ class MetadataLinks:
                                                  })
                         asset_list.append(asset_obj)
                     else:
-                        # asset_description = manifest.find_attr(
-                        #     "textInfo",
-                        #     f".//dataObject[@ID='{asset_key}']//fileLocation")
                         asset_obj = pystac.Asset(
                             href=asset_href,
                             media_type=media_type,
