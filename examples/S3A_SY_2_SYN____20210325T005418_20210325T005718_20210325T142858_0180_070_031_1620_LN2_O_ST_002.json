@@ -251,6 +251,14 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_Oa01_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with OLCI channel 01",
+      "syn:shape": [
+        {
+          "columns": 4865
+        },
+        {
+          "rows": 4091
+        }
+      ],
       "resolution": [
         300,
         300
@@ -271,6 +279,14 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_Oa02_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with OLCI channel 02",
+      "syn:shape": [
+        {
+          "columns": 4865
+        },
+        {
+          "rows": 4091
+        }
+      ],
       "resolution": [
         300,
         300
@@ -291,6 +307,14 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_Oa03_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with OLCI channel 03",
+      "syn:shape": [
+        {
+          "columns": 4865
+        },
+        {
+          "rows": 4091
+        }
+      ],
       "resolution": [
         300,
         300
@@ -311,6 +335,14 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_Oa04_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with OLCI channel 04",
+      "syn:shape": [
+        {
+          "columns": 4865
+        },
+        {
+          "rows": 4091
+        }
+      ],
       "resolution": [
         300,
         300
@@ -331,6 +363,14 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_Oa05_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with OLCI channel 05",
+      "syn:shape": [
+        {
+          "columns": 4865
+        },
+        {
+          "rows": 4091
+        }
+      ],
       "resolution": [
         300,
         300
@@ -351,6 +391,14 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_Oa06_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with OLCI channel 06",
+      "syn:shape": [
+        {
+          "columns": 4865
+        },
+        {
+          "rows": 4091
+        }
+      ],
       "resolution": [
         300,
         300
@@ -371,6 +419,14 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_Oa07_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with OLCI channel 07",
+      "syn:shape": [
+        {
+          "columns": 4865
+        },
+        {
+          "rows": 4091
+        }
+      ],
       "resolution": [
         300,
         300
@@ -391,6 +447,14 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_Oa08_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with OLCI channel 08",
+      "syn:shape": [
+        {
+          "columns": 4865
+        },
+        {
+          "rows": 4091
+        }
+      ],
       "resolution": [
         300,
         300
@@ -411,6 +475,14 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_Oa09_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with OLCI channel 09",
+      "syn:shape": [
+        {
+          "columns": 4865
+        },
+        {
+          "rows": 4091
+        }
+      ],
       "resolution": [
         300,
         300
@@ -431,6 +503,14 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_Oa10_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with OLCI channel 10",
+      "syn:shape": [
+        {
+          "columns": 4865
+        },
+        {
+          "rows": 4091
+        }
+      ],
       "resolution": [
         300,
         300
@@ -451,6 +531,14 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_Oa11_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with OLCI channel 11",
+      "syn:shape": [
+        {
+          "columns": 4865
+        },
+        {
+          "rows": 4091
+        }
+      ],
       "resolution": [
         300,
         300
@@ -471,6 +559,14 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_Oa12_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with OLCI channel 12",
+      "syn:shape": [
+        {
+          "columns": 4865
+        },
+        {
+          "rows": 4091
+        }
+      ],
       "resolution": [
         300,
         300
@@ -491,6 +587,14 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_Oa16_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with OLCI channel 16",
+      "syn:shape": [
+        {
+          "columns": 4865
+        },
+        {
+          "rows": 4091
+        }
+      ],
       "resolution": [
         300,
         300
@@ -511,6 +615,14 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_Oa17_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with OLCI channel 17",
+      "syn:shape": [
+        {
+          "columns": 4865
+        },
+        {
+          "rows": 4091
+        }
+      ],
       "resolution": [
         300,
         300
@@ -531,6 +643,14 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_Oa18_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with OLCI channel 18",
+      "syn:shape": [
+        {
+          "columns": 4865
+        },
+        {
+          "rows": 4091
+        }
+      ],
       "resolution": [
         300,
         300
@@ -551,6 +671,14 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_Oa21_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with OLCI channel 21",
+      "syn:shape": [
+        {
+          "columns": 4865
+        },
+        {
+          "rows": 4091
+        }
+      ],
       "resolution": [
         300,
         300
@@ -571,6 +699,14 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_S1N_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with SLSTR channel 01 acquired in nadir view",
+      "syn:shape": [
+        {
+          "columns": 4865
+        },
+        {
+          "rows": 4091
+        }
+      ],
       "resolution": [
         300,
         300
@@ -591,6 +727,14 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_S2N_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with SLSTR channel 02 acquired in nadir view",
+      "syn:shape": [
+        {
+          "columns": 4865
+        },
+        {
+          "rows": 4091
+        }
+      ],
       "resolution": [
         300,
         300
@@ -611,6 +755,14 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_S3N_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with SLSTR channel 03 acquired in nadir view",
+      "syn:shape": [
+        {
+          "columns": 4865
+        },
+        {
+          "rows": 4091
+        }
+      ],
       "resolution": [
         300,
         300
@@ -631,6 +783,14 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_S5N_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with SLSTR channel 05 acquired in nadir view",
+      "syn:shape": [
+        {
+          "columns": 4865
+        },
+        {
+          "rows": 4091
+        }
+      ],
       "resolution": [
         300,
         300
@@ -651,6 +811,14 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_S6N_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with SLSTR channel 06 acquired in nadir view",
+      "syn:shape": [
+        {
+          "columns": 4865
+        },
+        {
+          "rows": 4091
+        }
+      ],
       "resolution": [
         300,
         300
@@ -671,6 +839,14 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_S1O_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with SLSTR channel 01 acquired in oblique view",
+      "syn:shape": [
+        {
+          "columns": 4865
+        },
+        {
+          "rows": 4091
+        }
+      ],
       "resolution": [
         300,
         300
@@ -691,6 +867,14 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_S2O_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with SLSTR channel 02 acquired in oblique view",
+      "syn:shape": [
+        {
+          "columns": 4865
+        },
+        {
+          "rows": 4091
+        }
+      ],
       "resolution": [
         300,
         300
@@ -711,6 +895,14 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_S3O_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with SLSTR channel 03 acquired in oblique view",
+      "syn:shape": [
+        {
+          "columns": 4865
+        },
+        {
+          "rows": 4091
+        }
+      ],
       "resolution": [
         300,
         300
@@ -731,6 +923,14 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_S5O_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with SLSTR channel 05 acquired in oblique view",
+      "syn:shape": [
+        {
+          "columns": 4865
+        },
+        {
+          "rows": 4091
+        }
+      ],
       "resolution": [
         300,
         300
@@ -751,6 +951,14 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_S6O_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with SLSTR channel 06 acquired in oblique view",
+      "syn:shape": [
+        {
+          "columns": 4865
+        },
+        {
+          "rows": 4091
+        }
+      ],
       "resolution": [
         300,
         300
@@ -771,6 +979,14 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_AOT550.nc",
       "type": "application/x-netcdf",
       "description": "Aerosol Optical Thickness Data Set",
+      "syn:shape": [
+        {
+          "columns": 4865
+        },
+        {
+          "rows": 4091
+        }
+      ],
       "resolution": [
         300,
         300
@@ -911,6 +1127,14 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_Angstrom_exp550.nc",
       "type": "application/x-netcdf",
       "description": "Aerosol Angstrom Exponent Data Set",
+      "syn:shape": [
+        {
+          "columns": 4865
+        },
+        {
+          "rows": 4091
+        }
+      ],
       "resolution": [
         300,
         300
@@ -1051,6 +1275,14 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_SDR_removed_pixel.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance and aerosol parameters associated with removed pixel",
+      "syn:shape": [
+        {
+          "removed_pixels": 122
+        },
+        {
+          "rows": 4091
+        }
+      ],
       "resolution": [
         300,
         300
@@ -1203,6 +1435,14 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_AMIN.nc",
       "type": "application/x-netcdf",
       "description": "L2 Aerosol model index number data",
+      "syn:shape": [
+        {
+          "columns": 4865
+        },
+        {
+          "rows": 4091
+        }
+      ],
       "resolution": [
         300,
         300
@@ -1215,6 +1455,14 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/flags.nc",
       "type": "application/x-netcdf",
       "description": "Classification and quality Flags associated with OLCI, SLSTR and SYNERGY products",
+      "syn:shape": [
+        {
+          "columns": 4865
+        },
+        {
+          "rows": 4091
+        }
+      ],
       "resolution": [
         300,
         300
@@ -1227,6 +1475,14 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/geolocation.nc",
       "type": "application/x-netcdf",
       "description": "High resolution georeferencing data",
+      "syn:shape": [
+        {
+          "columns": 4865
+        },
+        {
+          "rows": 4091
+        }
+      ],
       "resolution": [
         300,
         300
@@ -1239,6 +1495,11 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/time.nc",
       "type": "application/x-netcdf",
       "description": "Time stamps annotation",
+      "syn:shape": [
+        {
+          "rows": 4091
+        }
+      ],
       "resolution": [
         300,
         300
@@ -1251,6 +1512,14 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_annot_rem.nc",
       "type": "application/x-netcdf",
       "description": "Annotations parameters associated with removed pixel",
+      "syn:shape": [
+        {
+          "removed_pixels": 122
+        },
+        {
+          "rows": 4091
+        }
+      ],
       "resolution": [
         300,
         300
@@ -1263,6 +1532,11 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/tiepoints_olci.nc",
       "type": "application/x-netcdf",
       "description": "Low resolution georeferencing data and Sun and View angles associated with OLCI products",
+      "syn:shape": [
+        {
+          "olc_number_tp": 315007
+        }
+      ],
       "resolution": [
         16000,
         300
@@ -1275,6 +1549,11 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/tiepoints_slstr_n.nc",
       "type": "application/x-netcdf",
       "description": "Low resolution georeferencing data and Sun and View angles associated with SLSTR nadir view products",
+      "syn:shape": [
+        {
+          "sln_number_tp": 2600000
+        }
+      ],
       "resolution": [
         16000,
         300
@@ -1287,6 +1566,11 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/tiepoints_slstr_o.nc",
       "type": "application/x-netcdf",
       "description": "Low resolution georeferencing data and Sun and View angles associated with SLSTR oblique view products",
+      "syn:shape": [
+        {
+          "slo_number_tp": 2600000
+        }
+      ],
       "resolution": [
         16000,
         300
@@ -1299,6 +1583,11 @@
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/tiepoints_meteo.nc",
       "type": "application/x-netcdf",
       "description": "ECMWF meteorology data",
+      "syn:shape": [
+        {
+          "number_tp": 315007
+        }
+      ],
       "resolution": [
         16000,
         300
