@@ -148,11 +148,12 @@ class ProductMetadata:
                 str(self.start_datetime),
                 "end_datetime":
                 str(self.end_datetime),
-                "s3:instrument":
-                str(
-                    self._root.find_attr(
-                        "abbreviation",
-                        ".//sentinel-safe:familyName[@abbreviation]")),
+                "instrument": [
+                    str(
+                        self._root.find_attr(
+                            "abbreviation",
+                            ".//sentinel-safe:familyName[@abbreviation]"))
+                ],
                 "s3:mode":
                 str(self._root.find_attr("identifier",
                                          ".//sentinel-safe:mode")),
@@ -219,11 +220,12 @@ class ProductMetadata:
                 str(self.start_datetime),
                 "end_datetime":
                 str(self.end_datetime),
-                "s3:instrument":
-                str(
-                    self._root.find_attr(
-                        "abbreviation",
-                        ".//sentinel-safe:familyName[@abbreviation]")),
+                "instrument": [
+                    str(
+                        self._root.find_attr(
+                            "abbreviation",
+                            ".//sentinel-safe:familyName[@abbreviation]"))
+                ],
                 "s3:mode":
                 str(self._root.find_attr("identifier",
                                          ".//sentinel-safe:mode")),
@@ -290,11 +292,12 @@ class ProductMetadata:
                 str(self.start_datetime),
                 "end_datetime":
                 str(self.end_datetime),
-                "s3:instrument":
-                str(
-                    self._root.find_attr(
-                        "abbreviation",
-                        ".//sentinel-safe:familyName[@abbreviation]")),
+                "instrument": [
+                    str(
+                        self._root.find_attr(
+                            "abbreviation",
+                            ".//sentinel-safe:familyName[@abbreviation]"))
+                ],
                 "s3:mode":
                 str(self._root.find_attr("identifier",
                                          ".//sentinel-safe:mode")),
@@ -373,11 +376,12 @@ class ProductMetadata:
                 str(self.start_datetime),
                 "end_datetime":
                 str(self.end_datetime),
-                "s3:instrument":
-                str(
-                    self._root.find_attr(
-                        "abbreviation",
-                        ".//sentinel-safe:familyName[@abbreviation]")),
+                "instrument": [
+                    str(
+                        self._root.find_attr(
+                            "abbreviation",
+                            ".//sentinel-safe:familyName[@abbreviation]"))
+                ],
                 "s3:mode":
                 str(self._root.find_attr("identifier",
                                          ".//sentinel-safe:mode")),
@@ -439,11 +443,12 @@ class ProductMetadata:
                 str(self.start_datetime),
                 "end_datetime":
                 str(self.end_datetime),
-                "s3:instrument":
-                str(
-                    self._root.find_attr(
-                        "abbreviation",
-                        ".//sentinel-safe:familyName[@abbreviation]")),
+                "instrument": [
+                    str(
+                        self._root.find_attr(
+                            "abbreviation",
+                            ".//sentinel-safe:familyName[@abbreviation]"))
+                ],
                 "s3:mode":
                 str(self._root.find_attr("identifier",
                                          ".//sentinel-safe:mode")),
@@ -472,11 +477,12 @@ class ProductMetadata:
                 str(self.start_datetime),
                 "end_datetime":
                 str(self.end_datetime),
-                "s3:instrument":
-                str(
-                    self._root.find_attr(
-                        "abbreviation",
-                        ".//sentinel-safe:familyName[@abbreviation]")),
+                "instrument": [
+                    str(
+                        self._root.find_attr(
+                            "abbreviation",
+                            ".//sentinel-safe:familyName[@abbreviation]"))
+                ],
                 "s3:mode":
                 str(self._root.find_attr("identifier",
                                          ".//sentinel-safe:mode")),
@@ -501,11 +507,12 @@ class ProductMetadata:
                 str(self.start_datetime),
                 "end_datetime":
                 str(self.end_datetime),
-                "s3:instrument":
-                str(
-                    self._root.find_attr(
-                        "abbreviation",
-                        ".//sentinel-safe:familyName[@abbreviation]")),
+                "instrument": [
+                    str(
+                        self._root.find_attr(
+                            "abbreviation",
+                            ".//sentinel-safe:familyName[@abbreviation]"))
+                ],
                 "s3:mode":
                 str(self._root.find_attr("identifier",
                                          ".//sentinel-safe:mode")),
@@ -544,11 +551,12 @@ class ProductMetadata:
                 str(self.start_datetime),
                 "end_datetime":
                 str(self.end_datetime),
-                "s3:instrument":
-                str(
-                    self._root.find_attr(
-                        "abbreviation",
-                        ".//sentinel-safe:familyName[@abbreviation]")),
+                "instrument": [
+                    str(
+                        self._root.find_attr(
+                            "abbreviation",
+                            ".//sentinel-safe:familyName[@abbreviation]"))
+                ],
                 "s3:mode":
                 str(self._root.find_attr("identifier",
                                          ".//sentinel-safe:mode")),
@@ -571,11 +579,12 @@ class ProductMetadata:
                 str(self.start_datetime),
                 "end_datetime":
                 str(self.end_datetime),
-                "s3:instrument":
-                str(
-                    self._root.find_attr(
-                        "abbreviation",
-                        ".//sentinel-safe:familyName[@abbreviation]")),
+                "instrument": [
+                    str(
+                        self._root.find_attr(
+                            "abbreviation",
+                            ".//sentinel-safe:familyName[@abbreviation]"))
+                ],
                 "s3:mode":
                 str(self._root.find_attr("identifier",
                                          ".//sentinel-safe:mode")),
@@ -598,11 +607,12 @@ class ProductMetadata:
                 str(self.start_datetime),
                 "end_datetime":
                 str(self.end_datetime),
-                "s3:instrument":
-                str(
-                    self._root.find_attr(
-                        "abbreviation",
-                        ".//sentinel-safe:familyName[@abbreviation]")),
+                "instrument": [
+                    str(
+                        self._root.find_attr(
+                            "abbreviation",
+                            ".//sentinel-safe:familyName[@abbreviation]"))
+                ],
                 "s3:mode":
                 str(self._root.find_attr("identifier",
                                          ".//sentinel-safe:mode")),
