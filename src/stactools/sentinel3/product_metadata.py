@@ -148,7 +148,7 @@ class ProductMetadata:
                 str(self.start_datetime),
                 "end_datetime":
                 str(self.end_datetime),
-                "instrument": [
+                "instruments": [
                     str(
                         self._root.find_attr(
                             "abbreviation",
@@ -220,7 +220,7 @@ class ProductMetadata:
                 str(self.start_datetime),
                 "end_datetime":
                 str(self.end_datetime),
-                "instrument": [
+                "instruments": [
                     str(
                         self._root.find_attr(
                             "abbreviation",
@@ -292,7 +292,7 @@ class ProductMetadata:
                 str(self.start_datetime),
                 "end_datetime":
                 str(self.end_datetime),
-                "instrument": [
+                "instruments": [
                     str(
                         self._root.find_attr(
                             "abbreviation",
@@ -376,7 +376,7 @@ class ProductMetadata:
                 str(self.start_datetime),
                 "end_datetime":
                 str(self.end_datetime),
-                "instrument": [
+                "instruments": [
                     str(
                         self._root.find_attr(
                             "abbreviation",
@@ -443,7 +443,7 @@ class ProductMetadata:
                 str(self.start_datetime),
                 "end_datetime":
                 str(self.end_datetime),
-                "instrument": [
+                "instruments": [
                     str(
                         self._root.find_attr(
                             "abbreviation",
@@ -477,7 +477,7 @@ class ProductMetadata:
                 str(self.start_datetime),
                 "end_datetime":
                 str(self.end_datetime),
-                "instrument": [
+                "instruments": [
                     str(
                         self._root.find_attr(
                             "abbreviation",
@@ -507,7 +507,7 @@ class ProductMetadata:
                 str(self.start_datetime),
                 "end_datetime":
                 str(self.end_datetime),
-                "instrument": [
+                "instruments": [
                     str(
                         self._root.find_attr(
                             "abbreviation",
@@ -551,7 +551,7 @@ class ProductMetadata:
                 str(self.start_datetime),
                 "end_datetime":
                 str(self.end_datetime),
-                "instrument": [
+                "instruments": [
                     str(
                         self._root.find_attr(
                             "abbreviation",
@@ -579,7 +579,7 @@ class ProductMetadata:
                 str(self.start_datetime),
                 "end_datetime":
                 str(self.end_datetime),
-                "instrument": [
+                "instruments": [
                     str(
                         self._root.find_attr(
                             "abbreviation",
@@ -607,7 +607,7 @@ class ProductMetadata:
                 str(self.start_datetime),
                 "end_datetime":
                 str(self.end_datetime),
-                "instrument": [
+                "instruments": [
                     str(
                         self._root.find_attr(
                             "abbreviation",
