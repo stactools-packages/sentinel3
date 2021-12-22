@@ -159,6 +159,8 @@ class ProductMetadata:
                                          ".//sentinel-safe:mode")),
                 "s3:productType":
                 self._root.findall(".//sentinel3:productType")[0].text,
+                "s3:gsd":
+                300,
                 "s3:salineWaterPixels_percentage":
                 float(
                     str(
@@ -231,6 +233,8 @@ class ProductMetadata:
                                          ".//sentinel-safe:mode")),
                 "s3:productType":
                 self._root.findall(".//sentinel3:productType")[0].text,
+                "s3:gsd":
+                300,
                 "s3:salineWaterPixels_percentage":
                 float(
                     str(
@@ -303,6 +307,11 @@ class ProductMetadata:
                                          ".//sentinel-safe:mode")),
                 "s3:productType":
                 self._root.findall(".//sentinel3:productType")[0].text,
+                "s3:gsd":
+                {
+                    "S1-S6": 500,
+                    "S7-S9 and F1-F2": 1000
+                },
                 "s3:salineWaterPixels_percentage":
                 float(
                     str(
@@ -387,6 +396,11 @@ class ProductMetadata:
                                          ".//sentinel-safe:mode")),
                 "s3:productType":
                 self._root.findall(".//sentinel3:productType")[0].text,
+                "s3:gsd":
+                {
+                    "S1-S6": 500,
+                    "S7-S9 and F1-F2": 1000
+                },
                 "s3:salineWaterPixels_percentage":
                 float(
                     str(
@@ -454,6 +468,11 @@ class ProductMetadata:
                                          ".//sentinel-safe:mode")),
                 "s3:productType":
                 self._root.findall(".//sentinel3:productType")[0].text,
+                "s3:gsd":
+                {
+                    "along-track": 300,
+                    "across-track": 1640
+                },
                 "s3:lrmModePercentage":
                 float(self._root.findall(".//sral:lrmModePercentage")[0].text),
                 "s3:sarModePercentage":
@@ -488,6 +507,14 @@ class ProductMetadata:
                                          ".//sentinel-safe:mode")),
                 "s3:productType":
                 self._root.findall(".//sentinel3:productType")[0].text,
+                "s3:gsd":
+                {
+                    "OLCI": 300,
+                    "SLSTR": {
+                        "S1-S6": 500,
+                        "S7-S9 and F1-F2": 1000
+                    }
+                },
                 "s3:salineWaterPixels_percentage":
                 float(
                     str(
@@ -518,6 +545,14 @@ class ProductMetadata:
                                          ".//sentinel-safe:mode")),
                 "s3:productType":
                 self._root.findall(".//sentinel3:productType")[0].text,
+                "s3:gsd":
+                {
+                    "OLCI": 300,
+                    "SLSTR": {
+                        "S1-S6": 500,
+                        "S7-S9 and F1-F2": 1000
+                    }
+                },
                 "s3:salineWaterPixels_percentage":
                 float(
                     str(
@@ -562,6 +597,14 @@ class ProductMetadata:
                                          ".//sentinel-safe:mode")),
                 "s3:productType":
                 self._root.findall(".//sentinel3:productType")[0].text,
+                "s3:gsd":
+                {
+                    "OLCI": 300,
+                    "SLSTR": {
+                        "S1-S6": 500,
+                        "S7-S9 and F1-F2": 1000
+                    }
+                },
                 "s3:snowOrIcePixels_percentage":
                 float(
                     str(
@@ -590,6 +633,14 @@ class ProductMetadata:
                                          ".//sentinel-safe:mode")),
                 "s3:productType":
                 self._root.findall(".//sentinel3:productType")[0].text,
+                "s3:gsd":
+                {
+                    "OLCI": 300,
+                    "SLSTR": {
+                        "S1-S6": 500,
+                        "S7-S9 and F1-F2": 1000
+                    }
+                },
                 "s3:snowOrIcePixels_percentage":
                 float(
                     str(
@@ -618,6 +669,14 @@ class ProductMetadata:
                                          ".//sentinel-safe:mode")),
                 "s3:productType":
                 self._root.findall(".//sentinel3:productType")[0].text,
+                "s3:gsd":
+                {
+                    "OLCI": 300,
+                    "SLSTR": {
+                        "S1-S6": 500,
+                        "S7-S9 and F1-F2": 1000
+                    }
+                },
                 "s3:snowOrIcePixels_percentage":
                 float(
                     str(

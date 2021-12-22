@@ -81,7 +81,7 @@ class MetadataLinks:
         else:
             raise RuntimeError(
                 f"Unknown product type encountered: {product_type_category}")
-
+        
         asset_key_list = None
         if instrument_bands == constants.SENTINEL_SRAL_BANDS:
             asset_key_list = constants.SRAL_L2_LAN_WAT_KEYS
@@ -112,6 +112,9 @@ class MetadataLinks:
                 asset_description = manifest.find_attr(
                     "textInfo",
                     f".//dataObject[@ID='{asset_key}']//fileLocation")
+                asset_checksum = manifest.find_attr(
+                    "textInfo",
+                    f".//dataObject[@ID='{asset_key}']//fileLocation")
                 if skip_nc:
                     asset_shape_list: List[dict] = []
                 else:
@@ -128,7 +131,7 @@ class MetadataLinks:
                                          roles=["data"],
                                          extra_fields={
                                              "shape": asset_shape_list,
-                                             "sral:bands": band_dict_list
+                                             "sral:bands": band_dict_list,
                                          })
                 asset_list.append(asset_obj)
         elif instrument_bands == constants.SENTINEL_SYNERGY_BANDS:
