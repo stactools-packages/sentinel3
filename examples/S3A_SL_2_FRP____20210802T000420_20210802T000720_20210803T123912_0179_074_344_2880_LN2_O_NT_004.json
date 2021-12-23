@@ -10,9 +10,15 @@
     "eo:cloud_cover": 63.904667,
     "start_datetime": "2021-08-02 00:04:19.503088+00:00",
     "end_datetime": "2021-08-02 00:07:19.503088+00:00",
-    "s3:instrument": "SLSTR",
+    "instrument": [
+      "SLSTR"
+    ],
     "s3:mode": "EO",
     "s3:productType": "SL_2_FRP___",
+    "s3:gsd": {
+      "S1-S6": 500,
+      "S7-S9 and F1-F2": 1000
+    },
     "s3:salineWaterPixels_percentage": 99.891,
     "s3:landPixels_percentage": 0.109,
     "s3:coastalPixels_percentage": 0.017944,
@@ -351,7 +357,7 @@
         "metadata"
       ]
     },
-    "FRP_IN_Data": {
+    "FRP_IN": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/FRP_in.nc",
       "type": "application/x-netcdf",
       "description": "Fire Radiative Power (FRP) dataset",
@@ -385,11 +391,14 @@
           "band_width": 398
         }
       ],
+      "file:checksum": "e80df8430624ec6ff9a4f22295f4a178",
+      "file:size": "435951",
+      "file:local_path": "./FRP_in.nc",
       "roles": [
         "data"
       ]
     },
-    "SLSTR_CARTESIAN_FN_Data": {
+    "SLSTR_CARTESIAN_FN": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/cartesian_fn.nc",
       "type": "application/x-netcdf",
       "description": "Full resolution cartesian coordinates for the 1km F1 grid, nadir view",
@@ -397,11 +406,14 @@
         1000,
         1000
       ],
+      "file:checksum": "05e47c1b71fb195553600b1d3af77710",
+      "file:size": "4472072",
+      "file:local_path": "./cartesian_fn.nc",
       "roles": [
         "data"
       ]
     },
-    "SLSTR_CARTESIAN_IN_Data": {
+    "SLSTR_CARTESIAN_IN": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/cartesian_in.nc",
       "type": "application/x-netcdf",
       "description": "Full resolution cartesian coordinates for the 1km TIR grid, nadir view",
@@ -409,11 +421,14 @@
         1000,
         1000
       ],
+      "file:checksum": "f93e4e6df49d9bb197c2763371632cd6",
+      "file:size": "4442134",
+      "file:local_path": "./cartesian_in.nc",
       "roles": [
         "data"
       ]
     },
-    "SLSTR_CARTESIAN_TX_Data": {
+    "SLSTR_CARTESIAN_TX": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/cartesian_tx.nc",
       "type": "application/x-netcdf",
       "description": "16km cartesian coordinates",
@@ -421,11 +436,14 @@
         16000,
         1000
       ],
+      "file:checksum": "49a3016bc439a8f6c141639223f8791d",
+      "file:size": "41993",
+      "file:local_path": "./cartesian_tx.nc",
       "roles": [
         "data"
       ]
     },
-    "SLSTR_FLAGS_FN_Data": {
+    "SLSTR_FLAGS_FN": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/flags_fn.nc",
       "type": "application/x-netcdf",
       "description": "Global flags for the 1km F1 grid, nadir view",
@@ -433,11 +451,14 @@
         1000,
         1000
       ],
+      "file:checksum": "53bc9d11a8c5cb34c9b51f96eceebe9f",
+      "file:size": "1339572",
+      "file:local_path": "./flags_fn.nc",
       "roles": [
         "data"
       ]
     },
-    "SLSTR_FLAGS_IN_Data": {
+    "SLSTR_FLAGS_IN": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/flags_in.nc",
       "type": "application/x-netcdf",
       "description": "Global flags for the 1km TIR grid, nadir view",
@@ -445,11 +466,14 @@
         1000,
         1000
       ],
+      "file:checksum": "39487bfb7c4f447c1c9ec052b8436f83",
+      "file:size": "1991460",
+      "file:local_path": "./flags_in.nc",
       "roles": [
         "data"
       ]
     },
-    "SLSTR_GEODETIC_FN_Data": {
+    "SLSTR_GEODETIC_FN": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/geodetic_fn.nc",
       "type": "application/x-netcdf",
       "description": "Full resolution geodetic coordinates for the 1km F1 grid, nadir view",
@@ -457,11 +481,14 @@
         1000,
         1000
       ],
+      "file:checksum": "360707fba7433c7defb49ea8cbe17e71",
+      "file:size": "7422422",
+      "file:local_path": "./geodetic_fn.nc",
       "roles": [
         "data"
       ]
     },
-    "SLSTR_GEODETIC_IN_Data": {
+    "SLSTR_GEODETIC_IN": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/geodetic_in.nc",
       "type": "application/x-netcdf",
       "description": "Full resolution geodetic coordinates for the 1km TIR grid, nadir view",
@@ -469,11 +496,14 @@
         1000,
         1000
       ],
+      "file:checksum": "8256eab16dc07852bfe889ba0a2253af",
+      "file:size": "7361648",
+      "file:local_path": "./geodetic_in.nc",
       "roles": [
         "data"
       ]
     },
-    "SLSTR_GEODETIC_TX_Data": {
+    "SLSTR_GEODETIC_TX": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/geodetic_tx.nc",
       "type": "application/x-netcdf",
       "description": "16km geodetic coordinates",
@@ -481,11 +511,14 @@
         16000,
         1000
       ],
+      "file:checksum": "40c185371d076a757011bebad5d36dd8",
+      "file:size": "1622693",
+      "file:local_path": "./geodetic_tx.nc",
       "roles": [
         "data"
       ]
     },
-    "SLSTR_GEOMETRY_TN_Data": {
+    "SLSTR_GEOMETRY_TN": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/geometry_tn.nc",
       "type": "application/x-netcdf",
       "description": "16km solar and satellite geometry annotations, nadir view",
@@ -493,11 +526,14 @@
         16000,
         1000
       ],
+      "file:checksum": "ffce0a618ebbbda718ff6e7d01c03024",
+      "file:size": "3422419",
+      "file:local_path": "./geometry_tn.nc",
       "roles": [
         "data"
       ]
     },
-    "SLSTR_INDICES_FN_Data": {
+    "SLSTR_INDICES_FN": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/indices_fn.nc",
       "type": "application/x-netcdf",
       "description": "Scan, pixel and detector annotations for the 1km F1 grid, nadir view",
@@ -505,11 +541,14 @@
         1000,
         1000
       ],
+      "file:checksum": "ce06860ec3a167255b0a64b8a8a6a7be",
+      "file:size": "860919",
+      "file:local_path": "./indices_fn.nc",
       "roles": [
         "data"
       ]
     },
-    "SLSTR_INDICES_IN_Data": {
+    "SLSTR_INDICES_IN": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/indices_in.nc",
       "type": "application/x-netcdf",
       "description": "Scan, pixel and detector annotations for the 1km TIR grid, nadir view",
@@ -517,11 +556,14 @@
         1000,
         1000
       ],
+      "file:checksum": "98092fedda6e22398d275094422ed21d",
+      "file:size": "858106",
+      "file:local_path": "./indices_in.nc",
       "roles": [
         "data"
       ]
     },
-    "SLSTR_MET_TX_Data": {
+    "SLSTR_MET_TX": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/met_tx.nc",
       "type": "application/x-netcdf",
       "description": "Meteorological parameters regridded onto the 16km tie points",
@@ -529,11 +571,14 @@
         16000,
         1000
       ],
+      "file:checksum": "0f29afc3680e43e66e01d609c9b8071a",
+      "file:size": "30215998",
+      "file:local_path": "./met_tx.nc",
       "roles": [
         "data"
       ]
     },
-    "SLSTR_TIME_IN_Data": {
+    "SLSTR_TIME_IN": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/time_in.nc",
       "type": "application/x-netcdf",
       "description": "Time annotations for the 1 KM grid",
@@ -541,6 +586,9 @@
         1000,
         1000
       ],
+      "file:checksum": "168c1202259bcb69c13be967cd31842b",
+      "file:size": "64340",
+      "file:local_path": "./time_in.nc",
       "roles": [
         "data"
       ]

@@ -72,6 +72,10 @@ def create_item(
     band_list, asset_list = metalinks.create_band_asset(
         metalinks.manifest, skip_nc)
 
+    band_list = [
+        key.replace("_Data", "").replace("Data", "") for key in band_list
+    ]
+
     # objects for bands
     for band, asset in zip(band_list, asset_list):
         item.add_asset(band, asset)

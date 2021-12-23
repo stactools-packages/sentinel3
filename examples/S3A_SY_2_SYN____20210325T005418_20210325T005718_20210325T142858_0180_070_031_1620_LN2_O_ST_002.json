@@ -10,9 +10,18 @@
     "eo:cloud_cover": 8.166911,
     "start_datetime": "2021-03-25 00:54:18.019583+00:00",
     "end_datetime": "2021-03-25 00:57:18.019583+00:00",
-    "s3:instrument": "SYNERGY",
+    "instrument": [
+      "SYNERGY"
+    ],
     "s3:mode": "EO",
     "s3:productType": "SY_2_SYN___",
+    "s3:gsd": {
+      "OLCI": 300,
+      "SLSTR": {
+        "S1-S6": 500,
+        "S7-S9 and F1-F2": 1000
+      }
+    },
     "s3:salineWaterPixels_percentage": 94.483109,
     "s3:coastalPixels_percentage": 0.093193,
     "s3:freshInlandWaterPixels_percentage": 0.076276,
@@ -247,7 +256,7 @@
         "metadata"
       ]
     },
-    "Syn_Oa01_reflectance_Data": {
+    "Syn_Oa01_reflectance": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_Oa01_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with OLCI channel 01",
@@ -271,11 +280,14 @@
           "band_width": 15
         }
       ],
+      "file:checksum": "2f259dae74fe833d12873443b170b5f8",
+      "file:size": "800215",
+      "file:local_path": "./Syn_Oa01_reflectance.nc",
       "roles": [
         "data"
       ]
     },
-    "Syn_Oa02_reflectance_Data": {
+    "Syn_Oa02_reflectance": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_Oa02_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with OLCI channel 02",
@@ -299,11 +311,14 @@
           "band_width": 10
         }
       ],
+      "file:checksum": "dd9d2c73f0d12ec81023a60c1e859015",
+      "file:size": "808211",
+      "file:local_path": "./Syn_Oa02_reflectance.nc",
       "roles": [
         "data"
       ]
     },
-    "Syn_Oa03_reflectance_Data": {
+    "Syn_Oa03_reflectance": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_Oa03_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with OLCI channel 03",
@@ -327,11 +342,14 @@
           "band_width": 10
         }
       ],
+      "file:checksum": "a817f567f6852358495412f3d8acd53a",
+      "file:size": "812380",
+      "file:local_path": "./Syn_Oa03_reflectance.nc",
       "roles": [
         "data"
       ]
     },
-    "Syn_Oa04_reflectance_Data": {
+    "Syn_Oa04_reflectance": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_Oa04_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with OLCI channel 04",
@@ -355,11 +373,14 @@
           "band_width": 10
         }
       ],
+      "file:checksum": "7bd7f2a9f1a4fb3c8bfc61113ce06682",
+      "file:size": "750146",
+      "file:local_path": "./Syn_Oa04_reflectance.nc",
       "roles": [
         "data"
       ]
     },
-    "Syn_Oa05_reflectance_Data": {
+    "Syn_Oa05_reflectance": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_Oa05_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with OLCI channel 05",
@@ -383,11 +404,14 @@
           "band_width": 10
         }
       ],
+      "file:checksum": "d854ff9ae9f1e719ae0e9651cbfe2851",
+      "file:size": "590185",
+      "file:local_path": "./Syn_Oa05_reflectance.nc",
       "roles": [
         "data"
       ]
     },
-    "Syn_Oa06_reflectance_Data": {
+    "Syn_Oa06_reflectance": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_Oa06_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with OLCI channel 06",
@@ -411,11 +435,14 @@
           "band_width": 10
         }
       ],
+      "file:checksum": "6ae3c5e38ebb7c7aa6054fe5a939b02b",
+      "file:size": "401166",
+      "file:local_path": "./Syn_Oa06_reflectance.nc",
       "roles": [
         "data"
       ]
     },
-    "Syn_Oa07_reflectance_Data": {
+    "Syn_Oa07_reflectance": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_Oa07_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with OLCI channel 07",
@@ -439,11 +466,14 @@
           "band_width": 10
         }
       ],
+      "file:checksum": "45dc348b08d25e1749bf8356cc55ea87",
+      "file:size": "414003",
+      "file:local_path": "./Syn_Oa07_reflectance.nc",
       "roles": [
         "data"
       ]
     },
-    "Syn_Oa08_reflectance_Data": {
+    "Syn_Oa08_reflectance": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_Oa08_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with OLCI channel 08",
@@ -467,11 +497,14 @@
           "band_width": 10
         }
       ],
+      "file:checksum": "5a86e89edca17958c2af80bf68493ee7",
+      "file:size": "631864",
+      "file:local_path": "./Syn_Oa08_reflectance.nc",
       "roles": [
         "data"
       ]
     },
-    "Syn_Oa09_reflectance_Data": {
+    "Syn_Oa09_reflectance": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_Oa09_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with OLCI channel 09",
@@ -495,11 +528,14 @@
           "band_width": 7.5
         }
       ],
+      "file:checksum": "abd055d89159257235ca282830517ad9",
+      "file:size": "697134",
+      "file:local_path": "./Syn_Oa09_reflectance.nc",
       "roles": [
         "data"
       ]
     },
-    "Syn_Oa10_reflectance_Data": {
+    "Syn_Oa10_reflectance": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_Oa10_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with OLCI channel 10",
@@ -523,11 +559,14 @@
           "band_width": 7.5
         }
       ],
+      "file:checksum": "b5b85b892315b5c0926c8f3e0d8c5a00",
+      "file:size": "777954",
+      "file:local_path": "./Syn_Oa10_reflectance.nc",
       "roles": [
         "data"
       ]
     },
-    "Syn_Oa11_reflectance_Data": {
+    "Syn_Oa11_reflectance": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_Oa11_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with OLCI channel 11",
@@ -551,11 +590,14 @@
           "band_width": 10
         }
       ],
+      "file:checksum": "a5ae0fe32ae758aa59042c6eadadccec",
+      "file:size": "860925",
+      "file:local_path": "./Syn_Oa11_reflectance.nc",
       "roles": [
         "data"
       ]
     },
-    "Syn_Oa12_reflectance_Data": {
+    "Syn_Oa12_reflectance": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_Oa12_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with OLCI channel 12",
@@ -579,11 +621,14 @@
           "band_width": 7.5
         }
       ],
+      "file:checksum": "53236689e36c627d38eee0bc86815760",
+      "file:size": "858321",
+      "file:local_path": "./Syn_Oa12_reflectance.nc",
       "roles": [
         "data"
       ]
     },
-    "Syn_Oa16_reflectance_Data": {
+    "Syn_Oa16_reflectance": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_Oa16_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with OLCI channel 16",
@@ -607,11 +652,14 @@
           "band_width": 15
         }
       ],
+      "file:checksum": "45a7e6ecb0ce0e6aada32c528c61715e",
+      "file:size": "902893",
+      "file:local_path": "./Syn_Oa16_reflectance.nc",
       "roles": [
         "data"
       ]
     },
-    "Syn_Oa17_reflectance_Data": {
+    "Syn_Oa17_reflectance": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_Oa17_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with OLCI channel 17",
@@ -635,11 +683,14 @@
           "band_width": 20
         }
       ],
+      "file:checksum": "807f414daf8c87df355f17560dcbc255",
+      "file:size": "905462",
+      "file:local_path": "./Syn_Oa17_reflectance.nc",
       "roles": [
         "data"
       ]
     },
-    "Syn_Oa18_reflectance_Data": {
+    "Syn_Oa18_reflectance": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_Oa18_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with OLCI channel 18",
@@ -663,11 +714,14 @@
           "band_width": 10
         }
       ],
+      "file:checksum": "1ef3e4ef1d7845610ac40f6099dfdddd",
+      "file:size": "880990",
+      "file:local_path": "./Syn_Oa18_reflectance.nc",
       "roles": [
         "data"
       ]
     },
-    "Syn_Oa21_reflectance_Data": {
+    "Syn_Oa21_reflectance": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_Oa21_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with OLCI channel 21",
@@ -691,11 +745,14 @@
           "band_width": 40
         }
       ],
+      "file:checksum": "7ed0d953f6350f6884a32adaa59d6ab9",
+      "file:size": "912861",
+      "file:local_path": "./Syn_Oa21_reflectance.nc",
       "roles": [
         "data"
       ]
     },
-    "Syn_S1N_reflectance_Data": {
+    "Syn_S1N_reflectance": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_S1N_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with SLSTR channel 01 acquired in nadir view",
@@ -719,11 +776,14 @@
           "band_width": 20
         }
       ],
+      "file:checksum": "66cc65db9b8e7c99e5cd08b437acf48a",
+      "file:size": "396384",
+      "file:local_path": "./Syn_S1N_reflectance.nc",
       "roles": [
         "data"
       ]
     },
-    "Syn_S2N_reflectance_Data": {
+    "Syn_S2N_reflectance": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_S2N_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with SLSTR channel 02 acquired in nadir view",
@@ -747,11 +807,14 @@
           "band_width": 20
         }
       ],
+      "file:checksum": "513381c2d490f8bf5fabdd227b4968ba",
+      "file:size": "608698",
+      "file:local_path": "./Syn_S2N_reflectance.nc",
       "roles": [
         "data"
       ]
     },
-    "Syn_S3N_reflectance_Data": {
+    "Syn_S3N_reflectance": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_S3N_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with SLSTR channel 03 acquired in nadir view",
@@ -775,11 +838,14 @@
           "band_width": 20
         }
       ],
+      "file:checksum": "3304634c09fe6789e3e9d36e21eeec3c",
+      "file:size": "947040",
+      "file:local_path": "./Syn_S3N_reflectance.nc",
       "roles": [
         "data"
       ]
     },
-    "Syn_S5N_reflectance_Data": {
+    "Syn_S5N_reflectance": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_S5N_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with SLSTR channel 05 acquired in nadir view",
@@ -803,11 +869,14 @@
           "band_width": 60
         }
       ],
+      "file:checksum": "265b9527e2f29c0b60f69cfd4d690297",
+      "file:size": "878501",
+      "file:local_path": "./Syn_S5N_reflectance.nc",
       "roles": [
         "data"
       ]
     },
-    "Syn_S6N_reflectance_Data": {
+    "Syn_S6N_reflectance": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_S6N_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with SLSTR channel 06 acquired in nadir view",
@@ -831,11 +900,14 @@
           "band_width": 50
         }
       ],
+      "file:checksum": "b7d320b216086ea80658aa541576e47b",
+      "file:size": "904702",
+      "file:local_path": "./Syn_S6N_reflectance.nc",
       "roles": [
         "data"
       ]
     },
-    "Syn_S1O_reflectance_Data": {
+    "Syn_S1O_reflectance": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_S1O_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with SLSTR channel 01 acquired in oblique view",
@@ -859,11 +931,14 @@
           "band_width": 20
         }
       ],
+      "file:checksum": "c951899a10321649c5b06912083435ad",
+      "file:size": "369738",
+      "file:local_path": "./Syn_S1O_reflectance.nc",
       "roles": [
         "data"
       ]
     },
-    "Syn_S2O_reflectance_Data": {
+    "Syn_S2O_reflectance": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_S2O_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with SLSTR channel 02 acquired in oblique view",
@@ -887,11 +962,14 @@
           "band_width": 20
         }
       ],
+      "file:checksum": "b6c4b4f54cbe2c833752ed87187a2616",
+      "file:size": "385220",
+      "file:local_path": "./Syn_S2O_reflectance.nc",
       "roles": [
         "data"
       ]
     },
-    "Syn_S3O_reflectance_Data": {
+    "Syn_S3O_reflectance": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_S3O_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with SLSTR channel 03 acquired in oblique view",
@@ -915,11 +993,14 @@
           "band_width": 20
         }
       ],
+      "file:checksum": "9b7082d6119a74ebffd0088255b98bb5",
+      "file:size": "409190",
+      "file:local_path": "./Syn_S3O_reflectance.nc",
       "roles": [
         "data"
       ]
     },
-    "Syn_S5O_reflectance_Data": {
+    "Syn_S5O_reflectance": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_S5O_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with SLSTR channel 05 acquired in oblique view",
@@ -943,11 +1024,14 @@
           "band_width": 60
         }
       ],
+      "file:checksum": "fcdd65373ba7e38508a8a6c53c7b0ff2",
+      "file:size": "406892",
+      "file:local_path": "./Syn_S5O_reflectance.nc",
       "roles": [
         "data"
       ]
     },
-    "Syn_S6O_reflectance_Data": {
+    "Syn_S6O_reflectance": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_S6O_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance associated with SLSTR channel 06 acquired in oblique view",
@@ -971,11 +1055,14 @@
           "band_width": 50
         }
       ],
+      "file:checksum": "2cde6b0b9f48e4ad2351165a18cf7fc1",
+      "file:size": "408067",
+      "file:local_path": "./Syn_S6O_reflectance.nc",
       "roles": [
         "data"
       ]
     },
-    "Syn_ATO550_Data": {
+    "Syn_ATO550": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_AOT550.nc",
       "type": "application/x-netcdf",
       "description": "Aerosol Optical Thickness Data Set",
@@ -1119,11 +1206,14 @@
           "band_width": 40
         }
       ],
+      "file:checksum": "ec0e2101b8ed4de477846c0ff5ee7cba",
+      "file:size": "502530",
+      "file:local_path": "./Syn_AOT550.nc",
       "roles": [
         "data"
       ]
     },
-    "Syn_Angstrom_exp550_Data": {
+    "Syn_Angstrom_exp550": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_Angstrom_exp550.nc",
       "type": "application/x-netcdf",
       "description": "Aerosol Angstrom Exponent Data Set",
@@ -1267,11 +1357,14 @@
           "band_width": 40
         }
       ],
+      "file:checksum": "ead2a38469612ac7a4319f67e5a3f4f5",
+      "file:size": "101966",
+      "file:local_path": "./Syn_Angstrom_exp550.nc",
       "roles": [
         "data"
       ]
     },
-    "Syn_SDR_removed_pixels_Data": {
+    "Syn_SDR_removed_pixels": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_SDR_removed_pixel.nc",
       "type": "application/x-netcdf",
       "description": "Surface directional reflectance and aerosol parameters associated with removed pixel",
@@ -1427,11 +1520,14 @@
           "band_width": 40
         }
       ],
+      "file:checksum": "434b341cc1f9e92314e353e9a2ab1d02",
+      "file:size": "751736",
+      "file:local_path": "./Syn_SDR_removed_pixel.nc",
       "roles": [
         "data"
       ]
     },
-    "Syn_AMIN_Data": {
+    "Syn_AMIN": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_AMIN.nc",
       "type": "application/x-netcdf",
       "description": "L2 Aerosol model index number data",
@@ -1447,11 +1543,14 @@
         300,
         300
       ],
+      "file:checksum": "f54bca38b9a3004d3eee3737f74f0984",
+      "file:size": "99452",
+      "file:local_path": "./Syn_AMIN.nc",
       "roles": [
         "data"
       ]
     },
-    "Syn_flags_Data": {
+    "Syn_flags": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/flags.nc",
       "type": "application/x-netcdf",
       "description": "Classification and quality Flags associated with OLCI, SLSTR and SYNERGY products",
@@ -1467,11 +1566,14 @@
         300,
         300
       ],
+      "file:checksum": "0a0d1906a9a613534ec79652d068c027",
+      "file:size": "4716237",
+      "file:local_path": "./flags.nc",
       "roles": [
         "data"
       ]
     },
-    "geolocation_Data": {
+    "geolocation": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/geolocation.nc",
       "type": "application/x-netcdf",
       "description": "High resolution georeferencing data",
@@ -1487,11 +1589,14 @@
         300,
         300
       ],
+      "file:checksum": "9b3ef279b690f7590009c4abdc72518d",
+      "file:size": "56805318",
+      "file:local_path": "./geolocation.nc",
       "roles": [
         "data"
       ]
     },
-    "time_Data": {
+    "time": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/time.nc",
       "type": "application/x-netcdf",
       "description": "Time stamps annotation",
@@ -1504,11 +1609,14 @@
         300,
         300
       ],
+      "file:checksum": "b729b5b63df504eccaf4c8a49e313563",
+      "file:size": "15778",
+      "file:local_path": "./time.nc",
       "roles": [
         "data"
       ]
     },
-    "annotations_removed_pixels_Data": {
+    "annotations_removed_pixels": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/Syn_annot_rem.nc",
       "type": "application/x-netcdf",
       "description": "Annotations parameters associated with removed pixel",
@@ -1524,11 +1632,14 @@
         300,
         300
       ],
+      "file:checksum": "6e3f479c4db26c60e414e3ecf40d12db",
+      "file:size": "221300",
+      "file:local_path": "./Syn_annot_rem.nc",
       "roles": [
         "data"
       ]
     },
-    "tiepoints_olci_Data": {
+    "tiepoints_olci": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/tiepoints_olci.nc",
       "type": "application/x-netcdf",
       "description": "Low resolution georeferencing data and Sun and View angles associated with OLCI products",
@@ -1541,11 +1652,14 @@
         16000,
         300
       ],
+      "file:checksum": "22e135b42d551e85dc0f2a4a4a4680bb",
+      "file:size": "2478407",
+      "file:local_path": "./tiepoints_olci.nc",
       "roles": [
         "data"
       ]
     },
-    "tiepoints_slstr_n_Data": {
+    "tiepoints_slstr_n": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/tiepoints_slstr_n.nc",
       "type": "application/x-netcdf",
       "description": "Low resolution georeferencing data and Sun and View angles associated with SLSTR nadir view products",
@@ -1558,11 +1672,14 @@
         16000,
         300
       ],
+      "file:checksum": "bdd7bce0a69568b00ba2c706cdd01e93",
+      "file:size": "35229067",
+      "file:local_path": "./tiepoints_slstr_n.nc",
       "roles": [
         "data"
       ]
     },
-    "tiepoints_slstr_o_Data": {
+    "tiepoints_slstr_o": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/tiepoints_slstr_o.nc",
       "type": "application/x-netcdf",
       "description": "Low resolution georeferencing data and Sun and View angles associated with SLSTR oblique view products",
@@ -1575,11 +1692,14 @@
         16000,
         300
       ],
+      "file:checksum": "4d58eaf4ed203b07aa182dc734c4fef1",
+      "file:size": "31363212",
+      "file:local_path": "./tiepoints_slstr_o.nc",
       "roles": [
         "data"
       ]
     },
-    "tiepoints_meteo_Data": {
+    "tiepoints_meteo": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_SYN____20210325T005418_20210325T005718_20210325T142858_0180_070_031_1620_LN2_O_ST_002.SEN3/tiepoints_meteo.nc",
       "type": "application/x-netcdf",
       "description": "ECMWF meteorology data",
@@ -1592,6 +1712,9 @@
         16000,
         300
       ],
+      "file:checksum": "3e1c5e487531a7ca586a9391b8e9fc9d",
+      "file:size": "1338679",
+      "file:local_path": "./tiepoints_meteo.nc",
       "roles": [
         "data"
       ]
