@@ -1,0 +1,485 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "id": "S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002",
+  "properties": {
+    "sat:platform_international_designator": "2016-011A",
+    "sat:orbit_state": "descending",
+    "sat:absolute_orbit": 27410,
+    "sat:relative_orbit": 102,
+    "eo:cloud_cover": 83.0,
+    "start_datetime": "2021-05-23 00:30:29.485583+00:00",
+    "end_datetime": "2021-05-23 00:33:29.485583+00:00",
+    "instrument": [
+      "OLCI"
+    ],
+    "s3:mode": "EO",
+    "s3:productType": "OL_2_LFR___",
+    "s3:gsd": 300,
+    "s3:salineWaterPixels_percentage": 4.0,
+    "s3:coastalPixels_percentage": 0.0082,
+    "s3:freshInlandWaterPixels_percentage": 0.0,
+    "s3:tidalRegionPixels_percentage": 1.0,
+    "s3:landPixels_percentage": 4.0,
+    "s3:invalidPixels_percentage": 4.0,
+    "s3:cosmeticPixels_percentage": 0.0,
+    "s3:duplicatedPixels_percentage": 1.545942,
+    "s3:saturatedPixels_percentage": 0.0,
+    "s3:dubiousSamples_percentage": 0.0,
+    "s3:shape": [
+      4865,
+      4090
+    ],
+    "providers": [
+      {
+        "name": "ESA",
+        "roles": [
+          "producer",
+          "processor",
+          "licensor"
+        ],
+        "url": "https://earth.esa.int/web/guest/home"
+      }
+    ],
+    "platform": "Sentinel-3A",
+    "constellation": "Sentinel-3",
+    "datetime": "2021-05-23T00:31:59.485583Z"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          138.497,
+          52.4616
+        ],
+        [
+          139.505,
+          52.4002
+        ],
+        [
+          140.514,
+          52.3304
+        ],
+        [
+          141.521,
+          52.2518
+        ],
+        [
+          142.521,
+          52.1651
+        ],
+        [
+          143.518,
+          52.0698
+        ],
+        [
+          144.511,
+          51.9661
+        ],
+        [
+          145.498,
+          51.8543
+        ],
+        [
+          146.481,
+          51.7339
+        ],
+        [
+          147.46,
+          51.6051
+        ],
+        [
+          148.436,
+          51.4729
+        ],
+        [
+          149.399,
+          51.3284
+        ],
+        [
+          150.363,
+          51.1776
+        ],
+        [
+          151.314,
+          51.0147
+        ],
+        [
+          152.262,
+          50.8466
+        ],
+        [
+          153.2,
+          50.6686
+        ],
+        [
+          154.131,
+          50.487
+        ],
+        [
+          155.056,
+          50.2966
+        ],
+        [
+          155.973,
+          50.0991
+        ],
+        [
+          156.884,
+          49.8938
+        ],
+        [
+          158.367,
+          52.4388
+        ],
+        [
+          160.023,
+          54.9724
+        ],
+        [
+          161.888,
+          57.4816
+        ],
+        [
+          164.009,
+          59.9636
+        ],
+        [
+          162.877,
+          60.2191
+        ],
+        [
+          161.727,
+          60.4646
+        ],
+        [
+          160.561,
+          60.6997
+        ],
+        [
+          159.377,
+          60.9239
+        ],
+        [
+          158.181,
+          61.1405
+        ],
+        [
+          156.965,
+          61.3443
+        ],
+        [
+          155.735,
+          61.5399
+        ],
+        [
+          154.487,
+          61.7195
+        ],
+        [
+          153.228,
+          61.8898
+        ],
+        [
+          151.957,
+          62.0433
+        ],
+        [
+          150.668,
+          62.1905
+        ],
+        [
+          149.377,
+          62.3246
+        ],
+        [
+          148.074,
+          62.4463
+        ],
+        [
+          146.748,
+          62.5569
+        ],
+        [
+          145.435,
+          62.6533
+        ],
+        [
+          144.093,
+          62.7386
+        ],
+        [
+          142.749,
+          62.8109
+        ],
+        [
+          141.401,
+          62.8701
+        ],
+        [
+          140.017,
+          62.918
+        ],
+        [
+          139.648,
+          60.3041
+        ],
+        [
+          139.27,
+          57.6889
+        ],
+        [
+          138.886,
+          55.0722
+        ],
+        [
+          138.497,
+          52.4616
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "license",
+      "href": "https://sentinel.esa.int/documents/247904/690755/Sentinel_Data_Legal_Notice"
+    },
+    {
+      "rel": "self",
+      "href": "/opt/stactools-sentinel3/examples/S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.json",
+      "type": "application/json"
+    }
+  ],
+  "assets": {
+    "safe-manifest": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/xfdumanifest.xml",
+      "type": "application/xml",
+      "roles": [
+        "metadata"
+      ]
+    },
+    "ogvi": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/ogvi.nc",
+      "type": "application/x-netcdf",
+      "description": "OLCI global Vegetal Index",
+      "resolution": [
+        270,
+        294
+      ],
+      "eo:bands": [
+        {
+          "name": "Oa03",
+          "description": "Band 3 - Chlorophyll absorption maximum, biogeochemistry, vegetation",
+          "center_wavelength": 442.5,
+          "band_width": 10
+        },
+        {
+          "name": "Oa10",
+          "description": "Band 10 - Chlorophyll fluorescence peak, red edge",
+          "center_wavelength": 681.25,
+          "band_width": 7.5
+        },
+        {
+          "name": "Oa17",
+          "description": "Band 17 - Atmospheric / aerosol correction, clouds, pixel co-registration",
+          "center_wavelength": 865,
+          "band_width": 20
+        }
+      ],
+      "file:checksum": "e1bce07ea928f7351c134a9aac3ff96c",
+      "file:size": "1127599",
+      "file:local_path": "./ogvi.nc",
+      "roles": [
+        "data"
+      ]
+    },
+    "otci": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/otci.nc",
+      "type": "application/x-netcdf",
+      "description": "OLCI Terrestrial Chlorophyll Index",
+      "resolution": [
+        270,
+        294
+      ],
+      "eo:bands": [
+        {
+          "name": "Oa10",
+          "description": "Band 10 - Chlorophyll fluorescence peak, red edge",
+          "center_wavelength": 681.25,
+          "band_width": 7.5
+        },
+        {
+          "name": "Oa11",
+          "description": "Band 11 - Chlorophyll fluorescence baseline, red edge transition",
+          "center_wavelength": 708.75,
+          "band_width": 10
+        },
+        {
+          "name": "Oa12",
+          "description": "Band 12 - O2 absorption / clouds, vegetation",
+          "center_wavelength": 753.75,
+          "band_width": 7.5
+        }
+      ],
+      "file:checksum": "39315a579338f9f580aefa795b716c49",
+      "file:size": "1306916",
+      "file:local_path": "./otci.nc",
+      "roles": [
+        "data"
+      ]
+    },
+    "iwv": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/iwv.nc",
+      "type": "application/x-netcdf",
+      "description": "Integrated water vapour column",
+      "resolution": [
+        270,
+        294
+      ],
+      "eo:bands": [
+        {
+          "name": "Oa18",
+          "description": "Band 18 - Water vapour absorption reference. Common reference band with SLSTR. Vegetation monitoring",
+          "center_wavelength": 885,
+          "band_width": 10
+        },
+        {
+          "name": "Oa19",
+          "description": "Band 19 - Water vapour absorption, vegetation monitoring (maximum REFLECTANCE)",
+          "center_wavelength": 900,
+          "band_width": 10
+        }
+      ],
+      "file:checksum": "18e1f8795d9d37b534effddac1e05b14",
+      "file:size": "1980948",
+      "file:local_path": "./iwv.nc",
+      "roles": [
+        "data"
+      ]
+    },
+    "rcOgvi": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/rc_ogvi.nc",
+      "type": "application/x-netcdf",
+      "description": "Rectified Reflectance",
+      "resolution": [
+        270,
+        294
+      ],
+      "eo:bands": [
+        {
+          "name": "Oa10",
+          "description": "Band 10 - Chlorophyll fluorescence peak, red edge",
+          "center_wavelength": 681.25,
+          "band_width": 7.5
+        },
+        {
+          "name": "Oa17",
+          "description": "Band 17 - Atmospheric / aerosol correction, clouds, pixel co-registration",
+          "center_wavelength": 865,
+          "band_width": 20
+        }
+      ],
+      "file:checksum": "2b7b1c4b8b85e038f67b7c4ea3ce4dba",
+      "file:size": "3879528",
+      "file:local_path": "./rc_ogvi.nc",
+      "roles": [
+        "data"
+      ]
+    },
+    "lqsf": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/lqsf.nc",
+      "type": "application/x-netcdf",
+      "description": "Land Quality and Science Flags",
+      "resolution": [
+        270,
+        294
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "timeCoordinates": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/time_coordinates.nc",
+      "type": "application/x-netcdf",
+      "description": "Time Coordinates Annotations",
+      "resolution": [
+        270,
+        294
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "geoCoordinates": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/geo_coordinates.nc",
+      "type": "application/x-netcdf",
+      "description": "Geo Coordinates Annotations",
+      "resolution": [
+        270,
+        294
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "tieGeoCoordinates": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/tie_geo_coordinates.nc",
+      "type": "application/x-netcdf",
+      "description": "Tie-Point Geo Coordinate Annotations",
+      "resolution": [
+        270,
+        294
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "tieGeometries": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/tie_geometries.nc",
+      "type": "application/x-netcdf",
+      "description": "Tie-Point Geometries Annotations",
+      "resolution": [
+        270,
+        294
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "tieMeteo": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/tie_meteo.nc",
+      "type": "application/x-netcdf",
+      "description": "Tie-Point Meteo Annotations",
+      "resolution": [
+        270,
+        294
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "instrument": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/instrument_data.nc",
+      "type": "application/x-netcdf",
+      "description": "Instrument Annotation",
+      "resolution": [
+        270,
+        294
+      ],
+      "roles": [
+        "data"
+      ]
+    }
+  },
+  "bbox": [
+    138.497,
+    49.8938,
+    164.009,
+    62.918
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/sat/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/eo/v1.0.0/schema.json"
+  ]
+}

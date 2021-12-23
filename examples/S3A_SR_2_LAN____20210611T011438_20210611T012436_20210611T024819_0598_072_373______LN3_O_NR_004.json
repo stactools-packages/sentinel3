@@ -1,0 +1,342 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "id": "S3A_SR_2_LAN____20210611T011438_20210611T012436_20210611T024819_0598_072_373______LN3_O_NR_004",
+  "properties": {
+    "sat:platform_international_designator": "2016-011A",
+    "sat:orbit_state": "descending",
+    "sat:absolute_orbit": 27681,
+    "sat:relative_orbit": 373,
+    "start_datetime": "2021-06-11 01:14:37.943332+00:00",
+    "end_datetime": "2021-06-11 01:24:36.460617+00:00",
+    "instrument": [
+      "SRAL"
+    ],
+    "s3:mode": "EO",
+    "s3:productType": "SR_2_LAN___",
+    "s3:gsd": {
+      "along-track": 300,
+      "across-track": 1640
+    },
+    "s3:lrmModePercentage": 0.0,
+    "s3:sarModePercentage": 100.0,
+    "s3:landPercentage": 0.0,
+    "s3:closedSeaPercentage": 0.0,
+    "s3:continentalIcePercentage": 97.0,
+    "s3:openOceanPercentage": 3.0,
+    "providers": [
+      {
+        "name": "ESA",
+        "roles": [
+          "producer",
+          "processor",
+          "licensor"
+        ],
+        "url": "https://earth.esa.int/web/guest/home"
+      }
+    ],
+    "platform": "Sentinel-3A",
+    "constellation": "Sentinel-3",
+    "datetime": "2021-06-11T01:19:37.201974Z"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          110.568,
+          -67.0245
+        ],
+        [
+          108.478,
+          -68.7312
+        ],
+        [
+          106.066,
+          -70.4111
+        ],
+        [
+          103.25,
+          -72.0567
+        ],
+        [
+          99.9191,
+          -73.658
+        ],
+        [
+          95.9292,
+          -75.2008
+        ],
+        [
+          91.0899,
+          -76.6648
+        ],
+        [
+          85.1618,
+          -78.0213
+        ],
+        [
+          77.8702,
+          -79.2298
+        ],
+        [
+          68.966,
+          -80.2354
+        ],
+        [
+          58.3727,
+          -80.9701
+        ],
+        [
+          46.406,
+          -81.3646
+        ],
+        [
+          33.8841,
+          -81.3721
+        ],
+        [
+          21.8784,
+          -80.9918
+        ],
+        [
+          11.2242,
+          -80.2688
+        ],
+        [
+          2.2554,
+          -79.2723
+        ],
+        [
+          -5.09335,
+          -78.0704
+        ],
+        [
+          -11.068,
+          -76.7187
+        ],
+        [
+          -15.944,
+          -75.2583
+        ],
+        [
+          -19.9624,
+          -73.7183
+        ],
+        [
+          -19.9677,
+          -73.7192
+        ],
+        [
+          -15.9497,
+          -75.2594
+        ],
+        [
+          -11.0739,
+          -76.7199
+        ],
+        [
+          -5.09929,
+          -78.0717
+        ],
+        [
+          2.24971,
+          -79.2737
+        ],
+        [
+          11.2192,
+          -80.2704
+        ],
+        [
+          21.875,
+          -80.9935
+        ],
+        [
+          33.8829,
+          -81.3739
+        ],
+        [
+          46.4073,
+          -81.3664
+        ],
+        [
+          58.3762,
+          -80.9718
+        ],
+        [
+          68.9709,
+          -80.237
+        ],
+        [
+          77.8759,
+          -79.2313
+        ],
+        [
+          85.1677,
+          -78.0226
+        ],
+        [
+          91.0957,
+          -76.666
+        ],
+        [
+          95.9348,
+          -75.2019
+        ],
+        [
+          99.9244,
+          -73.659
+        ],
+        [
+          103.255,
+          -72.0576
+        ],
+        [
+          106.071,
+          -70.4119
+        ],
+        [
+          108.482,
+          -68.732
+        ],
+        [
+          110.573,
+          -67.0252
+        ],
+        [
+          110.568,
+          -67.0245
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "license",
+      "href": "https://sentinel.esa.int/documents/247904/690755/Sentinel_Data_Legal_Notice"
+    },
+    {
+      "rel": "self",
+      "href": "/opt/stactools-sentinel3/examples/S3A_SR_2_LAN____20210611T011438_20210611T012436_20210611T024819_0598_072_373______LN3_O_NR_004.json",
+      "type": "application/json"
+    }
+  ],
+  "assets": {
+    "safe-manifest": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SR_2_LAN____20210611T011438_20210611T012436_20210611T024819_0598_072_373______LN3_O_NR_004.SEN3/xfdumanifest.xml",
+      "type": "application/xml",
+      "roles": [
+        "metadata"
+      ]
+    },
+    "standardMeasurement": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SR_2_LAN____20210611T011438_20210611T012436_20210611T024819_0598_072_373______LN3_O_NR_004.SEN3/standard_measurement.nc",
+      "type": "application/x-netcdf",
+      "description": "Measurement Data Object File",
+      "shape": [
+        {
+          "time_01": 598
+        },
+        {
+          "time_20_ku": 11716
+        },
+        {
+          "time_20_c": 11714
+        }
+      ],
+      "sral:bands": [
+        {
+          "name": "C",
+          "description": "Band C - Ionospheric correction",
+          "central_frequency": 5409999872.0,
+          "band_width_in_Hz": 290000000.0
+        },
+        {
+          "name": "Ku",
+          "description": "Band Ku - Range measurements",
+          "central_frequency": 13575000064.0,
+          "band_width_in_Hz": 320000000.0
+        }
+      ],
+      "file:checksum": "380c81836b5bd7a8efca81c4a11df60f",
+      "file:size": "6697120",
+      "file:local_path": "standard_measurement.nc",
+      "roles": [
+        "data"
+      ]
+    },
+    "enhancedMeasurement": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SR_2_LAN____20210611T011438_20210611T012436_20210611T024819_0598_072_373______LN3_O_NR_004.SEN3/enhanced_measurement.nc",
+      "type": "application/x-netcdf",
+      "description": "Measurement Data Object File",
+      "shape": [
+        {
+          "time_01": 598
+        },
+        {
+          "time_20_ku": 11716
+        },
+        {
+          "time_20_c": 11714
+        },
+        {
+          "echo_sample_ind": 128
+        }
+      ],
+      "sral:bands": [
+        {
+          "name": "C",
+          "description": "Band C - Ionospheric correction",
+          "central_frequency": 5409999872.0,
+          "band_width_in_Hz": 290000000.0
+        },
+        {
+          "name": "Ku",
+          "description": "Band Ku - Range measurements",
+          "central_frequency": 13575000064.0,
+          "band_width_in_Hz": 320000000.0
+        }
+      ],
+      "file:checksum": "8921946bfe2159a4c71819ab7522ae3d",
+      "file:size": "19958260",
+      "file:local_path": "enhanced_measurement.nc",
+      "roles": [
+        "data"
+      ]
+    },
+    "reducedMeasurement": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SR_2_LAN____20210611T011438_20210611T012436_20210611T024819_0598_072_373______LN3_O_NR_004.SEN3/reduced_measurement.nc",
+      "type": "application/x-netcdf",
+      "description": "Measurement Data Object File",
+      "shape": [
+        {
+          "time_01": 598
+        }
+      ],
+      "sral:bands": [
+        {
+          "name": "Ku",
+          "description": "Band Ku - Range measurements",
+          "central_frequency": 13575000064.0,
+          "band_width_in_Hz": 320000000.0
+        }
+      ],
+      "file:checksum": "ba787b27d6e590389f53b13453efd0cd",
+      "file:size": "273902",
+      "file:local_path": "reduced_measurement.nc",
+      "roles": [
+        "data"
+      ]
+    }
+  },
+  "bbox": [
+    -19.9677,
+    -81.3739,
+    110.573,
+    -67.0245
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/sat/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/eo/v1.0.0/schema.json"
+  ]
+}

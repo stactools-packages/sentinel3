@@ -1,0 +1,1149 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "id": "S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002",
+  "properties": {
+    "sat:platform_international_designator": "2018-039A",
+    "sat:orbit_state": "ascending",
+    "sat:absolute_orbit": 17013,
+    "sat:relative_orbit": 186,
+    "eo:cloud_cover": 51.0,
+    "start_datetime": "2021-07-31 21:43:24.821272+00:00",
+    "end_datetime": "2021-07-31 22:27:41.127860+00:00",
+    "instrument": [
+      "OLCI"
+    ],
+    "s3:mode": "EO",
+    "s3:productType": "OL_2_LRR___",
+    "s3:gsd": 300,
+    "s3:salineWaterPixels_percentage": 35.0,
+    "s3:coastalPixels_percentage": 0.332161,
+    "s3:freshInlandWaterPixels_percentage": 0.0,
+    "s3:tidalRegionPixels_percentage": 0.0,
+    "s3:landPixels_percentage": 1.0,
+    "s3:invalidPixels_percentage": 4.0,
+    "s3:cosmeticPixels_percentage": 0.0,
+    "s3:duplicatedPixels_percentage": 0.0,
+    "s3:saturatedPixels_percentage": 0.0,
+    "s3:dubiousSamples_percentage": 0.0,
+    "s3:shape": [
+      1217,
+      15092
+    ],
+    "providers": [
+      {
+        "name": "ESA",
+        "roles": [
+          "producer",
+          "processor",
+          "licensor"
+        ],
+        "url": "https://earth.esa.int/web/guest/home"
+      }
+    ],
+    "platform": "Sentinel-3B",
+    "constellation": "Sentinel-3",
+    "datetime": "2021-07-31T22:05:32.974566Z"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          148.569,
+          -49.7121
+        ],
+        [
+          149.418,
+          -49.9805
+        ],
+        [
+          150.288,
+          -50.2529
+        ],
+        [
+          151.169,
+          -50.5186
+        ],
+        [
+          152.058,
+          -50.7775
+        ],
+        [
+          152.958,
+          -51.0294
+        ],
+        [
+          153.867,
+          -51.2744
+        ],
+        [
+          154.797,
+          -51.5153
+        ],
+        [
+          155.724,
+          -51.7453
+        ],
+        [
+          156.66,
+          -51.9681
+        ],
+        [
+          157.594,
+          -52.187
+        ],
+        [
+          158.549,
+          -52.3945
+        ],
+        [
+          159.513,
+          -52.5941
+        ],
+        [
+          160.501,
+          -52.7886
+        ],
+        [
+          161.482,
+          -52.9719
+        ],
+        [
+          162.471,
+          -53.147
+        ],
+        [
+          163.455,
+          -53.3106
+        ],
+        [
+          164.46,
+          -53.4691
+        ],
+        [
+          165.471,
+          -53.619
+        ],
+        [
+          166.493,
+          -53.7609
+        ],
+        [
+          166.978,
+          -52.4646
+        ],
+        [
+          167.612,
+          -50.6864
+        ],
+        [
+          168.213,
+          -48.9056
+        ],
+        [
+          168.786,
+          -47.1225
+        ],
+        [
+          169.334,
+          -45.3375
+        ],
+        [
+          169.862,
+          -43.5511
+        ],
+        [
+          170.37,
+          -41.762
+        ],
+        [
+          170.862,
+          -39.9715
+        ],
+        [
+          171.339,
+          -38.1797
+        ],
+        [
+          171.803,
+          -36.3863
+        ],
+        [
+          172.256,
+          -34.5911
+        ],
+        [
+          172.699,
+          -32.7948
+        ],
+        [
+          173.133,
+          -30.9978
+        ],
+        [
+          173.559,
+          -29.1989
+        ],
+        [
+          173.979,
+          -27.3991
+        ],
+        [
+          174.392,
+          -25.5983
+        ],
+        [
+          174.801,
+          -23.7966
+        ],
+        [
+          175.205,
+          -21.9938
+        ],
+        [
+          175.606,
+          -20.1903
+        ],
+        [
+          176.004,
+          -18.3859
+        ],
+        [
+          176.399,
+          -16.581
+        ],
+        [
+          176.792,
+          -14.7754
+        ],
+        [
+          177.185,
+          -12.9692
+        ],
+        [
+          177.577,
+          -11.1624
+        ],
+        [
+          177.968,
+          -9.35551
+        ],
+        [
+          178.361,
+          -7.5483
+        ],
+        [
+          178.754,
+          -5.74062
+        ],
+        [
+          179.148,
+          -3.93279
+        ],
+        [
+          179.544,
+          -2.12503
+        ],
+        [
+          179.943,
+          -0.317231
+        ],
+        [
+          -179.655,
+          1.49047
+        ],
+        [
+          -179.249,
+          3.2979
+        ],
+        [
+          -178.84,
+          5.10503
+        ],
+        [
+          -178.425,
+          6.91188
+        ],
+        [
+          -178.006,
+          8.71825
+        ],
+        [
+          -177.581,
+          10.5238
+        ],
+        [
+          -177.148,
+          12.3288
+        ],
+        [
+          -176.709,
+          14.1336
+        ],
+        [
+          -176.261,
+          15.9367
+        ],
+        [
+          -175.804,
+          17.7382
+        ],
+        [
+          -175.338,
+          19.5397
+        ],
+        [
+          -174.861,
+          21.3393
+        ],
+        [
+          -174.371,
+          23.1376
+        ],
+        [
+          -173.869,
+          24.9342
+        ],
+        [
+          -173.352,
+          26.7289
+        ],
+        [
+          -172.819,
+          28.5219
+        ],
+        [
+          -172.269,
+          30.3126
+        ],
+        [
+          -171.7,
+          32.1009
+        ],
+        [
+          -171.109,
+          33.8867
+        ],
+        [
+          -170.495,
+          35.6696
+        ],
+        [
+          -169.855,
+          37.4495
+        ],
+        [
+          -169.187,
+          39.2257
+        ],
+        [
+          -168.486,
+          40.9983
+        ],
+        [
+          -167.751,
+          42.7668
+        ],
+        [
+          -166.975,
+          44.5305
+        ],
+        [
+          -166.154,
+          46.2891
+        ],
+        [
+          -165.284,
+          48.0419
+        ],
+        [
+          -164.357,
+          49.7883
+        ],
+        [
+          -163.366,
+          51.5275
+        ],
+        [
+          -162.302,
+          53.2583
+        ],
+        [
+          -161.154,
+          54.9797
+        ],
+        [
+          -159.91,
+          56.6904
+        ],
+        [
+          -158.555,
+          58.3887
+        ],
+        [
+          -157.071,
+          60.0719
+        ],
+        [
+          -155.436,
+          61.7387
+        ],
+        [
+          -153.625,
+          63.386
+        ],
+        [
+          -151.603,
+          65.0081
+        ],
+        [
+          -149.332,
+          66.6014
+        ],
+        [
+          -146.764,
+          68.1603
+        ],
+        [
+          -143.838,
+          69.6758
+        ],
+        [
+          -140.484,
+          71.1379
+        ],
+        [
+          -136.614,
+          72.5334
+        ],
+        [
+          -132.129,
+          73.8449
+        ],
+        [
+          -126.923,
+          75.0507
+        ],
+        [
+          -120.893,
+          76.1232
+        ],
+        [
+          -113.971,
+          77.0291
+        ],
+        [
+          -106.163,
+          77.7319
+        ],
+        [
+          -97.5999,
+          78.195
+        ],
+        [
+          -88.559,
+          78.39
+        ],
+        [
+          -79.4363,
+          78.3033
+        ],
+        [
+          -70.6475,
+          77.9412
+        ],
+        [
+          -62.5245,
+          77.3267
+        ],
+        [
+          -55.2546,
+          76.495
+        ],
+        [
+          -48.8851,
+          75.4825
+        ],
+        [
+          -43.3711,
+          74.3247
+        ],
+        [
+          -38.6207,
+          73.0512
+        ],
+        [
+          -34.5258,
+          71.6859
+        ],
+        [
+          -32.9665,
+          72.0894
+        ],
+        [
+          -31.3753,
+          72.4707
+        ],
+        [
+          -29.718,
+          72.8385
+        ],
+        [
+          -28.0118,
+          73.1895
+        ],
+        [
+          -26.2112,
+          73.5291
+        ],
+        [
+          -24.3336,
+          73.8535
+        ],
+        [
+          -22.3564,
+          74.1653
+        ],
+        [
+          -20.3343,
+          74.4541
+        ],
+        [
+          -18.235,
+          74.7244
+        ],
+        [
+          -16.0762,
+          74.9668
+        ],
+        [
+          -13.8419,
+          75.195
+        ],
+        [
+          -11.5428,
+          75.4011
+        ],
+        [
+          -9.15441,
+          75.5856
+        ],
+        [
+          -6.73601,
+          75.7444
+        ],
+        [
+          -4.26821,
+          75.8783
+        ],
+        [
+          -1.75833,
+          75.9866
+        ],
+        [
+          0.785405,
+          76.0687
+        ],
+        [
+          3.35425,
+          76.1241
+        ],
+        [
+          5.90387,
+          76.1565
+        ],
+        [
+          5.73389,
+          77.9305
+        ],
+        [
+          5.59653,
+          79.7038
+        ],
+        [
+          5.51202,
+          81.4772
+        ],
+        [
+          5.52321,
+          83.2504
+        ],
+        [
+          5.72755,
+          85.0225
+        ],
+        [
+          6.45246,
+          86.7942
+        ],
+        [
+          9.60061,
+          88.5626
+        ],
+        [
+          158.93,
+          89.6231
+        ],
+        [
+          178.717,
+          87.8777
+        ],
+        [
+          -179.644,
+          86.1074
+        ],
+        [
+          -179.193,
+          84.3351
+        ],
+        [
+          -179.085,
+          82.5623
+        ],
+        [
+          -179.118,
+          80.7892
+        ],
+        [
+          -179.225,
+          79.0159
+        ],
+        [
+          -179.377,
+          77.242
+        ],
+        [
+          -179.557,
+          75.4679
+        ],
+        [
+          -179.755,
+          73.6934
+        ],
+        [
+          -179.968,
+          71.9181
+        ],
+        [
+          179.81,
+          70.142
+        ],
+        [
+          179.579,
+          68.3666
+        ],
+        [
+          179.34,
+          66.5909
+        ],
+        [
+          179.099,
+          64.8123
+        ],
+        [
+          178.853,
+          63.0349
+        ],
+        [
+          178.601,
+          61.257
+        ],
+        [
+          178.347,
+          59.4777
+        ],
+        [
+          178.089,
+          57.6982
+        ],
+        [
+          177.828,
+          55.9178
+        ],
+        [
+          177.564,
+          54.1368
+        ],
+        [
+          177.298,
+          52.3549
+        ],
+        [
+          177.028,
+          50.5724
+        ],
+        [
+          176.756,
+          48.7894
+        ],
+        [
+          176.482,
+          47.0054
+        ],
+        [
+          176.204,
+          45.2209
+        ],
+        [
+          175.924,
+          43.4354
+        ],
+        [
+          175.641,
+          41.6496
+        ],
+        [
+          175.355,
+          39.863
+        ],
+        [
+          175.066,
+          38.0755
+        ],
+        [
+          174.774,
+          36.2875
+        ],
+        [
+          174.479,
+          34.4988
+        ],
+        [
+          174.181,
+          32.7095
+        ],
+        [
+          173.879,
+          30.9198
+        ],
+        [
+          173.574,
+          29.1293
+        ],
+        [
+          173.264,
+          27.3385
+        ],
+        [
+          172.952,
+          25.5475
+        ],
+        [
+          172.634,
+          23.7559
+        ],
+        [
+          172.313,
+          21.9641
+        ],
+        [
+          171.988,
+          20.171
+        ],
+        [
+          171.657,
+          18.3799
+        ],
+        [
+          171.321,
+          16.5879
+        ],
+        [
+          170.981,
+          14.7942
+        ],
+        [
+          170.634,
+          13.0016
+        ],
+        [
+          170.282,
+          11.2096
+        ],
+        [
+          169.924,
+          9.41749
+        ],
+        [
+          169.559,
+          7.62549
+        ],
+        [
+          169.188,
+          5.83413
+        ],
+        [
+          168.809,
+          4.04321
+        ],
+        [
+          168.423,
+          2.25294
+        ],
+        [
+          168.028,
+          0.463333
+        ],
+        [
+          167.625,
+          -1.32533
+        ],
+        [
+          167.213,
+          -3.11314
+        ],
+        [
+          166.791,
+          -4.89994
+        ],
+        [
+          166.359,
+          -6.68515
+        ],
+        [
+          165.916,
+          -8.46893
+        ],
+        [
+          165.46,
+          -10.2515
+        ],
+        [
+          164.993,
+          -12.0321
+        ],
+        [
+          164.512,
+          -13.8107
+        ],
+        [
+          164.016,
+          -15.5873
+        ],
+        [
+          163.505,
+          -17.3616
+        ],
+        [
+          162.977,
+          -19.1331
+        ],
+        [
+          162.431,
+          -20.9021
+        ],
+        [
+          161.867,
+          -22.6679
+        ],
+        [
+          161.281,
+          -24.4303
+        ],
+        [
+          160.673,
+          -26.1892
+        ],
+        [
+          160.041,
+          -27.9445
+        ],
+        [
+          159.382,
+          -29.6939
+        ],
+        [
+          158.694,
+          -31.4398
+        ],
+        [
+          157.975,
+          -33.1813
+        ],
+        [
+          157.222,
+          -34.916
+        ],
+        [
+          156.432,
+          -36.6444
+        ],
+        [
+          155.601,
+          -38.3664
+        ],
+        [
+          154.725,
+          -40.081
+        ],
+        [
+          153.799,
+          -41.7865
+        ],
+        [
+          152.818,
+          -43.4833
+        ],
+        [
+          151.777,
+          -45.1701
+        ],
+        [
+          150.668,
+          -46.8452
+        ],
+        [
+          149.485,
+          -48.5075
+        ],
+        [
+          148.569,
+          -49.7121
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "license",
+      "href": "https://sentinel.esa.int/documents/247904/690755/Sentinel_Data_Legal_Notice"
+    },
+    {
+      "rel": "self",
+      "href": "/opt/stactools-sentinel3/examples/S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.json",
+      "type": "application/json"
+    }
+  ],
+  "assets": {
+    "safe-manifest": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/xfdumanifest.xml",
+      "type": "application/xml",
+      "roles": [
+        "metadata"
+      ]
+    },
+    "ogvi": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/ogvi.nc",
+      "type": "application/x-netcdf",
+      "description": "OLCI global Vegetal Index",
+      "resolution": [
+        1080,
+        1176
+      ],
+      "eo:bands": [
+        {
+          "name": "Oa03",
+          "description": "Band 3 - Chlorophyll absorption maximum, biogeochemistry, vegetation",
+          "center_wavelength": 442.5,
+          "band_width": 10
+        },
+        {
+          "name": "Oa10",
+          "description": "Band 10 - Chlorophyll fluorescence peak, red edge",
+          "center_wavelength": 681.25,
+          "band_width": 7.5
+        },
+        {
+          "name": "Oa17",
+          "description": "Band 17 - Atmospheric / aerosol correction, clouds, pixel co-registration",
+          "center_wavelength": 865,
+          "band_width": 20
+        }
+      ],
+      "file:checksum": "62641c090d69f1e3808b4f3af9a16bdd",
+      "file:size": "355069",
+      "file:local_path": "./ogvi.nc",
+      "roles": [
+        "data"
+      ]
+    },
+    "otci": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/otci.nc",
+      "type": "application/x-netcdf",
+      "description": "OLCI Terrestrial Chlorophyll Index",
+      "resolution": [
+        1080,
+        1176
+      ],
+      "eo:bands": [
+        {
+          "name": "Oa10",
+          "description": "Band 10 - Chlorophyll fluorescence peak, red edge",
+          "center_wavelength": 681.25,
+          "band_width": 7.5
+        },
+        {
+          "name": "Oa11",
+          "description": "Band 11 - Chlorophyll fluorescence baseline, red edge transition",
+          "center_wavelength": 708.75,
+          "band_width": 10
+        },
+        {
+          "name": "Oa12",
+          "description": "Band 12 - O2 absorption / clouds, vegetation",
+          "center_wavelength": 753.75,
+          "band_width": 7.5
+        }
+      ],
+      "file:checksum": "0218d562d3eacb20843fc06ef3f7a1b0",
+      "file:size": "547075",
+      "file:local_path": "./otci.nc",
+      "roles": [
+        "data"
+      ]
+    },
+    "iwv": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/iwv.nc",
+      "type": "application/x-netcdf",
+      "description": "Integrated water vapour column",
+      "resolution": [
+        1080,
+        1176
+      ],
+      "eo:bands": [
+        {
+          "name": "Oa18",
+          "description": "Band 18 - Water vapour absorption reference. Common reference band with SLSTR. Vegetation monitoring",
+          "center_wavelength": 885,
+          "band_width": 10
+        },
+        {
+          "name": "Oa19",
+          "description": "Band 19 - Water vapour absorption, vegetation monitoring (maximum REFLECTANCE)",
+          "center_wavelength": 900,
+          "band_width": 10
+        }
+      ],
+      "file:checksum": "7943106a95ac4d6aea3827d4043b4e66",
+      "file:size": "10579229",
+      "file:local_path": "./iwv.nc",
+      "roles": [
+        "data"
+      ]
+    },
+    "rcOgvi": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/rc_ogvi.nc",
+      "type": "application/x-netcdf",
+      "description": "Rectified Reflectance",
+      "resolution": [
+        1080,
+        1176
+      ],
+      "eo:bands": [
+        {
+          "name": "Oa10",
+          "description": "Band 10 - Chlorophyll fluorescence peak, red edge",
+          "center_wavelength": 681.25,
+          "band_width": 7.5
+        },
+        {
+          "name": "Oa17",
+          "description": "Band 17 - Atmospheric / aerosol correction, clouds, pixel co-registration",
+          "center_wavelength": 865,
+          "band_width": 20
+        }
+      ],
+      "file:checksum": "a1097d61a25557e04836e29cde961b56",
+      "file:size": "1258173",
+      "file:local_path": "./rc_ogvi.nc",
+      "roles": [
+        "data"
+      ]
+    },
+    "lqsf": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/lqsf.nc",
+      "type": "application/x-netcdf",
+      "description": "Land Quality and Science Flags",
+      "resolution": [
+        1080,
+        1176
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "timeCoordinates": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/time_coordinates.nc",
+      "type": "application/x-netcdf",
+      "description": "Time Coordinates Annotations",
+      "resolution": [
+        1080,
+        1176
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "geoCoordinates": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/geo_coordinates.nc",
+      "type": "application/x-netcdf",
+      "description": "Geo Coordinates Annotations",
+      "resolution": [
+        1080,
+        1176
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "tieGeoCoordinates": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/tie_geo_coordinates.nc",
+      "type": "application/x-netcdf",
+      "description": "Tie-Point Geo Coordinate Annotations",
+      "resolution": [
+        1080,
+        1176
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "tieGeometries": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/tie_geometries.nc",
+      "type": "application/x-netcdf",
+      "description": "Tie-Point Geometries Annotations",
+      "resolution": [
+        1080,
+        1176
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "tieMeteo": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/tie_meteo.nc",
+      "type": "application/x-netcdf",
+      "description": "Tie-Point Meteo Annotations",
+      "resolution": [
+        1080,
+        1176
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "instrument": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/instrument_data.nc",
+      "type": "application/x-netcdf",
+      "description": "Instrument Annotation",
+      "resolution": [
+        1080,
+        1176
+      ],
+      "roles": [
+        "data"
+      ]
+    }
+  },
+  "bbox": [
+    -179.968,
+    -53.7609,
+    179.943,
+    89.6231
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/sat/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/eo/v1.0.0/schema.json"
+  ]
+}

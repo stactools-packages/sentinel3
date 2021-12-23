@@ -7,15 +7,15 @@ INSPIRE_METADATA_ASSET_KEY = "inspire-metadata"
 SAFE_MANIFEST_ASSET_KEY = "safe-manifest"
 PRODUCT_METADATA_ASSET_KEY = "product-metadata"
 
+MANIFEST_FILENAME = "xfdumanifest.xml"
+
 SENTINEL_LICENSE = Link(
     rel="license",
     target="https://sentinel.esa.int/documents/" +
     "247904/690755/Sentinel_Data_Legal_Notice",
 )
 
-SENTINEL_CONSTELLATION = "Sentinel 3"
-
-SENTINEL_INSTRUMENTS = ["slstr"]
+SENTINEL_CONSTELLATION = "Sentinel-3"
 
 SENTINEL_PROVIDER = pystac.Provider(
     name="ESA",
@@ -26,8 +26,6 @@ SENTINEL_PROVIDER = pystac.Provider(
     ],
     url="https://earth.esa.int/web/guest/home",
 )
-
-SAFE_MANIFEST_ASSET_KEY = "safe-manifest"
 
 SENTINEL_SLSTR_BANDS = {
     "S01":
@@ -573,8 +571,102 @@ SLSTR_BANDS_TO_RESOLUTIONS = {
     ],
 }
 
-SENTINEL_LICENSE = Link(
-    rel="license",
-    target="https://sentinel.esa.int/documents/" +
-    "247904/690755/Sentinel_Data_Legal_Notice",
-)
+SYNERGY_SYN_ASSET_KEYS = [
+    "Syn_Oa01_reflectance_Data", "Syn_Oa02_reflectance_Data",
+    "Syn_Oa03_reflectance_Data", "Syn_Oa04_reflectance_Data",
+    "Syn_Oa05_reflectance_Data", "Syn_Oa06_reflectance_Data",
+    "Syn_Oa07_reflectance_Data", "Syn_Oa08_reflectance_Data",
+    "Syn_Oa09_reflectance_Data", "Syn_Oa10_reflectance_Data",
+    "Syn_Oa11_reflectance_Data", "Syn_Oa12_reflectance_Data",
+    "Syn_Oa16_reflectance_Data", "Syn_Oa17_reflectance_Data",
+    "Syn_Oa18_reflectance_Data", "Syn_Oa21_reflectance_Data",
+    "Syn_S1N_reflectance_Data", "Syn_S2N_reflectance_Data",
+    "Syn_S3N_reflectance_Data", "Syn_S5N_reflectance_Data",
+    "Syn_S6N_reflectance_Data", "Syn_S1O_reflectance_Data",
+    "Syn_S2O_reflectance_Data", "Syn_S3O_reflectance_Data",
+    "Syn_S5O_reflectance_Data", "Syn_S6O_reflectance_Data", "Syn_ATO550_Data",
+    "Syn_Angstrom_exp550_Data", "Syn_SDR_removed_pixels_Data", "Syn_AMIN_Data",
+    "Syn_flags_Data", "geolocation_Data", "time_Data",
+    "annotations_removed_pixels_Data", "tiepoints_olci_Data",
+    "tiepoints_slstr_n_Data", "tiepoints_slstr_o_Data", "tiepoints_meteo_Data"
+]
+
+SYNERGY_V10_VG1_ASSET_KEYS = [
+    "b0Data", "b2Data", "b3Data", "mirData", "ndviData", "vaaData", "vzaData",
+    "saaData", "szaData", "agData", "ogData", "wvgData", "tgData", "smData"
+]
+
+SYNERGY_VGP_ASSET_KEYS = [
+    "b0Data", "b2Data", "b3Data", "mirData", "vaaData", "vzaData", "saaData",
+    "szaData", "agData", "ogData", "wvgData", "smData"
+]
+
+OLCI_L1_ASSET_KEYS = [
+    "Oa01_radianceData", "Oa02_radianceData", "Oa03_radianceData",
+    "Oa04_radianceData", "Oa05_radianceData", "Oa06_radianceData",
+    "Oa07_radianceData", "Oa08_radianceData", "Oa09_radianceData",
+    "Oa10_radianceData", "Oa11_radianceData", "Oa12_radianceData",
+    "Oa13_radianceData", "Oa14_radianceData", "Oa15_radianceData",
+    "Oa16_radianceData", "Oa17_radianceData", "Oa18_radianceData",
+    "Oa19_radianceData", "Oa20_radianceData", "Oa21_radianceData"
+]
+
+OLCI_L2_LAND_ASSET_KEYS = [
+    "ogviData", "otciData", "iwvData", "rcOgviData", "lqsfData",
+    "timeCoordinatesData", "geoCoordinatesData", "tieGeoCoordinatesData",
+    "tieGeometriesData", "tieMeteoData", "instrumentDataData"
+]
+
+OLCI_L2_WATER_ASSET_KEYS = [
+    "Oa01_reflectanceData", "Oa02_reflectanceData", "Oa03_reflectanceData",
+    "Oa04_reflectanceData", "Oa05_reflectanceData", "Oa06_reflectanceData",
+    "Oa07_reflectanceData", "Oa08_reflectanceData", "Oa09_reflectanceData",
+    "Oa10_reflectanceData", "Oa11_reflectanceData", "Oa12_reflectanceData",
+    "Oa16_reflectanceData", "Oa17_reflectanceData", "Oa18_reflectanceData",
+    "Oa21_reflectanceData", "chlNnData", "chlOc4meData", "iopNnData",
+    "iwvData", "parData", "trspData", "tsmNnData", "wAerData",
+    "geoCoordinatesData", "instrumentDataData", "tieGeoCoordinatesData",
+    "tieGeometriesData", "tieMeteoData", "timeCoordinatesData", "wqsfData"
+]
+
+SLSTR_L1_ASSET_KEYS = [
+    "SLSTR_S1_RAD_AN_Data", "SLSTR_S2_RAD_AN_Data", "SLSTR_S3_RAD_AN_Data",
+    "SLSTR_S4_RAD_AN_Data", "SLSTR_S5_RAD_AN_Data", "SLSTR_S6_RAD_AN_Data",
+    "SLSTR_S7_BT_IN_Data", "SLSTR_S8_BT_IN_Data", "SLSTR_S9_BT_IN_Data",
+    "SLSTR_F1_BT_FN_Data", "SLSTR_F2_BT_IN_Data"
+]
+
+SLSTR_L2_FRP_KEYS = [
+    "FRP_IN_Data", "SLSTR_CARTESIAN_FN_Data", "SLSTR_CARTESIAN_IN_Data",
+    "SLSTR_CARTESIAN_TX_Data", "SLSTR_FLAGS_FN_Data", "SLSTR_FLAGS_IN_Data",
+    "SLSTR_GEODETIC_FN_Data", "SLSTR_GEODETIC_IN_Data",
+    "SLSTR_GEODETIC_TX_Data", "SLSTR_GEOMETRY_TN_Data",
+    "SLSTR_INDICES_FN_Data", "SLSTR_INDICES_IN_Data", "SLSTR_MET_TX_Data",
+    "SLSTR_TIME_IN_Data"
+]
+
+SLSTR_L2_LST_KEYS = [
+    "LST_IN_Data", "LST_ANCILLARY_DS_Data", "SLSTR_FLAGS_IN_Data",
+    "SLSTR_INDICES_IN_Data", "SLSTR_TIME_IN_Data", "SLSTR_GEODETIC_IN_Data",
+    "SLSTR_CARTESIAN_IN_Data", "SLSTR_GEOMETRY_TN_Data",
+    "SLSTR_GEODETIC_TX_Data", "SLSTR_CARTESIAN_TX_Data", "SLSTR_MET_TX_Data"
+]
+
+SRAL_L2_LAN_WAT_KEYS = [
+    "standardMeasurementData", "enhancedMeasurementData",
+    "reducedMeasurementData"
+]
+
+SYNERGY_L2_A550_T550_BANDS = [
+    "S01", "S02", "S03", "S05", "S06", "Oa01", "Oa02", "Oa03", "Oa04", "Oa05",
+    "Oa06", "Oa07", "Oa08", "Oa09", "Oa10", "Oa11", "Oa12", "Oa16", "Oa17",
+    "Oa18", "Oa21"
+]
+
+SYNERGY_L2_SDR_BANDS = [
+    "S01", "S02", "S03", "S04", "S06", "Oa01", "Oa02", "Oa03", "Oa04", "Oa05",
+    "Oa06", "Oa07", "Oa08", "Oa09", "Oa10", "Oa11", "Oa12", "Oa13", "Oa16",
+    "Oa17", "Oa18", "Oa19", "Oa21"
+]
+
+SENTINEL_OLCI_SLSTR_BANDS = {**SENTINEL_SLSTR_BANDS, **SENTINEL_OLCI_BANDS}

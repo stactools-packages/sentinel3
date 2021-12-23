@@ -1,0 +1,624 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "id": "S3A_SL_1_RBT____20210930T220914_20210930T221214_20211002T102150_0180_077_043_5400_LN2_O_NT_004",
+  "properties": {
+    "sat:platform_international_designator": "2016-011A",
+    "sat:orbit_state": "ascending",
+    "sat:absolute_orbit": 29276,
+    "sat:relative_orbit": 43,
+    "eo:cloud_cover": 80.216007,
+    "start_datetime": "2021-09-30 22:09:13.843538+00:00",
+    "end_datetime": "2021-09-30 22:12:13.843538+00:00",
+    "instrument": [
+      "SLSTR"
+    ],
+    "s3:mode": "EO",
+    "s3:productType": "SL_1_RBT___",
+    "s3:gsd": {
+      "S1-S6": 500,
+      "S7-S9 and F1-F2": 1000
+    },
+    "s3:salineWaterPixels_percentage": 100.0,
+    "s3:landPixels_percentage": 0.0,
+    "s3:coastalPixels_percentage": 0.0,
+    "s3:freshInlandWaterPixels_percentage": 0.0,
+    "s3:tidalRegionPixels_percentage": 0.0,
+    "s3:cosmeticPixels_percentage": 28.085521,
+    "s3:duplicatedPixels_percentage": 5.105382,
+    "s3:saturatedPixels_percentage": 0.0,
+    "s3:outOfRangePixels_percentage": 0.0,
+    "s3:shape": [
+      1500,
+      1200
+    ],
+    "providers": [
+      {
+        "name": "ESA",
+        "roles": [
+          "producer",
+          "processor",
+          "licensor"
+        ],
+        "url": "https://earth.esa.int/web/guest/home"
+      }
+    ],
+    "platform": "Sentinel-3A",
+    "constellation": "Sentinel-3",
+    "datetime": "2021-09-30T22:10:43.843538Z"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -3.34105,
+          -29.2004
+        ],
+        [
+          -3.14775,
+          -29.1694
+        ],
+        [
+          -2.63196,
+          -29.0815
+        ],
+        [
+          -2.12184,
+          -28.9917
+        ],
+        [
+          -1.60927,
+          -28.8968
+        ],
+        [
+          -1.10209,
+          -28.8017
+        ],
+        [
+          -0.582995,
+          -28.706
+        ],
+        [
+          -0.078604,
+          -28.6056
+        ],
+        [
+          0.430418,
+          -28.5087
+        ],
+        [
+          0.942356,
+          -28.4092
+        ],
+        [
+          1.44768,
+          -28.2998
+        ],
+        [
+          1.95302,
+          -28.1974
+        ],
+        [
+          2.45924,
+          -28.0931
+        ],
+        [
+          2.96457,
+          -27.9764
+        ],
+        [
+          3.4684,
+          -27.8678
+        ],
+        [
+          3.96776,
+          -27.7562
+        ],
+        [
+          4.46404,
+          -27.6409
+        ],
+        [
+          4.96181,
+          -27.523
+        ],
+        [
+          5.46484,
+          -27.4031
+        ],
+        [
+          5.9565,
+          -27.2853
+        ],
+        [
+          6.45691,
+          -27.1652
+        ],
+        [
+          6.95527,
+          -27.0407
+        ],
+        [
+          7.44117,
+          -26.9151
+        ],
+        [
+          7.94175,
+          -26.7879
+        ],
+        [
+          8.4405,
+          -26.6617
+        ],
+        [
+          8.92474,
+          -26.523
+        ],
+        [
+          9.41918,
+          -26.3945
+        ],
+        [
+          9.90025,
+          -26.2672
+        ],
+        [
+          10.3952,
+          -26.1252
+        ],
+        [
+          10.8724,
+          -25.9801
+        ],
+        [
+          11.3615,
+          -25.8488
+        ],
+        [
+          12.2851,
+          -28.3902
+        ],
+        [
+          13.2833,
+          -30.9648
+        ],
+        [
+          14.3487,
+          -33.5282
+        ],
+        [
+          15.4866,
+          -36.0703
+        ],
+        [
+          15.4906,
+          -36.0788
+        ],
+        [
+          14.9557,
+          -36.2334
+        ],
+        [
+          14.436,
+          -36.4029
+        ],
+        [
+          13.891,
+          -36.5514
+        ],
+        [
+          13.3531,
+          -36.7066
+        ],
+        [
+          12.8098,
+          -36.8575
+        ],
+        [
+          12.2821,
+          -37.0107
+        ],
+        [
+          11.7296,
+          -37.157
+        ],
+        [
+          11.1819,
+          -37.2968
+        ],
+        [
+          10.6419,
+          -37.4396
+        ],
+        [
+          10.087,
+          -37.5807
+        ],
+        [
+          9.52853,
+          -37.7164
+        ],
+        [
+          8.97901,
+          -37.8489
+        ],
+        [
+          8.4297,
+          -37.9835
+        ],
+        [
+          7.871,
+          -38.1138
+        ],
+        [
+          7.31342,
+          -38.2407
+        ],
+        [
+          6.75158,
+          -38.3632
+        ],
+        [
+          6.18386,
+          -38.4818
+        ],
+        [
+          5.62219,
+          -38.597
+        ],
+        [
+          5.05115,
+          -38.7106
+        ],
+        [
+          4.48209,
+          -38.8284
+        ],
+        [
+          3.90725,
+          -38.9363
+        ],
+        [
+          3.34114,
+          -39.0464
+        ],
+        [
+          2.76379,
+          -39.1479
+        ],
+        [
+          2.18777,
+          -39.2443
+        ],
+        [
+          1.61306,
+          -39.3458
+        ],
+        [
+          1.03668,
+          -39.4425
+        ],
+        [
+          0.44949,
+          -39.5315
+        ],
+        [
+          -0.138573,
+          -39.6244
+        ],
+        [
+          -0.713623,
+          -39.7153
+        ],
+        [
+          -0.933648,
+          -39.7421
+        ],
+        [
+          -0.947238,
+          -39.735
+        ],
+        [
+          -1.57213,
+          -37.1009
+        ],
+        [
+          -2.18157,
+          -34.4555
+        ],
+        [
+          -2.77682,
+          -31.8079
+        ],
+        [
+          -3.34105,
+          -29.2004
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "license",
+      "href": "https://sentinel.esa.int/documents/247904/690755/Sentinel_Data_Legal_Notice"
+    },
+    {
+      "rel": "self",
+      "href": "/opt/stactools-sentinel3/examples/S3A_SL_1_RBT____20210930T220914_20210930T221214_20211002T102150_0180_077_043_5400_LN2_O_NT_004.json",
+      "type": "application/json"
+    }
+  ],
+  "assets": {
+    "safe-manifest": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_1_RBT____20210930T220914_20210930T221214_20211002T102150_0180_077_043_5400_LN2_O_NT_004.SEN3/xfdumanifest.xml",
+      "type": "application/xml",
+      "roles": [
+        "metadata"
+      ]
+    },
+    "SLSTR_S1_RAD_AN": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_1_RBT____20210930T220914_20210930T221214_20211002T102150_0180_077_043_5400_LN2_O_NT_004.SEN3/S1_radiance_an.nc",
+      "type": "application/x-netcdf",
+      "description": "TOA radiance for channel S1 (A stripe grid, nadir view)",
+      "resolution": [
+        500,
+        500
+      ],
+      "eo:bands": [
+        {
+          "name": "S1",
+          "description": "Band 1 - Cloud screening, vegetation monitoring, aerosol",
+          "center_wavelength": 554.27,
+          "band_width": 19.26
+        }
+      ],
+      "file:checksum": "a313e529a1ca436ad6bb3b5634dce75b",
+      "file:size": "1261116",
+      "file:local_path": "./S1_radiance_an.nc",
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_S2_RAD_AN": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_1_RBT____20210930T220914_20210930T221214_20211002T102150_0180_077_043_5400_LN2_O_NT_004.SEN3/S2_radiance_an.nc",
+      "type": "application/x-netcdf",
+      "description": "TOA radiance for channel S2 (A stripe grid, nadir view)",
+      "resolution": [
+        500,
+        500
+      ],
+      "eo:bands": [
+        {
+          "name": "S2",
+          "description": "Band 2 - NDVI, vegetation monitoring, aerosol",
+          "center_wavelength": 659.47,
+          "band_width": 19.25
+        }
+      ],
+      "file:checksum": "27ebdbc9b98bfee612b6613587073613",
+      "file:size": "1261051",
+      "file:local_path": "./S2_radiance_an.nc",
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_S3_RAD_AN": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_1_RBT____20210930T220914_20210930T221214_20211002T102150_0180_077_043_5400_LN2_O_NT_004.SEN3/S3_radiance_an.nc",
+      "type": "application/x-netcdf",
+      "description": "TOA radiance for channel S3 (A stripe grid, nadir view)",
+      "resolution": [
+        500,
+        500
+      ],
+      "eo:bands": [
+        {
+          "name": "S3",
+          "description": "Band 3 - NDVI, cloud flagging, pixel co-registration",
+          "center_wavelength": 868,
+          "band_width": 20.6
+        }
+      ],
+      "file:checksum": "58adb5675ce822273d92bb47f9454799",
+      "file:size": "1261051",
+      "file:local_path": "./S3_radiance_an.nc",
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_S4_RAD_AN": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_1_RBT____20210930T220914_20210930T221214_20211002T102150_0180_077_043_5400_LN2_O_NT_004.SEN3/S4_radiance_an.nc",
+      "type": "application/x-netcdf",
+      "description": "TOA radiance for channel S4 (A stripe grid, nadir view)",
+      "resolution": [
+        500,
+        500
+      ],
+      "eo:bands": [
+        {
+          "name": "S4",
+          "description": "Band 4 - Cirrus detection over land",
+          "center_wavelength": 1374.8,
+          "band_width": 20.8
+        }
+      ],
+      "file:checksum": "4356f7430862dfcd4964e32f30727af9",
+      "file:size": "1262286",
+      "file:local_path": "./S4_radiance_an.nc",
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_S5_RAD_AN": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_1_RBT____20210930T220914_20210930T221214_20211002T102150_0180_077_043_5400_LN2_O_NT_004.SEN3/S5_radiance_an.nc",
+      "type": "application/x-netcdf",
+      "description": "TOA radiance for channel S5 (A stripe grid, nadir view)",
+      "resolution": [
+        500,
+        500
+      ],
+      "eo:bands": [
+        {
+          "name": "S5",
+          "description": "Band 5 - Cloud clearing, ice, snow, vegetation monitoring",
+          "center_wavelength": 1613.4,
+          "band_width": 60.68
+        }
+      ],
+      "file:checksum": "eb0e92d37b8d9e5497b9f38d7878a2a3",
+      "file:size": "7872524",
+      "file:local_path": "./S5_radiance_an.nc",
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_S6_RAD_AN": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_1_RBT____20210930T220914_20210930T221214_20211002T102150_0180_077_043_5400_LN2_O_NT_004.SEN3/S6_radiance_an.nc",
+      "type": "application/x-netcdf",
+      "description": "TOA radiance for channel S6 (A stripe grid, nadir view)",
+      "resolution": [
+        500,
+        500
+      ],
+      "eo:bands": [
+        {
+          "name": "S6",
+          "description": "Band 6 - Vegetation state and cloud clearing",
+          "center_wavelength": 2255.7,
+          "band_width": 50.15
+        }
+      ],
+      "file:checksum": "c2ed2a4d01ace0b3a6f715927a3782df",
+      "file:size": "9284922",
+      "file:local_path": "./S6_radiance_an.nc",
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_S7_BT_IN": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_1_RBT____20210930T220914_20210930T221214_20211002T102150_0180_077_043_5400_LN2_O_NT_004.SEN3/S7_BT_in.nc",
+      "type": "application/x-netcdf",
+      "description": "Gridded pixel brightness temperature for channel S7 (1km TIR grid, nadir view)",
+      "resolution": [
+        1000,
+        1000
+      ],
+      "eo:bands": [
+        {
+          "name": "S7",
+          "description": "Band 7 - SST, LST, Active fire",
+          "center_wavelength": 3742,
+          "band_width": 398
+        }
+      ],
+      "file:checksum": "6629456693fa2b6b1251665ea50519a7",
+      "file:size": "2610392",
+      "file:local_path": "./S7_BT_in.nc",
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_S8_BT_IN": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_1_RBT____20210930T220914_20210930T221214_20211002T102150_0180_077_043_5400_LN2_O_NT_004.SEN3/S8_BT_in.nc",
+      "type": "application/x-netcdf",
+      "description": "Gridded pixel brightness temperature for channel S8 (1km TIR grid, nadir view)",
+      "resolution": [
+        1000,
+        1000
+      ],
+      "eo:bands": [
+        {
+          "name": "S8",
+          "description": "Band 8 - SST, LST, Active fire",
+          "center_wavelength": 10854,
+          "band_width": 776
+        }
+      ],
+      "file:checksum": "88c6b95c3540d3c1b7a233be770b59d2",
+      "file:size": "2550053",
+      "file:local_path": "./S8_BT_in.nc",
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_S9_BT_IN": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_1_RBT____20210930T220914_20210930T221214_20211002T102150_0180_077_043_5400_LN2_O_NT_004.SEN3/S9_BT_in.nc",
+      "type": "application/x-netcdf",
+      "description": "Gridded pixel brightness temperature for channel S9 (1km TIR grid, nadir view)",
+      "resolution": [
+        1000,
+        1000
+      ],
+      "eo:bands": [
+        {
+          "name": "S9",
+          "description": "Band 9 - SST, LST",
+          "center_wavelength": 12022.5,
+          "band_width": 905
+        }
+      ],
+      "file:checksum": "fb2c8b6a965e5b30fbd33d7fbe594fdb",
+      "file:size": "2542336",
+      "file:local_path": "./S9_BT_in.nc",
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_F1_BT_FN": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_1_RBT____20210930T220914_20210930T221214_20211002T102150_0180_077_043_5400_LN2_O_NT_004.SEN3/F1_BT_fn.nc",
+      "type": "application/x-netcdf",
+      "description": "Gridded pixel brightness temperature for channel F1 (1km F1 grid, nadir view)",
+      "resolution": [
+        1000,
+        1000
+      ],
+      "eo:bands": [
+        {
+          "name": "F1",
+          "description": "Band 10 - Active fire",
+          "center_wavelength": 3742,
+          "band_width": 398
+        }
+      ],
+      "file:checksum": "b0de0fc89680eb507fb3759496ae50dd",
+      "file:size": "2739389",
+      "file:local_path": "./F1_BT_fn.nc",
+      "roles": [
+        "data"
+      ]
+    },
+    "SLSTR_F2_BT_IN": {
+      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_1_RBT____20210930T220914_20210930T221214_20211002T102150_0180_077_043_5400_LN2_O_NT_004.SEN3/F2_BT_in.nc",
+      "type": "application/x-netcdf",
+      "description": "Gridded pixel brightness temperature for channel F2 (1km TIR grid, nadir view)",
+      "resolution": [
+        1000,
+        1000
+      ],
+      "eo:bands": [
+        {
+          "name": "F2",
+          "description": "Band 11 - Active fire",
+          "center_wavelength": 10854,
+          "band_width": 776
+        }
+      ],
+      "file:checksum": "c005e3777e6d8fc22cf6cec25ec7b9a1",
+      "file:size": "2572775",
+      "file:local_path": "./F2_BT_in.nc",
+      "roles": [
+        "data"
+      ]
+    }
+  },
+  "bbox": [
+    -3.34105,
+    -39.7421,
+    15.4906,
+    -25.8488
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/sat/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/eo/v1.0.0/schema.json"
+  ]
+}
