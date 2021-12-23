@@ -10,9 +10,18 @@
     "eo:cloud_cover": 82.147057,
     "start_datetime": "2021-05-12 14:33:14.765777+00:00",
     "end_datetime": "2021-05-12 15:17:38.420982+00:00",
-    "s3:instrument": "SYNERGY",
+    "instrument": [
+      "SYNERGY"
+    ],
     "s3:mode": "EO",
     "s3:productType": "SY_2_AOD___",
+    "s3:gsd": {
+      "OLCI": 300,
+      "SLSTR": {
+        "S1-S6": 500,
+        "S7-S9 and F1-F2": 1000
+      }
+    },
     "s3:salineWaterPixels_percentage": 72.660328,
     "s3:landPixels_percentage": 27.276878,
     "s3:shape": [
@@ -1432,7 +1441,7 @@
         "metadata"
       ]
     },
-    "NTC_AOD_Data": {
+    "NTC_AOD": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3B_SY_2_AOD____20210512T143315_20210512T151738_20210514T064157_2663_052_196______LN2_O_NT_002.SEN3/NTC_AOD.nc",
       "type": "application/x-netcdf",
       "description": "Global aerosol parameters",
@@ -1478,6 +1487,9 @@
           "band_width": 50
         }
       ],
+      "file:checksum": "453028626dd93f7a69a6d6953e872834",
+      "file:size": "33302097",
+      "file:local_path": "NTC_AOD.nc",
       "roles": [
         "data"
       ]

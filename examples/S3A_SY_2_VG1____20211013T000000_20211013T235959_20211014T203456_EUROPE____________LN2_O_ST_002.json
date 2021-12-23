@@ -10,9 +10,18 @@
     "eo:cloud_cover": 23.811417,
     "start_datetime": "2021-10-13 00:00:00+00:00",
     "end_datetime": "2021-10-13 23:59:59+00:00",
-    "s3:instrument": "SYNERGY",
+    "instrument": [
+      "SYNERGY"
+    ],
     "s3:mode": "EO",
     "s3:productType": "SY_2_VG1___",
+    "s3:gsd": {
+      "OLCI": 300,
+      "SLSTR": {
+        "S1-S6": 500,
+        "S7-S9 and F1-F2": 1000
+      }
+    },
     "s3:snowOrIcePixels_percentage": 0.102883,
     "s3:landPixels_percentage": 46.680979,
     "providers": [
@@ -1244,7 +1253,7 @@
         "metadata"
       ]
     },
-    "b0Data": {
+    "b0": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/B0.nc",
       "type": "application/x-netcdf",
       "description": "Surface Reflectance Data Set associated with VGT-B0 channel",
@@ -1274,11 +1283,14 @@
           "band_width": 20
         }
       ],
+      "file:checksum": "a7b378a6a60061d6e16aeb84e3ac6fef",
+      "file:size": "16807647",
+      "file:local_path": "./B0.nc",
       "roles": [
         "data"
       ]
     },
-    "b2Data": {
+    "b2": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/B2.nc",
       "type": "application/x-netcdf",
       "description": "Surface Reflectance Data Set associated with VGT-B2 channel",
@@ -1308,11 +1320,14 @@
           "band_width": 35
         }
       ],
+      "file:checksum": "30e21231f5d00cf1168331d5f2cff416",
+      "file:size": "17897406",
+      "file:local_path": "./B2.nc",
       "roles": [
         "data"
       ]
     },
-    "b3Data": {
+    "b3": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/B3.nc",
       "type": "application/x-netcdf",
       "description": "Surface Reflectance Data Set associated with VGT-B3 channel",
@@ -1342,11 +1357,14 @@
           "band_width": 55
         }
       ],
+      "file:checksum": "018b5d6af4e81b1920d8f97672bf385a",
+      "file:size": "18780646",
+      "file:local_path": "./B3.nc",
       "roles": [
         "data"
       ]
     },
-    "mirData": {
+    "mir": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/MIR.nc",
       "type": "application/x-netcdf",
       "description": "Surface Reflectance Data Set associated with VGT-MIR channel",
@@ -1376,11 +1394,14 @@
           "band_width": 85
         }
       ],
+      "file:checksum": "4e9103c08e01686abb298f3228acaee4",
+      "file:size": "19040570",
+      "file:local_path": "./MIR.nc",
       "roles": [
         "data"
       ]
     },
-    "ndviData": {
+    "ndvi": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/NDVI.nc",
       "type": "application/x-netcdf",
       "description": "Normalised difference vegetation index",
@@ -1416,11 +1437,14 @@
           "band_width": 55
         }
       ],
+      "file:checksum": "3213f8bc66ec2d79e1680731925c5eb8",
+      "file:size": "9662306",
+      "file:local_path": "./NDVI.nc",
       "roles": [
         "data"
       ]
     },
-    "vaaData": {
+    "vaa": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/vaa.nc",
       "type": "application/x-netcdf",
       "description": "View azimuth angle data",
@@ -1442,11 +1466,14 @@
         1000,
         1000
       ],
+      "file:checksum": "e1caba423a4dab01106aec7204d1de4e",
+      "file:size": "1402042",
+      "file:local_path": "./vaa.nc",
       "roles": [
         "data"
       ]
     },
-    "vzaData": {
+    "vza": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/vza.nc",
       "type": "application/x-netcdf",
       "description": "View zenith angle data",
@@ -1468,11 +1495,14 @@
         1000,
         1000
       ],
+      "file:checksum": "e2245dbec1646ca8dc90152d84df34d4",
+      "file:size": "2161061",
+      "file:local_path": "./vza.nc",
       "roles": [
         "data"
       ]
     },
-    "saaData": {
+    "saa": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/saa.nc",
       "type": "application/x-netcdf",
       "description": "Solar azimuth angle data",
@@ -1494,11 +1524,14 @@
         1000,
         1000
       ],
+      "file:checksum": "23a388ce9219b281ed2e1501a385c740",
+      "file:size": "1336938",
+      "file:local_path": "./saa.nc",
       "roles": [
         "data"
       ]
     },
-    "szaData": {
+    "sza": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/sza.nc",
       "type": "application/x-netcdf",
       "description": "Solar zenith angle data",
@@ -1520,11 +1553,14 @@
         1000,
         1000
       ],
+      "file:checksum": "22057a88425794b0a60facfb68497a65",
+      "file:size": "1181492",
+      "file:local_path": "./sza.nc",
       "roles": [
         "data"
       ]
     },
-    "agData": {
+    "ag": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/ag.nc",
       "type": "application/x-netcdf",
       "description": "Aerosol optical thickness data",
@@ -1546,11 +1582,14 @@
         1000,
         1000
       ],
+      "file:checksum": "09954ce7c459821842436be352e54e14",
+      "file:size": "5944181",
+      "file:local_path": "./ag.nc",
       "roles": [
         "data"
       ]
     },
-    "ogData": {
+    "og": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/og.nc",
       "type": "application/x-netcdf",
       "description": "Total Ozone column data",
@@ -1572,11 +1611,14 @@
         1000,
         1000
       ],
+      "file:checksum": "cae002d306b3dd61299c6a0ce3cd8e66",
+      "file:size": "783508",
+      "file:local_path": "./og.nc",
       "roles": [
         "data"
       ]
     },
-    "wvgData": {
+    "wvg": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/wvg.nc",
       "type": "application/x-netcdf",
       "description": "Total column Water vapour data",
@@ -1598,11 +1640,14 @@
         1000,
         1000
       ],
+      "file:checksum": "1851bd52bb32b8c397d2ad1fd17e713c",
+      "file:size": "2861263",
+      "file:local_path": "./wvg.nc",
       "roles": [
         "data"
       ]
     },
-    "tgData": {
+    "tg": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/tg.nc",
       "type": "application/x-netcdf",
       "description": "Synthesis time data",
@@ -1624,11 +1669,14 @@
         1000,
         1000
       ],
+      "file:checksum": "ca8ed1b504e8edd6489f99fe91236c80",
+      "file:size": "2853175",
+      "file:local_path": "./tg.nc",
       "roles": [
         "data"
       ]
     },
-    "smData": {
+    "sm": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/sm.nc",
       "type": "application/x-netcdf",
       "description": "Status Map data",
@@ -1650,6 +1698,9 @@
         1000,
         1000
       ],
+      "file:checksum": "58997919e815affee649a832675edf36",
+      "file:size": "2658577",
+      "file:local_path": "./sm.nc",
       "roles": [
         "data"
       ]

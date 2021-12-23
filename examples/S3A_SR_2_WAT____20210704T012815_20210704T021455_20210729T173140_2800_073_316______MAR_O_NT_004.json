@@ -9,9 +9,15 @@
     "sat:relative_orbit": 316,
     "start_datetime": "2021-07-04 01:28:14.862485+00:00",
     "end_datetime": "2021-07-04 02:14:55.499366+00:00",
-    "s3:instrument": "SRAL",
+    "instrument": [
+      "SRAL"
+    ],
     "s3:mode": "EO",
     "s3:productType": "SR_2_WAT___",
+    "s3:gsd": {
+      "along-track": 300,
+      "across-track": 1640
+    },
     "s3:lrmModePercentage": 0.0,
     "s3:sarModePercentage": 100.0,
     "s3:landPercentage": 8.0,
@@ -807,7 +813,7 @@
         "metadata"
       ]
     },
-    "standardMeasurementData": {
+    "standardMeasurement": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SR_2_WAT____20210704T012815_20210704T021455_20210729T173140_2800_073_316______MAR_O_NT_004.SEN3/standard_measurement.nc",
       "type": "application/x-netcdf",
       "description": "Measurement Data Object File",
@@ -836,11 +842,14 @@
           "band_width_in_Hz": 320000000.0
         }
       ],
+      "file:checksum": "9dd5b75385c391df0071722c4ac90642",
+      "file:size": "5265691",
+      "file:local_path": "standard_measurement.nc",
       "roles": [
         "data"
       ]
     },
-    "enhancedMeasurementData": {
+    "enhancedMeasurement": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SR_2_WAT____20210704T012815_20210704T021455_20210729T173140_2800_073_316______MAR_O_NT_004.SEN3/enhanced_measurement.nc",
       "type": "application/x-netcdf",
       "description": "Measurement Data Object File",
@@ -872,11 +881,14 @@
           "band_width_in_Hz": 320000000.0
         }
       ],
+      "file:checksum": "9e0aea65b6cb93daea99eeed493b639f",
+      "file:size": "35724332",
+      "file:local_path": "enhanced_measurement.nc",
       "roles": [
         "data"
       ]
     },
-    "reducedMeasurementData": {
+    "reducedMeasurement": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SR_2_WAT____20210704T012815_20210704T021455_20210729T173140_2800_073_316______MAR_O_NT_004.SEN3/reduced_measurement.nc",
       "type": "application/x-netcdf",
       "description": "Measurement Data Object File",
@@ -893,6 +905,9 @@
           "band_width_in_Hz": 320000000.0
         }
       ],
+      "file:checksum": "ab44587cbe2d3a044b9d79bc9ba59525",
+      "file:size": "339280",
+      "file:local_path": "reduced_measurement.nc",
       "roles": [
         "data"
       ]

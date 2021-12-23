@@ -9,9 +9,12 @@
     "sat:relative_orbit": 334,
     "start_datetime": "2021-10-21 07:38:27.254946+00:00",
     "end_datetime": "2021-10-21 07:41:12.194233+00:00",
-    "s3:instrument": "OLCI",
+    "instrument": [
+      "OLCI"
+    ],
     "s3:mode": "EO",
     "s3:productType": "OL_1_EFR___",
+    "s3:gsd": 300,
     "s3:salineWaterPixels_percentage": 44.0,
     "s3:coastalPixels_percentage": 0.0,
     "s3:freshInlandWaterPixels_percentage": 0.0,
@@ -255,7 +258,7 @@
         "metadata"
       ]
     },
-    "Oa01_radianceData": {
+    "Oa01_radiance": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa01_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa01",
@@ -271,11 +274,14 @@
           "band_width": 15
         }
       ],
+      "file:checksum": "b35469e134850b9edb49917a683a6c2e",
+      "file:size": "18738535",
+      "file:local_path": "./Oa01_radiance.nc",
       "roles": [
         "data"
       ]
     },
-    "Oa02_radianceData": {
+    "Oa02_radiance": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa02_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa02",
@@ -291,11 +297,14 @@
           "band_width": 10
         }
       ],
+      "file:checksum": "9fe7b4fa185545e4a8de259f8a9e0042",
+      "file:size": "19355002",
+      "file:local_path": "./Oa02_radiance.nc",
       "roles": [
         "data"
       ]
     },
-    "Oa03_radianceData": {
+    "Oa03_radiance": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa03_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa03",
@@ -311,11 +320,14 @@
           "band_width": 10
         }
       ],
+      "file:checksum": "f8777f610cd9991e56b5e6a3db70448f",
+      "file:size": "20275865",
+      "file:local_path": "./Oa03_radiance.nc",
       "roles": [
         "data"
       ]
     },
-    "Oa04_radianceData": {
+    "Oa04_radiance": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa04_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa04",
@@ -331,11 +343,14 @@
           "band_width": 10
         }
       ],
+      "file:checksum": "de0bec70f299cbe5f84d78e35fc865c2",
+      "file:size": "20985358",
+      "file:local_path": "./Oa04_radiance.nc",
       "roles": [
         "data"
       ]
     },
-    "Oa05_radianceData": {
+    "Oa05_radiance": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa05_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa05",
@@ -351,11 +366,14 @@
           "band_width": 10
         }
       ],
+      "file:checksum": "7cc48586e8c918dcb9ee8de7d5d64282",
+      "file:size": "21397184",
+      "file:local_path": "./Oa05_radiance.nc",
       "roles": [
         "data"
       ]
     },
-    "Oa06_radianceData": {
+    "Oa06_radiance": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa06_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa06",
@@ -371,11 +389,14 @@
           "band_width": 10
         }
       ],
+      "file:checksum": "4eeab3759b1c08f5edc4f01e640dd717",
+      "file:size": "20971549",
+      "file:local_path": "./Oa06_radiance.nc",
       "roles": [
         "data"
       ]
     },
-    "Oa07_radianceData": {
+    "Oa07_radiance": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa07_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa07",
@@ -391,11 +412,14 @@
           "band_width": 10
         }
       ],
+      "file:checksum": "84f73a37382ab1f2391c029dc5fb1344",
+      "file:size": "21812721",
+      "file:local_path": "./Oa07_radiance.nc",
       "roles": [
         "data"
       ]
     },
-    "Oa08_radianceData": {
+    "Oa08_radiance": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa08_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa08",
@@ -411,11 +435,14 @@
           "band_width": 10
         }
       ],
+      "file:checksum": "aa61c93d3bfe977e0eb2346ad0f05b9a",
+      "file:size": "21911818",
+      "file:local_path": "./Oa08_radiance.nc",
       "roles": [
         "data"
       ]
     },
-    "Oa09_radianceData": {
+    "Oa09_radiance": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa09_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa09",
@@ -431,11 +458,14 @@
           "band_width": 7.5
         }
       ],
+      "file:checksum": "5739d30f9fafa7dccccba0dcc86c817c",
+      "file:size": "21742420",
+      "file:local_path": "./Oa09_radiance.nc",
       "roles": [
         "data"
       ]
     },
-    "Oa10_radianceData": {
+    "Oa10_radiance": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa10_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa10",
@@ -451,11 +481,14 @@
           "band_width": 7.5
         }
       ],
+      "file:checksum": "6066a81872b2c516459270413a695ddb",
+      "file:size": "22219426",
+      "file:local_path": "./Oa10_radiance.nc",
       "roles": [
         "data"
       ]
     },
-    "Oa11_radianceData": {
+    "Oa11_radiance": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa11_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa11",
@@ -471,11 +504,14 @@
           "band_width": 10
         }
       ],
+      "file:checksum": "0ed26fa4ad491f6289eb87029f926da7",
+      "file:size": "22466296",
+      "file:local_path": "./Oa11_radiance.nc",
       "roles": [
         "data"
       ]
     },
-    "Oa12_radianceData": {
+    "Oa12_radiance": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa12_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa12",
@@ -491,11 +527,14 @@
           "band_width": 7.5
         }
       ],
+      "file:checksum": "c50dee0eb4c493361b2467a558483801",
+      "file:size": "22189679",
+      "file:local_path": "./Oa12_radiance.nc",
       "roles": [
         "data"
       ]
     },
-    "Oa13_radianceData": {
+    "Oa13_radiance": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa13_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa13",
@@ -511,11 +550,14 @@
           "band_width": 2.5
         }
       ],
+      "file:checksum": "cde690e53140d3b97f8184fe4e06a7f0",
+      "file:size": "18609409",
+      "file:local_path": "./Oa13_radiance.nc",
       "roles": [
         "data"
       ]
     },
-    "Oa14_radianceData": {
+    "Oa14_radiance": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa14_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa14",
@@ -531,11 +573,14 @@
           "band_width": 3.75
         }
       ],
+      "file:checksum": "4e5ff2ff0f1c6b5196197cf1dbe9b83b",
+      "file:size": "19923001",
+      "file:local_path": "./Oa14_radiance.nc",
       "roles": [
         "data"
       ]
     },
-    "Oa15_radianceData": {
+    "Oa15_radiance": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa15_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa15",
@@ -551,11 +596,14 @@
           "band_width": 2.5
         }
       ],
+      "file:checksum": "876681e560576ea82d7d05e2171780b2",
+      "file:size": "22855092",
+      "file:local_path": "./Oa15_radiance.nc",
       "roles": [
         "data"
       ]
     },
-    "Oa16_radianceData": {
+    "Oa16_radiance": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa16_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa16",
@@ -571,11 +619,14 @@
           "band_width": 15
         }
       ],
+      "file:checksum": "854b56744eb10b748c1915577370a01b",
+      "file:size": "22712386",
+      "file:local_path": "./Oa16_radiance.nc",
       "roles": [
         "data"
       ]
     },
-    "Oa17_radianceData": {
+    "Oa17_radiance": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa17_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa17",
@@ -591,11 +642,14 @@
           "band_width": 20
         }
       ],
+      "file:checksum": "611502aed66632424dba572668566e0c",
+      "file:size": "22534471",
+      "file:local_path": "./Oa17_radiance.nc",
       "roles": [
         "data"
       ]
     },
-    "Oa18_radianceData": {
+    "Oa18_radiance": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa18_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa18",
@@ -611,11 +665,14 @@
           "band_width": 10
         }
       ],
+      "file:checksum": "53b0ab6a6ffd0ee2f5466fbc9eccdcf1",
+      "file:size": "22299896",
+      "file:local_path": "./Oa18_radiance.nc",
       "roles": [
         "data"
       ]
     },
-    "Oa19_radianceData": {
+    "Oa19_radiance": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa19_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa19",
@@ -631,11 +688,14 @@
           "band_width": 10
         }
       ],
+      "file:checksum": "7065f33ac97d07849d028f7907789502",
+      "file:size": "22206798",
+      "file:local_path": "./Oa19_radiance.nc",
       "roles": [
         "data"
       ]
     },
-    "Oa20_radianceData": {
+    "Oa20_radiance": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa20_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa20",
@@ -651,11 +711,14 @@
           "band_width": 20
         }
       ],
+      "file:checksum": "38b3db2d1a854a16548dc3cdf7fa28eb",
+      "file:size": "22344681",
+      "file:local_path": "./Oa20_radiance.nc",
       "roles": [
         "data"
       ]
     },
-    "Oa21_radianceData": {
+    "Oa21_radiance": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa21_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa21",
@@ -671,6 +734,9 @@
           "band_width": 40
         }
       ],
+      "file:checksum": "7bd2fb08d506cd9a5de2252a86e70a7c",
+      "file:size": "23210999",
+      "file:local_path": "./Oa21_radiance.nc",
       "roles": [
         "data"
       ]

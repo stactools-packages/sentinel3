@@ -10,9 +10,15 @@
     "eo:cloud_cover": 67.421502,
     "start_datetime": "2021-04-19 05:17:54.047806+00:00",
     "end_datetime": "2021-04-19 06:58:53.371850+00:00",
-    "s3:instrument": "SLSTR",
+    "instrument": [
+      "SLSTR"
+    ],
     "s3:mode": "EO",
     "s3:productType": "SL_2_WST___",
+    "s3:gsd": {
+      "S1-S6": 500,
+      "S7-S9 and F1-F2": 1000
+    },
     "s3:salineWaterPixels_percentage": 69.464947,
     "s3:landPixels_percentage": 30.535053,
     "s3:coastalPixels_percentage": 0.0,
@@ -1351,7 +1357,7 @@
         "metadata"
       ]
     },
-    "L2P_Data": {
+    "L2P": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3B_SL_2_WST____20210419T051754_20210419T065853_20210420T160434_6059_051_247______MAR_O_NT_003.SEN3/20210419051754-MAR-L2P_GHRSST-SSTskin-SLSTRB-20210420160434-v02.0-fv01.0.nc",
       "type": "application/x-netcdf",
       "description": "Data respects the Group for High Resolution Sea Surface Temperature (GHRSST) L2P specification",
@@ -1376,6 +1382,9 @@
           "band_width": 905
         }
       ],
+      "file:checksum": "f7e67d0bb4acf309861443825cda3790",
+      "file:size": "644094789",
+      "file:local_path": "./20210419051754-MAR-L2P_GHRSST-SSTskin-SLSTRB-20210420160434-v02.0-fv01.0.nc",
       "roles": [
         "data"
       ]

@@ -10,9 +10,15 @@
     "eo:cloud_cover": 80.216007,
     "start_datetime": "2021-09-30 22:09:13.843538+00:00",
     "end_datetime": "2021-09-30 22:12:13.843538+00:00",
-    "s3:instrument": "SLSTR",
+    "instrument": [
+      "SLSTR"
+    ],
     "s3:mode": "EO",
     "s3:productType": "SL_1_RBT___",
+    "s3:gsd": {
+      "S1-S6": 500,
+      "S7-S9 and F1-F2": 1000
+    },
     "s3:salineWaterPixels_percentage": 100.0,
     "s3:landPixels_percentage": 0.0,
     "s3:coastalPixels_percentage": 0.0,
@@ -351,7 +357,7 @@
         "metadata"
       ]
     },
-    "SLSTR_S1_RAD_AN_Data": {
+    "SLSTR_S1_RAD_AN": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_1_RBT____20210930T220914_20210930T221214_20211002T102150_0180_077_043_5400_LN2_O_NT_004.SEN3/S1_radiance_an.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for channel S1 (A stripe grid, nadir view)",
@@ -367,11 +373,14 @@
           "band_width": 19.26
         }
       ],
+      "file:checksum": "a313e529a1ca436ad6bb3b5634dce75b",
+      "file:size": "1261116",
+      "file:local_path": "./S1_radiance_an.nc",
       "roles": [
         "data"
       ]
     },
-    "SLSTR_S2_RAD_AN_Data": {
+    "SLSTR_S2_RAD_AN": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_1_RBT____20210930T220914_20210930T221214_20211002T102150_0180_077_043_5400_LN2_O_NT_004.SEN3/S2_radiance_an.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for channel S2 (A stripe grid, nadir view)",
@@ -387,11 +396,14 @@
           "band_width": 19.25
         }
       ],
+      "file:checksum": "27ebdbc9b98bfee612b6613587073613",
+      "file:size": "1261051",
+      "file:local_path": "./S2_radiance_an.nc",
       "roles": [
         "data"
       ]
     },
-    "SLSTR_S3_RAD_AN_Data": {
+    "SLSTR_S3_RAD_AN": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_1_RBT____20210930T220914_20210930T221214_20211002T102150_0180_077_043_5400_LN2_O_NT_004.SEN3/S3_radiance_an.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for channel S3 (A stripe grid, nadir view)",
@@ -407,11 +419,14 @@
           "band_width": 20.6
         }
       ],
+      "file:checksum": "58adb5675ce822273d92bb47f9454799",
+      "file:size": "1261051",
+      "file:local_path": "./S3_radiance_an.nc",
       "roles": [
         "data"
       ]
     },
-    "SLSTR_S4_RAD_AN_Data": {
+    "SLSTR_S4_RAD_AN": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_1_RBT____20210930T220914_20210930T221214_20211002T102150_0180_077_043_5400_LN2_O_NT_004.SEN3/S4_radiance_an.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for channel S4 (A stripe grid, nadir view)",
@@ -427,11 +442,14 @@
           "band_width": 20.8
         }
       ],
+      "file:checksum": "4356f7430862dfcd4964e32f30727af9",
+      "file:size": "1262286",
+      "file:local_path": "./S4_radiance_an.nc",
       "roles": [
         "data"
       ]
     },
-    "SLSTR_S5_RAD_AN_Data": {
+    "SLSTR_S5_RAD_AN": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_1_RBT____20210930T220914_20210930T221214_20211002T102150_0180_077_043_5400_LN2_O_NT_004.SEN3/S5_radiance_an.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for channel S5 (A stripe grid, nadir view)",
@@ -447,11 +465,14 @@
           "band_width": 60.68
         }
       ],
+      "file:checksum": "eb0e92d37b8d9e5497b9f38d7878a2a3",
+      "file:size": "7872524",
+      "file:local_path": "./S5_radiance_an.nc",
       "roles": [
         "data"
       ]
     },
-    "SLSTR_S6_RAD_AN_Data": {
+    "SLSTR_S6_RAD_AN": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_1_RBT____20210930T220914_20210930T221214_20211002T102150_0180_077_043_5400_LN2_O_NT_004.SEN3/S6_radiance_an.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for channel S6 (A stripe grid, nadir view)",
@@ -467,11 +488,14 @@
           "band_width": 50.15
         }
       ],
+      "file:checksum": "c2ed2a4d01ace0b3a6f715927a3782df",
+      "file:size": "9284922",
+      "file:local_path": "./S6_radiance_an.nc",
       "roles": [
         "data"
       ]
     },
-    "SLSTR_S7_BT_IN_Data": {
+    "SLSTR_S7_BT_IN": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_1_RBT____20210930T220914_20210930T221214_20211002T102150_0180_077_043_5400_LN2_O_NT_004.SEN3/S7_BT_in.nc",
       "type": "application/x-netcdf",
       "description": "Gridded pixel brightness temperature for channel S7 (1km TIR grid, nadir view)",
@@ -487,11 +511,14 @@
           "band_width": 398
         }
       ],
+      "file:checksum": "6629456693fa2b6b1251665ea50519a7",
+      "file:size": "2610392",
+      "file:local_path": "./S7_BT_in.nc",
       "roles": [
         "data"
       ]
     },
-    "SLSTR_S8_BT_IN_Data": {
+    "SLSTR_S8_BT_IN": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_1_RBT____20210930T220914_20210930T221214_20211002T102150_0180_077_043_5400_LN2_O_NT_004.SEN3/S8_BT_in.nc",
       "type": "application/x-netcdf",
       "description": "Gridded pixel brightness temperature for channel S8 (1km TIR grid, nadir view)",
@@ -507,11 +534,14 @@
           "band_width": 776
         }
       ],
+      "file:checksum": "88c6b95c3540d3c1b7a233be770b59d2",
+      "file:size": "2550053",
+      "file:local_path": "./S8_BT_in.nc",
       "roles": [
         "data"
       ]
     },
-    "SLSTR_S9_BT_IN_Data": {
+    "SLSTR_S9_BT_IN": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_1_RBT____20210930T220914_20210930T221214_20211002T102150_0180_077_043_5400_LN2_O_NT_004.SEN3/S9_BT_in.nc",
       "type": "application/x-netcdf",
       "description": "Gridded pixel brightness temperature for channel S9 (1km TIR grid, nadir view)",
@@ -527,11 +557,14 @@
           "band_width": 905
         }
       ],
+      "file:checksum": "fb2c8b6a965e5b30fbd33d7fbe594fdb",
+      "file:size": "2542336",
+      "file:local_path": "./S9_BT_in.nc",
       "roles": [
         "data"
       ]
     },
-    "SLSTR_F1_BT_FN_Data": {
+    "SLSTR_F1_BT_FN": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_1_RBT____20210930T220914_20210930T221214_20211002T102150_0180_077_043_5400_LN2_O_NT_004.SEN3/F1_BT_fn.nc",
       "type": "application/x-netcdf",
       "description": "Gridded pixel brightness temperature for channel F1 (1km F1 grid, nadir view)",
@@ -547,11 +580,14 @@
           "band_width": 398
         }
       ],
+      "file:checksum": "b0de0fc89680eb507fb3759496ae50dd",
+      "file:size": "2739389",
+      "file:local_path": "./F1_BT_fn.nc",
       "roles": [
         "data"
       ]
     },
-    "SLSTR_F2_BT_IN_Data": {
+    "SLSTR_F2_BT_IN": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_1_RBT____20210930T220914_20210930T221214_20211002T102150_0180_077_043_5400_LN2_O_NT_004.SEN3/F2_BT_in.nc",
       "type": "application/x-netcdf",
       "description": "Gridded pixel brightness temperature for channel F2 (1km TIR grid, nadir view)",
@@ -567,6 +603,9 @@
           "band_width": 776
         }
       ],
+      "file:checksum": "c005e3777e6d8fc22cf6cec25ec7b9a1",
+      "file:size": "2572775",
+      "file:local_path": "./F2_BT_in.nc",
       "roles": [
         "data"
       ]
