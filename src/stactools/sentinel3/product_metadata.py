@@ -307,8 +307,7 @@ class ProductMetadata:
                                          ".//sentinel-safe:mode")),
                 "s3:productType":
                 self._root.findall(".//sentinel3:productType")[0].text,
-                "s3:gsd":
-                {
+                "s3:gsd": {
                     "S1-S6": 500,
                     "S7-S9 and F1-F2": 1000
                 },
@@ -396,8 +395,7 @@ class ProductMetadata:
                                          ".//sentinel-safe:mode")),
                 "s3:productType":
                 self._root.findall(".//sentinel3:productType")[0].text,
-                "s3:gsd":
-                {
+                "s3:gsd": {
                     "S1-S6": 500,
                     "S7-S9 and F1-F2": 1000
                 },
@@ -468,8 +466,7 @@ class ProductMetadata:
                                          ".//sentinel-safe:mode")),
                 "s3:productType":
                 self._root.findall(".//sentinel3:productType")[0].text,
-                "s3:gsd":
-                {
+                "s3:gsd": {
                     "along-track": 300,
                     "across-track": 1640
                 },
@@ -507,8 +504,7 @@ class ProductMetadata:
                                          ".//sentinel-safe:mode")),
                 "s3:productType":
                 self._root.findall(".//sentinel3:productType")[0].text,
-                "s3:gsd":
-                {
+                "s3:gsd": {
                     "OLCI": 300,
                     "SLSTR": {
                         "S1-S6": 500,
@@ -545,8 +541,7 @@ class ProductMetadata:
                                          ".//sentinel-safe:mode")),
                 "s3:productType":
                 self._root.findall(".//sentinel3:productType")[0].text,
-                "s3:gsd":
-                {
+                "s3:gsd": {
                     "OLCI": 300,
                     "SLSTR": {
                         "S1-S6": 500,
@@ -597,8 +592,7 @@ class ProductMetadata:
                                          ".//sentinel-safe:mode")),
                 "s3:productType":
                 self._root.findall(".//sentinel3:productType")[0].text,
-                "s3:gsd":
-                {
+                "s3:gsd": {
                     "OLCI": 300,
                     "SLSTR": {
                         "S1-S6": 500,
@@ -633,8 +627,7 @@ class ProductMetadata:
                                          ".//sentinel-safe:mode")),
                 "s3:productType":
                 self._root.findall(".//sentinel3:productType")[0].text,
-                "s3:gsd":
-                {
+                "s3:gsd": {
                     "OLCI": 300,
                     "SLSTR": {
                         "S1-S6": 500,
@@ -669,8 +662,7 @@ class ProductMetadata:
                                          ".//sentinel-safe:mode")),
                 "s3:productType":
                 self._root.findall(".//sentinel3:productType")[0].text,
-                "s3:gsd":
-                {
+                "s3:gsd": {
                     "OLCI": 300,
                     "SLSTR": {
                         "S1-S6": 500,

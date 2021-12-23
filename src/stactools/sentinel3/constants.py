@@ -572,89 +572,89 @@ SLSTR_BANDS_TO_RESOLUTIONS = {
 }
 
 SYNERGY_SYN_ASSET_KEYS = [
-    "Syn_Oa01_reflectance", "Syn_Oa02_reflectance",
-    "Syn_Oa03_reflectance", "Syn_Oa04_reflectance",
-    "Syn_Oa05_reflectance", "Syn_Oa06_reflectance",
-    "Syn_Oa07_reflectance", "Syn_Oa08_reflectance",
-    "Syn_Oa09_reflectance", "Syn_Oa10_reflectance",
-    "Syn_Oa11_reflectance", "Syn_Oa12_reflectance",
-    "Syn_Oa16_reflectance", "Syn_Oa17_reflectance",
-    "Syn_Oa18_reflectance", "Syn_Oa21_reflectance",
-    "Syn_S1N_reflectance", "Syn_S2N_reflectance",
-    "Syn_S3N_reflectance", "Syn_S5N_reflectance",
-    "Syn_S6N_reflectance", "Syn_S1O_reflectance",
-    "Syn_S2O_reflectance", "Syn_S3O_reflectance",
-    "Syn_S5O_reflectance", "Syn_S6O_reflectance", "Syn_ATO550",
-    "Syn_Angstrom_exp550", "Syn_SDR_removed_pixels", "Syn_AMIN",
-    "Syn_flags", "geolocation", "time",
-    "annotations_removed_pixels", "tiepoints_olci",
-    "tiepoints_slstr_n", "tiepoints_slstr_o", "tiepoints_meteo"
+    "Syn_Oa01_reflectance_Data", "Syn_Oa02_reflectance_Data",
+    "Syn_Oa03_reflectance_Data", "Syn_Oa04_reflectance_Data",
+    "Syn_Oa05_reflectance_Data", "Syn_Oa06_reflectance_Data",
+    "Syn_Oa07_reflectance_Data", "Syn_Oa08_reflectance_Data",
+    "Syn_Oa09_reflectance_Data", "Syn_Oa10_reflectance_Data",
+    "Syn_Oa11_reflectance_Data", "Syn_Oa12_reflectance_Data",
+    "Syn_Oa16_reflectance_Data", "Syn_Oa17_reflectance_Data",
+    "Syn_Oa18_reflectance_Data", "Syn_Oa21_reflectance_Data",
+    "Syn_S1N_reflectance_Data", "Syn_S2N_reflectance_Data",
+    "Syn_S3N_reflectance_Data", "Syn_S5N_reflectance_Data",
+    "Syn_S6N_reflectance_Data", "Syn_S1O_reflectance_Data",
+    "Syn_S2O_reflectance_Data", "Syn_S3O_reflectance_Data",
+    "Syn_S5O_reflectance_Data", "Syn_S6O_reflectance_Data", "Syn_ATO550_Data",
+    "Syn_Angstrom_exp550_Data", "Syn_SDR_removed_pixels_Data", "Syn_AMIN_Data",
+    "Syn_flags_Data", "geolocation_Data", "time_Data",
+    "annotations_removed_pixels_Data", "tiepoints_olci_Data",
+    "tiepoints_slstr_n_Data", "tiepoints_slstr_o_Data", "tiepoints_meteo_Data"
 ]
 
 SYNERGY_V10_VG1_ASSET_KEYS = [
-    "b0", "b2", "b3", "mir", "ndvi", "vaa", "vza",
-    "saa", "sza", "ag", "og", "wvg", "tg", "sm"
+    "b0Data", "b2Data", "b3Data", "mirData", "ndviData", "vaaData", "vzaData",
+    "saaData", "szaData", "agData", "ogData", "wvgData", "tgData", "smData"
 ]
 
 SYNERGY_VGP_ASSET_KEYS = [
-    "b0", "b2", "b3", "mir", "vaa", "vza", "saa",
-    "sza", "ag", "og", "wvg", "sm"
+    "b0Data", "b2Data", "b3Data", "mirData", "vaaData", "vzaData", "saaData",
+    "szaData", "agData", "ogData", "wvgData", "smData"
 ]
 
 OLCI_L1_ASSET_KEYS = [
-    "Oa01_radiance", "Oa02_radiance", "Oa03_radiance",
-    "Oa04_radiance", "Oa05_radiance", "Oa06_radiance",
-    "Oa07_radiance", "Oa08_radiance", "Oa09_radiance",
-    "Oa10_radiance", "Oa11_radiance", "Oa12_radiance",
-    "Oa13_radiance", "Oa14_radiance", "Oa15_radiance",
-    "Oa16_radiance", "Oa17_radiance", "Oa18_radiance",
-    "Oa19_radiance", "Oa20_radiance", "Oa21_radiance"
+    "Oa01_radianceData", "Oa02_radianceData", "Oa03_radianceData",
+    "Oa04_radianceData", "Oa05_radianceData", "Oa06_radianceData",
+    "Oa07_radianceData", "Oa08_radianceData", "Oa09_radianceData",
+    "Oa10_radianceData", "Oa11_radianceData", "Oa12_radianceData",
+    "Oa13_radianceData", "Oa14_radianceData", "Oa15_radianceData",
+    "Oa16_radianceData", "Oa17_radianceData", "Oa18_radianceData",
+    "Oa19_radianceData", "Oa20_radianceData", "Oa21_radianceData"
 ]
 
 OLCI_L2_LAND_ASSET_KEYS = [
-    "ogvi", "otci", "iwv", "rcOgvi", "lqsf",
-    "timeCoordinates", "geoCoordinates", "tieGeoCoordinates",
-    "tieGeometries", "tieMeteo", "instrument"
+    "ogviData", "otciData", "iwvData", "rcOgviData", "lqsfData",
+    "timeCoordinatesData", "geoCoordinatesData", "tieGeoCoordinatesData",
+    "tieGeometriesData", "tieMeteoData", "instrumentDataData"
 ]
 
 OLCI_L2_WATER_ASSET_KEYS = [
-    "Oa01_reflectance", "Oa02_reflectance", "Oa03_reflectance",
-    "Oa04_reflectance", "Oa05_reflectance", "Oa06_reflectance",
-    "Oa07_reflectance", "Oa08_reflectance", "Oa09_reflectance",
-    "Oa10_reflectance", "Oa11_reflectance", "Oa12_reflectance",
-    "Oa16_reflectance", "Oa17_reflectance", "Oa18_reflectance",
-    "Oa21_reflectance", "chlNn", "chlOc4me", "iopNn",
-    "iwv", "par", "trsp", "tsmNn", "wAer",
-    "geoCoordinates", "instrumentData", "tieGeoCoordinates",
-    "tieGeometries", "tieMeteo", "timeCoordinates", "wqsf"
+    "Oa01_reflectanceData", "Oa02_reflectanceData", "Oa03_reflectanceData",
+    "Oa04_reflectanceData", "Oa05_reflectanceData", "Oa06_reflectanceData",
+    "Oa07_reflectanceData", "Oa08_reflectanceData", "Oa09_reflectanceData",
+    "Oa10_reflectanceData", "Oa11_reflectanceData", "Oa12_reflectanceData",
+    "Oa16_reflectanceData", "Oa17_reflectanceData", "Oa18_reflectanceData",
+    "Oa21_reflectanceData", "chlNnData", "chlOc4meData", "iopNnData",
+    "iwvData", "parData", "trspData", "tsmNnData", "wAerData",
+    "geoCoordinatesData", "instrumentDataData", "tieGeoCoordinatesData",
+    "tieGeometriesData", "tieMeteoData", "timeCoordinatesData", "wqsfData"
 ]
 
 SLSTR_L1_ASSET_KEYS = [
-    "SLSTR_S1_RAD_AN", "SLSTR_S2_RAD_AN", "SLSTR_S3_RAD_AN",
-    "SLSTR_S4_RAD_AN", "SLSTR_S5_RAD_AN", "SLSTR_S6_RAD_AN",
-    "SLSTR_S7_BT_IN", "SLSTR_S8_BT_IN", "SLSTR_S9_BT_IN",
-    "SLSTR_F1_BT_FN", "SLSTR_F2_BT_IN"
+    "SLSTR_S1_RAD_AN_Data", "SLSTR_S2_RAD_AN_Data", "SLSTR_S3_RAD_AN_Data",
+    "SLSTR_S4_RAD_AN_Data", "SLSTR_S5_RAD_AN_Data", "SLSTR_S6_RAD_AN_Data",
+    "SLSTR_S7_BT_IN_Data", "SLSTR_S8_BT_IN_Data", "SLSTR_S9_BT_IN_Data",
+    "SLSTR_F1_BT_FN_Data", "SLSTR_F2_BT_IN_Data"
 ]
 
 SLSTR_L2_FRP_KEYS = [
-    "FRP_IN", "SLSTR_CARTESIAN_FN", "SLSTR_CARTESIAN_IN",
-    "SLSTR_CARTESIAN_TX", "SLSTR_FLAGS_FN", "SLSTR_FLAGS_IN",
-    "SLSTR_GEODETIC_FN", "SLSTR_GEODETIC_IN",
-    "SLSTR_GEODETIC_TX", "SLSTR_GEOMETRY_TN",
-    "SLSTR_INDICES_FN", "SLSTR_INDICES_IN", "SLSTR_MET_TX",
-    "SLSTR_TIME_IN"
+    "FRP_IN_Data", "SLSTR_CARTESIAN_FN_Data", "SLSTR_CARTESIAN_IN_Data",
+    "SLSTR_CARTESIAN_TX_Data", "SLSTR_FLAGS_FN_Data", "SLSTR_FLAGS_IN_Data",
+    "SLSTR_GEODETIC_FN_Data", "SLSTR_GEODETIC_IN_Data",
+    "SLSTR_GEODETIC_TX_Data", "SLSTR_GEOMETRY_TN_Data",
+    "SLSTR_INDICES_FN_Data", "SLSTR_INDICES_IN_Data", "SLSTR_MET_TX_Data",
+    "SLSTR_TIME_IN_Data"
 ]
 
 SLSTR_L2_LST_KEYS = [
-    "LST_IN", "LST_ANCILLARY_DS", "SLSTR_FLAGS_IN",
-    "SLSTR_INDICES_IN", "SLSTR_TIME_IN", "SLSTR_GEODETIC_IN",
-    "SLSTR_CARTESIAN_IN", "SLSTR_GEOMETRY_TN",
-    "SLSTR_GEODETIC_TX", "SLSTR_CARTESIAN_TX", "SLSTR_MET_TX"
+    "LST_IN_Data", "LST_ANCILLARY_DS_Data", "SLSTR_FLAGS_IN_Data",
+    "SLSTR_INDICES_IN_Data", "SLSTR_TIME_IN_Data", "SLSTR_GEODETIC_IN_Data",
+    "SLSTR_CARTESIAN_IN_Data", "SLSTR_GEOMETRY_TN_Data",
+    "SLSTR_GEODETIC_TX_Data", "SLSTR_CARTESIAN_TX_Data", "SLSTR_MET_TX_Data"
 ]
 
 SRAL_L2_LAN_WAT_KEYS = [
-    "standardMeasurement", "enhancedMeasurement",
-    "reducedMeasurement"
+    "standardMeasurementData", "enhancedMeasurementData",
+    "reducedMeasurementData"
 ]
 
 SYNERGY_L2_A550_T550_BANDS = [
