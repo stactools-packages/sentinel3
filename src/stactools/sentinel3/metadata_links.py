@@ -1,4 +1,5 @@
 import os
+from dataclasses import dataclass
 from typing import List, Optional
 
 import netCDF4 as nc  # type: ignore
@@ -11,6 +12,37 @@ from . import constants
 
 class ManifestError(Exception):
     pass
+
+
+@dataclass
+class FileProperties:
+    checksum: str
+    size: int
+    local_path: str
+
+
+def get_file_properties(manifest: XmlElement,
+                        asset_key: str) -> FileProperties:
+    asset_checksum = manifest.findall(
+        f".//dataObject[@ID='{asset_key}']//checksum")[0].text
+    asset_size = manifest.find_attr(
+        "size", f".//dataObject[@ID='{asset_key}']//byteStream")
+    asset_local_path = manifest.find_attr(
+        "href", f".//dataObject[@ID='{asset_key}']//fileLocation")
+
+    if asset_checksum is None:
+        raise RuntimeError(f"Manifest contains no checksum! Checked location: "
+                           f"'.//dataObject[@ID='{asset_key}']//checksum'")
+    if asset_size is None:
+        raise RuntimeError(
+            f"Manifest contains no size data! Checked location: "
+            f"'.//dataObject[@ID='{asset_key}']//byteStream'")
+    if asset_local_path is None:
+        raise RuntimeError(
+            f"Manifest contains no file location data! Checked location: "
+            f"'.//dataObject[@ID='{asset_key}']//fileLocation'")
+
+    return FileProperties(asset_checksum, int(asset_size), asset_local_path)
 
 
 class MetadataLinks:
@@ -112,12 +144,7 @@ class MetadataLinks:
                 asset_description = manifest.find_attr(
                     "textInfo",
                     f".//dataObject[@ID='{asset_key}']//fileLocation")
-                asset_checksum = manifest.findall(
-                    f".//dataObject[@ID='{asset_key}']//checksum")[0].text
-                asset_size = manifest.find_attr(
-                    "size", f".//dataObject[@ID='{asset_key}']//byteStream")
-                asset_local_path = manifest.find_attr(
-                    "href", f".//dataObject[@ID='{asset_key}']//fileLocation")
+                file_properties = get_file_properties(manifest, asset_key)
                 if skip_nc:
                     asset_shape_list: List[dict] = []
                 else:
@@ -133,12 +160,16 @@ class MetadataLinks:
                                          description=asset_description,
                                          roles=["data"],
                                          extra_fields={
-                                             "shape": asset_shape_list,
-                                             "sral:bands": band_dict_list,
-                                             "file:checksum": asset_checksum,
-                                             "file:size": asset_size,
+                                             "shape":
+                                             asset_shape_list,
+                                             "sral:bands":
+                                             band_dict_list,
+                                             "file:checksum":
+                                             file_properties.checksum,
+                                             "file:size":
+                                             file_properties.size,
                                              "file:local_path":
-                                             asset_local_path
+                                             file_properties.local_path
                                          })
                 asset_list.append(asset_obj)
         elif instrument_bands == constants.SENTINEL_SYNERGY_BANDS:
@@ -168,14 +199,7 @@ class MetadataLinks:
                         "mimeType",
                         f".//dataObject[@ID='{asset_key}']//byteStream")
                     asset_description = "Global aerosol parameters"
-                    asset_checksum = manifest.findall(
-                        f".//dataObject[@ID='{asset_key}']//checksum")[0].text
-                    asset_size = manifest.find_attr(
-                        "size",
-                        f".//dataObject[@ID='{asset_key}']//byteStream")
-                    asset_local_path = manifest.find_attr(
-                        "href",
-                        f".//dataObject[@ID='{asset_key}']//fileLocation")
+                    file_properties = get_file_properties(manifest, asset_key)
                     if skip_nc:
                         asset_resolution = []
                     else:
@@ -197,11 +221,11 @@ class MetadataLinks:
                                                  "eo:bands":
                                                  band_dict_list,
                                                  "file:checksum":
-                                                 asset_checksum,
+                                                 file_properties.checksum,
                                                  "file:size":
-                                                 asset_size,
+                                                 file_properties.size,
                                                  "file:local_path":
-                                                 asset_local_path
+                                                 file_properties.local_path
                                              })
                     asset_list.append(asset_obj)
             elif "_SYN_" in product_type:
@@ -270,14 +294,7 @@ class MetadataLinks:
                     asset_description = manifest.find_attr(
                         "textInfo",
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
-                    asset_checksum = manifest.findall(
-                        f".//dataObject[@ID='{asset_key}']//checksum")[0].text
-                    asset_size = manifest.find_attr(
-                        "size",
-                        f".//dataObject[@ID='{asset_key}']//byteStream")
-                    asset_local_path = manifest.find_attr(
-                        "href",
-                        f".//dataObject[@ID='{asset_key}']//fileLocation")
+                    file_properties = get_file_properties(manifest, asset_key)
                     if skip_nc:
                         asset_resolution = []
                         asset_shape_list = []
@@ -312,11 +329,11 @@ class MetadataLinks:
                                                      "eo:bands":
                                                      band_dict_list,
                                                      "file:checksum":
-                                                     asset_checksum,
+                                                     file_properties.checksum,
                                                      "file:size":
-                                                     asset_size,
+                                                     file_properties.size,
                                                      "file:local_path":
-                                                     asset_local_path
+                                                     file_properties.local_path
                                                  })
                         asset_list.append(asset_obj)
                     else:
@@ -330,11 +347,11 @@ class MetadataLinks:
                                                      "resolution":
                                                      asset_resolution,
                                                      "file:checksum":
-                                                     asset_checksum,
+                                                     file_properties.checksum,
                                                      "file:size":
-                                                     asset_size,
+                                                     file_properties.size,
                                                      "file:local_path":
-                                                     asset_local_path
+                                                     file_properties.local_path
                                                  })
                         asset_list.append(asset_obj)
             elif any(product_id in product_type
@@ -382,14 +399,7 @@ class MetadataLinks:
                     asset_description = manifest.find_attr(
                         "textInfo",
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
-                    asset_checksum = manifest.findall(
-                        f".//dataObject[@ID='{asset_key}']//checksum")[0].text
-                    asset_size = manifest.find_attr(
-                        "size",
-                        f".//dataObject[@ID='{asset_key}']//byteStream")
-                    asset_local_path = manifest.find_attr(
-                        "href",
-                        f".//dataObject[@ID='{asset_key}']//fileLocation")
+                    file_properties = get_file_properties(manifest, asset_key)
                     if skip_nc:
                         asset_resolution = []
                         asset_shape_list = []
@@ -422,9 +432,9 @@ class MetadataLinks:
                                 asset_shape_list,
                                 "resolution": asset_resolution,
                                 "eo:bands": band_dict_list,
-                                "file:checksum": asset_checksum,
-                                "file:size": asset_size,
-                                "file:local_path": asset_local_path
+                                "file:checksum": file_properties.checksum,
+                                "file:size": file_properties.size,
+                                "file:local_path": file_properties.local_path
                             })
                         asset_list.append(asset_obj)
                     else:
@@ -437,9 +447,9 @@ class MetadataLinks:
                                 f"{product_type.split('_')[2].lower()}:shape":
                                 asset_shape_list,
                                 "resolution": asset_resolution,
-                                "file:checksum": asset_checksum,
-                                "file:size": asset_size,
-                                "file:local_path": asset_local_path
+                                "file:checksum": file_properties.checksum,
+                                "file:size": file_properties.size,
+                                "file:local_path": file_properties.local_path
                             })
                         asset_list.append(asset_obj)
             else:
@@ -472,14 +482,7 @@ class MetadataLinks:
                     asset_description = manifest.find_attr(
                         "textInfo",
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
-                    asset_checksum = manifest.findall(
-                        f".//dataObject[@ID='{asset_key}']//checksum")[0].text
-                    asset_size = manifest.find_attr(
-                        "size",
-                        f".//dataObject[@ID='{asset_key}']//byteStream")
-                    asset_local_path = manifest.find_attr(
-                        "href",
-                        f".//dataObject[@ID='{asset_key}']//fileLocation")
+                    file_properties = get_file_properties(manifest, asset_key)
                     if skip_nc:
                         asset_resolution = []
                         asset_shape_list = []
@@ -514,11 +517,11 @@ class MetadataLinks:
                                                      "eo:bands":
                                                      band_dict_list,
                                                      "file:checksum":
-                                                     asset_checksum,
+                                                     file_properties.checksum,
                                                      "file:size":
-                                                     asset_size,
+                                                     file_properties.size,
                                                      "file:local_path":
-                                                     asset_local_path
+                                                     file_properties.local_path
                                                  })
                         asset_list.append(asset_obj)
                     else:
@@ -532,11 +535,11 @@ class MetadataLinks:
                                                      "resolution":
                                                      asset_resolution,
                                                      "file:checksum":
-                                                     asset_checksum,
+                                                     file_properties.checksum,
                                                      "file:size":
-                                                     asset_size,
+                                                     file_properties.size,
                                                      "file:local_path":
-                                                     asset_local_path
+                                                     file_properties.local_path
                                                  })
                         asset_list.append(asset_obj)
         elif instrument_bands == constants.SENTINEL_OLCI_BANDS:
@@ -561,14 +564,7 @@ class MetadataLinks:
                     asset_description = manifest.find_attr(
                         "textInfo",
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
-                    asset_checksum = manifest.findall(
-                        f".//dataObject[@ID='{asset_key}']//checksum")[0].text
-                    asset_size = manifest.find_attr(
-                        "size",
-                        f".//dataObject[@ID='{asset_key}']//byteStream")
-                    asset_local_path = manifest.find_attr(
-                        "href",
-                        f".//dataObject[@ID='{asset_key}']//fileLocation")
+                    file_properties = get_file_properties(manifest, asset_key)
                     if skip_nc:
                         asset_resolution = []
                     else:
@@ -589,11 +585,11 @@ class MetadataLinks:
                                                  asset_resolution,
                                                  "eo:bands": [band_dict],
                                                  "file:checksum":
-                                                 asset_checksum,
+                                                 file_properties.checksum,
                                                  "file:size":
-                                                 asset_size,
+                                                 file_properties.size,
                                                  "file:local_path":
-                                                 asset_local_path
+                                                 file_properties.local_path
                                              })
                     asset_list.append(asset_obj)
             elif any(_str in product_type for _str in ["_LFR_", "_LRR_"]):
@@ -619,14 +615,7 @@ class MetadataLinks:
                     asset_description = manifest.find_attr(
                         "textInfo",
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
-                    asset_checksum = manifest.findall(
-                        f".//dataObject[@ID='{asset_key}']//checksum")[0].text
-                    asset_size = manifest.find_attr(
-                        "size",
-                        f".//dataObject[@ID='{asset_key}']//byteStream")
-                    asset_local_path = manifest.find_attr(
-                        "href",
-                        f".//dataObject[@ID='{asset_key}']//fileLocation")
+                    file_properties = get_file_properties(manifest, asset_key)
                     if skip_nc:
                         asset_resolution = []
                     else:
@@ -669,11 +658,11 @@ class MetadataLinks:
                                                      "eo:bands":
                                                      band_dict_list,
                                                      "file:checksum":
-                                                     asset_checksum,
+                                                     file_properties.checksum,
                                                      "file:size":
-                                                     asset_size,
+                                                     file_properties.size,
                                                      "file:local_path":
-                                                     asset_local_path
+                                                     file_properties.local_path
                                                  })
                     asset_list.append(asset_obj)
             elif "_WFR_" in product_type:
@@ -721,14 +710,7 @@ class MetadataLinks:
                     asset_description = manifest.find_attr(
                         "textInfo",
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
-                    asset_checksum = manifest.findall(
-                        f".//dataObject[@ID='{asset_key}']//checksum")[0].text
-                    asset_size = manifest.find_attr(
-                        "size",
-                        f".//dataObject[@ID='{asset_key}']//byteStream")
-                    asset_local_path = manifest.find_attr(
-                        "href",
-                        f".//dataObject[@ID='{asset_key}']//fileLocation")
+                    file_properties = get_file_properties(manifest, asset_key)
                     if skip_nc:
                         asset_resolution = []
                     else:
@@ -764,11 +746,11 @@ class MetadataLinks:
                                                      "eo:bands":
                                                      band_dict_list,
                                                      "file:checksum":
-                                                     asset_checksum,
+                                                     file_properties.checksum,
                                                      "file:size":
-                                                     asset_size,
+                                                     file_properties.size,
                                                      "file:local_path":
-                                                     asset_local_path
+                                                     file_properties.local_path
                                                  })
                         asset_list.append(asset_obj)
                     else:
@@ -780,11 +762,11 @@ class MetadataLinks:
                                                      "resolution":
                                                      asset_resolution,
                                                      "file:checksum":
-                                                     asset_checksum,
+                                                     file_properties.checksum,
                                                      "file:size":
-                                                     asset_size,
+                                                     file_properties.size,
                                                      "file:local_path":
-                                                     asset_local_path
+                                                     file_properties.local_path
                                                  })
                         asset_list.append(asset_obj)
         elif instrument_bands == constants.SENTINEL_SLSTR_BANDS:
@@ -809,14 +791,7 @@ class MetadataLinks:
                     asset_description = manifest.find_attr(
                         "textInfo",
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
-                    asset_checksum = manifest.findall(
-                        f".//dataObject[@ID='{asset_key}']//checksum")[0].text
-                    asset_size = manifest.find_attr(
-                        "size",
-                        f".//dataObject[@ID='{asset_key}']//byteStream")
-                    asset_local_path = manifest.find_attr(
-                        "href",
-                        f".//dataObject[@ID='{asset_key}']//fileLocation")
+                    file_properties = get_file_properties(manifest, asset_key)
                     if skip_nc:
                         asset_resolution = []
                     else:
@@ -837,11 +812,11 @@ class MetadataLinks:
                                                  asset_resolution,
                                                  "eo:bands": [band_dict],
                                                  "file:checksum":
-                                                 asset_checksum,
+                                                 file_properties.checksum,
                                                  "file:size":
-                                                 asset_size,
+                                                 file_properties.size,
                                                  "file:local_path":
-                                                 asset_local_path
+                                                 file_properties.local_path
                                              })
                     asset_list.append(asset_obj)
             elif "_FRP_" in product_type:
@@ -861,14 +836,7 @@ class MetadataLinks:
                     asset_description = manifest.find_attr(
                         "textInfo",
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
-                    asset_checksum = manifest.findall(
-                        f".//dataObject[@ID='{asset_key}']//checksum")[0].text
-                    asset_size = manifest.find_attr(
-                        "size",
-                        f".//dataObject[@ID='{asset_key}']//byteStream")
-                    asset_local_path = manifest.find_attr(
-                        "href",
-                        f".//dataObject[@ID='{asset_key}']//fileLocation")
+                    file_properties = get_file_properties(manifest, asset_key)
                     if skip_nc:
                         asset_resolution = []
                     else:
@@ -905,11 +873,11 @@ class MetadataLinks:
                                                      "eo:bands":
                                                      band_dict_list,
                                                      "file:checksum":
-                                                     asset_checksum,
+                                                     file_properties.checksum,
                                                      "file:size":
-                                                     asset_size,
+                                                     file_properties.size,
                                                      "file:local_path":
-                                                     asset_local_path
+                                                     file_properties.local_path
                                                  })
                         asset_list.append(asset_obj)
                     else:
@@ -921,11 +889,11 @@ class MetadataLinks:
                                                      "resolution":
                                                      asset_resolution,
                                                      "file:checksum":
-                                                     asset_checksum,
+                                                     file_properties.checksum,
                                                      "file:size":
-                                                     asset_size,
+                                                     file_properties.size,
                                                      "file:local_path":
-                                                     asset_local_path
+                                                     file_properties.local_path
                                                  })
                         asset_list.append(asset_obj)
             elif "_LST_" in product_type:
@@ -942,14 +910,7 @@ class MetadataLinks:
                     media_type = manifest.find_attr(
                         "mimeType",
                         f".//dataObject[@ID='{asset_key}']//byteStream")
-                    asset_checksum = manifest.findall(
-                        f".//dataObject[@ID='{asset_key}']//checksum")[0].text
-                    asset_size = manifest.find_attr(
-                        "size",
-                        f".//dataObject[@ID='{asset_key}']//byteStream")
-                    asset_local_path = manifest.find_attr(
-                        "href",
-                        f".//dataObject[@ID='{asset_key}']//fileLocation")
+                    file_properties = get_file_properties(manifest, asset_key)
                     if skip_nc:
                         asset_resolution = []
                     else:
@@ -986,11 +947,11 @@ class MetadataLinks:
                                                      "eo:bands":
                                                      band_dict_list,
                                                      "file:checksum":
-                                                     asset_checksum,
+                                                     file_properties.checksum,
                                                      "file:size":
-                                                     asset_size,
+                                                     file_properties.size,
                                                      "file:local_path":
-                                                     asset_local_path
+                                                     file_properties.local_path
                                                  })
                         asset_list.append(asset_obj)
                     else:
@@ -1005,11 +966,11 @@ class MetadataLinks:
                                                      "resolution":
                                                      asset_resolution,
                                                      "file:checksum":
-                                                     asset_checksum,
+                                                     file_properties.checksum,
                                                      "file:size":
-                                                     asset_size,
+                                                     file_properties.size,
                                                      "file:local_path":
-                                                     asset_local_path
+                                                     file_properties.local_path
                                                  })
                         asset_list.append(asset_obj)
             elif "_WST_" in product_type:
@@ -1039,14 +1000,7 @@ class MetadataLinks:
                     asset_description = (
                         "Data respects the Group for High Resolution "
                         "Sea Surface Temperature (GHRSST) L2P specification")
-                    asset_checksum = manifest.findall(
-                        f".//dataObject[@ID='{asset_key}']//checksum")[0].text
-                    asset_size = manifest.find_attr(
-                        "size",
-                        f".//dataObject[@ID='{asset_key}']//byteStream")
-                    asset_local_path = manifest.find_attr(
-                        "href",
-                        f".//dataObject[@ID='{asset_key}']//fileLocation")
+                    file_properties = get_file_properties(manifest, asset_key)
                     if skip_nc:
                         asset_resolution_str = ""
                     else:
@@ -1062,11 +1016,11 @@ class MetadataLinks:
                                                  "eo:bands":
                                                  band_dict_list,
                                                  "file:checksum":
-                                                 asset_checksum,
+                                                 file_properties.checksum,
                                                  "file:size":
-                                                 asset_size,
+                                                 file_properties.size,
                                                  "file:local_path":
-                                                 asset_local_path
+                                                 file_properties.local_path
                                              })
                     asset_list.append(asset_obj)
         return (asset_key_list, asset_list)
