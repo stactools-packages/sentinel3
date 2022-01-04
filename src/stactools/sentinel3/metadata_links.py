@@ -21,22 +21,19 @@ class FileProperties:
     local_path: str
 
 
-def get_file_properties(granule_href: str,
-                        manifest: XmlElement,
+def get_file_properties(granule_href: str, manifest: XmlElement,
                         asset_key: str) -> FileProperties:
     asset_checksum = manifest.findall(
         f".//dataObject[@ID='{asset_key}']//checksum")[0].text
     asset_size = manifest.find_attr(
         "size", f".//dataObject[@ID='{asset_key}']//byteStream")
-    manifest_fileLocation = manifest.find_attr(
-        "href", f".//dataObject[@ID='{asset_key}']//fileLocation")
-    asset_local_path = "".join(
-        [
-            granule_href.split("/")[-1], 
-            "/", 
-            manifest_fileLocation.replace("./", "")
-        ]
-    )
+    manifest_fileLocation = str(
+        manifest.find_attr("href",
+                           f".//dataObject[@ID='{asset_key}']//fileLocation"))
+    asset_local_path = "".join([
+        granule_href.split("/")[-1], "/",
+        manifest_fileLocation.replace("./", "")
+    ])
 
     if asset_checksum is None:
         raise RuntimeError(f"Manifest contains no checksum! Checked location: "
@@ -54,6 +51,7 @@ def get_file_properties(granule_href: str,
 
 
 class MetadataLinks:
+
     def __init__(self,
                  granule_href: str,
                  read_href_modifier: Optional[ReadHrefModifier] = None):
@@ -152,7 +150,8 @@ class MetadataLinks:
                 asset_description = manifest.find_attr(
                     "textInfo",
                     f".//dataObject[@ID='{asset_key}']//fileLocation")
-                file_properties = get_file_properties(self.granule_href, manifest, asset_key)
+                file_properties = get_file_properties(self.granule_href,
+                                                      manifest, asset_key)
                 if skip_nc:
                     asset_shape_list: List[dict] = []
                 else:
@@ -207,7 +206,8 @@ class MetadataLinks:
                         "mimeType",
                         f".//dataObject[@ID='{asset_key}']//byteStream")
                     asset_description = "Global aerosol parameters"
-                    file_properties = get_file_properties(self.granule_href, manifest, asset_key)
+                    file_properties = get_file_properties(
+                        self.granule_href, manifest, asset_key)
                     if skip_nc:
                         asset_resolution = []
                     else:
@@ -302,7 +302,8 @@ class MetadataLinks:
                     asset_description = manifest.find_attr(
                         "textInfo",
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
-                    file_properties = get_file_properties(self.granule_href, manifest, asset_key)
+                    file_properties = get_file_properties(
+                        self.granule_href, manifest, asset_key)
                     if skip_nc:
                         asset_resolution = []
                         asset_shape_list = []
@@ -407,7 +408,8 @@ class MetadataLinks:
                     asset_description = manifest.find_attr(
                         "textInfo",
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
-                    file_properties = get_file_properties(self.granule_href, manifest, asset_key)
+                    file_properties = get_file_properties(
+                        self.granule_href, manifest, asset_key)
                     if skip_nc:
                         asset_resolution = []
                         asset_shape_list = []
@@ -490,7 +492,8 @@ class MetadataLinks:
                     asset_description = manifest.find_attr(
                         "textInfo",
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
-                    file_properties = get_file_properties(self.granule_href, manifest, asset_key)
+                    file_properties = get_file_properties(
+                        self.granule_href, manifest, asset_key)
                     if skip_nc:
                         asset_resolution = []
                         asset_shape_list = []
@@ -572,7 +575,8 @@ class MetadataLinks:
                     asset_description = manifest.find_attr(
                         "textInfo",
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
-                    file_properties = get_file_properties(self.granule_href, manifest, asset_key)
+                    file_properties = get_file_properties(
+                        self.granule_href, manifest, asset_key)
                     if skip_nc:
                         asset_resolution = []
                     else:
@@ -623,7 +627,8 @@ class MetadataLinks:
                     asset_description = manifest.find_attr(
                         "textInfo",
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
-                    file_properties = get_file_properties(self.granule_href, manifest, asset_key)
+                    file_properties = get_file_properties(
+                        self.granule_href, manifest, asset_key)
                     if skip_nc:
                         asset_resolution = []
                     else:
@@ -718,7 +723,8 @@ class MetadataLinks:
                     asset_description = manifest.find_attr(
                         "textInfo",
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
-                    file_properties = get_file_properties(self.granule_href, manifest, asset_key)
+                    file_properties = get_file_properties(
+                        self.granule_href, manifest, asset_key)
                     if skip_nc:
                         asset_resolution = []
                     else:
@@ -799,7 +805,8 @@ class MetadataLinks:
                     asset_description = manifest.find_attr(
                         "textInfo",
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
-                    file_properties = get_file_properties(self.granule_href, manifest, asset_key)
+                    file_properties = get_file_properties(
+                        self.granule_href, manifest, asset_key)
                     if skip_nc:
                         asset_resolution = []
                     else:
@@ -844,7 +851,8 @@ class MetadataLinks:
                     asset_description = manifest.find_attr(
                         "textInfo",
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
-                    file_properties = get_file_properties(self.granule_href, manifest, asset_key)
+                    file_properties = get_file_properties(
+                        self.granule_href, manifest, asset_key)
                     if skip_nc:
                         asset_resolution = []
                     else:
@@ -918,7 +926,8 @@ class MetadataLinks:
                     media_type = manifest.find_attr(
                         "mimeType",
                         f".//dataObject[@ID='{asset_key}']//byteStream")
-                    file_properties = get_file_properties(self.granule_href, manifest, asset_key)
+                    file_properties = get_file_properties(
+                        self.granule_href, manifest, asset_key)
                     if skip_nc:
                         asset_resolution = []
                     else:
@@ -1008,7 +1017,8 @@ class MetadataLinks:
                     asset_description = (
                         "Data respects the Group for High Resolution "
                         "Sea Surface Temperature (GHRSST) L2P specification")
-                    file_properties = get_file_properties(self.granule_href, manifest, asset_key)
+                    file_properties = get_file_properties(
+                        self.granule_href, manifest, asset_key)
                     if skip_nc:
                         asset_resolution_str = ""
                     else:
