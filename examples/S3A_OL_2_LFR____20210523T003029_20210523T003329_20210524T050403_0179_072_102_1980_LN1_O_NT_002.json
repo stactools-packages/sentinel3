@@ -10,7 +10,7 @@
     "eo:cloud_cover": 83.0,
     "start_datetime": "2021-05-23 00:30:29.485583+00:00",
     "end_datetime": "2021-05-23 00:33:29.485583+00:00",
-    "instrument": [
+    "instruments": [
       "OLCI"
     ],
     "s3:mode": "EO",
@@ -288,8 +288,8 @@
         }
       ],
       "file:checksum": "e1bce07ea928f7351c134a9aac3ff96c",
-      "file:size": "1127599",
-      "file:local_path": "./ogvi.nc",
+      "file:size": 1127599,
+      "file:local_path": "S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/ogvi.nc",
       "roles": [
         "data"
       ]
@@ -323,8 +323,8 @@
         }
       ],
       "file:checksum": "39315a579338f9f580aefa795b716c49",
-      "file:size": "1306916",
-      "file:local_path": "./otci.nc",
+      "file:size": 1306916,
+      "file:local_path": "S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/otci.nc",
       "roles": [
         "data"
       ]
@@ -352,8 +352,8 @@
         }
       ],
       "file:checksum": "18e1f8795d9d37b534effddac1e05b14",
-      "file:size": "1980948",
-      "file:local_path": "./iwv.nc",
+      "file:size": 1980948,
+      "file:local_path": "S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/iwv.nc",
       "roles": [
         "data"
       ]
@@ -381,8 +381,8 @@
         }
       ],
       "file:checksum": "2b7b1c4b8b85e038f67b7c4ea3ce4dba",
-      "file:size": "3879528",
-      "file:local_path": "./rc_ogvi.nc",
+      "file:size": 3879528,
+      "file:local_path": "S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/rc_ogvi.nc",
       "roles": [
         "data"
       ]
@@ -459,7 +459,7 @@
         "data"
       ]
     },
-    "instrument": {
+    "instrumentData": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/instrument_data.nc",
       "type": "application/x-netcdf",
       "description": "Instrument Annotation",
@@ -480,6 +480,7 @@
   ],
   "stac_extensions": [
     "https://stac-extensions.github.io/sat/v1.0.0/schema.json",
-    "https://stac-extensions.github.io/eo/v1.0.0/schema.json"
+    "https://stac-extensions.github.io/eo/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.0.0/schema.json"
   ]
 }
