@@ -73,7 +73,7 @@ def create_item(
         metalinks.manifest, skip_nc)
 
     band_list = [
-        key.replace("_Data", "").replace("Data", "") for key in band_list
+        key.replace("_Data", "").replace("Data", "", 1) for key in band_list
     ]
 
     # objects for bands
