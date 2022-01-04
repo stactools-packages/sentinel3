@@ -3,7 +3,6 @@ from typing import Optional
 
 import pystac
 from pystac.extensions.eo import EOExtension
-# from pystac.extensions.file import FileExtension
 from pystac.extensions.sat import SatExtension
 from stactools.core.io import ReadHrefModifier
 
@@ -82,9 +81,6 @@ def create_item(
     # objects for bands
     for band, asset in zip(band_list, asset_list):
         item.add_asset(band, asset)
-
-    # file
-    # FileExtension.ext(list(item.get_assets().values())[0], add_if_missing=True)
 
     # license link
     item.links.append(SENTINEL_LICENSE)

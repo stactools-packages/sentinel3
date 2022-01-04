@@ -1,5 +1,4 @@
 import os
-from dataclasses import dataclass
 from typing import List, Optional
 
 import netCDF4 as nc  # type: ignore
@@ -8,50 +7,15 @@ from stactools.core.io import ReadHrefModifier
 from stactools.core.io.xml import XmlElement
 
 from . import constants
+from .file_extension_updated import FileExtensionUpdated
+from .properties import fill_file_properties
 
 
 class ManifestError(Exception):
     pass
 
 
-@dataclass
-class FileProperties:
-    checksum: str
-    size: int
-    local_path: str
-
-
-def get_file_properties(granule_href: str, manifest: XmlElement,
-                        asset_key: str) -> FileProperties:
-    asset_checksum = manifest.findall(
-        f".//dataObject[@ID='{asset_key}']//checksum")[0].text
-    asset_size = manifest.find_attr(
-        "size", f".//dataObject[@ID='{asset_key}']//byteStream")
-    manifest_fileLocation = str(
-        manifest.find_attr("href",
-                           f".//dataObject[@ID='{asset_key}']//fileLocation"))
-    asset_local_path = "".join([
-        granule_href.split("/")[-1], "/",
-        manifest_fileLocation.replace("./", "")
-    ])
-
-    if asset_checksum is None:
-        raise RuntimeError(f"Manifest contains no checksum! Checked location: "
-                           f"'.//dataObject[@ID='{asset_key}']//checksum'")
-    if asset_size is None:
-        raise RuntimeError(
-            f"Manifest contains no size data! Checked location: "
-            f"'.//dataObject[@ID='{asset_key}']//byteStream'")
-    if asset_local_path is None:
-        raise RuntimeError(
-            f"Manifest contains no file location data! Checked location: "
-            f"'.//dataObject[@ID='{asset_key}']//fileLocation'")
-
-    return FileProperties(asset_checksum, int(asset_size), asset_local_path)
-
-
 class MetadataLinks:
-
     def __init__(self,
                  granule_href: str,
                  read_href_modifier: Optional[ReadHrefModifier] = None):
@@ -150,8 +114,6 @@ class MetadataLinks:
                 asset_description = manifest.find_attr(
                     "textInfo",
                     f".//dataObject[@ID='{asset_key}']//fileLocation")
-                file_properties = get_file_properties(self.granule_href,
-                                                      manifest, asset_key)
                 if skip_nc:
                     asset_shape_list: List[dict] = []
                 else:
@@ -167,17 +129,12 @@ class MetadataLinks:
                                          description=asset_description,
                                          roles=["data"],
                                          extra_fields={
-                                             "shape":
-                                             asset_shape_list,
-                                             "sral:bands":
-                                             band_dict_list,
-                                             "file:checksum":
-                                             file_properties.checksum,
-                                             "file:size":
-                                             file_properties.size,
-                                             "file:local_path":
-                                             file_properties.local_path
+                                             "shape": asset_shape_list,
+                                             "sral:bands": band_dict_list
                                          })
+                file = FileExtensionUpdated.ext(asset_obj, add_if_missing=True)
+                fill_file_properties(self.granule_href, asset_key, file,
+                                     manifest)
                 asset_list.append(asset_obj)
         elif instrument_bands == constants.SENTINEL_SYNERGY_BANDS:
             if "_AOD_" in product_type:
@@ -206,8 +163,6 @@ class MetadataLinks:
                         "mimeType",
                         f".//dataObject[@ID='{asset_key}']//byteStream")
                     asset_description = "Global aerosol parameters"
-                    file_properties = get_file_properties(
-                        self.granule_href, manifest, asset_key)
                     if skip_nc:
                         asset_resolution = []
                     else:
@@ -226,15 +181,12 @@ class MetadataLinks:
                                              extra_fields={
                                                  "resolution":
                                                  asset_resolution,
-                                                 "eo:bands":
-                                                 band_dict_list,
-                                                 "file:checksum":
-                                                 file_properties.checksum,
-                                                 "file:size":
-                                                 file_properties.size,
-                                                 "file:local_path":
-                                                 file_properties.local_path
+                                                 "eo:bands": band_dict_list
                                              })
+                    file = FileExtensionUpdated.ext(asset_obj,
+                                                    add_if_missing=True)
+                    fill_file_properties(self.granule_href, asset_key, file,
+                                         manifest)
                     asset_list.append(asset_obj)
             elif "_SYN_" in product_type:
                 asset_key_list = constants.SYNERGY_SYN_ASSET_KEYS
@@ -302,8 +254,6 @@ class MetadataLinks:
                     asset_description = manifest.find_attr(
                         "textInfo",
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
-                    file_properties = get_file_properties(
-                        self.granule_href, manifest, asset_key)
                     if skip_nc:
                         asset_resolution = []
                         asset_shape_list = []
@@ -335,16 +285,8 @@ class MetadataLinks:
                                                      asset_shape_list,
                                                      "resolution":
                                                      asset_resolution,
-                                                     "eo:bands":
-                                                     band_dict_list,
-                                                     "file:checksum":
-                                                     file_properties.checksum,
-                                                     "file:size":
-                                                     file_properties.size,
-                                                     "file:local_path":
-                                                     file_properties.local_path
+                                                     "eo:bands": band_dict_list
                                                  })
-                        asset_list.append(asset_obj)
                     else:
                         asset_obj = pystac.Asset(href=asset_href,
                                                  media_type=media_type,
@@ -354,15 +296,13 @@ class MetadataLinks:
                                                      "syn:shape":
                                                      asset_shape_list,
                                                      "resolution":
-                                                     asset_resolution,
-                                                     "file:checksum":
-                                                     file_properties.checksum,
-                                                     "file:size":
-                                                     file_properties.size,
-                                                     "file:local_path":
-                                                     file_properties.local_path
+                                                     asset_resolution
                                                  })
-                        asset_list.append(asset_obj)
+                    file = FileExtensionUpdated.ext(asset_obj,
+                                                    add_if_missing=True)
+                    fill_file_properties(self.granule_href, asset_key, file,
+                                         manifest)
+                    asset_list.append(asset_obj)
             elif any(product_id in product_type
                      for product_id in ["_VG1_", "_V10_"]):
                 asset_key_list = constants.SYNERGY_V10_VG1_ASSET_KEYS
@@ -408,8 +348,6 @@ class MetadataLinks:
                     asset_description = manifest.find_attr(
                         "textInfo",
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
-                    file_properties = get_file_properties(
-                        self.granule_href, manifest, asset_key)
                     if skip_nc:
                         asset_resolution = []
                         asset_shape_list = []
@@ -441,12 +379,8 @@ class MetadataLinks:
                                 f"{product_type.split('_')[2].lower()}:shape":
                                 asset_shape_list,
                                 "resolution": asset_resolution,
-                                "eo:bands": band_dict_list,
-                                "file:checksum": file_properties.checksum,
-                                "file:size": file_properties.size,
-                                "file:local_path": file_properties.local_path
+                                "eo:bands": band_dict_list
                             })
-                        asset_list.append(asset_obj)
                     else:
                         asset_obj = pystac.Asset(
                             href=asset_href,
@@ -456,12 +390,13 @@ class MetadataLinks:
                             extra_fields={
                                 f"{product_type.split('_')[2].lower()}:shape":
                                 asset_shape_list,
-                                "resolution": asset_resolution,
-                                "file:checksum": file_properties.checksum,
-                                "file:size": file_properties.size,
-                                "file:local_path": file_properties.local_path
+                                "resolution": asset_resolution
                             })
-                        asset_list.append(asset_obj)
+                    file = FileExtensionUpdated.ext(asset_obj,
+                                                    add_if_missing=True)
+                    fill_file_properties(self.granule_href, asset_key, file,
+                                         manifest)
+                    asset_list.append(asset_obj)
             else:
                 asset_key_list = constants.SYNERGY_VGP_ASSET_KEYS
                 for ind, asset_key in enumerate(asset_key_list):
@@ -492,8 +427,6 @@ class MetadataLinks:
                     asset_description = manifest.find_attr(
                         "textInfo",
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
-                    file_properties = get_file_properties(
-                        self.granule_href, manifest, asset_key)
                     if skip_nc:
                         asset_resolution = []
                         asset_shape_list = []
@@ -525,16 +458,8 @@ class MetadataLinks:
                                                      asset_shape_list,
                                                      "resolution":
                                                      asset_resolution,
-                                                     "eo:bands":
-                                                     band_dict_list,
-                                                     "file:checksum":
-                                                     file_properties.checksum,
-                                                     "file:size":
-                                                     file_properties.size,
-                                                     "file:local_path":
-                                                     file_properties.local_path
+                                                     "eo:bands": band_dict_list
                                                  })
-                        asset_list.append(asset_obj)
                     else:
                         asset_obj = pystac.Asset(href=asset_href,
                                                  media_type=media_type,
@@ -544,15 +469,13 @@ class MetadataLinks:
                                                      "vgp:shape":
                                                      asset_shape_list,
                                                      "resolution":
-                                                     asset_resolution,
-                                                     "file:checksum":
-                                                     file_properties.checksum,
-                                                     "file:size":
-                                                     file_properties.size,
-                                                     "file:local_path":
-                                                     file_properties.local_path
+                                                     asset_resolution
                                                  })
-                        asset_list.append(asset_obj)
+                    file = FileExtensionUpdated.ext(asset_obj,
+                                                    add_if_missing=True)
+                    fill_file_properties(self.granule_href, asset_key, file,
+                                         manifest)
+                    asset_list.append(asset_obj)
         elif instrument_bands == constants.SENTINEL_OLCI_BANDS:
             if "OL_1_" in product_type:
                 asset_key_list = constants.OLCI_L1_ASSET_KEYS
@@ -575,8 +498,6 @@ class MetadataLinks:
                     asset_description = manifest.find_attr(
                         "textInfo",
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
-                    file_properties = get_file_properties(
-                        self.granule_href, manifest, asset_key)
                     if skip_nc:
                         asset_resolution = []
                     else:
@@ -595,14 +516,12 @@ class MetadataLinks:
                                              extra_fields={
                                                  "resolution":
                                                  asset_resolution,
-                                                 "eo:bands": [band_dict],
-                                                 "file:checksum":
-                                                 file_properties.checksum,
-                                                 "file:size":
-                                                 file_properties.size,
-                                                 "file:local_path":
-                                                 file_properties.local_path
+                                                 "eo:bands": [band_dict]
                                              })
+                    file = FileExtensionUpdated.ext(asset_obj,
+                                                    add_if_missing=True)
+                    fill_file_properties(self.granule_href, asset_key, file,
+                                         manifest)
                     asset_list.append(asset_obj)
             elif any(_str in product_type for _str in ["_LFR_", "_LRR_"]):
                 asset_key_list = constants.OLCI_L2_LAND_ASSET_KEYS
@@ -627,8 +546,6 @@ class MetadataLinks:
                     asset_description = manifest.find_attr(
                         "textInfo",
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
-                    file_properties = get_file_properties(
-                        self.granule_href, manifest, asset_key)
                     if skip_nc:
                         asset_resolution = []
                     else:
@@ -668,15 +585,12 @@ class MetadataLinks:
                                                  extra_fields={
                                                      "resolution":
                                                      asset_resolution,
-                                                     "eo:bands":
-                                                     band_dict_list,
-                                                     "file:checksum":
-                                                     file_properties.checksum,
-                                                     "file:size":
-                                                     file_properties.size,
-                                                     "file:local_path":
-                                                     file_properties.local_path
+                                                     "eo:bands": band_dict_list
                                                  })
+                    file = FileExtensionUpdated.ext(asset_obj,
+                                                    add_if_missing=True)
+                    fill_file_properties(self.granule_href, asset_key, file,
+                                         manifest)
                     asset_list.append(asset_obj)
             elif "_WFR_" in product_type:
                 asset_key_list = constants.OLCI_L2_WATER_ASSET_KEYS
@@ -723,8 +637,6 @@ class MetadataLinks:
                     asset_description = manifest.find_attr(
                         "textInfo",
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
-                    file_properties = get_file_properties(
-                        self.granule_href, manifest, asset_key)
                     if skip_nc:
                         asset_resolution = []
                     else:
@@ -757,32 +669,20 @@ class MetadataLinks:
                                                  extra_fields={
                                                      "resolution":
                                                      asset_resolution,
-                                                     "eo:bands":
-                                                     band_dict_list,
-                                                     "file:checksum":
-                                                     file_properties.checksum,
-                                                     "file:size":
-                                                     file_properties.size,
-                                                     "file:local_path":
-                                                     file_properties.local_path
+                                                     "eo:bands": band_dict_list
                                                  })
-                        asset_list.append(asset_obj)
                     else:
-                        asset_obj = pystac.Asset(href=asset_href,
-                                                 media_type=media_type,
-                                                 description=asset_description,
-                                                 roles=["data"],
-                                                 extra_fields={
-                                                     "resolution":
-                                                     asset_resolution,
-                                                     "file:checksum":
-                                                     file_properties.checksum,
-                                                     "file:size":
-                                                     file_properties.size,
-                                                     "file:local_path":
-                                                     file_properties.local_path
-                                                 })
-                        asset_list.append(asset_obj)
+                        asset_obj = pystac.Asset(
+                            href=asset_href,
+                            media_type=media_type,
+                            description=asset_description,
+                            roles=["data"],
+                            extra_fields={"resolution": asset_resolution})
+                    file = FileExtensionUpdated.ext(asset_obj,
+                                                    add_if_missing=True)
+                    fill_file_properties(self.granule_href, asset_key, file,
+                                         manifest)
+                    asset_list.append(asset_obj)
         elif instrument_bands == constants.SENTINEL_SLSTR_BANDS:
             if "SL_1_" in product_type:
                 asset_key_list = constants.SLSTR_L1_ASSET_KEYS
@@ -805,8 +705,6 @@ class MetadataLinks:
                     asset_description = manifest.find_attr(
                         "textInfo",
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
-                    file_properties = get_file_properties(
-                        self.granule_href, manifest, asset_key)
                     if skip_nc:
                         asset_resolution = []
                     else:
@@ -825,14 +723,12 @@ class MetadataLinks:
                                              extra_fields={
                                                  "resolution":
                                                  asset_resolution,
-                                                 "eo:bands": [band_dict],
-                                                 "file:checksum":
-                                                 file_properties.checksum,
-                                                 "file:size":
-                                                 file_properties.size,
-                                                 "file:local_path":
-                                                 file_properties.local_path
+                                                 "eo:bands": [band_dict]
                                              })
+                    file = FileExtensionUpdated.ext(asset_obj,
+                                                    add_if_missing=True)
+                    fill_file_properties(self.granule_href, asset_key, file,
+                                         manifest)
                     asset_list.append(asset_obj)
             elif "_FRP_" in product_type:
                 asset_key_list = constants.SLSTR_L2_FRP_KEYS
@@ -851,8 +747,6 @@ class MetadataLinks:
                     asset_description = manifest.find_attr(
                         "textInfo",
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
-                    file_properties = get_file_properties(
-                        self.granule_href, manifest, asset_key)
                     if skip_nc:
                         asset_resolution = []
                     else:
@@ -886,32 +780,20 @@ class MetadataLinks:
                                                  extra_fields={
                                                      "resolution":
                                                      asset_resolution,
-                                                     "eo:bands":
-                                                     band_dict_list,
-                                                     "file:checksum":
-                                                     file_properties.checksum,
-                                                     "file:size":
-                                                     file_properties.size,
-                                                     "file:local_path":
-                                                     file_properties.local_path
+                                                     "eo:bands": band_dict_list
                                                  })
-                        asset_list.append(asset_obj)
                     else:
-                        asset_obj = pystac.Asset(href=asset_href,
-                                                 media_type=media_type,
-                                                 description=asset_description,
-                                                 roles=["data"],
-                                                 extra_fields={
-                                                     "resolution":
-                                                     asset_resolution,
-                                                     "file:checksum":
-                                                     file_properties.checksum,
-                                                     "file:size":
-                                                     file_properties.size,
-                                                     "file:local_path":
-                                                     file_properties.local_path
-                                                 })
-                        asset_list.append(asset_obj)
+                        asset_obj = pystac.Asset(
+                            href=asset_href,
+                            media_type=media_type,
+                            description=asset_description,
+                            roles=["data"],
+                            extra_fields={"resolution": asset_resolution})
+                    file = FileExtensionUpdated.ext(asset_obj,
+                                                    add_if_missing=True)
+                    fill_file_properties(self.granule_href, asset_key, file,
+                                         manifest)
+                    asset_list.append(asset_obj)
             elif "_LST_" in product_type:
                 asset_key_list = constants.SLSTR_L2_LST_KEYS
                 for asset_key in asset_key_list:
@@ -926,8 +808,6 @@ class MetadataLinks:
                     media_type = manifest.find_attr(
                         "mimeType",
                         f".//dataObject[@ID='{asset_key}']//byteStream")
-                    file_properties = get_file_properties(
-                        self.granule_href, manifest, asset_key)
                     if skip_nc:
                         asset_resolution = []
                     else:
@@ -961,35 +841,23 @@ class MetadataLinks:
                                                  extra_fields={
                                                      "resolution":
                                                      asset_resolution,
-                                                     "eo:bands":
-                                                     band_dict_list,
-                                                     "file:checksum":
-                                                     file_properties.checksum,
-                                                     "file:size":
-                                                     file_properties.size,
-                                                     "file:local_path":
-                                                     file_properties.local_path
+                                                     "eo:bands": band_dict_list
                                                  })
-                        asset_list.append(asset_obj)
                     else:
                         asset_description = manifest.find_attr(
                             "textInfo",
                             f".//dataObject[@ID='{asset_key}']//fileLocation")
-                        asset_obj = pystac.Asset(href=asset_href,
-                                                 media_type=media_type,
-                                                 description=asset_description,
-                                                 roles=["data"],
-                                                 extra_fields={
-                                                     "resolution":
-                                                     asset_resolution,
-                                                     "file:checksum":
-                                                     file_properties.checksum,
-                                                     "file:size":
-                                                     file_properties.size,
-                                                     "file:local_path":
-                                                     file_properties.local_path
-                                                 })
-                        asset_list.append(asset_obj)
+                        asset_obj = pystac.Asset(
+                            href=asset_href,
+                            media_type=media_type,
+                            description=asset_description,
+                            roles=["data"],
+                            extra_fields={"resolution": asset_resolution})
+                    file = FileExtensionUpdated.ext(asset_obj,
+                                                    add_if_missing=True)
+                    fill_file_properties(self.granule_href, asset_key, file,
+                                         manifest)
+                    asset_list.append(asset_obj)
             elif "_WST_" in product_type:
                 asset_key_list = ["L2P_Data"]
                 band_key_list = ["S07", "S08", "S09"]
@@ -1017,8 +885,6 @@ class MetadataLinks:
                     asset_description = (
                         "Data respects the Group for High Resolution "
                         "Sea Surface Temperature (GHRSST) L2P specification")
-                    file_properties = get_file_properties(
-                        self.granule_href, manifest, asset_key)
                     if skip_nc:
                         asset_resolution_str = ""
                     else:
@@ -1031,14 +897,11 @@ class MetadataLinks:
                                              extra_fields={
                                                  "resolution":
                                                  asset_resolution_str,
-                                                 "eo:bands":
-                                                 band_dict_list,
-                                                 "file:checksum":
-                                                 file_properties.checksum,
-                                                 "file:size":
-                                                 file_properties.size,
-                                                 "file:local_path":
-                                                 file_properties.local_path
+                                                 "eo:bands": band_dict_list
                                              })
+                    file = FileExtensionUpdated.ext(asset_obj,
+                                                    add_if_missing=True)
+                    fill_file_properties(self.granule_href, asset_key, file,
+                                         manifest)
                     asset_list.append(asset_obj)
-        return (asset_key_list, asset_list)
+        return asset_key_list, asset_list

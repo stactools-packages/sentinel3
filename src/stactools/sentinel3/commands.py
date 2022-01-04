@@ -10,7 +10,6 @@ logger = logging.getLogger(__name__)
 
 def create_sentinel3_command(cli):
     """Creates the stactools-sentinel3 command line utility."""
-
     @cli.group(
         "sentinel3",
         short_help="Commands for working with stactools-sentinel3",
