@@ -10,7 +10,7 @@
     "eo:cloud_cover": 67.421502,
     "start_datetime": "2021-04-19 05:17:54.047806+00:00",
     "end_datetime": "2021-04-19 06:58:53.371850+00:00",
-    "instrument": [
+    "instruments": [
       "SLSTR"
     ],
     "s3:mode": "EO",
@@ -1383,8 +1383,8 @@
         }
       ],
       "file:checksum": "f7e67d0bb4acf309861443825cda3790",
-      "file:size": "644094789",
-      "file:local_path": "./20210419051754-MAR-L2P_GHRSST-SSTskin-SLSTRB-20210420160434-v02.0-fv01.0.nc",
+      "file:size": 644094789,
+      "file:local_path": "S3B_SL_2_WST____20210419T051754_20210419T065853_20210420T160434_6059_051_247______MAR_O_NT_003.SEN3/20210419051754-MAR-L2P_GHRSST-SSTskin-SLSTRB-20210420160434-v02.0-fv01.0.nc",
       "roles": [
         "data"
       ]
@@ -1398,6 +1398,7 @@
   ],
   "stac_extensions": [
     "https://stac-extensions.github.io/sat/v1.0.0/schema.json",
-    "https://stac-extensions.github.io/eo/v1.0.0/schema.json"
+    "https://stac-extensions.github.io/eo/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.0.0/schema.json"
   ]
 }

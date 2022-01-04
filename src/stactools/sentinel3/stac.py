@@ -4,6 +4,7 @@ from typing import Optional
 import pystac
 from pystac.extensions.eo import EOExtension
 from pystac.extensions.sat import SatExtension
+from pystac.extensions.file import FileExtension
 from stactools.core.io import ReadHrefModifier
 
 from .constants import (SENTINEL_CONSTELLATION, SENTINEL_LICENSE,
@@ -73,13 +74,16 @@ def create_item(
         metalinks.manifest, skip_nc)
 
     band_list = [
-        key.replace("_Data", "").replace("Data", "") for key in band_list
+        key.replace("_Data", "").replace("Data", "", 1) for key in band_list
     ]
 
     # objects for bands
     for band, asset in zip(band_list, asset_list):
         item.add_asset(band, asset)
 
+    # file
+    FileExtension.ext(list(item.get_assets().values())[0], add_if_missing=True)
+    
     # license link
     item.links.append(SENTINEL_LICENSE)
 

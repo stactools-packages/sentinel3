@@ -9,7 +9,7 @@
     "sat:relative_orbit": 316,
     "start_datetime": "2021-07-04 01:28:14.862485+00:00",
     "end_datetime": "2021-07-04 02:14:55.499366+00:00",
-    "instrument": [
+    "instruments": [
       "SRAL"
     ],
     "s3:mode": "EO",
@@ -843,8 +843,8 @@
         }
       ],
       "file:checksum": "9dd5b75385c391df0071722c4ac90642",
-      "file:size": "5265691",
-      "file:local_path": "standard_measurement.nc",
+      "file:size": 5265691,
+      "file:local_path": "S3A_SR_2_WAT____20210704T012815_20210704T021455_20210729T173140_2800_073_316______MAR_O_NT_004.SEN3/standard_measurement.nc",
       "roles": [
         "data"
       ]
@@ -882,8 +882,8 @@
         }
       ],
       "file:checksum": "9e0aea65b6cb93daea99eeed493b639f",
-      "file:size": "35724332",
-      "file:local_path": "enhanced_measurement.nc",
+      "file:size": 35724332,
+      "file:local_path": "S3A_SR_2_WAT____20210704T012815_20210704T021455_20210729T173140_2800_073_316______MAR_O_NT_004.SEN3/enhanced_measurement.nc",
       "roles": [
         "data"
       ]
@@ -906,8 +906,8 @@
         }
       ],
       "file:checksum": "ab44587cbe2d3a044b9d79bc9ba59525",
-      "file:size": "339280",
-      "file:local_path": "reduced_measurement.nc",
+      "file:size": 339280,
+      "file:local_path": "S3A_SR_2_WAT____20210704T012815_20210704T021455_20210729T173140_2800_073_316______MAR_O_NT_004.SEN3/reduced_measurement.nc",
       "roles": [
         "data"
       ]
@@ -921,6 +921,7 @@
   ],
   "stac_extensions": [
     "https://stac-extensions.github.io/sat/v1.0.0/schema.json",
-    "https://stac-extensions.github.io/eo/v1.0.0/schema.json"
+    "https://stac-extensions.github.io/eo/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.0.0/schema.json"
   ]
 }
