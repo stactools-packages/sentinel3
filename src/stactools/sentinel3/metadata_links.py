@@ -51,6 +51,7 @@ def get_file_properties(granule_href: str, manifest: XmlElement,
 
 
 class MetadataLinks:
+
     def __init__(self,
                  granule_href: str,
                  read_href_modifier: Optional[ReadHrefModifier] = None):

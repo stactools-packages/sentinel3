@@ -43,6 +43,7 @@ def fill_eo_properties(eo_ext: EOExtension, manifest: XmlElement):
         eo_ext (EOExtension): The extension to be populated.
         manifest(XmlElement): manifest file parsed to XmlElement.
     """
+
     def find_or_throw(attribute: str, xpath: str) -> str:
         value = manifest.find_attr(attribute, xpath)
         if value is None:

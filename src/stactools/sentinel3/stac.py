@@ -3,7 +3,7 @@ from typing import Optional
 
 import pystac
 from pystac.extensions.eo import EOExtension
-from pystac.extensions.file import FileExtension
+# from pystac.extensions.file import FileExtension
 from pystac.extensions.sat import SatExtension
 from stactools.core.io import ReadHrefModifier
 
@@ -46,7 +46,9 @@ def create_item(
         bbox=product_metadata.bbox,
         datetime=product_metadata.get_datetime,
         properties={},
-        stac_extensions=[],
+        stac_extensions=[
+            "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+        ],
     )
 
     # ---- Add Extensions ----
@@ -82,7 +84,7 @@ def create_item(
         item.add_asset(band, asset)
 
     # file
-    FileExtension.ext(list(item.get_assets().values())[0], add_if_missing=True)
+    # FileExtension.ext(list(item.get_assets().values())[0], add_if_missing=True)
 
     # license link
     item.links.append(SENTINEL_LICENSE)
