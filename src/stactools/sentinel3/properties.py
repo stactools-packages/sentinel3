@@ -1,3 +1,6 @@
+import os
+from hashlib import md5
+
 from pystac.extensions.eo import EOExtension
 from pystac.extensions.sat import OrbitState, SatExtension
 from stactools.core.io.xml import XmlElement
@@ -45,6 +48,7 @@ def fill_eo_properties(eo_ext: EOExtension, manifest: XmlElement) -> None:
         eo_ext (EOExtension): The extension to be populated.
         manifest(XmlElement): manifest file parsed to XmlElement.
     """
+
     def find_or_throw(attribute: str, xpath: str) -> str:
         value = manifest.find_attr(attribute, xpath)
         if value is None:
@@ -107,3 +111,13 @@ def fill_file_properties(granule_href: str, asset_key: str,
             f"'.//dataObject[@ID='{asset_key}']//byteStream'")
 
     file_ext.size = int(asset_size)
+
+
+def fill_manifest_file_properties(href: str,
+                                  file_ext: FileExtensionUpdated) -> None:
+    with open(href, 'rb') as f:
+        manifest_checksum = md5(f.read()).hexdigest()
+    file_ext.checksum = manifest_checksum
+    file_ext.local_path = os.sep.join(href.split("/")[-2:])
+    manifest_size = os.path.getsize(href)
+    file_ext.size = int(manifest_size)
