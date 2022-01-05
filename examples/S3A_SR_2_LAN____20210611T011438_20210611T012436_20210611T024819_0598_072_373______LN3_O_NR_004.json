@@ -225,6 +225,9 @@
     "safe-manifest": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SR_2_LAN____20210611T011438_20210611T012436_20210611T024819_0598_072_373______LN3_O_NR_004.SEN3/xfdumanifest.xml",
       "type": "application/xml",
+      "file:checksum": "07334a484326233aeef73d4cf4f6fbbb",
+      "file:local_path": "S3A_SR_2_LAN____20210611T011438_20210611T012436_20210611T024819_0598_072_373______LN3_O_NR_004.SEN3/xfdumanifest.xml",
+      "file:size": 95620,
       "roles": [
         "metadata"
       ]
@@ -259,8 +262,8 @@
         }
       ],
       "file:checksum": "380c81836b5bd7a8efca81c4a11df60f",
-      "file:size": 6697120,
       "file:local_path": "S3A_SR_2_LAN____20210611T011438_20210611T012436_20210611T024819_0598_072_373______LN3_O_NR_004.SEN3/standard_measurement.nc",
+      "file:size": 6697120,
       "roles": [
         "data"
       ]
@@ -298,8 +301,8 @@
         }
       ],
       "file:checksum": "8921946bfe2159a4c71819ab7522ae3d",
-      "file:size": 19958260,
       "file:local_path": "S3A_SR_2_LAN____20210611T011438_20210611T012436_20210611T024819_0598_072_373______LN3_O_NR_004.SEN3/enhanced_measurement.nc",
+      "file:size": 19958260,
       "roles": [
         "data"
       ]
@@ -322,8 +325,8 @@
         }
       ],
       "file:checksum": "ba787b27d6e590389f53b13453efd0cd",
-      "file:size": 273902,
       "file:local_path": "S3A_SR_2_LAN____20210611T011438_20210611T012436_20210611T024819_0598_072_373______LN3_O_NR_004.SEN3/reduced_measurement.nc",
+      "file:size": 273902,
       "roles": [
         "data"
       ]

@@ -353,6 +353,9 @@
     "safe-manifest": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/xfdumanifest.xml",
       "type": "application/xml",
+      "file:checksum": "7556442c0b42c150816e46a1308acb03",
+      "file:local_path": "S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/xfdumanifest.xml",
+      "file:size": 117096,
       "roles": [
         "metadata"
       ]
@@ -380,8 +383,8 @@
         }
       ],
       "file:checksum": "c8052a87ba971ffd2fac11848fae8046",
-      "file:size": 790066,
       "file:local_path": "S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/LST_in.nc",
+      "file:size": 790066,
       "roles": [
         "data"
       ]
@@ -395,8 +398,8 @@
         1000
       ],
       "file:checksum": "33363c5ac9880e5dd2adce45fcc12abc",
-      "file:size": 1391879,
       "file:local_path": "S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/LST_ancillary_ds.nc",
+      "file:size": 1391879,
       "roles": [
         "data"
       ]
@@ -410,8 +413,8 @@
         1000
       ],
       "file:checksum": "406b2a87a475231398a1a30781d37fbf",
-      "file:size": 2021106,
       "file:local_path": "S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/flags_in.nc",
+      "file:size": 2021106,
       "roles": [
         "data"
       ]
@@ -425,8 +428,8 @@
         1000
       ],
       "file:checksum": "09533e74cf3909708c646959d4ac3e13",
-      "file:size": 884423,
       "file:local_path": "S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/indices_in.nc",
+      "file:size": 884423,
       "roles": [
         "data"
       ]
@@ -440,8 +443,8 @@
         1000
       ],
       "file:checksum": "5a2871990593b847c27d58587d07aa54",
-      "file:size": 64446,
       "file:local_path": "S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/time_in.nc",
+      "file:size": 64446,
       "roles": [
         "data"
       ]
@@ -455,8 +458,8 @@
         1000
       ],
       "file:checksum": "dd2e989843c4ca18301fc4ce65daaddf",
-      "file:size": 7783851,
       "file:local_path": "S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/geodetic_in.nc",
+      "file:size": 7783851,
       "roles": [
         "data"
       ]
@@ -470,8 +473,8 @@
         1000
       ],
       "file:checksum": "c07a3e094dc44d493826b1a9f5292375",
-      "file:size": 4635113,
       "file:local_path": "S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/cartesian_in.nc",
+      "file:size": 4635113,
       "roles": [
         "data"
       ]
@@ -485,8 +488,8 @@
         1000
       ],
       "file:checksum": "2425accdcb2930dba120eafb5c21d15c",
-      "file:size": 3355466,
       "file:local_path": "S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/geometry_tn.nc",
+      "file:size": 3355466,
       "roles": [
         "data"
       ]
@@ -500,8 +503,8 @@
         1000
       ],
       "file:checksum": "f65a157b348e5b0931716731385549f2",
-      "file:size": 1681223,
       "file:local_path": "S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/geodetic_tx.nc",
+      "file:size": 1681223,
       "roles": [
         "data"
       ]
@@ -515,8 +518,8 @@
         1000
       ],
       "file:checksum": "e7d5df992cee370002a8765786f00e1c",
-      "file:size": 41952,
       "file:local_path": "S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/cartesian_tx.nc",
+      "file:size": 41952,
       "roles": [
         "data"
       ]
@@ -530,8 +533,8 @@
         1000
       ],
       "file:checksum": "e5bc65e1a446027cd22a508419282fd6",
-      "file:size": 33032113,
       "file:local_path": "S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/met_tx.nc",
+      "file:size": 33032113,
       "roles": [
         "data"
       ]

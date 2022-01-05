@@ -919,6 +919,9 @@
     "safe-manifest": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/xfdumanifest.xml",
       "type": "application/xml",
+      "file:checksum": "5d7aa13f028469ee445c33ab3a03322b",
+      "file:local_path": "S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/xfdumanifest.xml",
+      "file:size": 159712,
       "roles": [
         "metadata"
       ]
@@ -952,8 +955,8 @@
         }
       ],
       "file:checksum": "62641c090d69f1e3808b4f3af9a16bdd",
-      "file:size": 355069,
       "file:local_path": "S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/ogvi.nc",
+      "file:size": 355069,
       "roles": [
         "data"
       ]
@@ -987,8 +990,8 @@
         }
       ],
       "file:checksum": "0218d562d3eacb20843fc06ef3f7a1b0",
-      "file:size": 547075,
       "file:local_path": "S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/otci.nc",
+      "file:size": 547075,
       "roles": [
         "data"
       ]
@@ -1016,8 +1019,8 @@
         }
       ],
       "file:checksum": "7943106a95ac4d6aea3827d4043b4e66",
-      "file:size": 10579229,
       "file:local_path": "S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/iwv.nc",
+      "file:size": 10579229,
       "roles": [
         "data"
       ]
@@ -1045,8 +1048,8 @@
         }
       ],
       "file:checksum": "a1097d61a25557e04836e29cde961b56",
-      "file:size": 1258173,
       "file:local_path": "S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/rc_ogvi.nc",
+      "file:size": 1258173,
       "roles": [
         "data"
       ]
@@ -1059,6 +1062,9 @@
         1080,
         1176
       ],
+      "file:checksum": "e51b74b6a8e21e587264eb31c588abac",
+      "file:local_path": "S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/lqsf.nc",
+      "file:size": 3910619,
       "roles": [
         "data"
       ]
@@ -1071,6 +1077,9 @@
         1080,
         1176
       ],
+      "file:checksum": "98fcfd9c1af8a72735f424f7e63f5c12",
+      "file:local_path": "S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/time_coordinates.nc",
+      "file:size": 23607,
       "roles": [
         "data"
       ]
@@ -1083,6 +1092,9 @@
         1080,
         1176
       ],
+      "file:checksum": "b965fc64ce2aec2327178f8d42bcba67",
+      "file:local_path": "S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/geo_coordinates.nc",
+      "file:size": 55029575,
       "roles": [
         "data"
       ]
@@ -1095,6 +1107,9 @@
         1080,
         1176
       ],
+      "file:checksum": "b4f335028ddf886a7e5658c0bbf0eabc",
+      "file:local_path": "S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/tie_geo_coordinates.nc",
+      "file:size": 4780779,
       "roles": [
         "data"
       ]
@@ -1107,6 +1122,9 @@
         1080,
         1176
       ],
+      "file:checksum": "f2945a9db361a4f4d4f894e568b98049",
+      "file:local_path": "S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/tie_geometries.nc",
+      "file:size": 9169195,
       "roles": [
         "data"
       ]
@@ -1119,6 +1137,9 @@
         1080,
         1176
       ],
+      "file:checksum": "f37552572fdaeebaf223a65705b5d9c8",
+      "file:local_path": "S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/tie_meteo.nc",
+      "file:size": 78319253,
       "roles": [
         "data"
       ]
@@ -1131,6 +1152,9 @@
         1080,
         1176
       ],
+      "file:checksum": "21b089d03ffe781c818bcf01bf19eb00",
+      "file:local_path": "S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/instrument_data.nc",
+      "file:size": 1137558,
       "roles": [
         "data"
       ]
