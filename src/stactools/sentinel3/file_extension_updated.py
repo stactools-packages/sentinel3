@@ -34,3 +34,7 @@ class FileExtensionUpdated(FileExtension):
             add_if_missing: bool = False) -> "FileExtensionUpdated":
         super().ext(obj, add_if_missing)
         return cls(obj)
+
+    @classmethod
+    def get_schema_uri(cls) -> str:
+        return cls.SCHEMA_URI

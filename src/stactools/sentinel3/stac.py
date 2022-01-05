@@ -8,9 +8,11 @@ from stactools.core.io import ReadHrefModifier
 
 from .constants import (SENTINEL_CONSTELLATION, SENTINEL_LICENSE,
                         SENTINEL_PROVIDER)
+from .file_extension_updated import FileExtensionUpdated
 from .metadata_links import MetadataLinks
 from .product_metadata import ProductMetadata
-from .properties import fill_eo_properties, fill_sat_properties
+from .properties import (fill_eo_properties, fill_file_properties,
+                         fill_sat_properties)
 
 logger = logging.getLogger(__name__)
 
@@ -71,7 +73,7 @@ def create_item(
     item.add_asset(*metalinks.create_manifest_asset())
 
     # create band asset list
-    band_list, asset_list = metalinks.create_band_asset(
+    band_list, asset_identifier_list, asset_list = metalinks.create_band_asset(
         metalinks.manifest, skip_nc)
 
     band_list = [
@@ -79,8 +81,12 @@ def create_item(
     ]
 
     # objects for bands
-    for band, asset in zip(band_list, asset_list):
+    for band, identifier, asset in zip(band_list, asset_identifier_list,
+                                       asset_list):
         item.add_asset(band, asset)
+        file = FileExtensionUpdated.ext(asset, add_if_missing=True)
+        fill_file_properties(metalinks.granule_href, identifier, file,
+                             metalinks.manifest)
 
     # license link
     item.links.append(SENTINEL_LICENSE)

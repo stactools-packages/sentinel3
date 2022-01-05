@@ -7,8 +7,6 @@ from stactools.core.io import ReadHrefModifier
 from stactools.core.io.xml import XmlElement
 
 from . import constants
-from .file_extension_updated import FileExtensionUpdated
-from .properties import fill_file_properties
 
 
 class ManifestError(Exception):
@@ -67,6 +65,7 @@ class MetadataLinks:
 
     def create_band_asset(self, manifest: XmlElement, skip_nc=False):
 
+        asset_identifier_list = []
         asset_list = []
 
         product_type = manifest.findall(".//sentinel3:productType")[0].text
@@ -132,9 +131,7 @@ class MetadataLinks:
                                              "shape": asset_shape_list,
                                              "sral:bands": band_dict_list
                                          })
-                file = FileExtensionUpdated.ext(asset_obj, add_if_missing=True)
-                fill_file_properties(self.granule_href, asset_key, file,
-                                     manifest)
+                asset_identifier_list.append(asset_key)
                 asset_list.append(asset_obj)
         elif instrument_bands == constants.SENTINEL_SYNERGY_BANDS:
             if "_AOD_" in product_type:
@@ -183,10 +180,7 @@ class MetadataLinks:
                                                  asset_resolution,
                                                  "eo:bands": band_dict_list
                                              })
-                    file = FileExtensionUpdated.ext(asset_obj,
-                                                    add_if_missing=True)
-                    fill_file_properties(self.granule_href, asset_key, file,
-                                         manifest)
+                    asset_identifier_list.append(asset_key)
                     asset_list.append(asset_obj)
             elif "_SYN_" in product_type:
                 asset_key_list = constants.SYNERGY_SYN_ASSET_KEYS
@@ -298,10 +292,7 @@ class MetadataLinks:
                                                      "resolution":
                                                      asset_resolution
                                                  })
-                    file = FileExtensionUpdated.ext(asset_obj,
-                                                    add_if_missing=True)
-                    fill_file_properties(self.granule_href, asset_key, file,
-                                         manifest)
+                    asset_identifier_list.append(asset_key)
                     asset_list.append(asset_obj)
             elif any(product_id in product_type
                      for product_id in ["_VG1_", "_V10_"]):
@@ -392,10 +383,7 @@ class MetadataLinks:
                                 asset_shape_list,
                                 "resolution": asset_resolution
                             })
-                    file = FileExtensionUpdated.ext(asset_obj,
-                                                    add_if_missing=True)
-                    fill_file_properties(self.granule_href, asset_key, file,
-                                         manifest)
+                    asset_identifier_list.append(asset_key)
                     asset_list.append(asset_obj)
             else:
                 asset_key_list = constants.SYNERGY_VGP_ASSET_KEYS
@@ -471,10 +459,7 @@ class MetadataLinks:
                                                      "resolution":
                                                      asset_resolution
                                                  })
-                    file = FileExtensionUpdated.ext(asset_obj,
-                                                    add_if_missing=True)
-                    fill_file_properties(self.granule_href, asset_key, file,
-                                         manifest)
+                    asset_identifier_list.append(asset_key)
                     asset_list.append(asset_obj)
         elif instrument_bands == constants.SENTINEL_OLCI_BANDS:
             if "OL_1_" in product_type:
@@ -518,10 +503,7 @@ class MetadataLinks:
                                                  asset_resolution,
                                                  "eo:bands": [band_dict]
                                              })
-                    file = FileExtensionUpdated.ext(asset_obj,
-                                                    add_if_missing=True)
-                    fill_file_properties(self.granule_href, asset_key, file,
-                                         manifest)
+                    asset_identifier_list.append(asset_key)
                     asset_list.append(asset_obj)
             elif any(_str in product_type for _str in ["_LFR_", "_LRR_"]):
                 asset_key_list = constants.OLCI_L2_LAND_ASSET_KEYS
@@ -587,10 +569,7 @@ class MetadataLinks:
                                                      asset_resolution,
                                                      "eo:bands": band_dict_list
                                                  })
-                    file = FileExtensionUpdated.ext(asset_obj,
-                                                    add_if_missing=True)
-                    fill_file_properties(self.granule_href, asset_key, file,
-                                         manifest)
+                    asset_identifier_list.append(asset_key)
                     asset_list.append(asset_obj)
             elif "_WFR_" in product_type:
                 asset_key_list = constants.OLCI_L2_WATER_ASSET_KEYS
@@ -678,10 +657,7 @@ class MetadataLinks:
                             description=asset_description,
                             roles=["data"],
                             extra_fields={"resolution": asset_resolution})
-                    file = FileExtensionUpdated.ext(asset_obj,
-                                                    add_if_missing=True)
-                    fill_file_properties(self.granule_href, asset_key, file,
-                                         manifest)
+                    asset_identifier_list.append(asset_key)
                     asset_list.append(asset_obj)
         elif instrument_bands == constants.SENTINEL_SLSTR_BANDS:
             if "SL_1_" in product_type:
@@ -725,10 +701,7 @@ class MetadataLinks:
                                                  asset_resolution,
                                                  "eo:bands": [band_dict]
                                              })
-                    file = FileExtensionUpdated.ext(asset_obj,
-                                                    add_if_missing=True)
-                    fill_file_properties(self.granule_href, asset_key, file,
-                                         manifest)
+                    asset_identifier_list.append(asset_key)
                     asset_list.append(asset_obj)
             elif "_FRP_" in product_type:
                 asset_key_list = constants.SLSTR_L2_FRP_KEYS
@@ -789,10 +762,7 @@ class MetadataLinks:
                             description=asset_description,
                             roles=["data"],
                             extra_fields={"resolution": asset_resolution})
-                    file = FileExtensionUpdated.ext(asset_obj,
-                                                    add_if_missing=True)
-                    fill_file_properties(self.granule_href, asset_key, file,
-                                         manifest)
+                    asset_identifier_list.append(asset_key)
                     asset_list.append(asset_obj)
             elif "_LST_" in product_type:
                 asset_key_list = constants.SLSTR_L2_LST_KEYS
@@ -853,10 +823,7 @@ class MetadataLinks:
                             description=asset_description,
                             roles=["data"],
                             extra_fields={"resolution": asset_resolution})
-                    file = FileExtensionUpdated.ext(asset_obj,
-                                                    add_if_missing=True)
-                    fill_file_properties(self.granule_href, asset_key, file,
-                                         manifest)
+                    asset_identifier_list.append(asset_key)
                     asset_list.append(asset_obj)
             elif "_WST_" in product_type:
                 asset_key_list = ["L2P_Data"]
@@ -899,9 +866,6 @@ class MetadataLinks:
                                                  asset_resolution_str,
                                                  "eo:bands": band_dict_list
                                              })
-                    file = FileExtensionUpdated.ext(asset_obj,
-                                                    add_if_missing=True)
-                    fill_file_properties(self.granule_href, asset_key, file,
-                                         manifest)
+                    asset_identifier_list.append(asset_key)
                     asset_list.append(asset_obj)
-        return asset_key_list, asset_list
+        return asset_key_list, asset_identifier_list, asset_list
