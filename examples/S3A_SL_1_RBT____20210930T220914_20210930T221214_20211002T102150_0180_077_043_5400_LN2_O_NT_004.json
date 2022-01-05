@@ -353,6 +353,9 @@
     "safe-manifest": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_1_RBT____20210930T220914_20210930T221214_20211002T102150_0180_077_043_5400_LN2_O_NT_004.SEN3/xfdumanifest.xml",
       "type": "application/xml",
+      "file:checksum": "e77b7613ad3278fde2d12f6b4942fdf9",
+      "file:local_path": "S3A_SL_1_RBT____20210930T220914_20210930T221214_20211002T102150_0180_077_043_5400_LN2_O_NT_004.SEN3/xfdumanifest.xml",
+      "file:size": 190447,
       "roles": [
         "metadata"
       ]
@@ -374,8 +377,8 @@
         }
       ],
       "file:checksum": "a313e529a1ca436ad6bb3b5634dce75b",
-      "file:size": 1261116,
       "file:local_path": "S3A_SL_1_RBT____20210930T220914_20210930T221214_20211002T102150_0180_077_043_5400_LN2_O_NT_004.SEN3/S1_radiance_an.nc",
+      "file:size": 1261116,
       "roles": [
         "data"
       ]
@@ -397,8 +400,8 @@
         }
       ],
       "file:checksum": "27ebdbc9b98bfee612b6613587073613",
-      "file:size": 1261051,
       "file:local_path": "S3A_SL_1_RBT____20210930T220914_20210930T221214_20211002T102150_0180_077_043_5400_LN2_O_NT_004.SEN3/S2_radiance_an.nc",
+      "file:size": 1261051,
       "roles": [
         "data"
       ]
@@ -420,8 +423,8 @@
         }
       ],
       "file:checksum": "58adb5675ce822273d92bb47f9454799",
-      "file:size": 1261051,
       "file:local_path": "S3A_SL_1_RBT____20210930T220914_20210930T221214_20211002T102150_0180_077_043_5400_LN2_O_NT_004.SEN3/S3_radiance_an.nc",
+      "file:size": 1261051,
       "roles": [
         "data"
       ]
@@ -443,8 +446,8 @@
         }
       ],
       "file:checksum": "4356f7430862dfcd4964e32f30727af9",
-      "file:size": 1262286,
       "file:local_path": "S3A_SL_1_RBT____20210930T220914_20210930T221214_20211002T102150_0180_077_043_5400_LN2_O_NT_004.SEN3/S4_radiance_an.nc",
+      "file:size": 1262286,
       "roles": [
         "data"
       ]
@@ -466,8 +469,8 @@
         }
       ],
       "file:checksum": "eb0e92d37b8d9e5497b9f38d7878a2a3",
-      "file:size": 7872524,
       "file:local_path": "S3A_SL_1_RBT____20210930T220914_20210930T221214_20211002T102150_0180_077_043_5400_LN2_O_NT_004.SEN3/S5_radiance_an.nc",
+      "file:size": 7872524,
       "roles": [
         "data"
       ]
@@ -489,8 +492,8 @@
         }
       ],
       "file:checksum": "c2ed2a4d01ace0b3a6f715927a3782df",
-      "file:size": 9284922,
       "file:local_path": "S3A_SL_1_RBT____20210930T220914_20210930T221214_20211002T102150_0180_077_043_5400_LN2_O_NT_004.SEN3/S6_radiance_an.nc",
+      "file:size": 9284922,
       "roles": [
         "data"
       ]
@@ -512,8 +515,8 @@
         }
       ],
       "file:checksum": "6629456693fa2b6b1251665ea50519a7",
-      "file:size": 2610392,
       "file:local_path": "S3A_SL_1_RBT____20210930T220914_20210930T221214_20211002T102150_0180_077_043_5400_LN2_O_NT_004.SEN3/S7_BT_in.nc",
+      "file:size": 2610392,
       "roles": [
         "data"
       ]
@@ -535,8 +538,8 @@
         }
       ],
       "file:checksum": "88c6b95c3540d3c1b7a233be770b59d2",
-      "file:size": 2550053,
       "file:local_path": "S3A_SL_1_RBT____20210930T220914_20210930T221214_20211002T102150_0180_077_043_5400_LN2_O_NT_004.SEN3/S8_BT_in.nc",
+      "file:size": 2550053,
       "roles": [
         "data"
       ]
@@ -558,8 +561,8 @@
         }
       ],
       "file:checksum": "fb2c8b6a965e5b30fbd33d7fbe594fdb",
-      "file:size": 2542336,
       "file:local_path": "S3A_SL_1_RBT____20210930T220914_20210930T221214_20211002T102150_0180_077_043_5400_LN2_O_NT_004.SEN3/S9_BT_in.nc",
+      "file:size": 2542336,
       "roles": [
         "data"
       ]
@@ -581,8 +584,8 @@
         }
       ],
       "file:checksum": "b0de0fc89680eb507fb3759496ae50dd",
-      "file:size": 2739389,
       "file:local_path": "S3A_SL_1_RBT____20210930T220914_20210930T221214_20211002T102150_0180_077_043_5400_LN2_O_NT_004.SEN3/F1_BT_fn.nc",
+      "file:size": 2739389,
       "roles": [
         "data"
       ]
@@ -604,8 +607,8 @@
         }
       ],
       "file:checksum": "c005e3777e6d8fc22cf6cec25ec7b9a1",
-      "file:size": 2572775,
       "file:local_path": "S3A_SL_1_RBT____20210930T220914_20210930T221214_20211002T102150_0180_077_043_5400_LN2_O_NT_004.SEN3/F2_BT_in.nc",
+      "file:size": 2572775,
       "roles": [
         "data"
       ]

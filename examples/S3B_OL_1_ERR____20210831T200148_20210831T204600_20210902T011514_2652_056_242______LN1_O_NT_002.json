@@ -918,6 +918,9 @@
     "safe-manifest": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3B_OL_1_ERR____20210831T200148_20210831T204600_20210902T011514_2652_056_242______LN1_O_NT_002.SEN3/xfdumanifest.xml",
       "type": "application/xml",
+      "file:checksum": "12705ca470488a8da7711a96cc741e1a",
+      "file:local_path": "S3B_OL_1_ERR____20210831T200148_20210831T204600_20210902T011514_2652_056_242______LN1_O_NT_002.SEN3/xfdumanifest.xml",
+      "file:size": 164616,
       "roles": [
         "metadata"
       ]
@@ -939,8 +942,8 @@
         }
       ],
       "file:checksum": "62999d1d2c2c9db87fe826144ccce514",
-      "file:size": 25463170,
       "file:local_path": "S3B_OL_1_ERR____20210831T200148_20210831T204600_20210902T011514_2652_056_242______LN1_O_NT_002.SEN3/Oa01_radiance.nc",
+      "file:size": 25463170,
       "roles": [
         "data"
       ]
@@ -962,8 +965,8 @@
         }
       ],
       "file:checksum": "a68a1ebdd2db1183b010bb57c319b7b0",
-      "file:size": 26412570,
       "file:local_path": "S3B_OL_1_ERR____20210831T200148_20210831T204600_20210902T011514_2652_056_242______LN1_O_NT_002.SEN3/Oa02_radiance.nc",
+      "file:size": 26412570,
       "roles": [
         "data"
       ]
@@ -985,8 +988,8 @@
         }
       ],
       "file:checksum": "183ba65a9ee0ac47c9f727f1d8e1dd76",
-      "file:size": 26756147,
       "file:local_path": "S3B_OL_1_ERR____20210831T200148_20210831T204600_20210902T011514_2652_056_242______LN1_O_NT_002.SEN3/Oa03_radiance.nc",
+      "file:size": 26756147,
       "roles": [
         "data"
       ]
@@ -1008,8 +1011,8 @@
         }
       ],
       "file:checksum": "5c184fce8ebfe3c3f3406564e4358ce5",
-      "file:size": 27415820,
       "file:local_path": "S3B_OL_1_ERR____20210831T200148_20210831T204600_20210902T011514_2652_056_242______LN1_O_NT_002.SEN3/Oa04_radiance.nc",
+      "file:size": 27415820,
       "roles": [
         "data"
       ]
@@ -1031,8 +1034,8 @@
         }
       ],
       "file:checksum": "20a5c3d9f67bdef97da0386a485fd38d",
-      "file:size": 27206201,
       "file:local_path": "S3B_OL_1_ERR____20210831T200148_20210831T204600_20210902T011514_2652_056_242______LN1_O_NT_002.SEN3/Oa05_radiance.nc",
+      "file:size": 27206201,
       "roles": [
         "data"
       ]
@@ -1054,8 +1057,8 @@
         }
       ],
       "file:checksum": "eef3b56bbd68bc451b2bb508debad12e",
-      "file:size": 27625230,
       "file:local_path": "S3B_OL_1_ERR____20210831T200148_20210831T204600_20210902T011514_2652_056_242______LN1_O_NT_002.SEN3/Oa06_radiance.nc",
+      "file:size": 27625230,
       "roles": [
         "data"
       ]
@@ -1077,8 +1080,8 @@
         }
       ],
       "file:checksum": "acc4f711f5adb6a3274607109efd42d1",
-      "file:size": 27346603,
       "file:local_path": "S3B_OL_1_ERR____20210831T200148_20210831T204600_20210902T011514_2652_056_242______LN1_O_NT_002.SEN3/Oa07_radiance.nc",
+      "file:size": 27346603,
       "roles": [
         "data"
       ]
@@ -1100,8 +1103,8 @@
         }
       ],
       "file:checksum": "e987deac956053ca0ad2549164c6a5fa",
-      "file:size": 27888891,
       "file:local_path": "S3B_OL_1_ERR____20210831T200148_20210831T204600_20210902T011514_2652_056_242______LN1_O_NT_002.SEN3/Oa08_radiance.nc",
+      "file:size": 27888891,
       "roles": [
         "data"
       ]
@@ -1123,8 +1126,8 @@
         }
       ],
       "file:checksum": "2c5c4ed1b7cdd705607da7ca81cc3869",
-      "file:size": 27629213,
       "file:local_path": "S3B_OL_1_ERR____20210831T200148_20210831T204600_20210902T011514_2652_056_242______LN1_O_NT_002.SEN3/Oa09_radiance.nc",
+      "file:size": 27629213,
       "roles": [
         "data"
       ]
@@ -1146,8 +1149,8 @@
         }
       ],
       "file:checksum": "5c2025af1550eb4af047467a68a9cd9d",
-      "file:size": 27832858,
       "file:local_path": "S3B_OL_1_ERR____20210831T200148_20210831T204600_20210902T011514_2652_056_242______LN1_O_NT_002.SEN3/Oa10_radiance.nc",
+      "file:size": 27832858,
       "roles": [
         "data"
       ]
@@ -1169,8 +1172,8 @@
         }
       ],
       "file:checksum": "6408f39824944c74a99353179357d543",
-      "file:size": 27919566,
       "file:local_path": "S3B_OL_1_ERR____20210831T200148_20210831T204600_20210902T011514_2652_056_242______LN1_O_NT_002.SEN3/Oa11_radiance.nc",
+      "file:size": 27919566,
       "roles": [
         "data"
       ]
@@ -1192,8 +1195,8 @@
         }
       ],
       "file:checksum": "425af0b8313bf9b4f28b223a0226d1ff",
-      "file:size": 28140324,
       "file:local_path": "S3B_OL_1_ERR____20210831T200148_20210831T204600_20210902T011514_2652_056_242______LN1_O_NT_002.SEN3/Oa12_radiance.nc",
+      "file:size": 28140324,
       "roles": [
         "data"
       ]
@@ -1215,8 +1218,8 @@
         }
       ],
       "file:checksum": "63412554e561d349f67b6dd6df049575",
-      "file:size": 24367800,
       "file:local_path": "S3B_OL_1_ERR____20210831T200148_20210831T204600_20210902T011514_2652_056_242______LN1_O_NT_002.SEN3/Oa13_radiance.nc",
+      "file:size": 24367800,
       "roles": [
         "data"
       ]
@@ -1238,8 +1241,8 @@
         }
       ],
       "file:checksum": "99731eee885295ea367fec3034f24e81",
-      "file:size": 26042476,
       "file:local_path": "S3B_OL_1_ERR____20210831T200148_20210831T204600_20210902T011514_2652_056_242______LN1_O_NT_002.SEN3/Oa14_radiance.nc",
+      "file:size": 26042476,
       "roles": [
         "data"
       ]
@@ -1261,8 +1264,8 @@
         }
       ],
       "file:checksum": "7c00795c69f0795b6c03dd7d7d80edb2",
-      "file:size": 27566256,
       "file:local_path": "S3B_OL_1_ERR____20210831T200148_20210831T204600_20210902T011514_2652_056_242______LN1_O_NT_002.SEN3/Oa15_radiance.nc",
+      "file:size": 27566256,
       "roles": [
         "data"
       ]
@@ -1284,8 +1287,8 @@
         }
       ],
       "file:checksum": "cd72e58c684ce6b4d941abdebc1c1acd",
-      "file:size": 28048200,
       "file:local_path": "S3B_OL_1_ERR____20210831T200148_20210831T204600_20210902T011514_2652_056_242______LN1_O_NT_002.SEN3/Oa16_radiance.nc",
+      "file:size": 28048200,
       "roles": [
         "data"
       ]
@@ -1307,8 +1310,8 @@
         }
       ],
       "file:checksum": "f2f7de2a1ae0665d99a3e874994e0297",
-      "file:size": 28055614,
       "file:local_path": "S3B_OL_1_ERR____20210831T200148_20210831T204600_20210902T011514_2652_056_242______LN1_O_NT_002.SEN3/Oa17_radiance.nc",
+      "file:size": 28055614,
       "roles": [
         "data"
       ]
@@ -1330,8 +1333,8 @@
         }
       ],
       "file:checksum": "543de277c59cfd3a133e06e90aa136d1",
-      "file:size": 27982585,
       "file:local_path": "S3B_OL_1_ERR____20210831T200148_20210831T204600_20210902T011514_2652_056_242______LN1_O_NT_002.SEN3/Oa18_radiance.nc",
+      "file:size": 27982585,
       "roles": [
         "data"
       ]
@@ -1353,8 +1356,8 @@
         }
       ],
       "file:checksum": "69ecb1ee611bedfb4154cc71bb2afc76",
-      "file:size": 27325734,
       "file:local_path": "S3B_OL_1_ERR____20210831T200148_20210831T204600_20210902T011514_2652_056_242______LN1_O_NT_002.SEN3/Oa19_radiance.nc",
+      "file:size": 27325734,
       "roles": [
         "data"
       ]
@@ -1376,8 +1379,8 @@
         }
       ],
       "file:checksum": "36cd9ea20eb9f60b42f01bd8bb237fbe",
-      "file:size": 25302667,
       "file:local_path": "S3B_OL_1_ERR____20210831T200148_20210831T204600_20210902T011514_2652_056_242______LN1_O_NT_002.SEN3/Oa20_radiance.nc",
+      "file:size": 25302667,
       "roles": [
         "data"
       ]
@@ -1399,8 +1402,8 @@
         }
       ],
       "file:checksum": "2765f865f90c45f6df822a2e30315b28",
-      "file:size": 28145521,
       "file:local_path": "S3B_OL_1_ERR____20210831T200148_20210831T204600_20210902T011514_2652_056_242______LN1_O_NT_002.SEN3/Oa21_radiance.nc",
+      "file:size": 28145521,
       "roles": [
         "data"
       ]

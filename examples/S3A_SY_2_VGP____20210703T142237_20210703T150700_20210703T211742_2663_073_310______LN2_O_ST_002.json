@@ -1437,6 +1437,9 @@
     "safe-manifest": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/xfdumanifest.xml",
       "type": "application/xml",
+      "file:checksum": "6f0bf1e6ec385d73e96f11f721f2c752",
+      "file:local_path": "S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/xfdumanifest.xml",
+      "file:size": 190191,
       "roles": [
         "metadata"
       ]
@@ -1471,8 +1474,8 @@
         }
       ],
       "file:checksum": "9eb422789252b0c917a70e8177b96b8e",
-      "file:size": 9383370,
       "file:local_path": "S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/B0.nc",
+      "file:size": 9383370,
       "roles": [
         "data"
       ]
@@ -1507,8 +1510,8 @@
         }
       ],
       "file:checksum": "49cbc23d76fc8445d02c207d17fe7313",
-      "file:size": 9343192,
       "file:local_path": "S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/B2.nc",
+      "file:size": 9343192,
       "roles": [
         "data"
       ]
@@ -1543,8 +1546,8 @@
         }
       ],
       "file:checksum": "953d54c7399ed11a4f74dc68e31d6647",
-      "file:size": 9824957,
       "file:local_path": "S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/B3.nc",
+      "file:size": 9824957,
       "roles": [
         "data"
       ]
@@ -1579,8 +1582,8 @@
         }
       ],
       "file:checksum": "0f607b0b6293b34b2437dd14652e5053",
-      "file:size": 12710854,
       "file:local_path": "S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/MIR.nc",
+      "file:size": 12710854,
       "roles": [
         "data"
       ]
@@ -1607,8 +1610,8 @@
         1000
       ],
       "file:checksum": "fd28cf3d969a04f31d5008918f28a082",
-      "file:size": 272952,
       "file:local_path": "S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/vaa.nc",
+      "file:size": 272952,
       "roles": [
         "data"
       ]
@@ -1635,8 +1638,8 @@
         1000
       ],
       "file:checksum": "27b52e52526c55f73b08893aa42812f2",
-      "file:size": 449317,
       "file:local_path": "S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/vza.nc",
+      "file:size": 449317,
       "roles": [
         "data"
       ]
@@ -1663,8 +1666,8 @@
         1000
       ],
       "file:checksum": "18a3b9ed14308bc2af1905f954690b55",
-      "file:size": 259002,
       "file:local_path": "S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/saa.nc",
+      "file:size": 259002,
       "roles": [
         "data"
       ]
@@ -1691,8 +1694,8 @@
         1000
       ],
       "file:checksum": "c5f680570de765477ac36307bfb4beaf",
-      "file:size": 291332,
       "file:local_path": "S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/sza.nc",
+      "file:size": 291332,
       "roles": [
         "data"
       ]
@@ -1719,8 +1722,8 @@
         1000
       ],
       "file:checksum": "f16a21ded98f76185b555b389fb985b8",
-      "file:size": 445172,
       "file:local_path": "S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/ag.nc",
+      "file:size": 445172,
       "roles": [
         "data"
       ]
@@ -1747,8 +1750,8 @@
         1000
       ],
       "file:checksum": "5a92524adf7feab2f53b3bde64df963a",
-      "file:size": 248484,
       "file:local_path": "S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/og.nc",
+      "file:size": 248484,
       "roles": [
         "data"
       ]
@@ -1775,8 +1778,8 @@
         1000
       ],
       "file:checksum": "6d478c7790e12b7c34f622b67ee5a617",
-      "file:size": 624971,
       "file:local_path": "S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/wvg.nc",
+      "file:size": 624971,
       "roles": [
         "data"
       ]
@@ -1803,8 +1806,8 @@
         1000
       ],
       "file:checksum": "33f87705b46c57e95f330e4ca03fa07a",
-      "file:size": 3266922,
       "file:local_path": "S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/sm.nc",
+      "file:size": 3266922,
       "roles": [
         "data"
       ]

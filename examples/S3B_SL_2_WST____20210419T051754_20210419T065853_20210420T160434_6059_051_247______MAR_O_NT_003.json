@@ -1353,6 +1353,9 @@
     "safe-manifest": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3B_SL_2_WST____20210419T051754_20210419T065853_20210420T160434_6059_051_247______MAR_O_NT_003.SEN3/xfdumanifest.xml",
       "type": "application/xml",
+      "file:checksum": "78276d1a70ef406665d21d6cb83ecb62",
+      "file:local_path": "S3B_SL_2_WST____20210419T051754_20210419T065853_20210420T160434_6059_051_247______MAR_O_NT_003.SEN3/xfdumanifest.xml",
+      "file:size": 214116,
       "roles": [
         "metadata"
       ]
@@ -1383,8 +1386,8 @@
         }
       ],
       "file:checksum": "f7e67d0bb4acf309861443825cda3790",
-      "file:size": 644094789,
       "file:local_path": "S3B_SL_2_WST____20210419T051754_20210419T065853_20210420T160434_6059_051_247______MAR_O_NT_003.SEN3/20210419051754-MAR-L2P_GHRSST-SSTskin-SLSTRB-20210420160434-v02.0-fv01.0.nc",
+      "file:size": 644094789,
       "roles": [
         "data"
       ]
