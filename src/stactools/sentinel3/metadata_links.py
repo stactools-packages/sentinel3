@@ -507,9 +507,12 @@ class MetadataLinks:
                     asset_identifier_list.append(asset_key)
                     asset_list.append(asset_obj)
             elif any(_str in product_type for _str in ["_LFR_", "_LRR_"]):
-                asset_key_list = constants.OLCI_L2_LAND_ASSET_KEYS
+                if len(manifest.findall(".//dataObject[@ID='ogviData']")) == 0:
+                    asset_key_list = constants.OLCI_L2_LAND_ASSET_KEYS_RENAMED
+                else:  
+                    asset_key_list = constants.OLCI_L2_LAND_ASSET_KEYS
                 for asset_key in asset_key_list:
-                    if asset_key == "ogviData":
+                    if (asset_key == "ogviData" or asset_key == "gifaparData"):
                         band_key_list = ["Oa03", "Oa10", "Oa17"]
                     elif asset_key == "otciData":
                         band_key_list = ["Oa10", "Oa11", "Oa12"]
