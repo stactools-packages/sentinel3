@@ -509,7 +509,7 @@ class MetadataLinks:
             elif any(_str in product_type for _str in ["_LFR_", "_LRR_"]):
                 if len(manifest.findall(".//dataObject[@ID='ogviData']")) == 0:
                     asset_key_list = constants.OLCI_L2_LAND_ASSET_KEYS_RENAMED
-                else:  
+                else:
                     asset_key_list = constants.OLCI_L2_LAND_ASSET_KEYS
                 for asset_key in asset_key_list:
                     if (asset_key == "ogviData" or asset_key == "gifaparData"):
