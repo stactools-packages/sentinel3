@@ -76,7 +76,8 @@ def create_item(
     manifest_href = os.path.join(granule_href, MANIFEST_FILENAME)
     manifest_file = FileExtensionUpdated.ext(manifest_asset,
                                              add_if_missing=True)
-    fill_manifest_file_properties(manifest_href, manifest_file)
+    fill_manifest_file_properties(manifest_href, metalinks.manifest_text,
+                                  manifest_file)
 
     # create band asset list
     band_list, asset_identifier_list, asset_list = metalinks.create_band_asset(

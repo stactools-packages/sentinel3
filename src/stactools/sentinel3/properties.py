@@ -113,11 +113,9 @@ def fill_file_properties(granule_href: str, asset_key: str,
     file_ext.size = int(asset_size)
 
 
-def fill_manifest_file_properties(href: str,
+def fill_manifest_file_properties(manifest_href: str, manifest_text: str,
                                   file_ext: FileExtensionUpdated) -> None:
-    with open(href, 'rb') as f:
-        manifest_checksum = md5(f.read()).hexdigest()
-    file_ext.checksum = manifest_checksum
-    file_ext.local_path = os.sep.join(href.split("/")[-2:])
-    manifest_size = os.path.getsize(href)
-    file_ext.size = int(manifest_size)
+    manifest_text_encoded = manifest_text.encode(encoding='UTF-8')
+    file_ext.checksum = md5(manifest_text_encoded).hexdigest()
+    file_ext.local_path = os.sep.join(manifest_href.split("/")[-2:])
+    file_ext.size = int(len(manifest_text_encoded))

@@ -1,9 +1,10 @@
 import os
-from typing import List, Optional
+from typing import List, Optional, Tuple
 
 import netCDF4 as nc  # type: ignore
 import pystac
-from stactools.core.io import ReadHrefModifier
+from lxml import etree  # type: ignore
+from stactools.core.io import ReadHrefModifier, read_text
 from stactools.core.io.xml import XmlElement
 
 from . import constants
@@ -21,7 +22,8 @@ class MetadataLinks:
         self.granule_href = granule_href
         self.href = os.path.join(granule_href, constants.MANIFEST_FILENAME)
 
-        self.manifest = XmlElement.from_file(self.href, read_href_modifier)
+        self.manifest, self.manifest_text = self.parse_xml_from_href(
+            self.href, read_href_modifier)
         data_object_section = self.manifest.find("dataObjectSection")
         if data_object_section is None:
             raise ManifestError(
@@ -30,6 +32,16 @@ class MetadataLinks:
         self._data_object_section = data_object_section
         self.product_metadata_href = os.path.join(granule_href,
                                                   constants.MANIFEST_FILENAME)
+
+    @classmethod
+    def parse_xml_from_href(
+        cls,
+        href: str,
+        read_href_modifier: Optional[ReadHrefModifier] = None
+    ) -> Tuple["XmlElement", str]:
+        text = read_text(href, read_href_modifier)
+        return XmlElement(etree.fromstring(bytes(text,
+                                                 encoding='utf-8'))), text
 
     def _find_href(self, xpaths: List[str]) -> Optional[str]:
         file_path = None
@@ -62,7 +74,7 @@ class MetadataLinks:
             media_type=pystac.MediaType.XML,
             roles=["metadata"],
         )
-        return (constants.SAFE_MANIFEST_ASSET_KEY, asset)
+        return constants.SAFE_MANIFEST_ASSET_KEY, asset
 
     def create_band_asset(self, manifest: XmlElement, skip_nc=False):
 
