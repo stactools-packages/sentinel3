@@ -77,6 +77,10 @@ class MetadataLinks:
         return constants.SAFE_MANIFEST_ASSET_KEY, asset
 
     def create_band_asset(self, manifest: XmlElement, skip_nc=False):
+        def strip_prefix(prefix: str, content: str) -> str:
+            if content.startswith(prefix):
+                return content[len(prefix):]
+            return content
 
         asset_identifier_list = []
         asset_list = []
@@ -254,7 +258,7 @@ class MetadataLinks:
                     asset_location = self.read_href(
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
                     asset_href = os.path.join(self.granule_href,
-                                              asset_location.split("/")[1])
+                                              strip_prefix("./", asset_location))
                     media_type = manifest.find_attr(
                         "mimeType",
                         f".//dataObject[@ID='{asset_key}']//byteStream")
@@ -345,7 +349,7 @@ class MetadataLinks:
                     asset_location = self.read_href(
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
                     asset_href = os.path.join(self.granule_href,
-                                              asset_location.split("/")[1])
+                                              strip_prefix("./", asset_location))
                     media_type = manifest.find_attr(
                         "mimeType",
                         f".//dataObject[@ID='{asset_key}']//byteStream")
@@ -489,7 +493,7 @@ class MetadataLinks:
                     asset_location = self.read_href(
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
                     asset_href = os.path.join(self.granule_href,
-                                              asset_location.split("/")[1])
+                                              strip_prefix("./", asset_location))
                     media_type = manifest.find_attr(
                         "mimeType",
                         f".//dataObject[@ID='{asset_key}']//byteStream")
@@ -537,7 +541,7 @@ class MetadataLinks:
                     asset_location = self.read_href(
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
                     asset_href = os.path.join(self.granule_href,
-                                              asset_location.split("/")[1])
+                                              strip_prefix("./", asset_location))
                     media_type = manifest.find_attr(
                         "mimeType",
                         f".//dataObject[@ID='{asset_key}']//byteStream")
@@ -625,7 +629,7 @@ class MetadataLinks:
                     asset_location = self.read_href(
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
                     asset_href = os.path.join(self.granule_href,
-                                              asset_location.split("/")[1])
+                                              strip_prefix("./", asset_location))
                     media_type = manifest.find_attr(
                         "mimeType",
                         f".//dataObject[@ID='{asset_key}']//byteStream")
@@ -690,7 +694,7 @@ class MetadataLinks:
                     asset_location = self.read_href(
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
                     asset_href = os.path.join(self.granule_href,
-                                              asset_location.split("/")[1])
+                                              strip_prefix("./", asset_location))
                     media_type = manifest.find_attr(
                         "mimeType",
                         f".//dataObject[@ID='{asset_key}']//byteStream")
@@ -729,7 +733,7 @@ class MetadataLinks:
                     asset_location = self.read_href(
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
                     asset_href = os.path.join(self.granule_href,
-                                              asset_location.split("/")[1])
+                                              strip_prefix("./", asset_location))
                     media_type = manifest.find_attr(
                         "mimeType",
                         f".//dataObject[@ID='{asset_key}']//byteStream")
@@ -790,7 +794,7 @@ class MetadataLinks:
                     asset_location = self.read_href(
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
                     asset_href = os.path.join(self.granule_href,
-                                              asset_location.split("/")[1])
+                                              strip_prefix("./", asset_location))
                     media_type = manifest.find_attr(
                         "mimeType",
                         f".//dataObject[@ID='{asset_key}']//byteStream")
@@ -861,7 +865,7 @@ class MetadataLinks:
                     asset_location = self.read_href(
                         f".//dataObject[@ID='{asset_key}']//fileLocation")
                     asset_href = os.path.join(self.granule_href,
-                                              asset_location.split("/")[1])
+                                              strip_prefix("./", asset_location))
                     media_type = manifest.find_attr(
                         "mimeType",
                         f".//dataObject[@ID='{asset_key}']//byteStream")
