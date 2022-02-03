@@ -12,6 +12,7 @@ from tests import test_data
 
 
 class Sentinel3OLCIMetadataTest(unittest.TestCase):
+
     def test_parses_olci_1_efr_metadata_properties(self):
 
         # Get the path of the test xml
@@ -58,8 +59,8 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             item.properties["sat:absolute_orbit"],
             "relative_orbit":
             item.properties["sat:relative_orbit"],
-            "instrument":
-            item.properties["instrument"],
+            "instruments":
+            item.properties["instruments"],
             "mode":
             item.properties["s3:mode"],
             "productType":
@@ -94,7 +95,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             "orbit_state": "descending",
             "absolute_orbit": 29567,
             "relative_orbit": 334,
-            "instrument": ["OLCI"],
+            "instruments": ["OLCI"],
             "mode": "EO",
             "productType": "OL_1_EFR___",
             "salineWaterPixels_percentage": 44.0,
@@ -160,8 +161,8 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             item.properties["sat:absolute_orbit"],
             "relative_orbit":
             item.properties["sat:relative_orbit"],
-            "instrument":
-            item.properties["instrument"],
+            "instruments":
+            item.properties["instruments"],
             "mode":
             item.properties["s3:mode"],
             "productType":
@@ -196,7 +197,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             "orbit_state": "ascending",
             "absolute_orbit": 17454,
             "relative_orbit": 242,
-            "instrument": ["OLCI"],
+            "instruments": ["OLCI"],
             "mode": "EO",
             "productType": "OL_1_ERR___",
             "salineWaterPixels_percentage": 90.0,
@@ -264,8 +265,8 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             item.properties["sat:relative_orbit"],
             "cloud_cover":
             item.properties["eo:cloud_cover"],
-            "instrument":
-            item.properties["instrument"],
+            "instruments":
+            item.properties["instruments"],
             "mode":
             item.properties["s3:mode"],
             "productType":
@@ -301,7 +302,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             "absolute_orbit": 27410,
             "relative_orbit": 102,
             "cloud_cover": 83.0,
-            "instrument": ["OLCI"],
+            "instruments": ["OLCI"],
             "mode": "EO",
             "productType": "OL_2_LFR___",
             "salineWaterPixels_percentage": 4.0,
@@ -369,8 +370,8 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             item.properties["sat:relative_orbit"],
             "cloud_cover":
             item.properties["eo:cloud_cover"],
-            "instrument":
-            item.properties["instrument"],
+            "instruments":
+            item.properties["instruments"],
             "mode":
             item.properties["s3:mode"],
             "productType":
@@ -406,7 +407,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             "absolute_orbit": 17013,
             "relative_orbit": 186,
             "cloud_cover": 51.0,
-            "instrument": ["OLCI"],
+            "instruments": ["OLCI"],
             "mode": "EO",
             "productType": "OL_2_LRR___",
             "salineWaterPixels_percentage": 35.0,
@@ -474,8 +475,8 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             item.properties["sat:relative_orbit"],
             "cloud_cover":
             item.properties["eo:cloud_cover"],
-            "instrument":
-            item.properties["instrument"],
+            "instruments":
+            item.properties["instruments"],
             "mode":
             item.properties["s3:mode"],
             "productType":
@@ -511,7 +512,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             "absolute_orbit": 27581,
             "relative_orbit": 273,
             "cloud_cover": 67.0,
-            "instrument": ["OLCI"],
+            "instruments": ["OLCI"],
             "mode": "EO",
             "productType": "OL_2_WFR___",
             "salineWaterPixels_percentage": 0.0,
@@ -579,8 +580,8 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             item.properties["sat:relative_orbit"],
             "cloud_cover":
             item.properties["eo:cloud_cover"],
-            "instrument":
-            item.properties["instrument"],
+            "instruments":
+            item.properties["instruments"],
             "mode":
             item.properties["s3:mode"],
             "productType":
@@ -614,7 +615,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             "absolute_orbit": 29276,
             "relative_orbit": 43,
             "cloud_cover": 80.216007,
-            "instrument": ["SLSTR"],
+            "instruments": ["SLSTR"],
             "mode": "EO",
             "productType": "SL_1_RBT___",
             "salineWaterPixels_percentage": 100.0,
@@ -681,8 +682,8 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             item.properties["sat:relative_orbit"],
             "cloud_cover":
             item.properties["eo:cloud_cover"],
-            "instrument":
-            item.properties["instrument"],
+            "instruments":
+            item.properties["instruments"],
             "mode":
             item.properties["s3:mode"],
             "productType":
@@ -716,7 +717,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             "absolute_orbit": 28422,
             "relative_orbit": 344,
             "cloud_cover": 63.904667,
-            "instrument": ["SLSTR"],
+            "instruments": ["SLSTR"],
             "mode": "EO",
             "productType": "SL_2_FRP___",
             "salineWaterPixels_percentage": 99.891,
@@ -783,8 +784,8 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             item.properties["sat:relative_orbit"],
             "cloud_cover":
             item.properties["eo:cloud_cover"],
-            "instrument":
-            item.properties["instrument"],
+            "instruments":
+            item.properties["instruments"],
             "mode":
             item.properties["s3:mode"],
             "productType":
@@ -818,7 +819,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             "absolute_orbit": 27224,
             "relative_orbit": 301,
             "cloud_cover": 57.378222,
-            "instrument": ["SLSTR"],
+            "instruments": ["SLSTR"],
             "mode": "EO",
             "productType": "SL_2_LST___",
             "salineWaterPixels_percentage": 78.747222,
@@ -885,8 +886,8 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             item.properties["sat:relative_orbit"],
             "cloud_cover":
             item.properties["eo:cloud_cover"],
-            "instrument":
-            item.properties["instrument"],
+            "instruments":
+            item.properties["instruments"],
             "mode":
             item.properties["s3:mode"],
             "productType":
@@ -920,7 +921,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             "absolute_orbit": 15534,
             "relative_orbit": 247,
             "cloud_cover": 67.421502,
-            "instrument": ["SLSTR"],
+            "instruments": ["SLSTR"],
             "mode": "EO",
             "productType": "SL_2_WST___",
             "salineWaterPixels_percentage": 69.464947,
@@ -985,8 +986,8 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             item.properties["sat:absolute_orbit"],
             "relative_orbit":
             item.properties["sat:relative_orbit"],
-            "instrument":
-            item.properties["instrument"],
+            "instruments":
+            item.properties["instruments"],
             "mode":
             item.properties["s3:mode"],
             "productType":
@@ -1011,7 +1012,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             "orbit_state": "descending",
             "absolute_orbit": 27681,
             "relative_orbit": 373,
-            "instrument": ["SRAL"],
+            "instruments": ["SRAL"],
             "mode": "EO",
             "productType": "SR_2_LAN___",
             "lrmModePercentage": 0.0,
@@ -1072,8 +1073,8 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             item.properties["sat:absolute_orbit"],
             "relative_orbit":
             item.properties["sat:relative_orbit"],
-            "instrument":
-            item.properties["instrument"],
+            "instruments":
+            item.properties["instruments"],
             "mode":
             item.properties["s3:mode"],
             "productType":
@@ -1098,7 +1099,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             "orbit_state": "descending",
             "absolute_orbit": 28009,
             "relative_orbit": 316,
-            "instrument": ["SRAL"],
+            "instruments": ["SRAL"],
             "mode": "EO",
             "productType": "SR_2_WAT___",
             "lrmModePercentage": 0.0,
@@ -1161,8 +1162,8 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             item.properties["sat:relative_orbit"],
             "cloud_cover":
             item.properties["eo:cloud_cover"],
-            "instrument":
-            item.properties["instrument"],
+            "instruments":
+            item.properties["instruments"],
             "mode":
             item.properties["s3:mode"],
             "productType":
@@ -1182,7 +1183,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             "absolute_orbit": 15868,
             "relative_orbit": 196,
             "cloud_cover": 82.147057,
-            "instrument": ["SYNERGY"],
+            "instruments": ["SYNERGY"],
             "mode": "EO",
             "productType": "SY_2_AOD___",
             "salineWaterPixels_percentage": 72.660328,
@@ -1242,8 +1243,8 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             item.properties["sat:relative_orbit"],
             "cloud_cover":
             item.properties["eo:cloud_cover"],
-            "instrument":
-            item.properties["instrument"],
+            "instruments":
+            item.properties["instruments"],
             "mode":
             item.properties["s3:mode"],
             "productType":
@@ -1267,7 +1268,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             "absolute_orbit": 26569,
             "relative_orbit": 31,
             "cloud_cover": 8.166911,
-            "instrument": ["SYNERGY"],
+            "instruments": ["SYNERGY"],
             "mode": "EO",
             "productType": "SY_2_SYN___",
             "salineWaterPixels_percentage": 94.483109,
@@ -1329,8 +1330,8 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             item.properties["sat:relative_orbit"],
             "cloud_cover":
             item.properties["eo:cloud_cover"],
-            "instrument":
-            item.properties["instrument"],
+            "instruments":
+            item.properties["instruments"],
             "mode":
             item.properties["s3:mode"],
             "productType":
@@ -1348,7 +1349,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             "absolute_orbit": 28848,
             "relative_orbit": 145,
             "cloud_cover": 3.041905,
-            "instrument": ["SYNERGY"],
+            "instruments": ["SYNERGY"],
             "mode": "EO",
             "productType": "SY_2_V10___",
             "snowOrIcePixels_percentage": 0.154442,
@@ -1407,8 +1408,8 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             item.properties["sat:relative_orbit"],
             "cloud_cover":
             item.properties["eo:cloud_cover"],
-            "instrument":
-            item.properties["instrument"],
+            "instruments":
+            item.properties["instruments"],
             "mode":
             item.properties["s3:mode"],
             "productType":
@@ -1426,7 +1427,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             "absolute_orbit": 29233,
             "relative_orbit": 216,
             "cloud_cover": 23.811417,
-            "instrument": ["SYNERGY"],
+            "instruments": ["SYNERGY"],
             "mode": "EO",
             "productType": "SY_2_VG1___",
             "snowOrIcePixels_percentage": 0.102883,
@@ -1485,8 +1486,8 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             item.properties["sat:relative_orbit"],
             "cloud_cover":
             item.properties["eo:cloud_cover"],
-            "instrument":
-            item.properties["instrument"],
+            "instruments":
+            item.properties["instruments"],
             "mode":
             item.properties["s3:mode"],
             "productType":
@@ -1512,7 +1513,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             "absolute_orbit": 28003,
             "relative_orbit": 310,
             "cloud_cover": 1.692044,
-            "instrument": ["SYNERGY"],
+            "instruments": ["SYNERGY"],
             "mode": "EO",
             "productType": "SY_2_VGP___",
             "snowOrIcePixels_percentage": 0.436467,

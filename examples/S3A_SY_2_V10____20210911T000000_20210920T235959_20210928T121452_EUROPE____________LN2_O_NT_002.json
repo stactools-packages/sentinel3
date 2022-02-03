@@ -10,7 +10,7 @@
     "eo:cloud_cover": 3.041905,
     "start_datetime": "2021-09-11 00:00:00+00:00",
     "end_datetime": "2021-09-20 23:59:59+00:00",
-    "instrument": [
+    "instruments": [
       "SYNERGY"
     ],
     "s3:mode": "EO",
@@ -1249,6 +1249,9 @@
     "safe-manifest": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_V10____20210911T000000_20210920T235959_20210928T121452_EUROPE____________LN2_O_NT_002.SEN3/xfdumanifest.xml",
       "type": "application/xml",
+      "file:checksum": "f5eb6e620e6397f20071eb64b7870ebe",
+      "file:local_path": "S3A_SY_2_V10____20210911T000000_20210920T235959_20210928T121452_EUROPE____________LN2_O_NT_002.SEN3/xfdumanifest.xml",
+      "file:size": 6205297,
       "roles": [
         "metadata"
       ]
@@ -1284,8 +1287,8 @@
         }
       ],
       "file:checksum": "0dd357a92dd007e945f26cf9e2907a1a",
-      "file:size": "37870282",
-      "file:local_path": "./B0.nc",
+      "file:local_path": "S3A_SY_2_V10____20210911T000000_20210920T235959_20210928T121452_EUROPE____________LN2_O_NT_002.SEN3/B0.nc",
+      "file:size": 37870282,
       "roles": [
         "data"
       ]
@@ -1321,8 +1324,8 @@
         }
       ],
       "file:checksum": "a277f7a58d835526fed3739ef743d8f1",
-      "file:size": "40273064",
-      "file:local_path": "./B2.nc",
+      "file:local_path": "S3A_SY_2_V10____20210911T000000_20210920T235959_20210928T121452_EUROPE____________LN2_O_NT_002.SEN3/B2.nc",
+      "file:size": 40273064,
       "roles": [
         "data"
       ]
@@ -1358,8 +1361,8 @@
         }
       ],
       "file:checksum": "8199bc79f996654352a93e8a4a4eae1d",
-      "file:size": "42145577",
-      "file:local_path": "./B3.nc",
+      "file:local_path": "S3A_SY_2_V10____20210911T000000_20210920T235959_20210928T121452_EUROPE____________LN2_O_NT_002.SEN3/B3.nc",
+      "file:size": 42145577,
       "roles": [
         "data"
       ]
@@ -1395,8 +1398,8 @@
         }
       ],
       "file:checksum": "123733e829e565f5cfda8f3dad4e0869",
-      "file:size": "40712475",
-      "file:local_path": "./MIR.nc",
+      "file:local_path": "S3A_SY_2_V10____20210911T000000_20210920T235959_20210928T121452_EUROPE____________LN2_O_NT_002.SEN3/MIR.nc",
+      "file:size": 40712475,
       "roles": [
         "data"
       ]
@@ -1438,8 +1441,8 @@
         }
       ],
       "file:checksum": "439dc05792bfe7d5ca7e0860bd7f851d",
-      "file:size": "21849259",
-      "file:local_path": "./NDVI.nc",
+      "file:local_path": "S3A_SY_2_V10____20210911T000000_20210920T235959_20210928T121452_EUROPE____________LN2_O_NT_002.SEN3/NDVI.nc",
+      "file:size": 21849259,
       "roles": [
         "data"
       ]
@@ -1467,8 +1470,8 @@
         1000
       ],
       "file:checksum": "9b6ac93b50ab51d215824e5095b1caa6",
-      "file:size": "7770097",
-      "file:local_path": "./vaa.nc",
+      "file:local_path": "S3A_SY_2_V10____20210911T000000_20210920T235959_20210928T121452_EUROPE____________LN2_O_NT_002.SEN3/vaa.nc",
+      "file:size": 7770097,
       "roles": [
         "data"
       ]
@@ -1496,8 +1499,8 @@
         1000
       ],
       "file:checksum": "56041ae2bfe78178b86a1d1a56d679c7",
-      "file:size": "12171655",
-      "file:local_path": "./vza.nc",
+      "file:local_path": "S3A_SY_2_V10____20210911T000000_20210920T235959_20210928T121452_EUROPE____________LN2_O_NT_002.SEN3/vza.nc",
+      "file:size": 12171655,
       "roles": [
         "data"
       ]
@@ -1525,8 +1528,8 @@
         1000
       ],
       "file:checksum": "ea617a0208563c2a9532809945b50776",
-      "file:size": "7113404",
-      "file:local_path": "./saa.nc",
+      "file:local_path": "S3A_SY_2_V10____20210911T000000_20210920T235959_20210928T121452_EUROPE____________LN2_O_NT_002.SEN3/saa.nc",
+      "file:size": 7113404,
       "roles": [
         "data"
       ]
@@ -1554,8 +1557,8 @@
         1000
       ],
       "file:checksum": "00d162bdd28a647f98dd25dfef18c214",
-      "file:size": "8073436",
-      "file:local_path": "./sza.nc",
+      "file:local_path": "S3A_SY_2_V10____20210911T000000_20210920T235959_20210928T121452_EUROPE____________LN2_O_NT_002.SEN3/sza.nc",
+      "file:size": 8073436,
       "roles": [
         "data"
       ]
@@ -1583,8 +1586,8 @@
         1000
       ],
       "file:checksum": "1492d4b34cce867a348d8b3af6a68192",
-      "file:size": "18285964",
-      "file:local_path": "./ag.nc",
+      "file:local_path": "S3A_SY_2_V10____20210911T000000_20210920T235959_20210928T121452_EUROPE____________LN2_O_NT_002.SEN3/ag.nc",
+      "file:size": 18285964,
       "roles": [
         "data"
       ]
@@ -1612,8 +1615,8 @@
         1000
       ],
       "file:checksum": "3695947024b0bd7c3ba3b7a684e6ccf6",
-      "file:size": "2187128",
-      "file:local_path": "./og.nc",
+      "file:local_path": "S3A_SY_2_V10____20210911T000000_20210920T235959_20210928T121452_EUROPE____________LN2_O_NT_002.SEN3/og.nc",
+      "file:size": 2187128,
       "roles": [
         "data"
       ]
@@ -1641,8 +1644,8 @@
         1000
       ],
       "file:checksum": "b322577320c147010a921d4a9c77e841",
-      "file:size": "10944695",
-      "file:local_path": "./wvg.nc",
+      "file:local_path": "S3A_SY_2_V10____20210911T000000_20210920T235959_20210928T121452_EUROPE____________LN2_O_NT_002.SEN3/wvg.nc",
+      "file:size": 10944695,
       "roles": [
         "data"
       ]
@@ -1670,8 +1673,8 @@
         1000
       ],
       "file:checksum": "46fd16a23b2c35772cae1eeb7b99603b",
-      "file:size": "15120424",
-      "file:local_path": "./tg.nc",
+      "file:local_path": "S3A_SY_2_V10____20210911T000000_20210920T235959_20210928T121452_EUROPE____________LN2_O_NT_002.SEN3/tg.nc",
+      "file:size": 15120424,
       "roles": [
         "data"
       ]
@@ -1699,8 +1702,8 @@
         1000
       ],
       "file:checksum": "ab3a6a802927d1649dbcf9b98810b8b8",
-      "file:size": "3056653",
-      "file:local_path": "./sm.nc",
+      "file:local_path": "S3A_SY_2_V10____20210911T000000_20210920T235959_20210928T121452_EUROPE____________LN2_O_NT_002.SEN3/sm.nc",
+      "file:size": 3056653,
       "roles": [
         "data"
       ]
@@ -1713,6 +1716,7 @@
     75.0
   ],
   "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/sat/v1.0.0/schema.json",
     "https://stac-extensions.github.io/eo/v1.0.0/schema.json"
   ]

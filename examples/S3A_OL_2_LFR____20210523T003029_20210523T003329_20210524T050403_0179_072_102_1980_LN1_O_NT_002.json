@@ -10,7 +10,7 @@
     "eo:cloud_cover": 83.0,
     "start_datetime": "2021-05-23 00:30:29.485583+00:00",
     "end_datetime": "2021-05-23 00:33:29.485583+00:00",
-    "instrument": [
+    "instruments": [
       "OLCI"
     ],
     "s3:mode": "EO",
@@ -255,6 +255,9 @@
     "safe-manifest": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/xfdumanifest.xml",
       "type": "application/xml",
+      "file:checksum": "a0a77f27ef6374da915140c42da1ceff",
+      "file:local_path": "S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/xfdumanifest.xml",
+      "file:size": 158467,
       "roles": [
         "metadata"
       ]
@@ -288,8 +291,8 @@
         }
       ],
       "file:checksum": "e1bce07ea928f7351c134a9aac3ff96c",
-      "file:size": "1127599",
-      "file:local_path": "./ogvi.nc",
+      "file:local_path": "S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/ogvi.nc",
+      "file:size": 1127599,
       "roles": [
         "data"
       ]
@@ -323,8 +326,8 @@
         }
       ],
       "file:checksum": "39315a579338f9f580aefa795b716c49",
-      "file:size": "1306916",
-      "file:local_path": "./otci.nc",
+      "file:local_path": "S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/otci.nc",
+      "file:size": 1306916,
       "roles": [
         "data"
       ]
@@ -352,8 +355,8 @@
         }
       ],
       "file:checksum": "18e1f8795d9d37b534effddac1e05b14",
-      "file:size": "1980948",
-      "file:local_path": "./iwv.nc",
+      "file:local_path": "S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/iwv.nc",
+      "file:size": 1980948,
       "roles": [
         "data"
       ]
@@ -381,8 +384,8 @@
         }
       ],
       "file:checksum": "2b7b1c4b8b85e038f67b7c4ea3ce4dba",
-      "file:size": "3879528",
-      "file:local_path": "./rc_ogvi.nc",
+      "file:local_path": "S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/rc_ogvi.nc",
+      "file:size": 3879528,
       "roles": [
         "data"
       ]
@@ -395,6 +398,9 @@
         270,
         294
       ],
+      "file:checksum": "4205527865a0f7bb472d19d67436deda",
+      "file:local_path": "S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/lqsf.nc",
+      "file:size": 1831351,
       "roles": [
         "data"
       ]
@@ -407,6 +413,9 @@
         270,
         294
       ],
+      "file:checksum": "2fc782c19c42f839076def64f9ee07ef",
+      "file:local_path": "S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/time_coordinates.nc",
+      "file:size": 15708,
       "roles": [
         "data"
       ]
@@ -419,6 +428,9 @@
         270,
         294
       ],
+      "file:checksum": "4c45104b68d3ece8e9914b5bedbd2dfd",
+      "file:local_path": "S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/geo_coordinates.nc",
+      "file:size": 58416073,
       "roles": [
         "data"
       ]
@@ -431,6 +443,9 @@
         270,
         294
       ],
+      "file:checksum": "deb020827d1cc623b2573445e978e257",
+      "file:local_path": "S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/tie_geo_coordinates.nc",
+      "file:size": 1286286,
       "roles": [
         "data"
       ]
@@ -443,6 +458,9 @@
         270,
         294
       ],
+      "file:checksum": "31f3dd0d0813000fae4de7cffcd3f94e",
+      "file:local_path": "S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/tie_geometries.nc",
+      "file:size": 2271750,
       "roles": [
         "data"
       ]
@@ -455,11 +473,14 @@
         270,
         294
       ],
+      "file:checksum": "425e95c9a1276368a3e745e932e2c8e2",
+      "file:local_path": "S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/tie_meteo.nc",
+      "file:size": 19901329,
       "roles": [
         "data"
       ]
     },
-    "instrument": {
+    "instrumentData": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/instrument_data.nc",
       "type": "application/x-netcdf",
       "description": "Instrument Annotation",
@@ -467,6 +488,9 @@
         270,
         294
       ],
+      "file:checksum": "0a9966e12209486c71cf34cb7b145a46",
+      "file:local_path": "S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/instrument_data.nc",
+      "file:size": 1056306,
       "roles": [
         "data"
       ]
@@ -479,6 +503,7 @@
     62.918
   ],
   "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/sat/v1.0.0/schema.json",
     "https://stac-extensions.github.io/eo/v1.0.0/schema.json"
   ]

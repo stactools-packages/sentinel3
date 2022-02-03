@@ -10,7 +10,7 @@
     "eo:cloud_cover": 63.904667,
     "start_datetime": "2021-08-02 00:04:19.503088+00:00",
     "end_datetime": "2021-08-02 00:07:19.503088+00:00",
-    "instrument": [
+    "instruments": [
       "SLSTR"
     ],
     "s3:mode": "EO",
@@ -353,6 +353,9 @@
     "safe-manifest": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/xfdumanifest.xml",
       "type": "application/xml",
+      "file:checksum": "8644cedf6bcf6086524c1f1bf9afdd3f",
+      "file:local_path": "S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/xfdumanifest.xml",
+      "file:size": 115669,
       "roles": [
         "metadata"
       ]
@@ -392,8 +395,8 @@
         }
       ],
       "file:checksum": "e80df8430624ec6ff9a4f22295f4a178",
-      "file:size": "435951",
-      "file:local_path": "./FRP_in.nc",
+      "file:local_path": "S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/FRP_in.nc",
+      "file:size": 435951,
       "roles": [
         "data"
       ]
@@ -407,8 +410,8 @@
         1000
       ],
       "file:checksum": "05e47c1b71fb195553600b1d3af77710",
-      "file:size": "4472072",
-      "file:local_path": "./cartesian_fn.nc",
+      "file:local_path": "S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/cartesian_fn.nc",
+      "file:size": 4472072,
       "roles": [
         "data"
       ]
@@ -422,8 +425,8 @@
         1000
       ],
       "file:checksum": "f93e4e6df49d9bb197c2763371632cd6",
-      "file:size": "4442134",
-      "file:local_path": "./cartesian_in.nc",
+      "file:local_path": "S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/cartesian_in.nc",
+      "file:size": 4442134,
       "roles": [
         "data"
       ]
@@ -437,8 +440,8 @@
         1000
       ],
       "file:checksum": "49a3016bc439a8f6c141639223f8791d",
-      "file:size": "41993",
-      "file:local_path": "./cartesian_tx.nc",
+      "file:local_path": "S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/cartesian_tx.nc",
+      "file:size": 41993,
       "roles": [
         "data"
       ]
@@ -452,8 +455,8 @@
         1000
       ],
       "file:checksum": "53bc9d11a8c5cb34c9b51f96eceebe9f",
-      "file:size": "1339572",
-      "file:local_path": "./flags_fn.nc",
+      "file:local_path": "S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/flags_fn.nc",
+      "file:size": 1339572,
       "roles": [
         "data"
       ]
@@ -467,8 +470,8 @@
         1000
       ],
       "file:checksum": "39487bfb7c4f447c1c9ec052b8436f83",
-      "file:size": "1991460",
-      "file:local_path": "./flags_in.nc",
+      "file:local_path": "S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/flags_in.nc",
+      "file:size": 1991460,
       "roles": [
         "data"
       ]
@@ -482,8 +485,8 @@
         1000
       ],
       "file:checksum": "360707fba7433c7defb49ea8cbe17e71",
-      "file:size": "7422422",
-      "file:local_path": "./geodetic_fn.nc",
+      "file:local_path": "S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/geodetic_fn.nc",
+      "file:size": 7422422,
       "roles": [
         "data"
       ]
@@ -497,8 +500,8 @@
         1000
       ],
       "file:checksum": "8256eab16dc07852bfe889ba0a2253af",
-      "file:size": "7361648",
-      "file:local_path": "./geodetic_in.nc",
+      "file:local_path": "S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/geodetic_in.nc",
+      "file:size": 7361648,
       "roles": [
         "data"
       ]
@@ -512,8 +515,8 @@
         1000
       ],
       "file:checksum": "40c185371d076a757011bebad5d36dd8",
-      "file:size": "1622693",
-      "file:local_path": "./geodetic_tx.nc",
+      "file:local_path": "S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/geodetic_tx.nc",
+      "file:size": 1622693,
       "roles": [
         "data"
       ]
@@ -527,8 +530,8 @@
         1000
       ],
       "file:checksum": "ffce0a618ebbbda718ff6e7d01c03024",
-      "file:size": "3422419",
-      "file:local_path": "./geometry_tn.nc",
+      "file:local_path": "S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/geometry_tn.nc",
+      "file:size": 3422419,
       "roles": [
         "data"
       ]
@@ -542,8 +545,8 @@
         1000
       ],
       "file:checksum": "ce06860ec3a167255b0a64b8a8a6a7be",
-      "file:size": "860919",
-      "file:local_path": "./indices_fn.nc",
+      "file:local_path": "S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/indices_fn.nc",
+      "file:size": 860919,
       "roles": [
         "data"
       ]
@@ -557,8 +560,8 @@
         1000
       ],
       "file:checksum": "98092fedda6e22398d275094422ed21d",
-      "file:size": "858106",
-      "file:local_path": "./indices_in.nc",
+      "file:local_path": "S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/indices_in.nc",
+      "file:size": 858106,
       "roles": [
         "data"
       ]
@@ -572,8 +575,8 @@
         1000
       ],
       "file:checksum": "0f29afc3680e43e66e01d609c9b8071a",
-      "file:size": "30215998",
-      "file:local_path": "./met_tx.nc",
+      "file:local_path": "S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/met_tx.nc",
+      "file:size": 30215998,
       "roles": [
         "data"
       ]
@@ -587,8 +590,8 @@
         1000
       ],
       "file:checksum": "168c1202259bcb69c13be967cd31842b",
-      "file:size": "64340",
-      "file:local_path": "./time_in.nc",
+      "file:local_path": "S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/time_in.nc",
+      "file:size": 64340,
       "roles": [
         "data"
       ]
@@ -601,6 +604,7 @@
     10.4264
   ],
   "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/sat/v1.0.0/schema.json",
     "https://stac-extensions.github.io/eo/v1.0.0/schema.json"
   ]

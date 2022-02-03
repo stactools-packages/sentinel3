@@ -617,6 +617,12 @@ OLCI_L2_LAND_ASSET_KEYS = [
     "tieGeometriesData", "tieMeteoData", "instrumentDataData"
 ]
 
+OLCI_L2_LAND_ASSET_KEYS_RENAMED = [
+    "gifaparData", "otciData", "iwvData", "rcGifaparData", "lqsfData",
+    "timeCoordinatesData", "geoCoordinatesData", "tieGeoCoordinatesData",
+    "tieGeometriesData", "tieMeteoData", "instrumentDataData"
+]
+
 OLCI_L2_WATER_ASSET_KEYS = [
     "Oa01_reflectanceData", "Oa02_reflectanceData", "Oa03_reflectanceData",
     "Oa04_reflectanceData", "Oa05_reflectanceData", "Oa06_reflectanceData",

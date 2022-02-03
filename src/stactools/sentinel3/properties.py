@@ -1,9 +1,14 @@
+import os
+from hashlib import md5
+
 from pystac.extensions.eo import EOExtension
 from pystac.extensions.sat import OrbitState, SatExtension
 from stactools.core.io.xml import XmlElement
 
+from stactools.sentinel3.file_extension_updated import FileExtensionUpdated
 
-def fill_sat_properties(sat_ext: SatExtension, manifest: XmlElement):
+
+def fill_sat_properties(sat_ext: SatExtension, manifest: XmlElement) -> None:
     """Fills the properties for SAR.
 
     Based on the sat Extension.py
@@ -34,7 +39,7 @@ def fill_sat_properties(sat_ext: SatExtension, manifest: XmlElement):
         sat_ext.relative_orbit = relative_orbit_num
 
 
-def fill_eo_properties(eo_ext: EOExtension, manifest: XmlElement):
+def fill_eo_properties(eo_ext: EOExtension, manifest: XmlElement) -> None:
     """Fills the properties for EO.
 
     Based on the eo Extension.py
@@ -43,6 +48,7 @@ def fill_eo_properties(eo_ext: EOExtension, manifest: XmlElement):
         eo_ext (EOExtension): The extension to be populated.
         manifest(XmlElement): manifest file parsed to XmlElement.
     """
+
     def find_or_throw(attribute: str, xpath: str) -> str:
         value = manifest.find_attr(attribute, xpath)
         if value is None:
@@ -74,3 +80,42 @@ def fill_eo_properties(eo_ext: EOExtension, manifest: XmlElement):
                          "this was expected to follow the sentinel 3 "
                          "naming convention, including "
                          "ending in .SEN3")
+
+
+def fill_file_properties(granule_href: str, asset_key: str,
+                         file_ext: FileExtensionUpdated,
+                         manifest: XmlElement) -> None:
+
+    file_ext.checksum = manifest.findall(
+        f".//dataObject[@ID='{asset_key}']//checksum")[0].text
+    manifest_file_location = str(
+        manifest.find_attr("href",
+                           f".//dataObject[@ID='{asset_key}']//fileLocation"))
+    file_ext.local_path = "".join([
+        granule_href.split("/")[-1], "/",
+        manifest_file_location.replace("./", "")
+    ])
+    asset_size = manifest.find_attr(
+        "size", f".//dataObject[@ID='{asset_key}']//byteStream")
+
+    if file_ext.checksum is None:
+        raise RuntimeError(f"Manifest contains no checksum! Checked location: "
+                           f"'.//dataObject[@ID='{asset_key}']//checksum'")
+    if file_ext.local_path is None:
+        raise RuntimeError(
+            f"Manifest contains no file location data! Checked location: "
+            f"'.//dataObject[@ID='{asset_key}']//fileLocation'")
+    if asset_size is None:
+        raise RuntimeError(
+            f"Manifest contains no size data! Checked location: "
+            f"'.//dataObject[@ID='{asset_key}']//byteStream'")
+
+    file_ext.size = int(asset_size)
+
+
+def fill_manifest_file_properties(manifest_href: str, manifest_text: str,
+                                  file_ext: FileExtensionUpdated) -> None:
+    manifest_text_encoded = manifest_text.encode(encoding='UTF-8')
+    file_ext.checksum = md5(manifest_text_encoded).hexdigest()
+    file_ext.local_path = os.sep.join(manifest_href.split("/")[-2:])
+    file_ext.size = int(len(manifest_text_encoded))

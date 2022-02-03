@@ -14,6 +14,7 @@ class ProductMetadataError(Exception):
 
 
 class ProductMetadata:
+
     def __init__(self, granule_href: str, manifest: XmlElement) -> None:
         self.granule_href = granule_href
         self.manifest_href = os.path.join(granule_href, MANIFEST_FILENAME)
@@ -133,6 +134,7 @@ class ProductMetadata:
 
     @property
     def metadata_dict(self) -> Dict[str, Any]:
+
         def _get_shape():
             x_size = int(self._root.findall(".//sentinel3:columns")[0].text)
             y_size = int(self._root.findall(".//sentinel3:rows")[0].text)
@@ -148,7 +150,7 @@ class ProductMetadata:
                 str(self.start_datetime),
                 "end_datetime":
                 str(self.end_datetime),
-                "instrument": [
+                "instruments": [
                     str(
                         self._root.find_attr(
                             "abbreviation",
@@ -222,7 +224,7 @@ class ProductMetadata:
                 str(self.start_datetime),
                 "end_datetime":
                 str(self.end_datetime),
-                "instrument": [
+                "instruments": [
                     str(
                         self._root.find_attr(
                             "abbreviation",
@@ -296,7 +298,7 @@ class ProductMetadata:
                 str(self.start_datetime),
                 "end_datetime":
                 str(self.end_datetime),
-                "instrument": [
+                "instruments": [
                     str(
                         self._root.find_attr(
                             "abbreviation",
@@ -384,7 +386,7 @@ class ProductMetadata:
                 str(self.start_datetime),
                 "end_datetime":
                 str(self.end_datetime),
-                "instrument": [
+                "instruments": [
                     str(
                         self._root.find_attr(
                             "abbreviation",
@@ -455,7 +457,7 @@ class ProductMetadata:
                 str(self.start_datetime),
                 "end_datetime":
                 str(self.end_datetime),
-                "instrument": [
+                "instruments": [
                     str(
                         self._root.find_attr(
                             "abbreviation",
@@ -493,7 +495,7 @@ class ProductMetadata:
                 str(self.start_datetime),
                 "end_datetime":
                 str(self.end_datetime),
-                "instrument": [
+                "instruments": [
                     str(
                         self._root.find_attr(
                             "abbreviation",
@@ -530,7 +532,7 @@ class ProductMetadata:
                 str(self.start_datetime),
                 "end_datetime":
                 str(self.end_datetime),
-                "instrument": [
+                "instruments": [
                     str(
                         self._root.find_attr(
                             "abbreviation",
@@ -581,7 +583,7 @@ class ProductMetadata:
                 str(self.start_datetime),
                 "end_datetime":
                 str(self.end_datetime),
-                "instrument": [
+                "instruments": [
                     str(
                         self._root.find_attr(
                             "abbreviation",
@@ -616,7 +618,7 @@ class ProductMetadata:
                 str(self.start_datetime),
                 "end_datetime":
                 str(self.end_datetime),
-                "instrument": [
+                "instruments": [
                     str(
                         self._root.find_attr(
                             "abbreviation",
@@ -651,7 +653,7 @@ class ProductMetadata:
                 str(self.start_datetime),
                 "end_datetime":
                 str(self.end_datetime),
-                "instrument": [
+                "instruments": [
                     str(
                         self._root.find_attr(
                             "abbreviation",

@@ -10,7 +10,7 @@
     "eo:cloud_cover": 82.147057,
     "start_datetime": "2021-05-12 14:33:14.765777+00:00",
     "end_datetime": "2021-05-12 15:17:38.420982+00:00",
-    "instrument": [
+    "instruments": [
       "SYNERGY"
     ],
     "s3:mode": "EO",
@@ -1437,6 +1437,9 @@
     "safe-manifest": {
       "href": "/opt/stactools-sentinel3/tests/data-files/S3B_SY_2_AOD____20210512T143315_20210512T151738_20210514T064157_2663_052_196______LN2_O_NT_002.SEN3/xfdumanifest.xml",
       "type": "application/xml",
+      "file:checksum": "e55367170bb60e7d1cab151c24e6e086",
+      "file:local_path": "S3B_SY_2_AOD____20210512T143315_20210512T151738_20210514T064157_2663_052_196______LN2_O_NT_002.SEN3/xfdumanifest.xml",
+      "file:size": 48295,
       "roles": [
         "metadata"
       ]
@@ -1488,8 +1491,8 @@
         }
       ],
       "file:checksum": "453028626dd93f7a69a6d6953e872834",
-      "file:size": "33302097",
-      "file:local_path": "NTC_AOD.nc",
+      "file:local_path": "S3B_SY_2_AOD____20210512T143315_20210512T151738_20210514T064157_2663_052_196______LN2_O_NT_002.SEN3/NTC_AOD.nc",
+      "file:size": 33302097,
       "roles": [
         "data"
       ]
@@ -1502,6 +1505,7 @@
     89.7337
   ],
   "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/sat/v1.0.0/schema.json",
     "https://stac-extensions.github.io/eo/v1.0.0/schema.json"
   ]
