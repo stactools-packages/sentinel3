@@ -1,7 +1,7 @@
 {
   "type": "Feature",
   "stac_version": "1.0.0",
-  "id": "S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002",
+  "id": "S3A_OL_2_LFR_20210523T003029_20210523T003329_0179_072_102_1980",
   "properties": {
     "sat:platform_international_designator": "2016-011A",
     "sat:orbit_state": "descending",
@@ -244,16 +244,11 @@
     {
       "rel": "license",
       "href": "https://sentinel.esa.int/documents/247904/690755/Sentinel_Data_Legal_Notice"
-    },
-    {
-      "rel": "self",
-      "href": "/opt/stactools-sentinel3/examples/S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.json",
-      "type": "application/json"
     }
   ],
   "assets": {
     "safe-manifest": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/xfdumanifest.xml",
+      "href": "../tests/data-files/S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/xfdumanifest.xml",
       "type": "application/xml",
       "file:checksum": "a0a77f27ef6374da915140c42da1ceff",
       "file:local_path": "S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/xfdumanifest.xml",
@@ -263,7 +258,7 @@
       ]
     },
     "ogvi": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/ogvi.nc",
+      "href": "../tests/data-files/S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/ogvi.nc",
       "type": "application/x-netcdf",
       "description": "OLCI global Vegetal Index",
       "resolution": [
@@ -298,7 +293,7 @@
       ]
     },
     "otci": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/otci.nc",
+      "href": "../tests/data-files/S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/otci.nc",
       "type": "application/x-netcdf",
       "description": "OLCI Terrestrial Chlorophyll Index",
       "resolution": [
@@ -333,7 +328,7 @@
       ]
     },
     "iwv": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/iwv.nc",
+      "href": "../tests/data-files/S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/iwv.nc",
       "type": "application/x-netcdf",
       "description": "Integrated water vapour column",
       "resolution": [
@@ -362,7 +357,7 @@
       ]
     },
     "rcOgvi": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/rc_ogvi.nc",
+      "href": "../tests/data-files/S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/rc_ogvi.nc",
       "type": "application/x-netcdf",
       "description": "Rectified Reflectance",
       "resolution": [
@@ -391,7 +386,7 @@
       ]
     },
     "lqsf": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/lqsf.nc",
+      "href": "../tests/data-files/S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/lqsf.nc",
       "type": "application/x-netcdf",
       "description": "Land Quality and Science Flags",
       "resolution": [
@@ -406,7 +401,7 @@
       ]
     },
     "timeCoordinates": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/time_coordinates.nc",
+      "href": "../tests/data-files/S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/time_coordinates.nc",
       "type": "application/x-netcdf",
       "description": "Time Coordinates Annotations",
       "resolution": [
@@ -421,7 +416,7 @@
       ]
     },
     "geoCoordinates": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/geo_coordinates.nc",
+      "href": "../tests/data-files/S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/geo_coordinates.nc",
       "type": "application/x-netcdf",
       "description": "Geo Coordinates Annotations",
       "resolution": [
@@ -436,7 +431,7 @@
       ]
     },
     "tieGeoCoordinates": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/tie_geo_coordinates.nc",
+      "href": "../tests/data-files/S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/tie_geo_coordinates.nc",
       "type": "application/x-netcdf",
       "description": "Tie-Point Geo Coordinate Annotations",
       "resolution": [
@@ -451,7 +446,7 @@
       ]
     },
     "tieGeometries": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/tie_geometries.nc",
+      "href": "../tests/data-files/S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/tie_geometries.nc",
       "type": "application/x-netcdf",
       "description": "Tie-Point Geometries Annotations",
       "resolution": [
@@ -466,7 +461,7 @@
       ]
     },
     "tieMeteo": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/tie_meteo.nc",
+      "href": "../tests/data-files/S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/tie_meteo.nc",
       "type": "application/x-netcdf",
       "description": "Tie-Point Meteo Annotations",
       "resolution": [
@@ -481,7 +476,7 @@
       ]
     },
     "instrumentData": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/instrument_data.nc",
+      "href": "../tests/data-files/S3A_OL_2_LFR____20210523T003029_20210523T003329_20210524T050403_0179_072_102_1980_LN1_O_NT_002.SEN3/instrument_data.nc",
       "type": "application/x-netcdf",
       "description": "Instrument Annotation",
       "resolution": [

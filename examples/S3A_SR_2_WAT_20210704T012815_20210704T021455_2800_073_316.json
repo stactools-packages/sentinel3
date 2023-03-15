@@ -1,7 +1,7 @@
 {
   "type": "Feature",
   "stac_version": "1.0.0",
-  "id": "S3A_SR_2_WAT____20210704T012815_20210704T021455_20210729T173140_2800_073_316______MAR_O_NT_004",
+  "id": "S3A_SR_2_WAT_20210704T012815_20210704T021455_2800_073_316",
   "properties": {
     "sat:platform_international_designator": "2016-011A",
     "sat:orbit_state": "descending",
@@ -798,16 +798,11 @@
     {
       "rel": "license",
       "href": "https://sentinel.esa.int/documents/247904/690755/Sentinel_Data_Legal_Notice"
-    },
-    {
-      "rel": "self",
-      "href": "/opt/stactools-sentinel3/examples/S3A_SR_2_WAT____20210704T012815_20210704T021455_20210729T173140_2800_073_316______MAR_O_NT_004.json",
-      "type": "application/json"
     }
   ],
   "assets": {
     "safe-manifest": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SR_2_WAT____20210704T012815_20210704T021455_20210729T173140_2800_073_316______MAR_O_NT_004.SEN3/xfdumanifest.xml",
+      "href": "../tests/data-files/S3A_SR_2_WAT____20210704T012815_20210704T021455_20210729T173140_2800_073_316______MAR_O_NT_004.SEN3/xfdumanifest.xml",
       "type": "application/xml",
       "file:checksum": "08faddcfb074bc9ddd4b61625eb8bce6",
       "file:local_path": "S3A_SR_2_WAT____20210704T012815_20210704T021455_20210729T173140_2800_073_316______MAR_O_NT_004.SEN3/xfdumanifest.xml",
@@ -817,7 +812,7 @@
       ]
     },
     "standardMeasurement": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SR_2_WAT____20210704T012815_20210704T021455_20210729T173140_2800_073_316______MAR_O_NT_004.SEN3/standard_measurement.nc",
+      "href": "../tests/data-files/S3A_SR_2_WAT____20210704T012815_20210704T021455_20210729T173140_2800_073_316______MAR_O_NT_004.SEN3/standard_measurement.nc",
       "type": "application/x-netcdf",
       "description": "Measurement Data Object File",
       "shape": [
@@ -853,7 +848,7 @@
       ]
     },
     "enhancedMeasurement": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SR_2_WAT____20210704T012815_20210704T021455_20210729T173140_2800_073_316______MAR_O_NT_004.SEN3/enhanced_measurement.nc",
+      "href": "../tests/data-files/S3A_SR_2_WAT____20210704T012815_20210704T021455_20210729T173140_2800_073_316______MAR_O_NT_004.SEN3/enhanced_measurement.nc",
       "type": "application/x-netcdf",
       "description": "Measurement Data Object File",
       "shape": [
@@ -892,7 +887,7 @@
       ]
     },
     "reducedMeasurement": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SR_2_WAT____20210704T012815_20210704T021455_20210729T173140_2800_073_316______MAR_O_NT_004.SEN3/reduced_measurement.nc",
+      "href": "../tests/data-files/S3A_SR_2_WAT____20210704T012815_20210704T021455_20210729T173140_2800_073_316______MAR_O_NT_004.SEN3/reduced_measurement.nc",
       "type": "application/x-netcdf",
       "description": "Measurement Data Object File",
       "shape": [

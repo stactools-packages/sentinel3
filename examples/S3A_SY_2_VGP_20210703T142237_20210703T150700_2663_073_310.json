@@ -1,7 +1,7 @@
 {
   "type": "Feature",
   "stac_version": "1.0.0",
-  "id": "S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002",
+  "id": "S3A_SY_2_VGP_20210703T142237_20210703T150700_2663_073_310",
   "properties": {
     "sat:platform_international_designator": "2016-011A",
     "sat:orbit_state": "ascending",
@@ -1426,16 +1426,11 @@
     {
       "rel": "license",
       "href": "https://sentinel.esa.int/documents/247904/690755/Sentinel_Data_Legal_Notice"
-    },
-    {
-      "rel": "self",
-      "href": "/opt/stactools-sentinel3/examples/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.json",
-      "type": "application/json"
     }
   ],
   "assets": {
     "safe-manifest": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/xfdumanifest.xml",
+      "href": "../tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/xfdumanifest.xml",
       "type": "application/xml",
       "file:checksum": "6f0bf1e6ec385d73e96f11f721f2c752",
       "file:local_path": "S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/xfdumanifest.xml",
@@ -1445,7 +1440,7 @@
       ]
     },
     "b0": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/B0.nc",
+      "href": "../tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/B0.nc",
       "type": "application/x-netcdf",
       "vgp:shape": [
         {
@@ -1481,7 +1476,7 @@
       ]
     },
     "b2": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/B2.nc",
+      "href": "../tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/B2.nc",
       "type": "application/x-netcdf",
       "vgp:shape": [
         {
@@ -1517,7 +1512,7 @@
       ]
     },
     "b3": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/B3.nc",
+      "href": "../tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/B3.nc",
       "type": "application/x-netcdf",
       "vgp:shape": [
         {
@@ -1553,7 +1548,7 @@
       ]
     },
     "mir": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/MIR.nc",
+      "href": "../tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/MIR.nc",
       "type": "application/x-netcdf",
       "vgp:shape": [
         {
@@ -1589,7 +1584,7 @@
       ]
     },
     "vaa": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/vaa.nc",
+      "href": "../tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/vaa.nc",
       "type": "application/x-netcdf",
       "vgp:shape": [
         {
@@ -1617,7 +1612,7 @@
       ]
     },
     "vza": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/vza.nc",
+      "href": "../tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/vza.nc",
       "type": "application/x-netcdf",
       "vgp:shape": [
         {
@@ -1645,7 +1640,7 @@
       ]
     },
     "saa": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/saa.nc",
+      "href": "../tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/saa.nc",
       "type": "application/x-netcdf",
       "vgp:shape": [
         {
@@ -1673,7 +1668,7 @@
       ]
     },
     "sza": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/sza.nc",
+      "href": "../tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/sza.nc",
       "type": "application/x-netcdf",
       "vgp:shape": [
         {
@@ -1701,7 +1696,7 @@
       ]
     },
     "ag": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/ag.nc",
+      "href": "../tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/ag.nc",
       "type": "application/x-netcdf",
       "vgp:shape": [
         {
@@ -1729,7 +1724,7 @@
       ]
     },
     "og": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/og.nc",
+      "href": "../tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/og.nc",
       "type": "application/x-netcdf",
       "vgp:shape": [
         {
@@ -1757,7 +1752,7 @@
       ]
     },
     "wvg": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/wvg.nc",
+      "href": "../tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/wvg.nc",
       "type": "application/x-netcdf",
       "vgp:shape": [
         {
@@ -1785,7 +1780,7 @@
       ]
     },
     "sm": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/sm.nc",
+      "href": "../tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/sm.nc",
       "type": "application/x-netcdf",
       "vgp:shape": [
         {

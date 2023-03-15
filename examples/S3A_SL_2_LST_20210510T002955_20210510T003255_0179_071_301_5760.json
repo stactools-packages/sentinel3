@@ -1,7 +1,7 @@
 {
   "type": "Feature",
   "stac_version": "1.0.0",
-  "id": "S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004",
+  "id": "S3A_SL_2_LST_20210510T002955_20210510T003255_0179_071_301_5760",
   "properties": {
     "sat:platform_international_designator": "2016-011A",
     "sat:orbit_state": "ascending",
@@ -342,16 +342,11 @@
     {
       "rel": "license",
       "href": "https://sentinel.esa.int/documents/247904/690755/Sentinel_Data_Legal_Notice"
-    },
-    {
-      "rel": "self",
-      "href": "/opt/stactools-sentinel3/examples/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.json",
-      "type": "application/json"
     }
   ],
   "assets": {
     "safe-manifest": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/xfdumanifest.xml",
+      "href": "../tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/xfdumanifest.xml",
       "type": "application/xml",
       "file:checksum": "7556442c0b42c150816e46a1308acb03",
       "file:local_path": "S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/xfdumanifest.xml",
@@ -361,7 +356,7 @@
       ]
     },
     "LST_IN": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/LST_in.nc",
+      "href": "../tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/LST_in.nc",
       "type": "application/x-netcdf",
       "description": "Land Surface Temperature (LST) values",
       "resolution": [
@@ -390,7 +385,7 @@
       ]
     },
     "LST_ANCILLARY_DS": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/LST_ancillary_ds.nc",
+      "href": "../tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/LST_ancillary_ds.nc",
       "type": "application/x-netcdf",
       "description": "LST ancillary measurement dataset",
       "resolution": [
@@ -405,7 +400,7 @@
       ]
     },
     "SLSTR_FLAGS_IN": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/flags_in.nc",
+      "href": "../tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/flags_in.nc",
       "type": "application/x-netcdf",
       "description": "Global flags for the 1km TIR grid, nadir view",
       "resolution": [
@@ -420,7 +415,7 @@
       ]
     },
     "SLSTR_INDICES_IN": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/indices_in.nc",
+      "href": "../tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/indices_in.nc",
       "type": "application/x-netcdf",
       "description": "Scan, pixel and detector annotations for the 1km TIR grid, nadir view",
       "resolution": [
@@ -435,7 +430,7 @@
       ]
     },
     "SLSTR_TIME_IN": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/time_in.nc",
+      "href": "../tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/time_in.nc",
       "type": "application/x-netcdf",
       "description": "Time annotations for the 1 KM grid",
       "resolution": [
@@ -450,7 +445,7 @@
       ]
     },
     "SLSTR_GEODETIC_IN": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/geodetic_in.nc",
+      "href": "../tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/geodetic_in.nc",
       "type": "application/x-netcdf",
       "description": "Full resolution geodetic coordinates for the 1km TIR grid, nadir view",
       "resolution": [
@@ -465,7 +460,7 @@
       ]
     },
     "SLSTR_CARTESIAN_IN": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/cartesian_in.nc",
+      "href": "../tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/cartesian_in.nc",
       "type": "application/x-netcdf",
       "description": "Full resolution cartesian coordinates for the 1km TIR grid, nadir view",
       "resolution": [
@@ -480,7 +475,7 @@
       ]
     },
     "SLSTR_GEOMETRY_TN": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/geometry_tn.nc",
+      "href": "../tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/geometry_tn.nc",
       "type": "application/x-netcdf",
       "description": "16km solar and satellite geometry annotations, nadir view",
       "resolution": [
@@ -495,7 +490,7 @@
       ]
     },
     "SLSTR_GEODETIC_TX": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/geodetic_tx.nc",
+      "href": "../tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/geodetic_tx.nc",
       "type": "application/x-netcdf",
       "description": "16km geodetic coordinates",
       "resolution": [
@@ -510,7 +505,7 @@
       ]
     },
     "SLSTR_CARTESIAN_TX": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/cartesian_tx.nc",
+      "href": "../tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/cartesian_tx.nc",
       "type": "application/x-netcdf",
       "description": "16km cartesian coordinates",
       "resolution": [
@@ -525,7 +520,7 @@
       ]
     },
     "SLSTR_MET_TX": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/met_tx.nc",
+      "href": "../tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/met_tx.nc",
       "type": "application/x-netcdf",
       "description": "Meteorological parameters regridded onto the 16km tie points",
       "resolution": [

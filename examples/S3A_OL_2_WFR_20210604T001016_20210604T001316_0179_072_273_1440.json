@@ -1,7 +1,7 @@
 {
   "type": "Feature",
   "stac_version": "1.0.0",
-  "id": "S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003",
+  "id": "S3A_OL_2_WFR_20210604T001016_20210604T001316_0179_072_273_1440",
   "properties": {
     "sat:platform_international_designator": "2016-011A",
     "sat:orbit_state": "ascending",
@@ -244,16 +244,11 @@
     {
       "rel": "license",
       "href": "https://sentinel.esa.int/documents/247904/690755/Sentinel_Data_Legal_Notice"
-    },
-    {
-      "rel": "self",
-      "href": "/opt/stactools-sentinel3/examples/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.json",
-      "type": "application/json"
     }
   ],
   "assets": {
     "safe-manifest": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/xfdumanifest.xml",
+      "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/xfdumanifest.xml",
       "type": "application/xml",
       "file:checksum": "15386acc9febe16dca69558385af15be",
       "file:local_path": "S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/xfdumanifest.xml",
@@ -263,7 +258,7 @@
       ]
     },
     "Oa01_reflectance": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/Oa01_reflectance.nc",
+      "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/Oa01_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Reflectance for OLCI acquisition band Oa01",
       "resolution": [
@@ -286,7 +281,7 @@
       ]
     },
     "Oa02_reflectance": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/Oa02_reflectance.nc",
+      "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/Oa02_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Reflectance for OLCI acquisition band Oa02",
       "resolution": [
@@ -309,7 +304,7 @@
       ]
     },
     "Oa03_reflectance": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/Oa03_reflectance.nc",
+      "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/Oa03_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Reflectance for OLCI acquisition band Oa03",
       "resolution": [
@@ -332,7 +327,7 @@
       ]
     },
     "Oa04_reflectance": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/Oa04_reflectance.nc",
+      "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/Oa04_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Reflectance for OLCI acquisition band Oa04",
       "resolution": [
@@ -355,7 +350,7 @@
       ]
     },
     "Oa05_reflectance": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/Oa05_reflectance.nc",
+      "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/Oa05_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Reflectance for OLCI acquisition band Oa05",
       "resolution": [
@@ -378,7 +373,7 @@
       ]
     },
     "Oa06_reflectance": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/Oa06_reflectance.nc",
+      "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/Oa06_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Reflectance for OLCI acquisition band Oa06",
       "resolution": [
@@ -401,7 +396,7 @@
       ]
     },
     "Oa07_reflectance": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/Oa07_reflectance.nc",
+      "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/Oa07_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Reflectance for OLCI acquisition band Oa07",
       "resolution": [
@@ -424,7 +419,7 @@
       ]
     },
     "Oa08_reflectance": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/Oa08_reflectance.nc",
+      "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/Oa08_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Reflectance for OLCI acquisition band Oa08",
       "resolution": [
@@ -447,7 +442,7 @@
       ]
     },
     "Oa09_reflectance": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/Oa09_reflectance.nc",
+      "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/Oa09_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Reflectance for OLCI acquisition band Oa09",
       "resolution": [
@@ -470,7 +465,7 @@
       ]
     },
     "Oa10_reflectance": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/Oa10_reflectance.nc",
+      "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/Oa10_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Reflectance for OLCI acquisition band Oa10",
       "resolution": [
@@ -493,7 +488,7 @@
       ]
     },
     "Oa11_reflectance": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/Oa11_reflectance.nc",
+      "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/Oa11_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Reflectance for OLCI acquisition band Oa11",
       "resolution": [
@@ -516,7 +511,7 @@
       ]
     },
     "Oa12_reflectance": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/Oa12_reflectance.nc",
+      "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/Oa12_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Reflectance for OLCI acquisition band Oa12",
       "resolution": [
@@ -539,7 +534,7 @@
       ]
     },
     "Oa16_reflectance": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/Oa16_reflectance.nc",
+      "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/Oa16_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Reflectance for OLCI acquisition band Oa16",
       "resolution": [
@@ -562,7 +557,7 @@
       ]
     },
     "Oa17_reflectance": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/Oa17_reflectance.nc",
+      "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/Oa17_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Reflectance for OLCI acquisition band Oa17",
       "resolution": [
@@ -585,7 +580,7 @@
       ]
     },
     "Oa18_reflectance": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/Oa18_reflectance.nc",
+      "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/Oa18_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Reflectance for OLCI acquisition band Oa18",
       "resolution": [
@@ -608,7 +603,7 @@
       ]
     },
     "Oa21_reflectance": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/Oa21_reflectance.nc",
+      "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/Oa21_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Reflectance for OLCI acquisition band Oa21",
       "resolution": [
@@ -631,7 +626,7 @@
       ]
     },
     "chlNn": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/chl_nn.nc",
+      "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/chl_nn.nc",
       "type": "application/x-netcdf",
       "description": "Neural Net Chlorophyll concentration",
       "resolution": [
@@ -744,7 +739,7 @@
       ]
     },
     "chlOc4me": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/chl_oc4me.nc",
+      "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/chl_oc4me.nc",
       "type": "application/x-netcdf",
       "description": "OC4Me algorithm Chlorophyll concentration",
       "resolution": [
@@ -785,7 +780,7 @@
       ]
     },
     "iopNn": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/iop_nn.nc",
+      "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/iop_nn.nc",
       "type": "application/x-netcdf",
       "description": "Inherent Optical Properties of water",
       "resolution": [
@@ -832,7 +827,7 @@
       ]
     },
     "iwv": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/iwv.nc",
+      "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/iwv.nc",
       "type": "application/x-netcdf",
       "description": "Integrated water vapour column",
       "resolution": [
@@ -861,7 +856,7 @@
       ]
     },
     "par": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/par.nc",
+      "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/par.nc",
       "type": "application/x-netcdf",
       "description": "Photosynthetically Active Radiation",
       "resolution": [
@@ -876,7 +871,7 @@
       ]
     },
     "trsp": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/trsp.nc",
+      "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/trsp.nc",
       "type": "application/x-netcdf",
       "description": "Transparency properties of water",
       "resolution": [
@@ -905,7 +900,7 @@
       ]
     },
     "tsmNn": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/tsm_nn.nc",
+      "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/tsm_nn.nc",
       "type": "application/x-netcdf",
       "description": "Total suspended matter concentration",
       "resolution": [
@@ -1018,7 +1013,7 @@
       ]
     },
     "wAer": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/w_aer.nc",
+      "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/w_aer.nc",
       "type": "application/x-netcdf",
       "description": "Aerosol Over Water",
       "resolution": [
@@ -1053,7 +1048,7 @@
       ]
     },
     "geoCoordinates": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/geo_coordinates.nc",
+      "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/geo_coordinates.nc",
       "type": "application/x-netcdf",
       "description": "Geo Coordinates Annotations",
       "resolution": [
@@ -1068,7 +1063,7 @@
       ]
     },
     "instrumentData": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/instrument_data.nc",
+      "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/instrument_data.nc",
       "type": "application/x-netcdf",
       "description": "Instrument Annotation",
       "resolution": [
@@ -1083,7 +1078,7 @@
       ]
     },
     "tieGeoCoordinates": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/tie_geo_coordinates.nc",
+      "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/tie_geo_coordinates.nc",
       "type": "application/x-netcdf",
       "description": "Tie-Point Geo Coordinate Annotations",
       "resolution": [
@@ -1098,7 +1093,7 @@
       ]
     },
     "tieGeometries": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/tie_geometries.nc",
+      "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/tie_geometries.nc",
       "type": "application/x-netcdf",
       "description": "Tie-Point Geometries Annotations",
       "resolution": [
@@ -1113,7 +1108,7 @@
       ]
     },
     "tieMeteo": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/tie_meteo.nc",
+      "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/tie_meteo.nc",
       "type": "application/x-netcdf",
       "description": "Tie-Point Meteo Annotations",
       "resolution": [
@@ -1128,7 +1123,7 @@
       ]
     },
     "timeCoordinates": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/time_coordinates.nc",
+      "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/time_coordinates.nc",
       "type": "application/x-netcdf",
       "description": "Time Coordinates Annotations",
       "resolution": [
@@ -1143,7 +1138,7 @@
       ]
     },
     "wqsf": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/wqsf.nc",
+      "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/wqsf.nc",
       "type": "application/x-netcdf",
       "description": "Water Quality and Science Flags",
       "resolution": [

@@ -1,7 +1,7 @@
 {
   "type": "Feature",
   "stac_version": "1.0.0",
-  "id": "S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002",
+  "id": "S3A_SY_2_VG1_20211013T000000_20211013T235959_EUROPE",
   "properties": {
     "sat:platform_international_designator": "2016-011A",
     "sat:orbit_state": "descending",
@@ -1238,16 +1238,11 @@
     {
       "rel": "license",
       "href": "https://sentinel.esa.int/documents/247904/690755/Sentinel_Data_Legal_Notice"
-    },
-    {
-      "rel": "self",
-      "href": "/opt/stactools-sentinel3/examples/S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.json",
-      "type": "application/json"
     }
   ],
   "assets": {
     "safe-manifest": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/xfdumanifest.xml",
+      "href": "../tests/data-files/S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/xfdumanifest.xml",
       "type": "application/xml",
       "file:checksum": "665fb36324464da22374bda5a012fa22",
       "file:local_path": "S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/xfdumanifest.xml",
@@ -1257,7 +1252,7 @@
       ]
     },
     "b0": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/B0.nc",
+      "href": "../tests/data-files/S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/B0.nc",
       "type": "application/x-netcdf",
       "description": "Surface Reflectance Data Set associated with VGT-B0 channel",
       "vg1:shape": [
@@ -1294,7 +1289,7 @@
       ]
     },
     "b2": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/B2.nc",
+      "href": "../tests/data-files/S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/B2.nc",
       "type": "application/x-netcdf",
       "description": "Surface Reflectance Data Set associated with VGT-B2 channel",
       "vg1:shape": [
@@ -1331,7 +1326,7 @@
       ]
     },
     "b3": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/B3.nc",
+      "href": "../tests/data-files/S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/B3.nc",
       "type": "application/x-netcdf",
       "description": "Surface Reflectance Data Set associated with VGT-B3 channel",
       "vg1:shape": [
@@ -1368,7 +1363,7 @@
       ]
     },
     "mir": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/MIR.nc",
+      "href": "../tests/data-files/S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/MIR.nc",
       "type": "application/x-netcdf",
       "description": "Surface Reflectance Data Set associated with VGT-MIR channel",
       "vg1:shape": [
@@ -1405,7 +1400,7 @@
       ]
     },
     "ndvi": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/NDVI.nc",
+      "href": "../tests/data-files/S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/NDVI.nc",
       "type": "application/x-netcdf",
       "description": "Normalised difference vegetation index",
       "vg1:shape": [
@@ -1448,7 +1443,7 @@
       ]
     },
     "vaa": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/vaa.nc",
+      "href": "../tests/data-files/S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/vaa.nc",
       "type": "application/x-netcdf",
       "description": "View azimuth angle data",
       "vg1:shape": [
@@ -1477,7 +1472,7 @@
       ]
     },
     "vza": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/vza.nc",
+      "href": "../tests/data-files/S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/vza.nc",
       "type": "application/x-netcdf",
       "description": "View zenith angle data",
       "vg1:shape": [
@@ -1506,7 +1501,7 @@
       ]
     },
     "saa": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/saa.nc",
+      "href": "../tests/data-files/S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/saa.nc",
       "type": "application/x-netcdf",
       "description": "Solar azimuth angle data",
       "vg1:shape": [
@@ -1535,7 +1530,7 @@
       ]
     },
     "sza": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/sza.nc",
+      "href": "../tests/data-files/S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/sza.nc",
       "type": "application/x-netcdf",
       "description": "Solar zenith angle data",
       "vg1:shape": [
@@ -1564,7 +1559,7 @@
       ]
     },
     "ag": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/ag.nc",
+      "href": "../tests/data-files/S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/ag.nc",
       "type": "application/x-netcdf",
       "description": "Aerosol optical thickness data",
       "vg1:shape": [
@@ -1593,7 +1588,7 @@
       ]
     },
     "og": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/og.nc",
+      "href": "../tests/data-files/S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/og.nc",
       "type": "application/x-netcdf",
       "description": "Total Ozone column data",
       "vg1:shape": [
@@ -1622,7 +1617,7 @@
       ]
     },
     "wvg": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/wvg.nc",
+      "href": "../tests/data-files/S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/wvg.nc",
       "type": "application/x-netcdf",
       "description": "Total column Water vapour data",
       "vg1:shape": [
@@ -1651,7 +1646,7 @@
       ]
     },
     "tg": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/tg.nc",
+      "href": "../tests/data-files/S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/tg.nc",
       "type": "application/x-netcdf",
       "description": "Synthesis time data",
       "vg1:shape": [
@@ -1680,7 +1675,7 @@
       ]
     },
     "sm": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/sm.nc",
+      "href": "../tests/data-files/S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/sm.nc",
       "type": "application/x-netcdf",
       "description": "Status Map data",
       "vg1:shape": [

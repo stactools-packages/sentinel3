@@ -1,7 +1,7 @@
 {
   "type": "Feature",
   "stac_version": "1.0.0",
-  "id": "S3B_SY_2_AOD____20210512T143315_20210512T151738_20210514T064157_2663_052_196______LN2_O_NT_002",
+  "id": "S3B_SY_2_AOD_20210512T143315_20210512T151738_2663_052_196",
   "properties": {
     "sat:platform_international_designator": "2018-039A",
     "sat:orbit_state": "ascending",
@@ -1426,16 +1426,11 @@
     {
       "rel": "license",
       "href": "https://sentinel.esa.int/documents/247904/690755/Sentinel_Data_Legal_Notice"
-    },
-    {
-      "rel": "self",
-      "href": "/opt/stactools-sentinel3/examples/S3B_SY_2_AOD____20210512T143315_20210512T151738_20210514T064157_2663_052_196______LN2_O_NT_002.json",
-      "type": "application/json"
     }
   ],
   "assets": {
     "safe-manifest": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_SY_2_AOD____20210512T143315_20210512T151738_20210514T064157_2663_052_196______LN2_O_NT_002.SEN3/xfdumanifest.xml",
+      "href": "../tests/data-files/S3B_SY_2_AOD____20210512T143315_20210512T151738_20210514T064157_2663_052_196______LN2_O_NT_002.SEN3/xfdumanifest.xml",
       "type": "application/xml",
       "file:checksum": "e55367170bb60e7d1cab151c24e6e086",
       "file:local_path": "S3B_SY_2_AOD____20210512T143315_20210512T151738_20210514T064157_2663_052_196______LN2_O_NT_002.SEN3/xfdumanifest.xml",
@@ -1445,7 +1440,7 @@
       ]
     },
     "NTC_AOD": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_SY_2_AOD____20210512T143315_20210512T151738_20210514T064157_2663_052_196______LN2_O_NT_002.SEN3/NTC_AOD.nc",
+      "href": "../tests/data-files/S3B_SY_2_AOD____20210512T143315_20210512T151738_20210514T064157_2663_052_196______LN2_O_NT_002.SEN3/NTC_AOD.nc",
       "type": "application/x-netcdf",
       "description": "Global aerosol parameters",
       "resolution": [

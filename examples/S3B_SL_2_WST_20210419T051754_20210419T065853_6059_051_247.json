@@ -1,7 +1,7 @@
 {
   "type": "Feature",
   "stac_version": "1.0.0",
-  "id": "S3B_SL_2_WST____20210419T051754_20210419T065853_20210420T160434_6059_051_247______MAR_O_NT_003",
+  "id": "S3B_SL_2_WST_20210419T051754_20210419T065853_6059_051_247",
   "properties": {
     "sat:platform_international_designator": "2018-039A",
     "sat:orbit_state": "descending",
@@ -1342,16 +1342,11 @@
     {
       "rel": "license",
       "href": "https://sentinel.esa.int/documents/247904/690755/Sentinel_Data_Legal_Notice"
-    },
-    {
-      "rel": "self",
-      "href": "/opt/stactools-sentinel3/examples/S3B_SL_2_WST____20210419T051754_20210419T065853_20210420T160434_6059_051_247______MAR_O_NT_003.json",
-      "type": "application/json"
     }
   ],
   "assets": {
     "safe-manifest": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_SL_2_WST____20210419T051754_20210419T065853_20210420T160434_6059_051_247______MAR_O_NT_003.SEN3/xfdumanifest.xml",
+      "href": "../tests/data-files/S3B_SL_2_WST____20210419T051754_20210419T065853_20210420T160434_6059_051_247______MAR_O_NT_003.SEN3/xfdumanifest.xml",
       "type": "application/xml",
       "file:checksum": "78276d1a70ef406665d21d6cb83ecb62",
       "file:local_path": "S3B_SL_2_WST____20210419T051754_20210419T065853_20210420T160434_6059_051_247______MAR_O_NT_003.SEN3/xfdumanifest.xml",
@@ -1361,7 +1356,7 @@
       ]
     },
     "L2P": {
-      "href": "/opt/stactools-sentinel3/tests/data-files/S3B_SL_2_WST____20210419T051754_20210419T065853_20210420T160434_6059_051_247______MAR_O_NT_003.SEN3/20210419051754-MAR-L2P_GHRSST-SSTskin-SLSTRB-20210420160434-v02.0-fv01.0.nc",
+      "href": "../tests/data-files/S3B_SL_2_WST____20210419T051754_20210419T065853_20210420T160434_6059_051_247______MAR_O_NT_003.SEN3/20210419051754-MAR-L2P_GHRSST-SSTskin-SLSTRB-20210420160434-v02.0-fv01.0.nc",
       "type": "application/x-netcdf",
       "description": "Data respects the Group for High Resolution Sea Surface Temperature (GHRSST) L2P specification",
       "resolution": "1 km at nadir",
