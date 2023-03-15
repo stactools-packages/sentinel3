@@ -8,6 +8,7 @@ from stactools.core.io.xml import XmlElement
 
 from stactools.sentinel3 import xml
 from stactools.sentinel3.constants import MANIFEST_FILENAME
+from stactools.sentinel3.file_name import FileName
 
 
 class ProductMetadataError(Exception):
@@ -49,26 +50,13 @@ class ProductMetadata:
     def scene_id(self) -> str:
         """Returns the string to be used for a STAC Item id.
 
-        Removes the processing number and .SAFE extension
-        from the product_id defined below.
+        Removes the processing number, product creation date, centre id, class
+        id, and .SAFE extension from the product_id defined below.
 
         Parsed based on the naming convention found here:
         https://sentinel.esa.int/web/sentinel/user-guides/sentinel-3-slstr/naming-convention
         """
-        product_id = self.product_id
-        # Ensure the product id is as expected.
-        if not product_id.endswith(".SEN3"):
-            raise ValueError(
-                "Unexpected value found at "
-                f"{product_id}: "
-                "this was expected to follow the sentinel 3 "
-                "naming convention, including "
-                "ending in .SEN3"
-            )
-
-        scene_id = self.product_id.split(".")[0]
-
-        return scene_id
+        return FileName.from_str(self.product_id).scene_id
 
     @property
     def product_id(self) -> str:
