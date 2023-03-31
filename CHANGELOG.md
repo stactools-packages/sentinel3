@@ -9,9 +9,9 @@ number as needed.
 
 ## [Unreleased]
 
-## [0.1.0] - 2023-03-16
+## [0.4.0] - 2023-03-31
 
-Initial release.
+First tagged release.
 
-[Unreleased]: https://github.com/stactools-packages/sentinel3/compare/v0.1.0..HEAD
-[0.1.0]: https://github.com/stactools-packages/sentinel3/releases/tag/v0.1.0
+[Unreleased]: https://github.com/stactools-packages/sentinel3/compare/v0.4.0..HEAD
+[0.4.0]: https://github.com/stactools-packages/sentinel3/releases/tag/v0.4.0
