@@ -1,6 +1,7 @@
 import logging
 import os
-from typing import Optional
+from decimal import Decimal
+from typing import Any, List, Optional
 
 import pystac
 from pystac.extensions.eo import EOExtension
@@ -10,7 +11,6 @@ from stactools.core.io import ReadHrefModifier
 from .constants import (
     MANIFEST_FILENAME,
     SENTINEL_CONSTELLATION,
-    SENTINEL_LICENSE,
     SENTINEL_PROVIDER,
     SPECIAL_ASSET_KEYS,
 )
@@ -25,6 +25,46 @@ from .properties import (
 )
 
 logger = logging.getLogger(__name__)
+
+
+# This module includes copious contributions ported from the Microsoft Planetary
+# Computer Sentinel-3 dataset package:
+# https://github.com/microsoft/planetary-computer-tasks/blob/main/datasets/sentinel-3/
+
+
+def recursive_round(coordinates: List[Any], precision: int) -> List[Any]:
+    """Rounds a list of numbers. The list can contain additional nested lists
+    or tuples of numbers.
+
+    Any tuples encountered will be converted to lists.
+
+    Args:
+        coordinates (List[Any]): A list of numbers, possibly containing nested
+            lists or tuples of numbers.
+        precision (int): Number of decimal places to use for rounding.
+
+    Returns:
+        List[Any]: The list of numbers rounded to the given precision.
+    """
+    rounded: List[Any] = []
+    for value in coordinates:
+        if isinstance(value, (int, float)):
+            rounded.append(round(value, precision))
+        else:
+            rounded.append(recursive_round(list(value), precision))
+    return rounded
+
+
+def nano2micro(value: float) -> float:
+    """Converts nanometers to micrometers while handling floating
+    point arithmetic errors."""
+    return float(Decimal(str(value)) / Decimal("1000"))
+
+
+def hz2ghz(value: float) -> float:
+    """Converts hertz to gigahertz while handling floating point
+    arithmetic errors."""
+    return float(Decimal(str(value)) / Decimal("1000000000"))
 
 
 def sen3_to_kebab(asset_key: str) -> str:
@@ -118,7 +158,34 @@ def create_item(
             metalinks.granule_href, identifier, file, metalinks.manifest
         )
 
-    # license link
-    item.links.append(SENTINEL_LICENSE)
+    # ---- ASSETS ----
+    for asset_key, asset in item.assets.items():
+        # remove local paths
+        asset.extra_fields.pop("file:local_path", None)
+
+        # Add a description to the safe_manifest asset
+        if asset_key == "safe-manifest":
+            asset.description = "SAFE product manifest"
+
+        # correct eo:bands
+        if "eo:bands" in asset.extra_fields:
+            for band in asset.extra_fields["eo:bands"]:
+                band["center_wavelength"] = nano2micro(band["center_wavelength"])
+                band["full_width_half_max"] = nano2micro(band["band_width"])
+                band.pop("band_width")
+
+        # Tune up the radar altimetry bands. Radar altimetry is different
+        # enough than radar imagery that the existing SAR extension doesn't
+        # quite work (plus, the SAR extension doesn't have a band object).
+        # We'll use a band construct similar to eo:bands, but follow the
+        # naming and unit conventions in the SAR extension.
+        if "sral:bands" in asset.extra_fields:
+            asset.extra_fields["s3:altimetry_bands"] = asset.extra_fields.pop(
+                "sral:bands"
+            )
+            for band in asset.extra_fields["s3:altimetry_bands"]:
+                band["frequency_band"] = band.pop("name")
+                band["center_frequency"] = hz2ghz(band.pop("central_frequency"))
+                band["band_width"] = hz2ghz(band.pop("band_width_in_Hz"))
 
     return item

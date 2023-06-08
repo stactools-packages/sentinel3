@@ -210,18 +210,13 @@
       ]
     ]
   },
-  "links": [
-    {
-      "rel": "license",
-      "href": "https://sentinel.esa.int/documents/247904/690755/Sentinel_Data_Legal_Notice"
-    }
-  ],
+  "links": [],
   "assets": {
     "safe-manifest": {
       "href": "../tests/data-files/S3A_SR_2_LAN____20210611T011438_20210611T012436_20210611T024819_0598_072_373______LN3_O_NR_004.SEN3/xfdumanifest.xml",
       "type": "application/xml",
+      "description": "SAFE product manifest",
       "file:checksum": "07334a484326233aeef73d4cf4f6fbbb",
-      "file:local_path": "S3A_SR_2_LAN____20210611T011438_20210611T012436_20210611T024819_0598_072_373______LN3_O_NR_004.SEN3/xfdumanifest.xml",
       "file:size": 95620,
       "roles": [
         "metadata"
@@ -242,23 +237,22 @@
           "time_20_c": 11714
         }
       ],
-      "sral:bands": [
+      "file:checksum": "380c81836b5bd7a8efca81c4a11df60f",
+      "file:size": 6697120,
+      "s3:altimetry_bands": [
         {
-          "name": "C",
           "description": "Band C - Ionospheric correction",
-          "central_frequency": 5409999872.0,
-          "band_width_in_Hz": 290000000.0
+          "frequency_band": "C",
+          "center_frequency": 5.409999872,
+          "band_width": 0.29
         },
         {
-          "name": "Ku",
           "description": "Band Ku - Range measurements",
-          "central_frequency": 13575000064.0,
-          "band_width_in_Hz": 320000000.0
+          "frequency_band": "Ku",
+          "center_frequency": 13.575000064,
+          "band_width": 0.32
         }
       ],
-      "file:checksum": "380c81836b5bd7a8efca81c4a11df60f",
-      "file:local_path": "S3A_SR_2_LAN____20210611T011438_20210611T012436_20210611T024819_0598_072_373______LN3_O_NR_004.SEN3/standard_measurement.nc",
-      "file:size": 6697120,
       "roles": [
         "data"
       ]
@@ -281,23 +275,22 @@
           "echo_sample_ind": 128
         }
       ],
-      "sral:bands": [
+      "file:checksum": "8921946bfe2159a4c71819ab7522ae3d",
+      "file:size": 19958260,
+      "s3:altimetry_bands": [
         {
-          "name": "C",
           "description": "Band C - Ionospheric correction",
-          "central_frequency": 5409999872.0,
-          "band_width_in_Hz": 290000000.0
+          "frequency_band": "C",
+          "center_frequency": 5.409999872,
+          "band_width": 0.29
         },
         {
-          "name": "Ku",
           "description": "Band Ku - Range measurements",
-          "central_frequency": 13575000064.0,
-          "band_width_in_Hz": 320000000.0
+          "frequency_band": "Ku",
+          "center_frequency": 13.575000064,
+          "band_width": 0.32
         }
       ],
-      "file:checksum": "8921946bfe2159a4c71819ab7522ae3d",
-      "file:local_path": "S3A_SR_2_LAN____20210611T011438_20210611T012436_20210611T024819_0598_072_373______LN3_O_NR_004.SEN3/enhanced_measurement.nc",
-      "file:size": 19958260,
       "roles": [
         "data"
       ]
@@ -311,17 +304,16 @@
           "time_01": 598
         }
       ],
-      "sral:bands": [
+      "file:checksum": "ba787b27d6e590389f53b13453efd0cd",
+      "file:size": 273902,
+      "s3:altimetry_bands": [
         {
-          "name": "Ku",
           "description": "Band Ku - Range measurements",
-          "central_frequency": 13575000064.0,
-          "band_width_in_Hz": 320000000.0
+          "frequency_band": "Ku",
+          "center_frequency": 13.575000064,
+          "band_width": 0.32
         }
       ],
-      "file:checksum": "ba787b27d6e590389f53b13453efd0cd",
-      "file:local_path": "S3A_SR_2_LAN____20210611T011438_20210611T012436_20210611T024819_0598_072_373______LN3_O_NR_004.SEN3/reduced_measurement.nc",
-      "file:size": 273902,
       "roles": [
         "data"
       ]
@@ -336,6 +328,6 @@
   "stac_extensions": [
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/sat/v1.0.0/schema.json",
-    "https://stac-extensions.github.io/eo/v1.0.0/schema.json"
+    "https://stac-extensions.github.io/eo/v1.1.0/schema.json"
   ]
 }

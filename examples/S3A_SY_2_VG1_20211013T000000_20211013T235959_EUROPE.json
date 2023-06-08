@@ -1234,18 +1234,13 @@
       ]
     ]
   },
-  "links": [
-    {
-      "rel": "license",
-      "href": "https://sentinel.esa.int/documents/247904/690755/Sentinel_Data_Legal_Notice"
-    }
-  ],
+  "links": [],
   "assets": {
     "safe-manifest": {
       "href": "../tests/data-files/S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/xfdumanifest.xml",
       "type": "application/xml",
+      "description": "SAFE product manifest",
       "file:checksum": "665fb36324464da22374bda5a012fa22",
-      "file:local_path": "S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/xfdumanifest.xml",
       "file:size": 3226061,
       "roles": [
         "metadata"
@@ -1277,12 +1272,11 @@
         {
           "name": "B0",
           "description": "OLCI channels Oa02, Oa03",
-          "center_wavelength": 450,
-          "band_width": 20
+          "center_wavelength": 0.45,
+          "full_width_half_max": 0.02
         }
       ],
       "file:checksum": "a7b378a6a60061d6e16aeb84e3ac6fef",
-      "file:local_path": "S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/B0.nc",
       "file:size": 16807647,
       "roles": [
         "data"
@@ -1314,12 +1308,11 @@
         {
           "name": "B2",
           "description": "OLCI channels Oa06, Oa07, Oa08, Oa09, Oa10",
-          "center_wavelength": 645,
-          "band_width": 35
+          "center_wavelength": 0.645,
+          "full_width_half_max": 0.035
         }
       ],
       "file:checksum": "30e21231f5d00cf1168331d5f2cff416",
-      "file:local_path": "S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/B2.nc",
       "file:size": 17897406,
       "roles": [
         "data"
@@ -1351,12 +1344,11 @@
         {
           "name": "B3",
           "description": "OLCI channels Oa16, Oa17, Oa18, Oa21",
-          "center_wavelength": 835,
-          "band_width": 55
+          "center_wavelength": 0.835,
+          "full_width_half_max": 0.055
         }
       ],
       "file:checksum": "018b5d6af4e81b1920d8f97672bf385a",
-      "file:local_path": "S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/B3.nc",
       "file:size": 18780646,
       "roles": [
         "data"
@@ -1388,12 +1380,11 @@
         {
           "name": "MIR",
           "description": "SLSTR nadir and oblique channels S5, S6",
-          "center_wavelength": 1665,
-          "band_width": 85
+          "center_wavelength": 1.665,
+          "full_width_half_max": 0.085
         }
       ],
       "file:checksum": "4e9103c08e01686abb298f3228acaee4",
-      "file:local_path": "S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/MIR.nc",
       "file:size": 19040570,
       "roles": [
         "data"
@@ -1425,18 +1416,17 @@
         {
           "name": "B2",
           "description": "OLCI channels Oa06, Oa07, Oa08, Oa09, Oa10",
-          "center_wavelength": 645,
-          "band_width": 35
+          "center_wavelength": 0.645,
+          "full_width_half_max": 0.035
         },
         {
           "name": "B3",
           "description": "OLCI channels Oa16, Oa17, Oa18, Oa21",
-          "center_wavelength": 835,
-          "band_width": 55
+          "center_wavelength": 0.835,
+          "full_width_half_max": 0.055
         }
       ],
       "file:checksum": "3213f8bc66ec2d79e1680731925c5eb8",
-      "file:local_path": "S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/NDVI.nc",
       "file:size": 9662306,
       "roles": [
         "data"
@@ -1465,7 +1455,6 @@
         1000
       ],
       "file:checksum": "e1caba423a4dab01106aec7204d1de4e",
-      "file:local_path": "S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/vaa.nc",
       "file:size": 1402042,
       "roles": [
         "data"
@@ -1494,7 +1483,6 @@
         1000
       ],
       "file:checksum": "e2245dbec1646ca8dc90152d84df34d4",
-      "file:local_path": "S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/vza.nc",
       "file:size": 2161061,
       "roles": [
         "data"
@@ -1523,7 +1511,6 @@
         1000
       ],
       "file:checksum": "23a388ce9219b281ed2e1501a385c740",
-      "file:local_path": "S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/saa.nc",
       "file:size": 1336938,
       "roles": [
         "data"
@@ -1552,7 +1539,6 @@
         1000
       ],
       "file:checksum": "22057a88425794b0a60facfb68497a65",
-      "file:local_path": "S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/sza.nc",
       "file:size": 1181492,
       "roles": [
         "data"
@@ -1581,7 +1567,6 @@
         1000
       ],
       "file:checksum": "09954ce7c459821842436be352e54e14",
-      "file:local_path": "S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/ag.nc",
       "file:size": 5944181,
       "roles": [
         "data"
@@ -1610,7 +1595,6 @@
         1000
       ],
       "file:checksum": "cae002d306b3dd61299c6a0ce3cd8e66",
-      "file:local_path": "S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/og.nc",
       "file:size": 783508,
       "roles": [
         "data"
@@ -1639,7 +1623,6 @@
         1000
       ],
       "file:checksum": "1851bd52bb32b8c397d2ad1fd17e713c",
-      "file:local_path": "S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/wvg.nc",
       "file:size": 2861263,
       "roles": [
         "data"
@@ -1668,7 +1651,6 @@
         1000
       ],
       "file:checksum": "ca8ed1b504e8edd6489f99fe91236c80",
-      "file:local_path": "S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/tg.nc",
       "file:size": 2853175,
       "roles": [
         "data"
@@ -1697,7 +1679,6 @@
         1000
       ],
       "file:checksum": "58997919e815affee649a832675edf36",
-      "file:local_path": "S3A_SY_2_VG1____20211013T000000_20211013T235959_20211014T203456_EUROPE____________LN2_O_ST_002.SEN3/sm.nc",
       "file:size": 2658577,
       "roles": [
         "data"
@@ -1713,6 +1694,6 @@
   "stac_extensions": [
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/sat/v1.0.0/schema.json",
-    "https://stac-extensions.github.io/eo/v1.0.0/schema.json"
+    "https://stac-extensions.github.io/eo/v1.1.0/schema.json"
   ]
 }

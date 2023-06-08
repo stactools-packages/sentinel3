@@ -904,18 +904,13 @@
       ]
     ]
   },
-  "links": [
-    {
-      "rel": "license",
-      "href": "https://sentinel.esa.int/documents/247904/690755/Sentinel_Data_Legal_Notice"
-    }
-  ],
+  "links": [],
   "assets": {
     "safe-manifest": {
       "href": "../tests/data-files/S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/xfdumanifest.xml",
       "type": "application/xml",
+      "description": "SAFE product manifest",
       "file:checksum": "5d7aa13f028469ee445c33ab3a03322b",
-      "file:local_path": "S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/xfdumanifest.xml",
       "file:size": 159712,
       "roles": [
         "metadata"
@@ -933,24 +928,23 @@
         {
           "name": "Oa03",
           "description": "Band 3 - Chlorophyll absorption maximum, biogeochemistry, vegetation",
-          "center_wavelength": 442.5,
-          "band_width": 10
+          "center_wavelength": 0.4425,
+          "full_width_half_max": 0.01
         },
         {
           "name": "Oa10",
           "description": "Band 10 - Chlorophyll fluorescence peak, red edge",
-          "center_wavelength": 681.25,
-          "band_width": 7.5
+          "center_wavelength": 0.68125,
+          "full_width_half_max": 0.0075
         },
         {
           "name": "Oa17",
           "description": "Band 17 - Atmospheric / aerosol correction, clouds, pixel co-registration",
-          "center_wavelength": 865,
-          "band_width": 20
+          "center_wavelength": 0.865,
+          "full_width_half_max": 0.02
         }
       ],
       "file:checksum": "62641c090d69f1e3808b4f3af9a16bdd",
-      "file:local_path": "S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/ogvi.nc",
       "file:size": 355069,
       "roles": [
         "data"
@@ -968,24 +962,23 @@
         {
           "name": "Oa10",
           "description": "Band 10 - Chlorophyll fluorescence peak, red edge",
-          "center_wavelength": 681.25,
-          "band_width": 7.5
+          "center_wavelength": 0.68125,
+          "full_width_half_max": 0.0075
         },
         {
           "name": "Oa11",
           "description": "Band 11 - Chlorophyll fluorescence baseline, red edge transition",
-          "center_wavelength": 708.75,
-          "band_width": 10
+          "center_wavelength": 0.70875,
+          "full_width_half_max": 0.01
         },
         {
           "name": "Oa12",
           "description": "Band 12 - O2 absorption / clouds, vegetation",
-          "center_wavelength": 753.75,
-          "band_width": 7.5
+          "center_wavelength": 0.75375,
+          "full_width_half_max": 0.0075
         }
       ],
       "file:checksum": "0218d562d3eacb20843fc06ef3f7a1b0",
-      "file:local_path": "S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/otci.nc",
       "file:size": 547075,
       "roles": [
         "data"
@@ -1003,18 +996,17 @@
         {
           "name": "Oa18",
           "description": "Band 18 - Water vapour absorption reference. Common reference band with SLSTR. Vegetation monitoring",
-          "center_wavelength": 885,
-          "band_width": 10
+          "center_wavelength": 0.885,
+          "full_width_half_max": 0.01
         },
         {
           "name": "Oa19",
           "description": "Band 19 - Water vapour absorption, vegetation monitoring (maximum REFLECTANCE)",
-          "center_wavelength": 900,
-          "band_width": 10
+          "center_wavelength": 0.9,
+          "full_width_half_max": 0.01
         }
       ],
       "file:checksum": "7943106a95ac4d6aea3827d4043b4e66",
-      "file:local_path": "S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/iwv.nc",
       "file:size": 10579229,
       "roles": [
         "data"
@@ -1032,18 +1024,17 @@
         {
           "name": "Oa10",
           "description": "Band 10 - Chlorophyll fluorescence peak, red edge",
-          "center_wavelength": 681.25,
-          "band_width": 7.5
+          "center_wavelength": 0.68125,
+          "full_width_half_max": 0.0075
         },
         {
           "name": "Oa17",
           "description": "Band 17 - Atmospheric / aerosol correction, clouds, pixel co-registration",
-          "center_wavelength": 865,
-          "band_width": 20
+          "center_wavelength": 0.865,
+          "full_width_half_max": 0.02
         }
       ],
       "file:checksum": "a1097d61a25557e04836e29cde961b56",
-      "file:local_path": "S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/rc_ogvi.nc",
       "file:size": 1258173,
       "roles": [
         "data"
@@ -1058,7 +1049,6 @@
         1176
       ],
       "file:checksum": "e51b74b6a8e21e587264eb31c588abac",
-      "file:local_path": "S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/lqsf.nc",
       "file:size": 3910619,
       "roles": [
         "data"
@@ -1073,7 +1063,6 @@
         1176
       ],
       "file:checksum": "98fcfd9c1af8a72735f424f7e63f5c12",
-      "file:local_path": "S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/time_coordinates.nc",
       "file:size": 23607,
       "roles": [
         "data"
@@ -1088,7 +1077,6 @@
         1176
       ],
       "file:checksum": "b965fc64ce2aec2327178f8d42bcba67",
-      "file:local_path": "S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/geo_coordinates.nc",
       "file:size": 55029575,
       "roles": [
         "data"
@@ -1103,7 +1091,6 @@
         1176
       ],
       "file:checksum": "b4f335028ddf886a7e5658c0bbf0eabc",
-      "file:local_path": "S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/tie_geo_coordinates.nc",
       "file:size": 4780779,
       "roles": [
         "data"
@@ -1118,7 +1105,6 @@
         1176
       ],
       "file:checksum": "f2945a9db361a4f4d4f894e568b98049",
-      "file:local_path": "S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/tie_geometries.nc",
       "file:size": 9169195,
       "roles": [
         "data"
@@ -1133,7 +1119,6 @@
         1176
       ],
       "file:checksum": "f37552572fdaeebaf223a65705b5d9c8",
-      "file:local_path": "S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/tie_meteo.nc",
       "file:size": 78319253,
       "roles": [
         "data"
@@ -1148,7 +1133,6 @@
         1176
       ],
       "file:checksum": "21b089d03ffe781c818bcf01bf19eb00",
-      "file:local_path": "S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/instrument_data.nc",
       "file:size": 1137558,
       "roles": [
         "data"
@@ -1164,6 +1148,6 @@
   "stac_extensions": [
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/sat/v1.0.0/schema.json",
-    "https://stac-extensions.github.io/eo/v1.0.0/schema.json"
+    "https://stac-extensions.github.io/eo/v1.1.0/schema.json"
   ]
 }

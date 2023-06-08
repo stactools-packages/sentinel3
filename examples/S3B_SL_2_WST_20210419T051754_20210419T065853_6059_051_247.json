@@ -1338,18 +1338,13 @@
       ]
     ]
   },
-  "links": [
-    {
-      "rel": "license",
-      "href": "https://sentinel.esa.int/documents/247904/690755/Sentinel_Data_Legal_Notice"
-    }
-  ],
+  "links": [],
   "assets": {
     "safe-manifest": {
       "href": "../tests/data-files/S3B_SL_2_WST____20210419T051754_20210419T065853_20210420T160434_6059_051_247______MAR_O_NT_003.SEN3/xfdumanifest.xml",
       "type": "application/xml",
+      "description": "SAFE product manifest",
       "file:checksum": "78276d1a70ef406665d21d6cb83ecb62",
-      "file:local_path": "S3B_SL_2_WST____20210419T051754_20210419T065853_20210420T160434_6059_051_247______MAR_O_NT_003.SEN3/xfdumanifest.xml",
       "file:size": 214116,
       "roles": [
         "metadata"
@@ -1364,24 +1359,23 @@
         {
           "name": "S7",
           "description": "Band 7 - SST, LST, Active fire",
-          "center_wavelength": 3742,
-          "band_width": 398
+          "center_wavelength": 3.742,
+          "full_width_half_max": 0.398
         },
         {
           "name": "S8",
           "description": "Band 8 - SST, LST, Active fire",
-          "center_wavelength": 10854,
-          "band_width": 776
+          "center_wavelength": 10.854,
+          "full_width_half_max": 0.776
         },
         {
           "name": "S9",
           "description": "Band 9 - SST, LST",
-          "center_wavelength": 12022.5,
-          "band_width": 905
+          "center_wavelength": 12.0225,
+          "full_width_half_max": 0.905
         }
       ],
       "file:checksum": "f7e67d0bb4acf309861443825cda3790",
-      "file:local_path": "S3B_SL_2_WST____20210419T051754_20210419T065853_20210420T160434_6059_051_247______MAR_O_NT_003.SEN3/20210419051754-MAR-L2P_GHRSST-SSTskin-SLSTRB-20210420160434-v02.0-fv01.0.nc",
       "file:size": 644094789,
       "roles": [
         "data"
@@ -1397,6 +1391,6 @@
   "stac_extensions": [
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/sat/v1.0.0/schema.json",
-    "https://stac-extensions.github.io/eo/v1.0.0/schema.json"
+    "https://stac-extensions.github.io/eo/v1.1.0/schema.json"
   ]
 }

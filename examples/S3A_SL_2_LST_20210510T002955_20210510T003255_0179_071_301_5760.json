@@ -338,18 +338,13 @@
       ]
     ]
   },
-  "links": [
-    {
-      "rel": "license",
-      "href": "https://sentinel.esa.int/documents/247904/690755/Sentinel_Data_Legal_Notice"
-    }
-  ],
+  "links": [],
   "assets": {
     "safe-manifest": {
       "href": "../tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/xfdumanifest.xml",
       "type": "application/xml",
+      "description": "SAFE product manifest",
       "file:checksum": "7556442c0b42c150816e46a1308acb03",
-      "file:local_path": "S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/xfdumanifest.xml",
       "file:size": 117096,
       "roles": [
         "metadata"
@@ -367,18 +362,17 @@
         {
           "name": "S8",
           "description": "Band 8 - SST, LST, Active fire",
-          "center_wavelength": 10854,
-          "band_width": 776
+          "center_wavelength": 10.854,
+          "full_width_half_max": 0.776
         },
         {
           "name": "S9",
           "description": "Band 9 - SST, LST",
-          "center_wavelength": 12022.5,
-          "band_width": 905
+          "center_wavelength": 12.0225,
+          "full_width_half_max": 0.905
         }
       ],
       "file:checksum": "c8052a87ba971ffd2fac11848fae8046",
-      "file:local_path": "S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/LST_in.nc",
       "file:size": 790066,
       "roles": [
         "data"
@@ -393,7 +387,6 @@
         1000
       ],
       "file:checksum": "33363c5ac9880e5dd2adce45fcc12abc",
-      "file:local_path": "S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/LST_ancillary_ds.nc",
       "file:size": 1391879,
       "roles": [
         "data"
@@ -408,7 +401,6 @@
         1000
       ],
       "file:checksum": "406b2a87a475231398a1a30781d37fbf",
-      "file:local_path": "S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/flags_in.nc",
       "file:size": 2021106,
       "roles": [
         "data"
@@ -423,7 +415,6 @@
         1000
       ],
       "file:checksum": "09533e74cf3909708c646959d4ac3e13",
-      "file:local_path": "S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/indices_in.nc",
       "file:size": 884423,
       "roles": [
         "data"
@@ -438,7 +429,6 @@
         1000
       ],
       "file:checksum": "5a2871990593b847c27d58587d07aa54",
-      "file:local_path": "S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/time_in.nc",
       "file:size": 64446,
       "roles": [
         "data"
@@ -453,7 +443,6 @@
         1000
       ],
       "file:checksum": "dd2e989843c4ca18301fc4ce65daaddf",
-      "file:local_path": "S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/geodetic_in.nc",
       "file:size": 7783851,
       "roles": [
         "data"
@@ -468,7 +457,6 @@
         1000
       ],
       "file:checksum": "c07a3e094dc44d493826b1a9f5292375",
-      "file:local_path": "S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/cartesian_in.nc",
       "file:size": 4635113,
       "roles": [
         "data"
@@ -483,7 +471,6 @@
         1000
       ],
       "file:checksum": "2425accdcb2930dba120eafb5c21d15c",
-      "file:local_path": "S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/geometry_tn.nc",
       "file:size": 3355466,
       "roles": [
         "data"
@@ -498,7 +485,6 @@
         1000
       ],
       "file:checksum": "f65a157b348e5b0931716731385549f2",
-      "file:local_path": "S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/geodetic_tx.nc",
       "file:size": 1681223,
       "roles": [
         "data"
@@ -513,7 +499,6 @@
         1000
       ],
       "file:checksum": "e7d5df992cee370002a8765786f00e1c",
-      "file:local_path": "S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/cartesian_tx.nc",
       "file:size": 41952,
       "roles": [
         "data"
@@ -528,7 +513,6 @@
         1000
       ],
       "file:checksum": "e5bc65e1a446027cd22a508419282fd6",
-      "file:local_path": "S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/met_tx.nc",
       "file:size": 33032113,
       "roles": [
         "data"
@@ -544,6 +528,6 @@
   "stac_extensions": [
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/sat/v1.0.0/schema.json",
-    "https://stac-extensions.github.io/eo/v1.0.0/schema.json"
+    "https://stac-extensions.github.io/eo/v1.1.0/schema.json"
   ]
 }
