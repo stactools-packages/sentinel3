@@ -8,41 +8,31 @@
     "sat:absolute_orbit": 27410,
     "sat:relative_orbit": 102,
     "eo:cloud_cover": 83.0,
-    "start_datetime": "2021-05-23 00:30:29.485583+00:00",
-    "end_datetime": "2021-05-23 00:33:29.485583+00:00",
+    "start_datetime": "2021-05-23T00:30:29Z",
+    "end_datetime": "2021-05-23T00:33:29Z",
     "instruments": [
       "OLCI"
     ],
-    "s3:mode": "EO",
-    "s3:productType": "OL_2_LFR___",
+    "s3:product_type": "OL_2_LFR___",
     "s3:gsd": 300,
-    "s3:salineWaterPixels_percentage": 4.0,
-    "s3:coastalPixels_percentage": 0.0082,
-    "s3:freshInlandWaterPixels_percentage": 0.0,
-    "s3:tidalRegionPixels_percentage": 1.0,
-    "s3:landPixels_percentage": 4.0,
-    "s3:invalidPixels_percentage": 4.0,
-    "s3:cosmeticPixels_percentage": 0.0,
-    "s3:duplicatedPixels_percentage": 1.545942,
-    "s3:saturatedPixels_percentage": 0.0,
-    "s3:dubiousSamples_percentage": 0.0,
+    "s3:saline_water": 4.0,
+    "s3:coastal": 0.0082,
+    "s3:fresh_inland_water": 0.0,
+    "s3:tidal_region": 1.0,
+    "s3:land": 4.0,
+    "s3:invalid": 4.0,
+    "s3:cosmetic": 0.0,
+    "s3:duplicated": 1.545942,
+    "s3:saturated": 0.0,
+    "s3:dubious_samples": 0.0,
     "s3:shape": [
       4865,
       4090
     ],
-    "providers": [
-      {
-        "name": "ESA",
-        "roles": [
-          "producer",
-          "processor",
-          "licensor"
-        ],
-        "url": "https://earth.esa.int/web/guest/home"
-      }
-    ],
     "platform": "Sentinel-3A",
     "constellation": "Sentinel-3",
+    "s3:processing_timeliness": "NT",
+    "s3:product_name": "olci-lfr",
     "datetime": "2021-05-23T00:31:59.485583Z"
   },
   "geometry": {

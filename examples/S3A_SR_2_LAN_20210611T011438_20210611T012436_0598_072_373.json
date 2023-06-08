@@ -7,36 +7,26 @@
     "sat:orbit_state": "descending",
     "sat:absolute_orbit": 27681,
     "sat:relative_orbit": 373,
-    "start_datetime": "2021-06-11 01:14:37.943332+00:00",
-    "end_datetime": "2021-06-11 01:24:36.460617+00:00",
+    "start_datetime": "2021-06-11T01:14:38Z",
+    "end_datetime": "2021-06-11T01:24:36Z",
     "instruments": [
       "SRAL"
     ],
-    "s3:mode": "EO",
-    "s3:productType": "SR_2_LAN___",
+    "s3:product_type": "SR_2_LAN___",
     "s3:gsd": {
       "along-track": 300,
       "across-track": 1640
     },
-    "s3:lrmModePercentage": 0.0,
-    "s3:sarModePercentage": 100.0,
-    "s3:landPercentage": 0.0,
-    "s3:closedSeaPercentage": 0.0,
-    "s3:continentalIcePercentage": 97.0,
-    "s3:openOceanPercentage": 3.0,
-    "providers": [
-      {
-        "name": "ESA",
-        "roles": [
-          "producer",
-          "processor",
-          "licensor"
-        ],
-        "url": "https://earth.esa.int/web/guest/home"
-      }
-    ],
+    "s3:lrm_mode": 0.0,
+    "s3:sar_mode": 100.0,
+    "s3:land": 0.0,
+    "s3:closed_sea": 0.0,
+    "s3:continental_ice": 97.0,
+    "s3:open_ocean": 3.0,
     "platform": "Sentinel-3A",
     "constellation": "Sentinel-3",
+    "s3:processing_timeliness": "NR",
+    "s3:product_name": "sral-lan",
     "datetime": "2021-06-11T01:19:37.201974Z"
   },
   "geometry": {

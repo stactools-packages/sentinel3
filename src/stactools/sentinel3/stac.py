@@ -1,5 +1,6 @@
 import logging
 import os
+import re
 from decimal import Decimal
 from typing import Any, List, Optional
 
@@ -85,6 +86,23 @@ def sen3_to_kebab(asset_key: str) -> str:
     return new_asset_key
 
 
+def sen3_to_snake(key: str) -> str:
+    new_key = "".join("_" + char.lower() if char.isupper() else char for char in key)
+    # strip "_pixels_percentages" to match eo:cloud_cover pattern
+    if new_key.endswith("_pixels_percentage"):
+        new_key = new_key.replace("_pixels_percentage", "")
+    elif new_key.endswith("_pixelss_percentage"):
+        new_key = new_key.replace("_pixelss_percentage", "")
+    elif new_key.endswith("_percentage"):
+        new_key = new_key.replace("_percentage", "")
+    return new_key
+
+
+def product_type(source, datatype):
+    source_to_name = {"OL": "olci", "SL": "slstr", "SR": "sral", "SY": "synergy"}
+    return f"{source_to_name[source]}-{datatype.strip('_').lower()}"
+
+
 def create_item(
     granule_href: str,
     skip_nc: bool = False,
@@ -118,6 +136,19 @@ def create_item(
         properties={},
         stac_extensions=["https://stac-extensions.github.io/file/v2.1.0/schema.json"],
     )
+    sen3naming = re.match(
+        r".*/(?P<mission>...)_(?P<source>[A-Z]{2})_(?P<level>[_012])_(?P<datatype>.{6})"
+        r"_(?P<datastart>.{15})_(?P<datastop>.{15})_(?P<creation>.{15})"
+        r"_(?P<instance_id>((?P<duration>[0-9]{4})_(?P<cycle>[0-9]{3})"
+        r"_(?P<relative_orbit>[0-9]{3})"
+        r"_(?P<frame>[0-9]{4}))|.{17})_(?P<generating_centre>...)"
+        r"_(?P<platform>[OFDR])_(?P<timeliness>[^_]+)_(?P<collection>[^\.]+)\.SEN3",
+        granule_href,
+    )
+    if not sen3naming:
+        raise ValueError(
+            "Granule name does not match SEN3 naming convention(s)", granule_href
+        )
 
     # ---- Add Extensions ----
     # sat
@@ -135,6 +166,44 @@ def create_item(
     item.common_metadata.providers = [SENTINEL_PROVIDER]
     item.common_metadata.platform = product_metadata.platform
     item.common_metadata.constellation = SENTINEL_CONSTELLATION
+
+    if item.common_metadata.instruments == ["SYNERGY"]:
+        # "SYNERGY" is not a instrument
+        item.properties["instruments"] = ["OLCI", "SLSTR"]
+
+    # --Extended Sentinel3 metadata--
+    # Add the processing timelessness to the properties
+    item.properties["s3:processing_timeliness"] = sen3naming["timeliness"]
+
+    # Add a user-friendly name
+    item.properties["s3:product_name"] = product_type(
+        *sen3naming.group("source", "datatype")
+    )
+    # Providers should be supplied in the Collection, not the Item
+    item.properties.pop("providers", None)
+
+    # start_datetime and end_datetime are incorrectly formatted
+    item.properties["start_datetime"] = pystac.utils.datetime_to_str(
+        pystac.utils.str_to_datetime(sen3naming["datastart"])
+    )
+    item.properties["end_datetime"] = pystac.utils.datetime_to_str(
+        pystac.utils.str_to_datetime(sen3naming["datastop"])
+    )
+    item.properties["datetime"] = pystac.utils.datetime_to_str(
+        pystac.utils.str_to_datetime(sen3naming["creation"])
+    )
+
+    # Remove s3:mode, which is always set to EO (Earth # Observation). It
+    # offers no additional information.
+    item.properties.pop("s3:mode", None)
+
+    new_props = {}
+    for key, value in item.properties.items():
+        if key.startswith("s3:"):
+            new_props[sen3_to_snake(key)] = value
+        else:
+            new_props[key] = value
+    item.properties = new_props
 
     # Add assets to item
     manifest_asset_key, manifest_asset = metalinks.create_manifest_asset()

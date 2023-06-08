@@ -8,13 +8,13 @@
     "sat:absolute_orbit": 28003,
     "sat:relative_orbit": 310,
     "eo:cloud_cover": 1.692044,
-    "start_datetime": "2021-07-03 14:22:36.678672+00:00",
-    "end_datetime": "2021-07-03 15:07:00.249235+00:00",
+    "start_datetime": "2021-07-03T14:22:37Z",
+    "end_datetime": "2021-07-03T15:07:00Z",
     "instruments": [
-      "SYNERGY"
+      "OLCI",
+      "SLSTR"
     ],
-    "s3:mode": "EO",
-    "s3:productType": "SY_2_VGP___",
+    "s3:product_type": "SY_2_VGP___",
     "s3:gsd": {
       "OLCI": 300,
       "SLSTR": {
@@ -22,25 +22,16 @@
         "S7-S9 and F1-F2": 1000
       }
     },
-    "s3:snowOrIcePixels_percentage": 0.436467,
-    "s3:salineWaterPixels_percentage": 67.744293,
-    "s3:coastalPixelss_percentage": 0.169447,
-    "s3:freshInlandWaterPixels_percentage": 0.878855,
-    "s3:tidalRegionPixels_percentage": 0.470567,
-    "s3:landPixels_percentage": 32.227482,
-    "providers": [
-      {
-        "name": "ESA",
-        "roles": [
-          "producer",
-          "processor",
-          "licensor"
-        ],
-        "url": "https://earth.esa.int/web/guest/home"
-      }
-    ],
+    "s3:snow_or_ice": 0.436467,
+    "s3:saline_water": 67.744293,
+    "s3:coastal": 0.169447,
+    "s3:fresh_inland_water": 0.878855,
+    "s3:tidal_region": 0.470567,
+    "s3:land": 32.227482,
     "platform": "Sentinel-3A",
     "constellation": "Sentinel-3",
+    "s3:processing_timeliness": "ST",
+    "s3:product_name": "synergy-vgp",
     "datetime": "2021-07-03T14:44:48.463954Z"
   },
   "geometry": {

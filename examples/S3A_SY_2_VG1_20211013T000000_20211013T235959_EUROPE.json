@@ -8,13 +8,13 @@
     "sat:absolute_orbit": 29233,
     "sat:relative_orbit": 216,
     "eo:cloud_cover": 23.811417,
-    "start_datetime": "2021-10-13 00:00:00+00:00",
-    "end_datetime": "2021-10-13 23:59:59+00:00",
+    "start_datetime": "2021-10-13T00:00:00Z",
+    "end_datetime": "2021-10-13T23:59:59Z",
     "instruments": [
-      "SYNERGY"
+      "OLCI",
+      "SLSTR"
     ],
-    "s3:mode": "EO",
-    "s3:productType": "SY_2_VG1___",
+    "s3:product_type": "SY_2_VG1___",
     "s3:gsd": {
       "OLCI": 300,
       "SLSTR": {
@@ -22,21 +22,12 @@
         "S7-S9 and F1-F2": 1000
       }
     },
-    "s3:snowOrIcePixels_percentage": 0.102883,
-    "s3:landPixels_percentage": 46.680979,
-    "providers": [
-      {
-        "name": "ESA",
-        "roles": [
-          "producer",
-          "processor",
-          "licensor"
-        ],
-        "url": "https://earth.esa.int/web/guest/home"
-      }
-    ],
+    "s3:snow_or_ice": 0.102883,
+    "s3:land": 46.680979,
     "platform": "Sentinel-3A",
     "constellation": "Sentinel-3",
+    "s3:processing_timeliness": "ST",
+    "s3:product_name": "synergy-vg1",
     "datetime": "2021-10-13T11:59:59.500000Z"
   },
   "geometry": {
