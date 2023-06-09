@@ -8,8 +8,8 @@
     "sat:absolute_orbit": 27410,
     "sat:relative_orbit": 102,
     "eo:cloud_cover": 83.0,
-    "start_datetime": "2021-05-23T00:30:29Z",
-    "end_datetime": "2021-05-23T00:33:29Z",
+    "start_datetime": "2021-05-23T00:30:29.485583Z",
+    "end_datetime": "2021-05-23T00:33:29.485583Z",
     "instruments": [
       "OLCI"
     ],

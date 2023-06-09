@@ -184,13 +184,10 @@ def create_item(
 
     # start_datetime and end_datetime are incorrectly formatted
     item.properties["start_datetime"] = pystac.utils.datetime_to_str(
-        pystac.utils.str_to_datetime(sen3naming["datastart"])
+        pystac.utils.str_to_datetime(item.properties["start_datetime"])
     )
     item.properties["end_datetime"] = pystac.utils.datetime_to_str(
-        pystac.utils.str_to_datetime(sen3naming["datastop"])
-    )
-    item.properties["datetime"] = pystac.utils.datetime_to_str(
-        pystac.utils.str_to_datetime(sen3naming["creation"])
+        pystac.utils.str_to_datetime(item.properties["end_datetime"])
     )
 
     # Remove s3:mode, which is always set to EO (Earth # Observation). It

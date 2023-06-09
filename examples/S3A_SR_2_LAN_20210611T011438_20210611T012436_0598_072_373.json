@@ -7,8 +7,8 @@
     "sat:orbit_state": "descending",
     "sat:absolute_orbit": 27681,
     "sat:relative_orbit": 373,
-    "start_datetime": "2021-06-11T01:14:38Z",
-    "end_datetime": "2021-06-11T01:24:36Z",
+    "start_datetime": "2021-06-11T01:14:37.943332Z",
+    "end_datetime": "2021-06-11T01:24:36.460617Z",
     "instruments": [
       "SRAL"
     ],

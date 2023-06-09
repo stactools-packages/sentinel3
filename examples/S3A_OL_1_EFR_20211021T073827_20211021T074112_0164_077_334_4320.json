@@ -7,8 +7,8 @@
     "sat:orbit_state": "descending",
     "sat:absolute_orbit": 29567,
     "sat:relative_orbit": 334,
-    "start_datetime": "2021-10-21T07:38:27Z",
-    "end_datetime": "2021-10-21T07:41:12Z",
+    "start_datetime": "2021-10-21T07:38:27.254946Z",
+    "end_datetime": "2021-10-21T07:41:12.194233Z",
     "instruments": [
       "OLCI"
     ],

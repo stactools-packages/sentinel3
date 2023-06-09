@@ -8,8 +8,8 @@
     "sat:absolute_orbit": 15534,
     "sat:relative_orbit": 247,
     "eo:cloud_cover": 67.421502,
-    "start_datetime": "2021-04-19T05:17:54Z",
-    "end_datetime": "2021-04-19T06:58:53Z",
+    "start_datetime": "2021-04-19T05:17:54.047806Z",
+    "end_datetime": "2021-04-19T06:58:53.371850Z",
     "instruments": [
       "SLSTR"
     ],
