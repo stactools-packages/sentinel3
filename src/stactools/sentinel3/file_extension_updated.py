@@ -1,4 +1,4 @@
-from typing import List, Optional
+from typing import List, Optional, Union, cast
 
 import pystac
 from pystac.extensions.file import ByteOrder, FileExtension, MappingObject
@@ -32,10 +32,11 @@ class FileExtensionUpdated(FileExtension):
 
     @classmethod
     def ext(
-        cls, obj: pystac.Asset, add_if_missing: bool = False
+        cls, obj: Union[pystac.Asset, pystac.Link], add_if_missing: bool = False
     ) -> "FileExtensionUpdated":
-        super().ext(obj, add_if_missing)
-        return cls(obj)
+        if not isinstance(obj, pystac.Asset):
+            raise TypeError("FileExtensionUpdated only supports pystac.Asset objects.")
+        return cast(FileExtensionUpdated, super().ext(obj, add_if_missing))
 
     @classmethod
     def get_schema_uri(cls) -> str:
