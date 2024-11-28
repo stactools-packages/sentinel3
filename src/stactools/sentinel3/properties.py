@@ -59,7 +59,7 @@ def fill_eo_properties(eo_ext: EOExtension, manifest: XmlElement) -> None:
     def find_or_throw(attribute: str, xpath: str) -> str:
         value = manifest.find_attr(attribute, xpath)
         if value is None:
-            raise RuntimeError(f"Value not found in manifest: {xpath}@{attribute}")
+            raise RuntimeError(f"Value not in manifest: {xpath}@{attribute}")
         return value
 
     product_name = xml.find_text(manifest, ".//sentinel3:productName")
