@@ -13,7 +13,7 @@ jobs:
     env:
       DOCKER_BUILDKIT: true
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v5
       - name: Execute linters and test suites
         run: ./docker/cibuild
       - name: Upload All coverage to Codecov
