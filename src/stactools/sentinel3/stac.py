@@ -107,7 +107,7 @@ def product_type(source, datatype):
 
 
 def get_array_shape(
-    asset_shape: List[Dict[str, int]] | None, item_shape: List[int]
+    asset_shape: Optional[List[Dict[str, int]]], item_shape: List[int]
 ) -> List[int]:
     asset_reshaped: Dict[str, int]
     if asset_shape is None:
@@ -283,7 +283,7 @@ def create_item(
         asset.extra_fields.pop("file:local_path", None)
 
         # ensure shape is set at asset level
-        asset_shape: list[dict[str, int]] | None = asset.extra_fields.get(
+        asset_shape: Optional[List[Dict[str, int]]] = asset.extra_fields.get(
             "s3:shape", None
         )
         s3shape: List[int] = []
