@@ -107,7 +107,7 @@ def product_type(source, datatype):
 
 
 def get_array_shape(
-    asset_shape: List[Dict[str, int]], item_shape: List[int]
+    asset_shape: List[Dict[str, int]] | None, item_shape: List[int]
 ) -> List[int]:
     asset_reshaped: Dict[str, int]
     if asset_shape is None:
@@ -130,7 +130,7 @@ def get_array_shape(
             asset_reshaped = dict(*zip(*[a.items() for a in asset_shape]))
         else:
             logger.debug(
-                "structure of asset level 's3:shape' doesn't match " "expectation: %s",
+                "structure of asset level 's3:shape' doesn't match expectation: %s",
                 asset_shape,
             )
             asset_reshaped = {}
@@ -283,7 +283,9 @@ def create_item(
         asset.extra_fields.pop("file:local_path", None)
 
         # ensure shape is set at asset level
-        asset_shape = asset.extra_fields.get("s3:shape", None)
+        asset_shape: list[dict[str, int]] | None = asset.extra_fields.get(
+            "s3:shape", None
+        )
         s3shape: List[int] = []
         if asset_shape or item_shape and asset_key != "safe-manifest":
             s3shape = get_array_shape(asset_shape, item_shape)
@@ -334,7 +336,7 @@ def create_item(
         geometry_dict["coordinates"] = [coords[::-1]]
     elif winding is None:
         logger.warning(
-            "Could not determine winding order of polygon in " f"Item: '{item.id}'"
+            f"Could not determine winding order of polygon in Item: '{item.id}'"
         )
 
     geometry = shapely.geometry.shape(geometry_dict)
