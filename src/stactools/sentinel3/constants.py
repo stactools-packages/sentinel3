@@ -730,6 +730,18 @@ OLCI_L2_WATER_ASSET_KEYS = [
     "wqsfData",
 ]
 
+# Additional data objects introduced by the OLCI Collection 4 (v4.01)
+# processing baseline for level 2 water products. The OC4Me chlorophyll
+# product (chl_oc4me.nc / chlOc4meData) was replaced by chlor_a.nc, and the
+# fluorescence (fluorescence.nc) and inherent optical properties (iop_lsd.nc)
+# products were added. See:
+# https://user.eumetsat.int/news-events/news/update-to-sentinel-3-olci-level-2-water-processing
+OLCI_L2_WATER_ASSET_KEYS_C4 = [
+    "chlorAData",
+    "fluorescenceData",
+    "iopLsdData",
+]
+
 SLSTR_L1_ASSET_KEYS = [
     "SLSTR_S1_RAD_AN_Data",
     "SLSTR_S2_RAD_AN_Data",

@@ -502,6 +502,107 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             self.assertIn(k, s3_props)
             self.assertEqual(s3_props[k], v)
 
+    def test_olci_2_wfr_skips_missing_data_object(self):
+        # The OLCI Collection 4 (v4.01) processing baseline renamed the OC4Me
+        # chlorophyll product (chl_oc4me.nc / chlOc4meData) to chlor_a.nc, so
+        # the chlOc4meData data object is absent from newer manifests. Building
+        # band assets should skip absent data objects rather than raising.
+        import re
+
+        from lxml import etree
+        from stactools.core.io.xml import XmlElement
+
+        manifest_path = test_data.get_path(
+            "data-files/"
+            "S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_"
+            "0179_072_273_1440_MAR_O_NR_003.SEN3"
+        )
+
+        metalinks = MetadataLinks(manifest_path)
+
+        # Simulate a newer-baseline manifest by removing the chlOc4meData
+        # data object and its pointer.
+        text = re.sub(
+            r'<dataObject ID="chlOc4meData">.*?</dataObject>',
+            "",
+            metalinks.manifest_text,
+            flags=re.S,
+        )
+        text = text.replace('<dataObjectPointer dataObjectID="chlOc4meData"/>', "")
+        manifest = XmlElement(etree.fromstring(bytes(text, encoding="utf-8")))
+        metalinks.manifest = manifest
+
+        asset_key_list, asset_identifier_list, asset_list = metalinks.create_band_asset(
+            manifest, skip_nc=True
+        )
+
+        self.assertNotIn("chlOc4meData", asset_identifier_list)
+        # Other water data objects are still present.
+        self.assertIn("chlNnData", asset_identifier_list)
+        # The returned key list must stay aligned with the assets so that
+        # downstream zipping does not misalign asset keys and assets.
+        self.assertEqual(asset_key_list, asset_identifier_list)
+        self.assertEqual(len(asset_identifier_list), len(asset_list))
+
+    def test_olci_2_wfr_collection_4_assets(self):
+        # The OLCI Collection 4 (v4.01) baseline replaces chl_oc4me.nc with
+        # chlor_a.nc and adds fluorescence.nc and iop_lsd.nc. Verify these new
+        # data objects are turned into assets with the expected (kebab-case)
+        # keys.
+        from lxml import etree
+        from stactools.core.io.xml import XmlElement
+
+        from stactools.sentinel3.stac import sen3_to_kebab
+
+        manifest_path = test_data.get_path(
+            "data-files/"
+            "S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_"
+            "0179_072_273_1440_MAR_O_NR_003.SEN3"
+        )
+
+        metalinks = MetadataLinks(manifest_path)
+
+        # Rename chlOc4meData -> chlorAData (chl_oc4me.nc -> chlor_a.nc) and
+        # append the new fluorescence and iop_lsd data objects.
+        text = metalinks.manifest_text
+        text = text.replace("chlOc4meData", "chlorAData").replace(
+            "chl_oc4me.nc", "chlor_a.nc"
+        )
+        new_objects = (
+            '<dataObject ID="fluorescenceData">'
+            '<byteStream mimeType="application/x-netcdf" size="123">'
+            '<fileLocation locatorType="URL" textInfo="Fluorescence" '
+            'href="./fluorescence.nc"/>'
+            '<checksum checksumName="MD5">00000000000000000000000000000000'
+            "</checksum></byteStream></dataObject>"
+            '<dataObject ID="iopLsdData">'
+            '<byteStream mimeType="application/x-netcdf" size="123">'
+            '<fileLocation locatorType="URL" textInfo="Inherent Optical '
+            'Properties" href="./iop_lsd.nc"/>'
+            '<checksum checksumName="MD5">00000000000000000000000000000000'
+            "</checksum></byteStream></dataObject>"
+        )
+        text = text.replace(
+            "</dataObjectSection>", new_objects + "</dataObjectSection>"
+        )
+        manifest = XmlElement(etree.fromstring(bytes(text, encoding="utf-8")))
+        metalinks.manifest = manifest
+
+        asset_key_list, asset_identifier_list, asset_list = metalinks.create_band_asset(
+            manifest, skip_nc=True
+        )
+
+        self.assertNotIn("chlOc4meData", asset_identifier_list)
+        for key in ("chlorAData", "fluorescenceData", "iopLsdData"):
+            self.assertIn(key, asset_identifier_list)
+
+        kebab_keys = [sen3_to_kebab(key) for key in asset_key_list]
+        for kebab in ("chlor-a", "fluorescence", "iop-lsd"):
+            self.assertIn(kebab, kebab_keys)
+
+        self.assertEqual(asset_key_list, asset_identifier_list)
+        self.assertEqual(len(asset_identifier_list), len(asset_list))
+
     def test_parses_slstr_1_rbt_metadata_properties(self):
         # Get the path of the test xml
         manifest_path = test_data.get_path(
