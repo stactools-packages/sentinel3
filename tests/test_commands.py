@@ -215,6 +215,56 @@ class CreateItemTest(CliTestCase):
                 [self.assertTrue(band in band_list) for band in bands_seen]
                 os.remove(f"{tmp_dir}/{item_id}.json")
 
+    def test_create_olci_2_wfr_collection_4_item(self):
+        # Real-world OLCI Collection 4 (v4.01) water product. This baseline
+        # replaced chl_oc4me.nc with chlor_a.nc and added fluorescence.nc and
+        # iop_lsd.nc; the missing chlOc4meData data object originally caused
+        # item creation to fail.
+        item_id = "S3B_OL_2_WFR_20260301T234556_20260301T234856_0179_117_187_2520"
+        granule_href = test_data.get_path(
+            "data-files/"
+            "S3B_OL_2_WFR____"
+            "20260301T234556_20260301T234856_20260303T033944_"
+            "0179_117_187_2520_MAR_O_NT_004.SEN3"
+        )
+
+        with self.subTest(granule_href):
+            with TemporaryDirectory() as tmp_dir:
+                cmd = ["sentinel3", "create-item", granule_href, tmp_dir]
+                self.run_command(cmd)
+
+                jsons = [p for p in os.listdir(tmp_dir) if p.endswith(".json")]
+                self.assertEqual(len(jsons), 1)
+                fname = jsons[0]
+
+                item = pystac.Item.from_file(os.path.join(tmp_dir, fname))
+
+                item.validate()
+
+                self.assertEqual(item.id, item_id)
+
+                # The Collection 4 products are present and the removed OC4Me
+                # product is not.
+                self.assertIn("chlor-a", item.assets)
+                self.assertIn("fluo", item.assets)
+                self.assertIn("iop-lsd", item.assets)
+                self.assertNotIn("chl-oc4me", item.assets)
+
+                band_list = [value.name for value in SENTINEL_OLCI_BANDS.values()]
+
+                bands_seen = set()
+
+                for _, asset in item.assets.items():
+                    self.assertTrue("/./" not in asset.href)
+                    self.assertTrue(is_absolute_href(asset.href))
+                    asset_eo = EOExtension.ext(asset)
+                    bands = asset_eo.bands
+                    if bands is not None:
+                        bands_seen |= set(b.name for b in bands)
+
+                [self.assertTrue(band in band_list) for band in bands_seen]
+                os.remove(f"{tmp_dir}/{item_id}.json")
+
     def test_create_slstr_1_rbt_item(self):
         item_id = "S3A_SL_1_RBT_20210930T220914_20210930T221214_0180_077_043_5400"
         granule_href = test_data.get_path(

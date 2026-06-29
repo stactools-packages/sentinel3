@@ -559,53 +559,6 @@ class MetadataLinks:
                     asset_identifier_list.append(asset_key)
                     asset_list.append(asset_obj)
             elif "_WFR_" in product_type:
-                # Map each water data object ID to the OLCI bands it is
-                # derived from. Data objects without an entry here (annotation
-                # files, and the Collection 4 chlor_a/fluorescence/iop_lsd
-                # products) carry no eo:bands.
-                band_key_map = {
-                    "chlNnData": [
-                        "Oa01",
-                        "Oa02",
-                        "Oa03",
-                        "Oa04",
-                        "Oa05",
-                        "Oa06",
-                        "Oa07",
-                        "Oa08",
-                        "Oa09",
-                        "Oa10",
-                        "Oa11",
-                        "Oa12",
-                        "Oa16",
-                        "Oa17",
-                        "Oa18",
-                        "Oa21",
-                    ],
-                    "tsmNnData": [
-                        "Oa01",
-                        "Oa02",
-                        "Oa03",
-                        "Oa04",
-                        "Oa05",
-                        "Oa06",
-                        "Oa07",
-                        "Oa08",
-                        "Oa09",
-                        "Oa10",
-                        "Oa11",
-                        "Oa12",
-                        "Oa16",
-                        "Oa17",
-                        "Oa18",
-                        "Oa21",
-                    ],
-                    "chlOc4meData": ["Oa03", "Oa04", "Oa05", "Oa06"],
-                    "iopNnData": ["Oa01", "Oa12", "Oa16", "Oa17", "Oa21"],
-                    "iwvData": ["Oa18", "Oa19"],
-                    "trspData": ["Oa04", "Oa06"],
-                    "wAerData": ["Oa05", "Oa06", "Oa17"],
-                }
                 # Iterate over both the legacy water keys and the Collection 4
                 # (v4.01) additions. Data objects that are not present in this
                 # particular manifest are skipped, so the same code handles
@@ -617,8 +570,8 @@ class MetadataLinks:
                 ):
                     if len(manifest.findall(f".//dataObject[@ID='{asset_key}']")) == 0:
                         continue
-                    if asset_key in band_key_map:
-                        band_key_list = band_key_map[asset_key]
+                    if asset_key in constants.OLCI_L2_WATER_BAND_KEYS:
+                        band_key_list = constants.OLCI_L2_WATER_BAND_KEYS[asset_key]
                     elif asset_key.startswith("Oa") and asset_key.endswith(
                         "_reflectanceData"
                     ):
