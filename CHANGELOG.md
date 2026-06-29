@@ -9,6 +9,8 @@ number as needed.
 
 ## [Unreleased]
 
+## [0.5.0] - 2026-06-29
+
 ### Changed
 
 - Item ID format ([#9](https://github.com/stactools-packages/sentinel3/pull/9))
@@ -39,5 +41,6 @@ number as needed.
 
 First tagged release.
 
-[Unreleased]: https://github.com/stactools-packages/sentinel3/compare/v0.4.0..HEAD
+[Unreleased]: https://github.com/stactools-packages/sentinel3/compare/v0.5.0..HEAD
+[0.5.0]: https://github.com/stactools-packages/sentinel3/compare/v0.4.0..v0.5.0
 [0.4.0]: https://github.com/stactools-packages/sentinel3/releases/tag/v0.4.0
