@@ -20,6 +20,11 @@ number as needed.
 
 ### Fixed
 
+- Support the OLCI Collection 4 (v4.01) level 2 water processing baseline:
+  data objects absent from a manifest (such as the OC4Me chlorophyll product
+  `chlOc4meData`, removed in Collection 4) are skipped instead of raising a
+  `RuntimeError`, and the new `chlor_a`, `fluorescence`, and `iop_lsd`
+  products are turned into assets when present
 - Use correct EO Extension attribute names and units ([#13](https://github.com/stactools-packages/sentinel3/pull/15))
 - Use un-stripped `instance_id` to check for strip granules and apply geometry
   fix ([#19](https://github.com/stactools-packages/sentinel3/pull/19))

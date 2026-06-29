@@ -559,55 +559,25 @@ class MetadataLinks:
                     asset_identifier_list.append(asset_key)
                     asset_list.append(asset_obj)
             elif "_WFR_" in product_type:
-                asset_key_list = constants.OLCI_L2_WATER_ASSET_KEYS
-                for asset_key in asset_key_list:
-                    if asset_key == "chlNnData" or asset_key == "tsmNnData":
-                        band_key_list = [
-                            "Oa01",
-                            "Oa02",
-                            "Oa03",
-                            "Oa04",
-                            "Oa05",
-                            "Oa06",
-                            "Oa07",
-                            "Oa08",
-                            "Oa09",
-                            "Oa10",
-                            "Oa11",
-                            "Oa12",
-                            "Oa16",
-                            "Oa17",
-                            "Oa18",
-                            "Oa21",
-                        ]
-                    elif asset_key == "chlOc4meData":
-                        band_key_list = ["Oa03", "Oa04", "Oa05", "Oa06"]
-                    elif asset_key == "iopNnData":
-                        band_key_list = [
-                            "Oa01",
-                            "Oa12",
-                            "Oa16",
-                            "Oa17",
-                            "Oa21",
-                        ]
-                    elif asset_key == "iwvData":
-                        band_key_list = [
-                            "Oa18",
-                            "Oa19",
-                        ]
-                    elif asset_key == "parData":
-                        band_key_list = []
-                    elif asset_key == "trspData":
-                        band_key_list = ["Oa04", "Oa06"]
-                    elif asset_key == "wAerData":
-                        band_key_list = ["Oa05", "Oa06", "Oa17"]
-                    elif any(
-                        asset_key == key
-                        for key in constants.OLCI_L2_WATER_ASSET_KEYS[-7:]
+                # Iterate over both the legacy water keys and the Collection 4
+                # (v4.01) additions. Data objects that are not present in this
+                # particular manifest are skipped, so the same code handles
+                # both the old and new processing baselines.
+                present_asset_keys = []
+                for asset_key in (
+                    constants.OLCI_L2_WATER_ASSET_KEYS
+                    + constants.OLCI_L2_WATER_ASSET_KEYS_C4
+                ):
+                    if len(manifest.findall(f".//dataObject[@ID='{asset_key}']")) == 0:
+                        continue
+                    if asset_key in constants.OLCI_L2_WATER_BAND_KEYS:
+                        band_key_list = constants.OLCI_L2_WATER_BAND_KEYS[asset_key]
+                    elif asset_key.startswith("Oa") and asset_key.endswith(
+                        "_reflectanceData"
                     ):
-                        band_key_list = []
-                    else:
                         band_key_list = [asset_key[:4]]
+                    else:
+                        band_key_list = []
                     asset_location = self.read_href(
                         f".//dataObject[@ID='{asset_key}']//fileLocation"
                     )
@@ -653,8 +623,12 @@ class MetadataLinks:
                             roles=["data"],
                             extra_fields={"s3:spatial_resolution": asset_resolution},
                         )
+                    present_asset_keys.append(asset_key)
                     asset_identifier_list.append(asset_key)
                     asset_list.append(asset_obj)
+                # Return only the keys actually present in this manifest so the
+                # asset keys stay aligned with asset_identifier_list/asset_list.
+                asset_key_list = present_asset_keys
         elif instrument_bands == constants.SENTINEL_SLSTR_BANDS:
             if "SL_1_" in product_type:
                 asset_key_list = constants.SLSTR_L1_ASSET_KEYS

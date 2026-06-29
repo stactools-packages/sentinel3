@@ -502,6 +502,44 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             self.assertIn(k, s3_props)
             self.assertEqual(s3_props[k], v)
 
+    def test_olci_2_wfr_collection_4_baseline(self):
+        # The OLCI Collection 4 (v4.01) processing baseline replaced the OC4Me
+        # chlorophyll product (chl_oc4me.nc / chlOc4meData) with chlor_a.nc and
+        # added fluorescence.nc and iop_lsd.nc. This uses a real-world manifest
+        # from the baseline that originally caused
+        # "RuntimeError: Xpath returns no href" to ensure the new products are
+        # turned into assets and the removed product no longer breaks parsing.
+        from stactools.sentinel3.stac import sen3_to_kebab
+
+        manifest_path = test_data.get_path(
+            "data-files/"
+            "S3B_OL_2_WFR____20260301T234556_20260301T234856_20260303T033944_"
+            "0179_117_187_2520_MAR_O_NT_004.SEN3"
+        )
+
+        metalinks = MetadataLinks(manifest_path)
+
+        asset_key_list, asset_identifier_list, asset_list = metalinks.create_band_asset(
+            metalinks.manifest, skip_nc=True
+        )
+
+        # The removed OC4Me product must not appear.
+        self.assertNotIn("chlOc4meData", asset_identifier_list)
+        # The Collection 4 products must be present as assets.
+        for key in ("chlor_aData", "fluoData", "iopLsdData"):
+            self.assertIn(key, asset_identifier_list)
+        # Legacy water products that remain in Collection 4 are still present.
+        self.assertIn("chlNnData", asset_identifier_list)
+
+        kebab_keys = [sen3_to_kebab(key) for key in asset_key_list]
+        for kebab in ("chlor-a", "fluo", "iop-lsd"):
+            self.assertIn(kebab, kebab_keys)
+
+        # The returned key list must stay aligned with the assets so that
+        # downstream zipping does not misalign asset keys and assets.
+        self.assertEqual(asset_key_list, asset_identifier_list)
+        self.assertEqual(len(asset_identifier_list), len(asset_list))
+
     def test_parses_slstr_1_rbt_metadata_properties(self):
         # Get the path of the test xml
         manifest_path = test_data.get_path(

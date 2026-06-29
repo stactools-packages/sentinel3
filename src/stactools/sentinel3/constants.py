@@ -730,6 +730,65 @@ OLCI_L2_WATER_ASSET_KEYS = [
     "wqsfData",
 ]
 
+# Additional data objects introduced by the OLCI Collection 4 (v4.01)
+# processing baseline for level 2 water products. The OC4Me chlorophyll
+# product (chl_oc4me.nc / chlOc4meData) was replaced by chlor_a.nc, and the
+# fluorescence (fluorescence.nc) and inherent optical properties (iop_lsd.nc)
+# products were added. See:
+# https://user.eumetsat.int/news-events/news/update-to-sentinel-3-olci-level-2-water-processing
+OLCI_L2_WATER_ASSET_KEYS_C4 = [
+    "chlor_aData",
+    "fluoData",
+    "iopLsdData",
+]
+
+# Maps each OLCI L2 water data object ID to the OLCI bands it is derived from.
+# Data objects without an entry here (annotation files, and the Collection 4
+# chlor_a/fluorescence/iop_lsd products) carry no eo:bands.
+OLCI_L2_WATER_BAND_KEYS = {
+    "chlNnData": [
+        "Oa01",
+        "Oa02",
+        "Oa03",
+        "Oa04",
+        "Oa05",
+        "Oa06",
+        "Oa07",
+        "Oa08",
+        "Oa09",
+        "Oa10",
+        "Oa11",
+        "Oa12",
+        "Oa16",
+        "Oa17",
+        "Oa18",
+        "Oa21",
+    ],
+    "tsmNnData": [
+        "Oa01",
+        "Oa02",
+        "Oa03",
+        "Oa04",
+        "Oa05",
+        "Oa06",
+        "Oa07",
+        "Oa08",
+        "Oa09",
+        "Oa10",
+        "Oa11",
+        "Oa12",
+        "Oa16",
+        "Oa17",
+        "Oa18",
+        "Oa21",
+    ],
+    "chlOc4meData": ["Oa03", "Oa04", "Oa05", "Oa06"],
+    "iopNnData": ["Oa01", "Oa12", "Oa16", "Oa17", "Oa21"],
+    "iwvData": ["Oa18", "Oa19"],
+    "trspData": ["Oa04", "Oa06"],
+    "wAerData": ["Oa05", "Oa06", "Oa17"],
+}
+
 SLSTR_L1_ASSET_KEYS = [
     "SLSTR_S1_RAD_AN_Data",
     "SLSTR_S2_RAD_AN_Data",
